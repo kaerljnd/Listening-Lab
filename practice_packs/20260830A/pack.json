@@ -1,0 +1,1253 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20260830A",
+  "title": "20260830A Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20260830A-M1",
+      "title": "20260830A · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            11.02,
+            13.31
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Could you nudge the team to work on the course project?",
+          "question_ids": [
+            "Q1"
+          ]
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            33.54,
+            35.95
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Don't first-year students have to live on campus?",
+          "question_ids": [
+            "Q2"
+          ]
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            48.26,
+            52.52
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "What is the deadline to submit the article for the student newspaper?",
+          "question_ids": [
+            "Q3"
+          ]
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            65.28,
+            68.13
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "The cafeteria offers locally sourced meals.",
+          "question_ids": [
+            "Q4"
+          ]
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            82.17,
+            84.7
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "If we take the short route and reach the dorm faster, we...",
+          "question_ids": [
+            "Q5"
+          ]
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            102.21,
+            104.61
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "We should stay sharp for the quiz tomorrow morning.",
+          "question_ids": [
+            "Q6"
+          ]
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            118.72,
+            121.93
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Could you remind me what time the guest lecture begins?",
+          "question_ids": [
+            "Q7"
+          ]
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            135.84,
+            138.48
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "How can I access the training videos online?",
+          "question_ids": [
+            "Q8"
+          ]
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            151.26,
+            153.74
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Should we go all out and rehearse the speech tonight?",
+          "question_ids": [
+            "Q9"
+          ]
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            169.77,
+            172.84
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Let's not beat around the bush. The exam is tomorrow.",
+          "question_ids": [
+            "Q10"
+          ]
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            193.4,
+            195.56
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "What time does the economics lecture start?",
+          "question_ids": [
+            "Q11"
+          ]
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            209.41,
+            212.09
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Do you think our framing aligns with the professor's expectations?",
+          "question_ids": [
+            "Q12"
+          ]
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            227.91,
+            261.4
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": null,
+          "transcript": "Hey Lisa, you took a statistics class last semester, right? How was it? I liked it. If I can fit it into my schedule, I might take statistics too next year. Really? I remember you telling me that you didn't like math and you weren't very good at it. First of all, all university students have to take a math class, even if they're majoring in political science like me, and secondly the statistics class kind of fit for my major. I mean using statistics in surveys, things like that.",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ]
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            288.01,
+            323.96
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": null,
+          "transcript": "I've been thinking about getting into bird watching. Any tips? Sure. A good pair of binoculars is essential, and instead of a guidebook I'd recommend a mobile app. It helps you identify species and log sightings. I actually have an old field guide, but it's missing pages and doesn't cover local birds. Then get an app. Some of them even alert you when there's a rare sighting nearby. That's my favorite feature. Impressive. So I'd like to join your group too. We'd love to have you. I'll send you our calendar of events, including local walks.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ]
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            362.16,
+            399.34
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": null,
+          "transcript": "Which museum object are you using for your next paper? The marble statue of a lion, the one in the Hartwell Museum. What drew you to this particular statue? It looks powerful but calm too, like it's guarding something but not in a threatening way. I'm just not sure how to start the paper. Professor Sims, what in particular about its pose or surface texture or facial expression makes it seem simultaneously powerful and calm? The very act of describing its physical features could help you figure out the creator's intention.",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ]
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to an announcement on a university radio station.",
+          "listen_window": [
+            431.34,
+            458.29
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": null,
+          "transcript": "Good morning, students. I want to remind you about the new computer lab we're opening next week. The lab will have advanced graphic design software and high-performance computers. This was a significant financial investment, so please use the lab safely and respectfully. Also be advised that the lab is replacing the multi-purpose room in Scott Hall, so it will no longer be available for club meetings and such. Meeting rooms in the Student Center will still be available.",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ]
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to a campus radio announcement.",
+          "listen_window": [
+            488.01,
+            522.61
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": null,
+          "transcript": "The university's parking permit system is going all digital. Current parking permit holders should already have received an email with a link to the system and instructions. Students, faculty, and staff must register their vehicles through this link by 5 p.m. Friday. The new system will assign parking zones based on such factors as residence, class schedules, and departmental affiliations. Parking in unauthorized zones may result in fines or suspension of parking privileges, so check your zone assignment carefully.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ]
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to an announcement by the Office of Campus Life.",
+          "listen_window": [
+            550.08,
+            594.52
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": null,
+          "transcript": "Our university community includes hundreds of students, faculty, and staff from countries around the world. To celebrate this diversity, we're hosting our annual International Connections Project. If you wish to participate, submit a short proposal connecting something you've noticed on campus, such as an event, tradition, or food, to a particular culture. If your proposal is accepted, you'll use a tri-fold poster board to show the connection. You may include photos, drawings, and other artifacts. The Campus Life website has sample work and further information.",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ]
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a science podcast.",
+          "listen_window": [
+            623.04,
+            744.84
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": null,
+          "transcript": "Nanoparticles are particles whose size is less than one ten-thousandth of a millimeter, super tiny. Nanoparticles have numerous applications. My family had a picnic last Saturday. We used sunscreen to avoid sunburn. Our sunscreen contains titanium dioxide, which has been used in sunscreen for decades. You used to end up with these horrible-looking white smears all over your skin while wearing it. But our new sunscreen's titanium dioxide comes in nanoparticles. They block ultraviolet sunlight but are transparent. The sunblock's completely invisible on your skin, not smeary white. Another example: the metal silver has antimicrobial properties. The problem is, you can't put regular metal on a wound. But an ointment with silver nanoparticles, we can actually apply that to stop bacterial growth. We did it when my son scraped his knee at the picnic. Humans have actually used nanoparticles for millennia. Take ancient Rome's tesserae. Tesserae are tiny bits of highly colorful glass that the Romans arranged to create various images. Many Roman tesserae, especially pink ones, contain nanoparticles. The particles affect how light interacts with the glass and create the color. Did the Romans know what they were doing? Well, they probably didn't understand the physics of it. But some glass workshop could have realized that gold foil beaten to an extremely thin layer produces bright colors when heated between glass layers, and the technique was perfected and spread. All pink tesserae contain gold particles at between 10 and 30 parts per million. That's so consistent, so it's definitely not random.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ]
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk on an art podcast.",
+          "listen_window": [
+            797.32,
+            915.72
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": null,
+          "transcript": "Today I'd like to talk about the color blue in art. Now, we might take blue for granted, but for centuries it was one of the most elusive and expensive pigments an artist could use. In ancient Egypt, artisans crafted blue from lapis lazuli, a brilliant stone mined in what is now Afghanistan. This mineral was so rare and so valuable that it was literally worth its weight in gold. Because of its scarcity, blue was reserved for the most honored subjects in art. In medieval European paintings, important holy figures were often cloaked in deep blue robes. This wasn't just symbolic; it was also a financial statement. During the Renaissance, oil paints made the mixing and layering of colors easier, including the mixing of lapis lazuli powder with oil. Still, blue remained clear due to its natural sources. Then came a turning point in the 18th century: synthetic dyes. Prussian blue, which was originally created in Germany quite by accident, was affordable, vibrant, and widely accessible. Suddenly, artists from all walks of life could use blue freely. This democratization of color transformed artistic expression and opened doors for artistic movements like Impressionism, where blue was used freely to evoke mood, atmosphere, and emotion. Even today, blue carries echoes of its luxurious past. It's often linked to ideas of calm, depth, and aspiration. Yet some traditionalists still argue that no synthetic pigment can match the richness and depth of lapis lazuli. The story of blue continues to reflect the evolving relationship between art, innovation, and culture.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "I'll try to make it available.",
+            "I'm happy with my project results.",
+            "I'll register for the course.",
+            "I'll send them a reminder now."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "I haven't visited the library yet.",
+            "There are some exceptions to this rule.",
+            "I believe it's due next week.",
+            "I think we should stay in line a little longer."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "Articles are important.",
+            "Please submit the request.",
+            "It should be on the bus route.",
+            "I'll need to check with the editor."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "I'll share my location with you.",
+            "The theater opens at five p.m.",
+            "That sounds delicious.",
+            "Please list your sources."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "OK, but do you know which way to go?",
+            "Yes, they want to have shorter study sessions.",
+            "Which topic do you think is easier?",
+            "Sure, let's start planning our winter trip now."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "Not now, but we can go shopping after the quiz.",
+            "Absolutely, staying fit has always been my priority.",
+            "Definitely, it's important to be prepared.",
+            "No rush—we can leave when you’re ready."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "Right after lunch break.",
+            "I'm sorry I didn't reply to your invitation.",
+            "Sure, I'll let you know when they arrive.",
+            "I don't know which building it is."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "There's a link to the videos in the professor's email.",
+            "Do you know how many videos are available?",
+            "The videos were uploaded last week.",
+            "The lessons are divided into modules."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "Play rehearsals went well yesterday.",
+            "Her speech was really engaging.",
+            "We should go there at some point next week.",
+            "Let's practice tonight and make it perfect."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, we probably should get organized.",
+            "The time to beat is forty-five seconds.",
+            "Yes, let's meet there tomorrow.",
+            "Yes, we do have some gardening to do."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "No, yesterday.",
+            "I'll need to check.",
+            "Professor Johnson will be speaking.",
+            "Down the hallway in Room 104."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "I think we can submit it through the course website.",
+            "I'll review the requirements and confirm.",
+            "It's on the third floor near the lab.",
+            "No, the campus art gallery is closed on Sundays."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "What does the man find surprising?",
+          "options": [
+            "The woman's difficulty in choosing a math class",
+            "The woman's decision to major in political science",
+            "The woman's opinion of a class she took",
+            "The woman's decision to transfer to a different university"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "What does the woman imply when she discusses a statistics course that she took?",
+          "options": [
+            "She found the material relevant to her course of study.",
+            "She decided to change her major to statistics.",
+            "She did not expect the class to be so difficult.",
+            "She was not required to take a math class."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "What is the woman's favorite feature of a mobile app?",
+          "options": [
+            "Monthly migration updates",
+            "A group discussion forum",
+            "An alert system",
+            "A bird encyclopedia"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "What will the woman most likely do next?",
+          "options": [
+            "Provide the man with a calendar",
+            "Send the man a link to an app",
+            "Join the man for a walk",
+            "Help the man repair a book"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "What course does the woman most likely teach?",
+          "options": [
+            "Art appreciation",
+            "Museum administration",
+            "Wildlife biology",
+            "Studio art"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "What are the speakers discussing?",
+          "options": [
+            "The professor's critique of a paper the student wrote",
+            "The approach the student should take for an assignment",
+            "The student's interest in a job at a museum",
+            "The extent to which a lion statue resembles a living lion"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "What does the speaker imply about a new computer lab?",
+          "options": [
+            "Its opening has been delayed.",
+            "Its equipment is expensive.",
+            "It is only available to graphic design students.",
+            "It is replacing an old lab."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "Why does the speaker mention the student center?",
+          "options": [
+            "To identify the location of the new computer lab",
+            "To offer an alternative location for club meetings",
+            "To explain how to find Scott Hall",
+            "To tell students where to go for graphic design workshops"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "What most likely prompted the announcement?",
+          "options": [
+            "Complaints about the cost of parking permits",
+            "Recent changes to campus parking availability",
+            "The launch of a new parking permit system",
+            "Confusion about existing parking zone assignments"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "Why does the announcement mention 5:00 p.m. Friday?",
+          "options": [
+            "To indicate when new parking zones will be enforced",
+            "To specify when a registration step must be completed",
+            "To notify drivers of a deadline to appeal fines",
+            "To highlight when parking privileges may be suspended"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "Why is the speaker making the announcement?",
+          "options": [
+            "To highlight a change in an application process",
+            "To provide information about an upcoming activity",
+            "To explain how to apply to an international studies program",
+            "To describe a university photography exhibit"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "Why should the listeners go to a website?",
+          "options": [
+            "To view sample works",
+            "To participate in a virtual event",
+            "To sign up as a volunteer",
+            "To register for a club"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "Recent advances in nanotechnology",
+            "A problem with nanotechnology",
+            "The physics of nanotechnology",
+            "Various uses of nanotechnology"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "What advantage of a new sunscreen does the speaker mention?",
+          "options": [
+            "It is invisible when applied on skin.",
+            "It can be used in any weather.",
+            "It does not contain titanium dioxide.",
+            "It is effective when used in tiny amounts."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "What does the speaker point out about silver?",
+          "options": [
+            "It was used in ointments for millennia.",
+            "It can stop the growth of harmful microbes.",
+            "It can help increase the transparency of glass.",
+            "It was considered more valuable than gold in ancient Rome."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker mention the amount of gold nanoparticles in pink tesserae?",
+          "options": [
+            "To help explain why most of the tesserae were very expensive",
+            "To help people understand what ancient Roman tesserae looked like",
+            "To emphasize an effect of heating gold nanoparticles between layers of glass",
+            "To argue that the Romans knew how to use tiny particles for coloring tesserae"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "Why was blue considered a symbol of wealth in ancient art?",
+          "options": [
+            "It was associated with the color of high-value coins.",
+            "It was easy to produce but hard to preserve.",
+            "It was made from a rare and costly mineral.",
+            "It was a color only royalty was allowed to wear."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "How did the use of blue in painting change during the Renaissance?",
+          "options": [
+            "Artists stopped using blue entirely.",
+            "Due to new mining techniques, blue became cheaper to acquire.",
+            "Oil paints made it easier to mix and layer blue.",
+            "Blue was replaced by green as the dominant color."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "What impact did the development of Prussian blue have on art?",
+          "options": [
+            "It made paintings that used it more valuable.",
+            "It made blue more affordable and widely used by artists.",
+            "It was associated with paintings made only in Germany.",
+            "It had little impact, as most artists disliked it."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "According to the speaker, why do some still prefer lapis lazuli over synthetic dyes?",
+          "options": [
+            "It dries more quickly.",
+            "It is easier to mix with other colors.",
+            "It is less likely to fade over time.",
+            "It has a deeper, more vibrant appearance."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "module_id": "M2H",
+      "id": "20260830A-M2H",
+      "title": "20260830A · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            11.95,
+            14.35
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "It’s not perfect, but let’s keep this title.",
+          "question_ids": [
+            "Q1"
+          ]
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            26,
+            28.9
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Can you walk me through setting up the experiment?",
+          "question_ids": [
+            "Q2"
+          ]
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            41.6,
+            44.7
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "When the vibes are positive, seminars are a lot of fun.",
+          "question_ids": [
+            "Q3"
+          ]
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            55.55,
+            78.9
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": null,
+          "transcript": "Did you hear about the movie in the Student Center tonight? I’m going to check it out with some friends if you want to join us. No, I didn’t know about it. I don’t have anything else planned for tonight, so... Great! And it’s technically free to get in, but they’re doing it as a fundraiser to support the student government. Got it. I’ll bring some cash along with me.",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ]
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            101.2,
+            140.7
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": null,
+          "transcript": "Are you going to the Architecture Lesson 7 tomorrow evening? The speaker is a famous architect who specializes in eco-friendly buildings. I wanted to, but my friend organized this free screening of a documentary film also at 7. It’s about a young baseball player preparing for an important game. The film’s director will answer audience questions after. Tempting, but I’m struggling with picking a topic for my architecture paper. The eco-friendly buildings talk might help. I’d rather learn about movie making from a real director. Plus, my friend worked hard to make this event happen, so...",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ]
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a marine biology class.",
+          "listen_window": [
+            168.3,
+            300
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": null,
+          "transcript": "One growing concern in marine biology is ocean acidification. This refers to the decrease in the pH of Earth’s oceans, mainly due to the absorption of carbon dioxide from the atmosphere. When carbon dioxide dissolves in seawater, it forms carbonic acid, which lowers the pH and alters the ocean’s chemical balance. This change has serious consequences for marine organisms, especially those that use calcium carbonate to build shells and skeletons, such as staghorn corals, Pacific oysters, and types of plankton. As acidity increases, these organisms struggle to maintain their structures, resulting in weaker shells and unhealthy corals. Coral reefs, such as the Great Barrier Reef in the Coral Sea, are particularly vulnerable. Their decline can lead to reduced biodiversity and disrupted ecosystems. Ocean acidification also affects fish. A 2023 study conducted by marine biologists at James Cook University found that clownfish exposed to lower pH levels in reef environments had difficulty detecting the sounds of predators and navigating their surroundings. This sensory impairment may also interfere with reproduction, threatening population stability. To address this issue, efforts focus on reducing carbon dioxide emissions. This includes shifting to renewable energy, improving energy efficiency, and adopting sustainable practices. Additionally, protecting organisms like seagrass beds and mangroves can help absorb carbon dioxide and buffer acidification. Mangroves in particular can store up to 10 times more carbon per hectare than terrestrial forests. Understanding and mitigating ocean acidification is essential for preserving marine biodiversity and maintaining healthy oceans. It requires global cooperation and long-term commitment.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ]
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to part of a lecture in a history class.",
+          "listen_window": [
+            348,
+            492
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": null,
+          "transcript": "Earlier in class we talked about the Dutch tulip craze of the early 1600s, a time when tulip bulbs became luxury symbols, prices soared and fortunes vanished almost overnight. It was one of history’s first economic bubbles, fueled by speculation and status. America had its own version in the early 19th century, when the country was swept up in the mulberry craze. The idea sounded simple. Plant mulberry trees, raise the silkworms that eat their leaves, harvest the silk from the worms’ cocoons, and rake in the profits. Silk was a prized luxury import, and producing it locally promised enormous wealth. Farmers and investors rushed to buy mulberry saplings. Prices for the young trees soared from pennies to several dollars. Classic bubble behavior. And the speculation wasn’t all about money. Silk itself, the idea of silk, carried powerful symbolism, refinement, status, and aspiration. For a brief moment, middle-class Americans imagined silk dresses as attainable, blurring old-class distinctions. But reality intervened. Silkworms are delicate, requiring precise care and stable climates. Harsh winters wiped out silkworm populations across the country. Mulberry groves lost their purpose. The trees lost their value. The bubble burst, and by the mid-1840s, folks who’d invested their fortunes in the venture were ruined financially. And the bottom line? Well, just like tulip mania in the Netherlands, the American mulberry craze shows how ambition and hype can outpace ecological and practical limits. This is a cautionary tale for modern day investment booms.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Not a bad idea for a weekend trip.",
+            "It’s okay, I think the professor will like it.",
+            "Don’t worry, I’ll keep it somewhere safe.",
+            "We can go there tomorrow."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Meet me in the lab at 6:30.",
+            "It’s about a five-minute walk from campus.",
+            "The experiment requires that you continue.",
+            "Yes, I thought so too."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "For sure, and it helps us be more interactive.",
+            "No, let’s go as a group.",
+            "When is it due?",
+            "Did you already send them to me?"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "Why does the woman say that she has no plans tonight?",
+          "options": [
+            "To offer the man a ride",
+            "To accept the man’s invitation",
+            "To ask the man for some suggestions",
+            "To inform the man about a change"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "What will the woman most likely do tonight?",
+          "options": [
+            "Join the student government",
+            "Vote in an election",
+            "Make a donation",
+            "Purchase theater tickets"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "What is the man having trouble with?",
+          "options": [
+            "Organizing an event",
+            "Remembering when an event will be held",
+            "Coming up with questions for an architect",
+            "Choosing a topic for a class assignment"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "What will the woman most likely do tomorrow?",
+          "options": [
+            "Support her friend’s event",
+            "Watch a documentary about eco-friendly buildings",
+            "Watch a baseball game",
+            "Go to a lecture with the man"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "What is the main topic of the talk?",
+          "options": [
+            "The benefits of coral reef ecosystems",
+            "The behavior of fish in marine environments",
+            "The causes and effects of ocean acidification",
+            "The role of renewable energy in ocean science"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "According to the speaker, what challenge are shell-building organisms facing?",
+          "options": [
+            "They have difficulty preserving their physical structures.",
+            "They need to search for calcium-rich food sources.",
+            "They must migrate to escape acidic conditions.",
+            "Their shells are growing larger than usual."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "According to the speaker, what is one effect of changes in ocean chemistry on clown fish?",
+          "options": [
+            "They migrate to colder regions of the ocean.",
+            "They become more aggressive towards each other.",
+            "They lose the ability to regulate body temperature.",
+            "They have difficulty perceiving their surroundings."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker mention mangroves?",
+          "options": [
+            "To identify organisms most vulnerable to acidification",
+            "To explain a way to mitigate acidification",
+            "To describe symbiotic relationships in marine ecosystems",
+            "To highlight the importance of marine biodiversity"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "What does the speaker mainly discuss?",
+          "options": [
+            "The problems involved in importing silk to the United States",
+            "A notable economic bubble in American history",
+            "Silk’s effect on social class distinctions in the United States",
+            "Differences between the Dutch and American economies"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention the value of silk as an import?",
+          "options": [
+            "To indicate why there was relatively little silk in the United States",
+            "To emphasize that luxury goods often lose value",
+            "To explain the motivation behind purchasing mulberry trees",
+            "To highlight the growing prosperity in the United States"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "According to the speaker, why did mulberry groves lose their value?",
+          "options": [
+            "Insect pests damaged most of the trees.",
+            "Economic difficulties reduced the demand for silk.",
+            "Overproduction of silkworms brought down the price of silk.",
+            "The climate made raising silkworms too difficult."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "What view does the speaker express regarding the tulip and mulberry crazes?",
+          "options": [
+            "They were inevitable outcomes of technological progress.",
+            "They warn about investing without careful judgment.",
+            "They helped economic growth in the short term.",
+            "They were unusual events and unlikely to happen again."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    }
+  ]
+}

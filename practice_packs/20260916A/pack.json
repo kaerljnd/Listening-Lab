@@ -1,0 +1,1276 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20260916A",
+  "title": "20260916A Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20260916A-M1",
+      "title": "20260916A · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            12.36,
+            15.14
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "",
+          "question_ids": [
+            "Q1"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            29.9,
+            33.28
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "",
+          "question_ids": [
+            "Q2"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            51.04,
+            54.64
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "",
+          "question_ids": [
+            "Q3"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            73.1,
+            76.16
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "",
+          "question_ids": [
+            "Q4"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            91.68,
+            93.9
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "When is the next bus for Campus West?",
+          "question_ids": [
+            "Q5"
+          ]
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            108.1,
+            111.3
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "",
+          "question_ids": [
+            "Q6"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            129.3,
+            130.78
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Where is the nearest train station?",
+          "question_ids": [
+            "Q7"
+          ]
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            149.34,
+            151.24
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "",
+          "question_ids": [
+            "Q8"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            170.82,
+            173.54
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "",
+          "question_ids": [
+            "Q9"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            192.42,
+            195.26
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Could you please send me the art class trip permission form?",
+          "question_ids": [
+            "Q10"
+          ]
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            213.78,
+            215.34
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "",
+          "question_ids": [
+            "Q11"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            232.86,
+            234.92
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "",
+          "question_ids": [
+            "Q12"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            250.92,
+            287.44
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            324.06,
+            349.96
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Listen to a conversation. My computer keeps freezing whenever I try to open a large file. Have you been restarting it? Yes, but it didn't help. I'm worried it might be a hardware issue. Maybe it's time for a memory upgrade. That could solve the problem. You might be right. I'll take it to a technician to check. Good idea. They'll be able to help you.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ]
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            379.76,
+            412.18
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to an announcement in a classroom.",
+          "listen_window": [
+            442.92,
+            486.34
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to a university radio announcement.",
+          "listen_window": [
+            517.02,
+            552.02
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Listen to a university radio announcement. Hello students. Our end of semester celebration is next Friday at 6 p.m. in the Student Lounge. It's a great chance to relax before finals week. We'll have food, music, and a few games and activities, including trivia and a raffle with small prizes. Faculty from several departments will be there too, so it's a great opportunity to connect with instructors outside of class. We still need a few volunteers to help set up before the event. If interested, please contact the student activities coordinator by Wednesday.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ]
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to an announcement on the campus radio station.",
+          "listen_window": [
+            587.98,
+            620.12
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a lecture in an art history class.",
+          "listen_window": [
+            652.1,
+            759.38
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "Listen to a lecture in an art history class. Let's talk about a classic example of land art: Spiral Jetty by Robert Smithson. Picture yourself at the edge of the Great Salt Lake in the state of Utah in the United States. Stretching out into the water is a massive spiral made of dark basalt rocks, about 1,500 feet long. The title tells you a lot. A jetty is a structure that sticks out into a body of water, usually to protect a shoreline or dock. Smithson took that idea and twisted it, literally, into a spiral. Land art is an art movement that wanted to break free from museums and galleries and put art directly into nature. Smithson was fascinated by big concepts like geological time and change. He never intended Spiral Jetty to be permanent. The lake rises and falls, salt crystals form on the rocks, and the spiral slowly transforms. He wanted people to experience that reality firsthand, to make the journey and see the work in its natural setting. Here's the irony, though. Relatively few people have actually seen Spiral Jetty firsthand. Most people know it only through photographs and films that have been made about it. All this undermines Smithson's idea because the work is supposedly about being there, about sensing its scale and its shifting relationship with the Great Salt Lake. When we only see pictures, it becomes a static image, raising questions about whether land art, or at least this particular example of land art, can actually ever fulfill its intent.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ]
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk in an anthropology class.",
+          "listen_window": [
+            840.46,
+            945.96
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "Listen to a talk in an anthropology class. Pottery changed significantly as technologies improved. One major advance was the potter's wheel, which made it possible to shape clay more evenly and with greater control. These advances allowed for stronger, more durable pottery. Another advance was the updraft kiln, which directed heat upward through the chamber. By adjusting the airflow, potters could control how much oxygen reached the fire. This helped them produce pottery with specific colors like red or black, depending on how the clay reacted to the firing atmosphere. Then, in ancient China, potters developed kilns that could reach very high temperatures. This allowed them to create stoneware and eventually porcelain. Porcelain requires especially high firing temperatures and became known for its strength and refined appearance.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "That's right, there are no office hours today.",
+            "They like their professor, too.",
+            "Please put it over there.",
+            "I agree that we should try our best."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Sometime tomorrow.",
+            "I have a scheduling conflict.",
+            "It's in the top drawer.",
+            "Yes, I came by bus."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "The student orchestra is excellent.",
+            "Where's that music coming from?",
+            "History class is canceled next week.",
+            "I definitely don't want to miss that."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "The decorations are blue and white.",
+            "Presentations should start on time.",
+            "I need to review my class schedule first.",
+            "I believe that I donated last time."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "The cab ride takes about 30 minutes.",
+            "I'm getting off at the next stop.",
+            "At 6:45 p.m.",
+            "Platform B."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "I've submitted it already.",
+            "The classmate's notes were informative.",
+            "The last project was on time.",
+            "I don't think so."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "On Platform B.",
+            "Yes, the bus is running a little late.",
+            "It's a kilometer north of Fleet Street.",
+            "I'll get the next flight."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "The professor authored the materials.",
+            "The multimedia materials look great.",
+            "I'll find them for you.",
+            "Your pen case is on my desk."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "My advisor is one of the instructors.",
+            "Yes, the workload is heavy.",
+            "I'll finish writing this tomorrow.",
+            "The art students are so creative!"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "That's a good point.",
+            "It was mentioned in passing.",
+            "As far as I recall.",
+            "Sure, but I think you already have it."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "Apply it to a brush first.",
+            "The meeting will begin soon.",
+            "Likely during class at some point.",
+            "I need more time to finish it."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "Assemble the group and we'll discuss the work project.",
+            "All of the students enjoyed it.",
+            "I was so engaged with the book that I finished it in one night.",
+            "The school year begins earlier in some areas."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "What does the man's description of a basketball club suggest?",
+          "options": [
+            "The club is poorly organized.",
+            "Games are held at more than one location.",
+            "His team will probably win the championship.",
+            "Players treat the games as serious competition."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "What can be inferred about the man?",
+          "options": [
+            "He is considering quitting the basketball club.",
+            "He is confused about the basketball club's schedule.",
+            "He has several friends in the basketball club.",
+            "He wants to become a professional basketball player."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "What problem is the woman experiencing with her computer?",
+          "options": [
+            "It won't turn on.",
+            "It keeps freezing.",
+            "It has a virus.",
+            "It makes loud noises."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "What will the woman most likely do next?",
+          "options": [
+            "Buy new software for her computer",
+            "Restart her computer",
+            "Take her computer to a professional",
+            "Replace her computer's hard drive"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "What do the speakers have to do?",
+          "options": [
+            "Develop a new course",
+            "Reduce spending",
+            "Buy a new printer",
+            "Hire an office manager"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "Why does the woman mention digital documents?",
+          "options": [
+            "To make a request",
+            "To explain how to use an app",
+            "To express a concern",
+            "To propose a solution"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "Why does the speaker stress a paper's word requirement?",
+          "options": [
+            "To help students build useful research habits",
+            "To ensure the course website can accept the submission",
+            "To allow for more efficient essay grading",
+            "To prevent students from referencing too many articles"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "Why do students need to visit the course website?",
+          "options": [
+            "To submit their projects",
+            "To access citation guidelines",
+            "To check a paper's word count",
+            "To search for journal articles"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "What is the purpose of the event described in the announcement?",
+          "options": [
+            "To provide students an enjoyable break",
+            "To introduce new faculty members",
+            "To showcase student musicians",
+            "To provide information about final exams"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "Why should students contact the activities coordinator?",
+          "options": [
+            "To suggest games or activities",
+            "To indicate whether they will be attending",
+            "To offer to help set up",
+            "To donate prizes"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "What is the main purpose of the new parking-permit system?",
+          "options": [
+            "To improve parking safety and organization",
+            "To increase parking fees for students",
+            "To limit parking to faculty and staff only",
+            "To reduce the amount of traffic on campus"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "Where can students obtain a new parking permit?",
+          "options": [
+            "On the university website",
+            "At the student center",
+            "At the campus security office",
+            "At the campus bookstore"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "What is the location of the artwork by Robert Smithson that the speaker discusses?",
+          "options": [
+            "A forest",
+            "A lake",
+            "A mountaintop",
+            "A desert"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "What does the speaker emphasize about the physical nature of Spiral Jetty?",
+          "options": [
+            "It was constructed using materials meant to resist weathering.",
+            "It was designed without consideration of its surrounding environment.",
+            "It requires frequent human maintenance to preserve its form.",
+            "It is reshaped by its ongoing interaction with its natural environment."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "What does the speaker imply was Smithson's attitude toward art museums?",
+          "options": [
+            "He believed that they were the only way to give large numbers of people access to great art.",
+            "He felt that they were necessary to preserve artworks from the effects of time.",
+            "He felt that they limited people's experience of art.",
+            "He believed that they should be located far from big cities."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker mention that Spiral Jetty is mainly known through photographs and movies?",
+          "options": [
+            "To point out that Smithson was an artist of wide-ranging talents",
+            "To emphasize the enormous fame that the work enjoys",
+            "To introduce a criticism that is made of the work",
+            "To suggest that Smithson's views about Land Art changed since he created the work"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "What is the main purpose of the talk?",
+          "options": [
+            "To describe the events that led to pottery being invented",
+            "To highlight technological advancements in pottery",
+            "To highlight the cultural significance of pottery",
+            "To compare pottery styles from different ancient regions"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "What benefit of the potter's wheel is mentioned?",
+          "options": [
+            "It made pottery lighter and more portable.",
+            "It allowed potters to decorate pots more easily.",
+            "It helped potters to control the shape of the pots better.",
+            "It reduced the need for firing pottery."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "What does the speaker imply about the updraft kiln?",
+          "options": [
+            "It was easier to build than other types of kilns.",
+            "It allowed potters to control the final appearance of pottery.",
+            "It was primarily used for making porcelain.",
+            "It was difficult to maintain consistent temperatures when using it."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "How is making porcelain different from making other types of pottery?",
+          "options": [
+            "The clay is painted before being placed in a kiln.",
+            "It requires very high temperatures.",
+            "The clay is shaped without using a potter's wheel.",
+            "It has to be handled with care as it is very fragile."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "module_id": "M2H",
+      "id": "20260916A-M2H",
+      "title": "20260916A · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            14.66,
+            18.12
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "",
+          "question_ids": [
+            "Q1"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            36.78,
+            39.64
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "",
+          "question_ids": [
+            "Q2"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            56.82,
+            59.1
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "",
+          "question_ids": [
+            "Q3"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            73.84,
+            109.96
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            141.78,
+            172.68
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ],
+          "source_issue": "Transcript was not supplied in the 20260916A source files and has not been inferred."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a science podcast.",
+          "listen_window": [
+            206.06,
+            317.28
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "Listen to a talk on a science podcast. When we study ecosystems, we're not just looking at a collection of plants and animals scattered across the landscape. We're diving into a dynamic web of interactions, all of which shape the structure and function of the natural world. One particularly fascinating concept within this field is that of keystone species. In architecture, a keystone is a central stone that locks an arch together. Remove it and the arch collapses. Similarly, a keystone species has a disproportionately large effect on its environment. It cannot be removed without threatening the whole ecosystem. A striking example is the gray wolf in Yellowstone National Park in the U.S. In the early 20th century, wolves were eradicated from the region due to widespread hunting through government predator control programs driven by concerns over livestock and human safety. Without wolves, elk populations surged dramatically. Elk began overgrazing, which suppressed the growth of trees and other plants. Birds had fewer places to nest, mice and rabbits couldn't use plants to hide from predators, and even bees had fewer flowers to feed from. When wolves were reintroduced in the 1990s, their presence reshaped the landscape. Elk populations decreased, which allowed plant and tree populations to recover and in turn all the animals who depended on them.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ]
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a chemistry class.",
+          "listen_window": [
+            392.24,
+            497.14
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Listen to a talk in a chemistry class. Back in 1938, a chemist named Roy Plunkett was working to create a new refrigerant, a new cooling substance. Plunkett was looking for an industrial refrigerant to replace the ones that existed at the time, which were toxic and flammable, for example, could cause fatal poisoning if leaked. He was working with a gas called tetrafluoroethylene, or TFE, a highly flammable refrigerant. He stored TFE gas in cylinders. But one day, he noticed that a cylinder of TFE no longer had gas in it. What was there? Well, powder. A solid. The TFE gas had solidified into this new powdery substance, polytetrafluoroethylene, or PTFE. What made PTFE remarkable was its almost unprecedented stability, its resistance to heat, chemicals, and friction. It didn't react with other substances, making it ideal for industrial applications, like parts used in the aerospace industry, also medical devices and electronics. Eventually, PTFE began to be used in consumer products. Ever heard of Teflon, the non-stick coating on frying pans? That is PTFE, and it was used in homes around the world for many years. These days, you may be more likely to use stainless steel or cast iron cookware due to concerns with PTFE. Nevertheless, this is a classic example of serendipity in science. Plunkett wasn't trying to invent a non-stick surface. He stumbled upon it. This kind of discovery isn't rare. Scientists discovered X-rays, penicillin, and many other scientific and medical innovations while trying to do something else.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "It's on the other side of campus.",
+            "Yes, the library has extended hours.",
+            "Let's call her this afternoon.",
+            "They changed the schedule last week."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Let me take a look at them now.",
+            "I never know what to ask.",
+            "Every chapter contains a list of questions.",
+            "I practice every morning after getting up."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "I think actually the professor might like it.",
+            "Let's meet at the library instead.",
+            "Not now, let's try him again later.",
+            "Yes, let's sit in the first row."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "Why does the woman mention her friend John?",
+          "options": [
+            "To explain why she is reluctant to enter a photo contest",
+            "To compare his work to that of a famous photojournalist",
+            "To tell the man who won last year's photo contest",
+            "To provide the man with a contact at the university newspaper"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "What does the woman suggest about her friends in the photography club?",
+          "options": [
+            "They do not plan to enter a photo contest.",
+            "They are more confident about their skills than the woman is about her own.",
+            "They only recently joined the photography club.",
+            "They want the woman to create a flyer for the photography club."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "What does the woman imply about last year's art exhibit?",
+          "options": [
+            "She displayed some of her work there.",
+            "It was held at a different venue.",
+            "She preferred it to this year's exhibit.",
+            "She helped at the exhibit as a volunteer."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "What does the man suggest the woman contact the exhibit organizers about?",
+          "options": [
+            "Finding a larger venue in order to include more artists",
+            "Displaying some familiar artworks",
+            "Inviting art history majors to volunteer at the exhibit",
+            "Including works by local artists at the next exhibit"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker talk about arches in architecture?",
+          "options": [
+            "To point out a similarity to rock arches in nature",
+            "To help illustrate an important concept",
+            "To argue against a common comparison",
+            "To show a difference between life science and technology fields"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "According to the talk, what is a keystone species?",
+          "options": [
+            "A species that is necessary to maintain balance in an ecosystem",
+            "A species that has no predators within an ecosystem",
+            "A species that is too numerous for a healthy ecosystem",
+            "A species that is negatively affected by environmental changes"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "In the early 20th century, what happened to the wolves in Yellowstone National Park?",
+          "options": [
+            "Their population increased dramatically when their prey population increased.",
+            "They became a government-protected species.",
+            "They were eliminated over farming and safety concerns.",
+            "Their population decreased significantly because of disease."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "How did an increasing elk population affect the Yellowstone ecosystem?",
+          "options": [
+            "Many species were negatively affected due to the elk's diet.",
+            "Various animals that prey on elk were attracted to the area.",
+            "Some areas developed an overgrowth of plants while others had too little vegetation.",
+            "The population and range of the wolves also increased."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "What is the main topic of the talk?",
+          "options": [
+            "The life and career of an important chemist",
+            "The production process of two refrigerants",
+            "An electronic device that led to medical innovations",
+            "The invention of a substance that has many practical uses"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "What problem was Roy Plunkett trying to solve?",
+          "options": [
+            "Refrigerants were unable to cool industrial systems.",
+            "Refrigerants were unsafe to use.",
+            "Refrigerants could not be stored effectively.",
+            "Refrigerants could not be used in multiple applications."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "What makes PTFE special?",
+          "options": [
+            "It is available in gas and liquid form.",
+            "It can be used in medicines that cure poisoning.",
+            "It is unusually stable.",
+            "It can be mixed with TFE."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "At the end of the talk, why does the speaker mention X-rays and penicillin?",
+          "options": [
+            "To point out medical uses of PTFE",
+            "To emphasize the importance of research",
+            "To contrast PTFE with other advancements",
+            "To support a general point about many scientific discoveries"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    }
+  ],
+  "source_notes": [
+    "Question text and answer mapping come from the supplied PDFs and answer key.",
+    "Audio windows were aligned to the supplied M1/M2H audio.",
+    "The source package did not include transcript files. Matching previously verified transcripts were reused only for clearly duplicated materials; unmatched materials are explicitly marked source_issue and have blank transcript fields."
+  ]
+}

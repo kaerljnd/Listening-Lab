@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "set_id": "YYYYMMDDX",
+  "title": "YYYYMMDDX Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "YYYYMMDDX-M1",
+      "title": "YYYYMMDDX · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 1,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [0.0, 2.5],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Example prompt text.",
+          "question_ids": ["Q1"]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": ["Option A", "Option B", "Option C", "Option D"],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    }
+  ]
+}

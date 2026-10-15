@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20260920A",
+  "title": "20260920A Listening",
+  "pack_file": "pack.json",
+  "modules": [
+    {
+      "module_id": "M1",
+      "title": "20260920A · M1",
+      "question_count": 32,
+      "question_type_counts": {
+        "best_response": 12,
+        "conversation": 6,
+        "announcement": 6,
+        "academic_talk": 8
+      },
+      "material_type_counts": {
+        "best_response": 12,
+        "conversation": 3,
+        "announcement": 3,
+        "academic_talk": 2
+      }
+    },
+    {
+      "module_id": "M2H",
+      "title": "20260920A · M2H",
+      "question_count": 15,
+      "question_type_counts": {
+        "best_response": 3,
+        "conversation": 4,
+        "academic_talk": 8
+      },
+      "material_type_counts": {
+        "best_response": 3,
+        "conversation": 2,
+        "academic_talk": 2
+      }
+    }
+  ],
+  "description": "20260920A Listening Lab pack built from supplied M1/M2H audio, question PDFs, answer key, and transcript DOCX files. Transcript text has been context-corrected for obvious ASR errors."
+}

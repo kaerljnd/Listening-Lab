@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "set_id": "YYYYMMDDX",
+  "title": "YYYYMMDDX Listening",
+  "pack_file": "pack.json",
+  "description": "New listening practice pack",
+  "modules": [
+    {
+      "module_id": "M1",
+      "title": "YYYYMMDDX · M1",
+      "question_count": 1,
+      "question_type_counts": {"best_response": 1},
+      "material_type_counts": {"best_response": 1}
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+Listening Lab v1.9.2 · Single Talk UX Refinement
+
+Implemented from student testing feedback:
+1. Separate Assignment / Full Analysis vs Self Practice modes.
+2. Self Practice may skip analysis and open Transcript directly; this free-view path does not create complete diagnostic Results.
+3. After Transcript: one-click "all understood, keep all answers" copies Second Answer to After Transcript Answer.
+4. Results Locked audit now provides direct jump-to-missing-step buttons.
+5. Analysis page provides expandable review of every question in the talk without revealing correct answers.
+6. Evidence timestamps are clickable; Results vocabulary/framework/evidence timestamps reopen review at that audio position.
+7. Question analysis layout refined.
+8. Main Point time marks remain optional and do not affect completion.
+9. Dictionary / vocabulary collection is intentionally deferred until student profile/database design.
+
+Validation:
+- JavaScript syntax: PASS (node --check)
+- Server catalog: 8 packs, 0 scan errors
+- Pack blocking errors: 0 across all 8 packs
+- Existing non-blocking pack warnings preserved: 20260908A transcript gap; 20260909B unverified answer; 20260916A transcript gaps.

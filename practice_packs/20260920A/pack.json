@@ -1,0 +1,1286 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20260920A",
+  "title": "20260920A Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20260920A_M1",
+      "title": "20260920A · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            18.36,
+            20.52
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "The teacher recommends regular study breaks.",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            32.12,
+            34.28
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "The campus store has a variety of stationery.",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            57.64,
+            59.42
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "When should we work on the class project?",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            73.18,
+            75.42
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "How long is the flight home for that exchange student?",
+          "question_ids": [
+            "Q4"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            88.38,
+            90.36
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "The workshop will be held next Tuesday.",
+          "question_ids": [
+            "Q5"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            103.28,
+            106.22
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "A new exhibition of surrealist paintings just opened.",
+          "question_ids": [
+            "Q6"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            121.86,
+            123.82
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Are you attending the school science symposium?",
+          "question_ids": [
+            "Q7"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            135.08,
+            137.26
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "I suggest we meet again before the exam.",
+          "question_ids": [
+            "Q8"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            153.14,
+            156.0
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Could you email me the updated schedule before class?",
+          "question_ids": [
+            "Q9"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            175.98,
+            178.3
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Don't rock the boat during the group discussion.",
+          "question_ids": [
+            "Q10"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            191.64,
+            194.7
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Which artist is featured in the gallery's new exhibit?",
+          "question_ids": [
+            "Q11"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            209.28,
+            211.66
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Isn't the review session happening later this evening?",
+          "question_ids": [
+            "Q12"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            225.64,
+            254.26
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": null,
+          "transcript": "Clara, you took a pottery class at that studio downtown, right? I did, yeah. What did you think of it? It was great. I made a set that came out really well. I gave them to my mom and she uses them all the time. My daughter is interested in pottery, so I'm thinking of signing her up for a class as a birthday gift. You should. I think she'll love it. Who knows? You might just end up with some beautiful new kitchenware.",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            285.38,
+            321.88
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": null,
+          "transcript": "My parents are visiting the city this weekend. I'll show them the new art museum and the botanical gardens. Nice. I'm still trying to decide where to take them to eat. How about that new seafood restaurant by the waterfront? Their food is really fresh—whatever the local fishers catch that day. And the view is spectacular, especially at sunset. Fabulous. My parents love fish and they'd enjoy the scenery. The thing is, it's super popular and gets rather packed with people. You might want to make a reservation.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            351.54,
+            390.54
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": null,
+          "transcript": "My schoolwork is really stressing me out. Have you considered trying yoga? My sister's taking a yoga class and says it's great for stress. I haven't, but it sounds like a good idea. Do you know where I might start? Have you done yoga yourself? I haven't, but I know there are lots of classes for beginners. You should really also think about taking a vacation during spring break. When's the last time you went anywhere for fun? Thanks, but I like the yoga idea better. Why don't you find out where your sister attends her class and let me know?",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to an announcement.",
+          "listen_window": [
+            424.0,
+            460.66
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Don't miss this week's big interview segment on the student radio station. We're sitting down with Coach Ian Drayton of the university swim team. The team took first place at last week's regional swim meet, and Coach Drayton will break down the championship win. He'll also reveal the grueling practices that coax the best out of every swimmer. Listeners won't believe how much swim-team members must push themselves during practice.",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to an announcement.",
+          "listen_window": [
+            495.44,
+            526.2
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Attention students, please come to the main student lounge next Thursday at 8:00 p.m. for a discussion of recent updates to our dormitory. We've made significant upgrades to the kitchen, TV common area, and study areas. These changes are based on your feedback in last month's survey. Join us to find out how you can best take advantage of the upgraded facilities. Refreshments will be provided.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to an announcement.",
+          "listen_window": [
+            558.3,
+            589.66
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "I wanted to remind you about potential changes to our class schedule due to the ongoing renovations to this building. Some of our sessions might need to be relocated. I'll do my best to communicate any necessary changes as soon as I learn about them. And if this building isn't available, I'll try to reserve a room in Brindle Hall, the building next to this one. Please check your email regularly for updates, and sorry for the inconvenience.",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to an academic talk.",
+          "listen_window": [
+            620.6,
+            760.1
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Today, let's dive into a cornerstone of modern marketing: market segmentation. Imagine trying to sell the same product to everyone—retirees, athletes, and artists—with one generic message. It wouldn't work. That's where segmentation comes in. Market segmentation is the strategic process of dividing a broad audience into smaller groups based on shared traits like age, lifestyle, income, or even values. This allows companies to craft tailored messages and products that speak directly to each group's needs. Why does this matter? First, it sharpens targeting. A company that understands its target audience can design product campaigns that feel personal, not generic. A running-shoe company could create ads that feel relevant to teenagers and alternate ads for thirty-year-olds. Second, segmentation helps businesses focus on high-potential markets, focusing on the most profitable segments. A cell-phone company might discover that urban professionals buy new phones far more often than rural inhabitants. Instead of marketing to all regions, the company can concentrate its budget, messaging, and product development on the urban segment. Segmentation also boosts customer satisfaction. When consumers feel understood, they're more likely to stay loyal to a product or service. Personalized experiences, curated recommendations, or specialty product lines can turn casual buyers into lifelong fans. However, implementing segmentation effectively requires rigorous data collection and analysis. Companies must gather insights from surveys, purchase histories, social-media behavior, and more to define meaningful segments. Once identified, they need to monitor these groups continuously as consumers evolve over time.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to an academic talk.",
+          "listen_window": [
+            829.44,
+            936.04
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "The Renaissance was a pivotal period in European history, spanning roughly the fourteenth to the seventeenth centuries. The Renaissance is characterized by a renewed interest in art, science, and literature. It marked a significant departure from the Middle Ages and laid the groundwork for the modern era. One of the defining features of the Renaissance was the revival of classical learning. Scholars and artists looked back to the texts and artistic achievements of ancient Greece and Rome for inspiration. This led to a flourishing of ideas and creativity, evident in the works of figures like Leonardo da Vinci, Michelangelo, and Galileo Galilei. The invention of the printing press by Johannes Gutenberg around 1440 was another important development during this time. It allowed for the mass production of books, making literature and scholarly works more accessible to a broader audience. This contributed to increased literacy and the spread of Renaissance ideas. The Renaissance also saw major advancements in science, particularly in astronomy. Nicolaus Copernicus proposed a heliocentric model of the solar system, placing the sun, not the Earth, at the center. Galileo later used a telescope to observe celestial bodies, providing evidence that supported Copernicus's theory. These discoveries challenged long-held beliefs and laid the foundation for modern astronomy. Despite political instability in some regions, the Renaissance left a lasting legacy on European society. Its influence can still be seen today in art, science, and education.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "I find them very helpful.",
+            "I need a recommendation for a job application.",
+            "Glass breaks rather easily.",
+            "My teacher started at the school this year."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Campus dining is quite affordable.",
+            "I need to get some notebooks for my classes.",
+            "We should try to get to the station on time.",
+            "I don't really enjoy cooking."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "Let's meet later today in the study room.",
+            "The group will present next week in class.",
+            "My roommate lost his keys.",
+            "The dining hall was serving pizza and pasta."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "It's possible.",
+            "He'll be traveling all day.",
+            "From gate 22.",
+            "It's an international flight."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "I have a group study session then.",
+            "They work well together.",
+            "Probably on the weekend.",
+            "Last week was quite eventful."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "At the art museum on campus?",
+            "Sure, I'll show you a catalog of her works.",
+            "I think I misplaced mine.",
+            "Where do you like to study?"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, last week on Thursday.",
+            "Yes, I'm planning to go.",
+            "The library has a section for all sciences.",
+            "No, my father is a literature professor."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "No, we haven't met yet.",
+            "Yes, it's right behind you.",
+            "How about sometime this weekend?",
+            "Would you like to try it first?"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "The lecture will happen on time.",
+            "You're right—I need to adjust my schedule.",
+            "The schedule was already updated.",
+            "I'll send it to you right away."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, the exam date is next week.",
+            "Let's try to keep it harmonious.",
+            "The boat is big enough for large groups.",
+            "The group performed their classic hits."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "Students can submit their projects tomorrow.",
+            "My new phone has several features.",
+            "I wouldn't call myself an artist.",
+            "I haven't been over to see it yet."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "Have you read any reviews for the film?",
+            "I booked an hour-long massage session.",
+            "The lecture was really interesting.",
+            "I heard that it was postponed."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "Why does Clara mention her mom?",
+          "options": [
+            "Her mom took a pottery class.",
+            "Her mom teaches pottery classes.",
+            "Her mom's birthday is coming up.",
+            "She gave her mom a gift she made."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "What gift is the man considering giving his daughter?",
+          "options": [
+            "He's considering giving her a set of bowls.",
+            "He's considering signing her up for a pottery class.",
+            "He's considering giving her a new kitchen table.",
+            "He's considering buying her a gift certificate."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "Where is the restaurant that the woman mentions most likely located?",
+          "options": [
+            "In the city center",
+            "Inside the art museum",
+            "Far from the botanical gardens",
+            "By the sea"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "What possible problem with the restaurant does the woman mention?",
+          "options": [
+            "It has a limited dinner menu.",
+            "Its food is sometimes not very fresh.",
+            "It is often crowded.",
+            "It does not accept reservations."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "How does the man know yoga is helpful for managing stress?",
+          "options": [
+            "His sister is taking a yoga class.",
+            "He has practiced yoga before.",
+            "He is a yoga instructor.",
+            "He read about it online."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "Which word best describes the woman's attitude toward taking a vacation?",
+          "options": [
+            "Curious",
+            "Excited",
+            "Uninterested",
+            "Cautious"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "What is being promoted?",
+          "options": [
+            "The launch of a podcast sponsored by a student radio station",
+            "A conversation with the head of a championship team",
+            "Exercises designed to enhance athletic performance",
+            "An upcoming regional sports competition"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "What point does the speaker make about a swim team's practices?",
+          "options": [
+            "They are particularly intense.",
+            "They take place all year.",
+            "They are surprisingly short.",
+            "They are open to the public."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "What is the main purpose of the announcement?",
+          "options": [
+            "To report an unexpected change in schedule",
+            "To report the closing of some facilities",
+            "To request feedback",
+            "To invite students to an event"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "What has been improved?",
+          "options": [
+            "Furniture in student bedrooms",
+            "The process for student surveys",
+            "The quality of refreshments",
+            "Some shared facilities"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "What is the reason for the changes the speaker mentions?",
+          "options": [
+            "She has to put off a trip unexpectedly.",
+            "Her class has too many students.",
+            "A building is being renovated.",
+            "A new university attendance policy went into effect."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "What does the speaker tell the students to do?",
+          "options": [
+            "Reserve a study room",
+            "Check messages regularly",
+            "Post some comments on a class website",
+            "Choose partners for a group project"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "What is the main purpose of the talk?",
+          "options": [
+            "To explain how market data is collected and analyzed",
+            "To show why consumer age and location are key factors in marketing",
+            "To contrast modern marketing techniques with traditional ones",
+            "To explain the benefits of marketing to specific groups"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker talk about marketing cell phones?",
+          "options": [
+            "To show how brand loyalty makes it difficult to convince people to try new products",
+            "To provide an example of a marketing strategy for expensive, high-tech products",
+            "To illustrate how segmentation can help businesses focus on the most profitable markets",
+            "To point out one example for which market segmentation has not been useful"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "What is the benefit to a company when its marketing makes consumers feel understood?",
+          "options": [
+            "The customers will leave positive comments online about the product.",
+            "The customers become loyal to the company's product.",
+            "The customers will buy the most expensive version of the product.",
+            "The customers are more likely to share their personal data with the company."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker point out that consumer preferences change over time?",
+          "options": [
+            "To explain why continually monitoring consumer data is necessary",
+            "To suggest that many consumers do not develop brand loyalty",
+            "To show that even the best marketing strategy may be ineffective",
+            "To explain why company products must be constantly updated"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "The invention of the printing press",
+            "The development of modern astronomy",
+            "The political instability of the Renaissance period",
+            "The Renaissance as a turning point in European history"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention classical learning during the Renaissance?",
+          "options": [
+            "To explain why ancient texts are difficult to find in Europe",
+            "To argue that classical ideas were no longer relevant",
+            "To describe how printing replaced ancient writing systems",
+            "To show how Renaissance thinkers were influenced by earlier cultures"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "According to the speaker, what was one effect of the invention of the printing press?",
+          "options": [
+            "It promoted an increase in literacy.",
+            "It limited the topics scholars could write about.",
+            "It led to the decline of handwritten manuscripts.",
+            "It caused a decrease in interest in classical learning."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "What does the speaker say about Renaissance astronomy?",
+          "options": [
+            "It highlighted Earth's special place in the universe.",
+            "It focused mainly on astrology and superstition.",
+            "It introduced ideas that challenged earlier beliefs.",
+            "It rejected the use of observational tools."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "module_id": "M2H",
+      "id": "20260920A_M2H",
+      "title": "20260920A · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            12.5,
+            14.9
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Are you still planning to attend the review session later?",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            24.62,
+            26.92
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Any chance we could compress the literature review?",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            44.2,
+            46.42
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Did you already submit your thesis proposal?",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            59.7,
+            95.04
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": null,
+          "transcript": "Did that new shipment of textbooks come in yet? No, not yet. Wasn't it supposed to be here yesterday? That's what I thought. The semester starts next week, so soon there are going to be lots of students stopping by our store to get their books. Right. We should talk to Amy about this. She probably received an email with details about tracking. Yes, you're probably right. I hope this doesn't become a trend. More shipments are set to come in tomorrow and the day after that.",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            127.38,
+            163.4
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": null,
+          "transcript": "My ankle's been bothering me for the past few days. Did you go to the student health clinic? I went this morning, but it was incredibly busy. I waited for two hours and gave up. I had a chemistry class that I had to go to. Everything went smoothly for me a couple of weeks ago. I was in and out in no time. Maybe you could look into virtual appointments. I heard those are pretty easy to schedule. But wouldn't the doctor need to be able to touch it to check it properly?",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to an academic talk.",
+          "listen_window": [
+            192.2,
+            301.82
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "When we think about paintings, we often focus on their subject, their style, or even the type of paint used. What we often overlook is the material underneath the paint—what we call its support, or sometimes the substrate. This is the surface on which the paint is applied. The support is more important than you might think. Before the fourteenth century, many paintings were created on wooden panels. Wood was strong and durable, but it posed serious challenges. Large panels were extremely heavy, making transport difficult. Because of this, artists were limited in how big their works could be. Typical subjects for panel paintings were small devotional images, altarpieces, and portraits—works intended for private chapels or fixed locations rather than large public spaces. In the early fourteenth century, artists in Italy, especially Venice, began turning to canvas as a support for their paintings, and by the late fifteenth century its use had spread widely. Canvas was light and flexible, so paintings could be moved easily and made much larger. This portability meant that monumental works could be displayed in civic buildings and palaces, and even transported for festivals. This brought art beyond the confines of churches and into broader public life. This new use of canvas wasn't just a material change. It transformed art because it enabled ambitious subjects like vast historical scenes and mythological narratives. For example, Paolo Veronese's The Wedding at Cana is a massive banquet scene filled with dozens of figures and rich architectural detail.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to an academic talk.",
+          "listen_window": [
+            371.02,
+            506.28
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I'm sure you're familiar with ostriches, the large flightless birds from Africa, and you've heard of Australian emus. There are several species of large flightless birds on different continents. They're all from the same group called paleognaths and are genetically related, meaning they're descendants of the same ancestor species that evolved over time into the present-day species. But how did they end up on different continents? One theory was rooted in Earth's geological history. Until about 175 million years ago, Earth's continents were together as one giant supercontinent. Later, they slowly drifted apart. So maybe a paleognath ancestor species lived on that supercontinent, and its descendants evolved into separate species after it split into today's land masses. However, recent genetic research has found that the ancestor paleognath hadn't appeared until many millions of years after the supercontinent had already broken apart. There goes that idea. So how did the birds end up this way? In 2005, researchers studied the fossilized breastbone of an ancient paleognath called Lithornis, which could be an ancestor of today's paleognaths. From the breastbone shape, they determined that Lithornis could fly great distances. It must have established populations in Africa, Australia, and elsewhere. Initially, Lithornis used flight to escape predatory dinosaurs. But after the dinosaurs went extinct, it no longer needed to waste its energy flying. It could use its specialized beak to find food on the ground. Over time, in different ways on each land mass, its descendant species lost the ability to fly.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ],
+          "transcript_source": "Supplied 20260920A AI-generated transcript, context-corrected for obvious ASR errors."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Sure, here are my lecture notes.",
+            "I wouldn't miss it.",
+            "Yes, I'll go help him tonight.",
+            "I'm still working on the first draft."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, the book got a lot of positive reviews.",
+            "We can probably take out a paragraph or two.",
+            "We'll need our combined strength for that.",
+            "Let's calculate the probabilities."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, I've read about this experiment before.",
+            "Oh, I'm a long way from being done.",
+            "I can show you—it only takes a minute.",
+            "Not yet—my roommates and I are still looking."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "Why does the man suggest that the speakers talk to Amy?",
+          "options": [
+            "The speakers do not know how to order a shipment of books.",
+            "Amy has not replied to an important email the woman sent her.",
+            "Some books Amy ordered have arrived at the bookstore.",
+            "Amy should have important information for them about a package."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "What concern does the woman express about future shipments of books?",
+          "options": [
+            "That they might not arrive on time",
+            "That they will contain the wrong textbooks",
+            "That they will not arrive in good condition",
+            "That the bookstore will have no place to put them"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "What does the man say about his visit to the health clinic?",
+          "options": [
+            "He was forced to miss his morning class.",
+            "He scheduled a follow-up appointment in a couple of weeks.",
+            "He was not able to see a doctor.",
+            "He had a smoother experience than the woman did."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "What is the man's attitude about virtual appointments?",
+          "options": [
+            "He is not sure if the health clinic provides them.",
+            "He is hopeful that he will be able to schedule one.",
+            "He is disappointed at their quality.",
+            "He does not believe that they are suitable for him."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "What does the speaker say is meant by the term “support” in the context of painting?",
+          "options": [
+            "The temporary backing used for transporting paintings",
+            "The frame that surrounds the painting",
+            "The social environment in which the painting was produced",
+            "The material on which the artwork is painted"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "What aspect of wood does the speaker emphasize as a limitation?",
+          "options": [
+            "Its cost",
+            "Its weight",
+            "Its color",
+            "Its lack of durability"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "According to the speaker, where were paintings on wooden panels commonly displayed?",
+          "options": [
+            "In museums",
+            "In churches",
+            "In government buildings",
+            "In outdoor spaces"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker mention Paolo Veronese's painting The Wedding at Cana?",
+          "options": [
+            "To compare the cost of canvas paintings with that of paintings on wood",
+            "To highlight the change in techniques required by the growing use of canvas",
+            "To explain how the shift to canvas influenced paintings' subject matter",
+            "To emphasize the enthusiastic public reaction to the new type of artwork"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "What question about paleognaths does the speaker mainly discuss?",
+          "options": [
+            "How researchers studied adaptations of modern paleognaths",
+            "When ancient paleognaths began to evolve separately",
+            "Whether different paleognaths are genetically related",
+            "How paleognath species ended up on different continents"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "What attitude regarding paleognaths does the speaker express at the beginning of the talk?",
+          "options": [
+            "He is confident that listeners know some species of them.",
+            "He is concerned that some species of them can go extinct.",
+            "He is impressed with how long they have existed.",
+            "He is eager to find out the results of a future study about them."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "What does the speaker emphasize about the supercontinent?",
+          "options": [
+            "It may have been smaller than previously thought.",
+            "It may have destroyed fossil evidence of paleognaths.",
+            "It existed long before the ancestor species of paleognaths appeared.",
+            "Its conditions were not ideal for paleognath survival."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "What does the speaker say about the evolution of Lithornis over time?",
+          "options": [
+            "The evolution of its breastbone limited its ability to fly.",
+            "It stopped flying when it no longer needed to escape predators.",
+            "It evolved the ability to fly after the dinosaurs went extinct.",
+            "It evolved the ability to eat a wide variety of food."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    }
+  ],
+  "source_notes": [
+    "Built from supplied M1/M2H audio, question PDFs, 20260920A answer key, and supplied AI-generated transcript DOCX files.",
+    "Question stems/options were transcribed from the supplied PDF screenshots and answer keys were mapped exactly from the supplied 20260920A answer document.",
+    "Transcript text was context-corrected for obvious ASR errors; no question content or answer key was replaced with outside material.",
+    "Audio listen_window values were aligned to the supplied full-module MP3 files using detected speech/silence boundaries with small safety margins."
+  ]
+}

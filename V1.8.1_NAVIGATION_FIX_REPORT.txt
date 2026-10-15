@@ -1,0 +1,11 @@
+Listening Lab v1.8.1 navigation hotfix
+
+1. "← 所有套题" now resets the navigation view to set selection and renders it directly.
+2. Set detail page no longer contains the "重新扫描题包" button.
+3. Current navigation view is saved independently from diagnostic session state.
+   - Refresh on set selection -> remains on set selection.
+   - Refresh on set detail -> remains on the same set detail.
+   - Refresh during practice/analysis/results -> existing autosave/resume behavior remains intact.
+4. JavaScript syntax check: PASS (node --check).
+5. Pack catalog server scan: PASS.
+6. Full bundle includes 20260915A corrected transcript pack in addition to the existing v1.8 test packs.

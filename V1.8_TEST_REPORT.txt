@@ -1,0 +1,33 @@
+Listening Lab v1.8 validation report
+
+Navigation
+- Level 1: test-set selection page, sorted by set id/date newest first.
+- Level 2: selected set detail page.
+- Mode 01: full module practice + analysis.
+- Mode 02: question-type practice + analysis.
+- Type practice retains Exit + Question Review.
+
+Local scan test
+- 20260830A: found
+- 20260908A: found
+- 20260909A: found
+- 20260909B: found
+- 20260916A: found
+- scan errors: 0
+
+HTTP test
+- app root: 200 OK
+- audio byte range: 206 Partial Content
+
+Pack validator
+- 20260830A: 0 blocking, 0 warnings
+- 20260908A: 0 blocking, 1 warning (known source transcript gap)
+- 20260909A: 0 blocking, 0 warnings
+- 20260909B: 0 blocking, 1 warning (known source Q4 page missing)
+- 20260916A: 0 blocking, 18 warnings (transcript not supplied for these materials)
+
+20260916A
+- M1: 32 questions, 20 materials
+- M2H: 15 questions, 7 materials
+- all 47 answer mappings are verified against the supplied answer key
+- pack scan and audio range playback are valid

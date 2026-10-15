@@ -1,0 +1,10 @@
+Listening Lab v1.8.2 startup-delay update
+
+Changes:
+1. New practice sessions wait 3 seconds before the first audio starts.
+2. Visible 3-second preparation countdown in the practice UI.
+3. Best Response options are not exposed during the preparation countdown.
+4. Set detail page explains the 3-second startup delay under both full-module and question-type modes.
+5. Refresh recovery during the preparation phase restarts from the saved remaining countdown instead of getting stuck.
+6. Pause and question review are disabled during the initial preparation countdown; Exit remains available in question-type mode.
+7. The delay happens once per new session, not before every later material.

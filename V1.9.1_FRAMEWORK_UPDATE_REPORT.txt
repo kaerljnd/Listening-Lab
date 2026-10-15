@@ -1,0 +1,26 @@
+Listening Lab v1.9.1 Framework Update
+
+Changes:
+1. Single Talk Lab framework Main Points are dynamic.
+   - default 2
+   - minimum 1 slot
+   - maximum 6
+   - add/delete before and after Transcript
+2. Each Main Point can optionally mark current audio time.
+   - click timestamp to seek back
+   - clear/re-mark supported
+   - timestamps are optional and do not block completion
+3. Framework completion now accepts Topic + >=1 Main Point (or explicit I don't know before Transcript).
+4. Framework issue labels expanded:
+   - detail treated as Main Point
+   - points too fragmented
+   - points over-merged
+5. Results compare all before/after Main Points and display timestamps.
+6. Diagnostic JSON schema_version updated to 1.9.1.
+7. Content pack schema unchanged.
+
+Checks:
+- app.js node --check: PASS
+- practice pack scanner: 8 packs, 0 scan errors
+- pack validators: 0 blocking errors across included packs
+- existing warnings remain source-data warnings (0908A SR02 transcript, 0909B Q4 verification, 0916A missing transcripts).

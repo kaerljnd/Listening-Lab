@@ -1,0 +1,1286 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20260923A",
+  "title": "20260923A Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20260923A-M1",
+      "title": "20260923A · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            15.75,
+            19.55
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "What's the best way to create a plan for this large project?",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            30.55,
+            33.2
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "The book discussion event is next Tuesday.",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            45.98,
+            48.35
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "That was an interesting discussion.",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            59.9,
+            63.9
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Who will be giving the presentation?",
+          "question_ids": [
+            "Q4"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            77.66,
+            81.22
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I'd appreciate it if you could help me with these practice questions.",
+          "question_ids": [
+            "Q5"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            95.92,
+            98.43
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "How can I improve my rowing skills?",
+          "question_ids": [
+            "Q6"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            109.78,
+            112.6
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Why didn't you attend the luncheon?",
+          "question_ids": [
+            "Q7"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            125.06,
+            127.23
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Who will be giving the lecture?",
+          "question_ids": [
+            "Q8"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            137.16,
+            140.03
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Could you have a look at this portion of my essay?",
+          "question_ids": [
+            "Q9"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            150.98,
+            154.28
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Do you go to the book fair every year?",
+          "question_ids": [
+            "Q10"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            169.88,
+            172.52
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Where is the campus convenience store?",
+          "question_ids": [
+            "Q11"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            182.49,
+            184.63
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Who forgot to turn off the lights?",
+          "question_ids": [
+            "Q12"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            200.0,
+            236.9
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Listen to a conversation. Hi, Avery. I was going to text the group to confirm, but now here you are in person. Is our study group still meeting in the student center at six? That's the plan, though Julia said she couldn't make it. I'd hate for her to miss out. Maybe we should postpone. The test is Thursday, though, so it might be hard to find another time. Yeah, that's the thing. I mentioned postponing, but Julia said not to worry about it.",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            262.55,
+            298.6
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Listen to a conversation. Remember how we were talking about the food in the dining hall? I have an idea. Tell me. We know the food usually tastes good. It's just that it isn't the best from a nutrition perspective. So we should create a petition to add some healthier menu items and get students to sign it. Wouldn't it be easier to just speak with the dining hall manager? Already tried. She basically said, \"I'll take that under advisement.\" That's why I think we should go with a petition. Makes sense. I'll help however I can.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            322.7,
+            357.1
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Listen to a conversation. Are you going to the museum opening tonight? Is that tonight? You forgot all about it? Yes, the doors open at seven. A couple of the artists will be talking about their paintings. I'd hate to miss that, but I have to finish up some work for my chemistry class. Let's see. What time is it now? Almost four. So that gives me about three hours. I think I can pull it off.",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to an announcement on a university radio station.",
+          "listen_window": [
+            380.25,
+            412.65
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Listen to an announcement on a university radio station. Good morning, students. I want to remind you about the new computer lab we're opening next week in Scott Hall. The lab will have advanced graphic design software and high-performance computers. This was a significant financial investment, so please use the lab safely and respectfully. Also be advised that the lab is replacing the multipurpose room in Scott Hall, so it will no longer be available for club meetings and such. Meeting rooms in the Student Center will still be available.",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to an announcement at a gathering of student club leaders.",
+          "listen_window": [
+            436.75,
+            470.8
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Listen to an announcement at a gathering of student club leaders. The university is making some changes to the policies governing student organizations. One of these changes pertains to scheduling events at the last minute. This creates extra work for the Student Affairs Office, and so, effective immediately, all student clubs must submit their event plans to the office for approval at least two weeks in advance. Failure to comply with this rule may result in the cancellation of events. If you have questions, please contact the Student Affairs Office.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to a campus radio announcement.",
+          "listen_window": [
+            494.45,
+            533.7
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Listen to a campus radio announcement. Attention, students. The Community Service Club will be moving to biweekly meetings instead of monthly meetings due to strong enrollment. You may still choose to attend one meeting a month, or you can come more often. It's up to you. We have some new ways for students to get involved this year, including helping at a local park. So please check your email for the full list of upcoming events. We'll be sending the message out shortly.",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in an archaeology class.",
+          "listen_window": [
+            556.15,
+            692.05
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Listen to a talk in an archaeology class. When you think of archaeological fieldwork, you might picture people using tools to dig through dirt and uncover a variety of artifacts, like pottery and jewelry. You might think of a site like Ephesus, an ancient city located in western Turkey. By the way, some say that's the largest excavated site on Earth. Ephesus includes massive remains from different time periods, including Roman, Greek, and Byzantine periods, which are different civilizations spanning millennia. At Ephesus, there are ruins of ancient Greek temples and Roman theaters. Other archaeological sites, though, are more difficult to reach. There's an entire subfield of archaeology that focuses on these sites. It's called underwater archaeology. It is the study of human history through sites and artifacts found beneath the water's surface. This includes shipwrecks, settlements, harbors, and ports. Researchers have found all kinds of artifacts at underwater sites, including tools, pottery, coins, and other objects. Because water can slow decay, especially of organic materials like wood or textiles, underwater sites often provide exceptionally well-preserved evidence of past human activity. One notable underwater site is the Uluburun shipwreck off the coast of Turkey, dating to about 3,000 years ago. Uluburun was discovered in 1982. Specialized diving and excavation techniques were used at this site, and archaeologists recovered cargo, including copper ingots and luxury goods. These artifacts shed light on ancient trade networks. They suggest that highly complex, multiregional trade routes connecting Asia and Africa existed far earlier than we expected.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a literature class.",
+          "listen_window": [
+            750.5,
+            860.5
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Listen to a talk in a literature class. So today we're looking at the hero's journey, a storytelling structure that shows up in myths, literature, and narratives from all over the world. This structure was brought into the spotlight by Joseph Campbell, an American mythologist. In his book The Hero with a Thousand Faces, Campbell studied myths across cultures and noticed they shared a common structure. Campbell called it the monomyth, and he believed it reflected something universal about the human experience. The journey usually kicks off with the call to adventure, some kind of invitation or challenge that pulls the hero out of their everyday life. They might resist at first, but eventually they accept, often with a mentor's help. Then come the trials, tests that push the hero to grow. At the center of it all is the abyss, the toughest part, where the hero faces their greatest fear or enemy. If they make it through, they're transformed. And here's the key part: they return with a gift, some kind of insight, wisdom, or ability that can help others. That gift is what makes the journey meaningful, not just for the hero, but for their community. Now, some critics argue this model oversimplifies storytelling. It can flatten out cultural differences and force diverse stories into a single mold. Still, I'd argue it endures because it taps into something deeply human: the idea that struggle leads to growth, that we come back changed.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "You should start by prioritizing the most difficult tasks.",
+            "No, I don't have any dinner plans for this evening.",
+            "He struggled to run the large projector during his presentation.",
+            "Yes, I also thought that the presentation was interesting and creative."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, I'm planning to attend right after class.",
+            "No, our discussion did not lead to a resolution.",
+            "I agree, the library would be a great place to meet up.",
+            "Thanks, I had a really great time on the class field trip."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "The class has a lot of critical thinkers.",
+            "Tomorrow morning, I think.",
+            "In the dining hall near the student center.",
+            "I'll call you back."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "It starts at noon sharp.",
+            "Professor Clark will give it.",
+            "It's on the topic of biology.",
+            "It should be an hour long."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "Let me take a look at them now.",
+            "I never know what to ask.",
+            "Every chapter contains a list of questions.",
+            "I practice every morning after getting up."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "Maybe you should join the student club.",
+            "You can find it in the row near the exit.",
+            "Your verbal skills will be tested on the final exam.",
+            "You should study improv in a drama class."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "Sure, I have time right now.",
+            "Maybe tomorrow will work.",
+            "I will be available all day.",
+            "I was on vacation."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "It's a requirement for the class.",
+            "It starts in twenty minutes.",
+            "The professor said there will be a quiz afterwards.",
+            "A professor from another university."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, the essay should be up to three pages.",
+            "No problem—let's see it.",
+            "Uh, I'm not sure what that means either.",
+            "Don't worry—you always look great!"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "I've never missed one.",
+            "I was able to park on campus.",
+            "Yes, they're arriving on time for class.",
+            "Tomorrow night sounds great."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "No, I already bought it.",
+            "On the west campus.",
+            "My cupboards are empty.",
+            "Whenever you want to leave."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "Bruce had a flashlight.",
+            "The school office will send more lightbulbs.",
+            "The cleaning crew finished all the rooms.",
+            "Annie needed to leave in a hurry."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "What are the speakers planning to do together?",
+          "options": [
+            "Have dinner",
+            "Register for an event",
+            "Postpone a meeting",
+            "Prepare for an exam"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "Why does the woman say, “she said not to worry about it”?",
+          "options": [
+            "To reassure the man about a test",
+            "To respond to the man's idea",
+            "To explain a change of plans",
+            "To accept an apology"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "What concern about food is being discussed?",
+          "options": [
+            "It is too expensive.",
+            "It tastes bland.",
+            "It is not very healthy.",
+            "It lacks variety."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "What does the man imply about the dining hall manager?",
+          "options": [
+            "She made a change based on student feedback.",
+            "She ignored an idea he had proposed.",
+            "She suggested creating a petition.",
+            "She is relatively new to her job."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "What does the woman say will happen at the museum tonight?",
+          "options": [
+            "Painting techniques will be demonstrated.",
+            "A mural will be painted on the museum's walls.",
+            "A restricted gallery will be open to the public.",
+            "Artists will discuss their work."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "What will the man most likely do tonight?",
+          "options": [
+            "Go to a chemistry class",
+            "Interview a museum owner",
+            "Attend an event with the woman",
+            "Put some art up on his walls"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "What does the speaker imply about a new computer lab?",
+          "options": [
+            "Its opening has been delayed.",
+            "Its equipment is expensive.",
+            "It is only available to graphic design students.",
+            "It is replacing an old lab."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "Why does the speaker mention the student center?",
+          "options": [
+            "To identify the location of the new computer lab",
+            "To offer an alternative location for club meetings",
+            "To explain how to find Scott Hall",
+            "To tell students where to go for graphic design workshops"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "What can be inferred about the new policy?",
+          "options": [
+            "It aims to reduce the number of student events.",
+            "It is designed to ensure proper event planning.",
+            "It will be enforced starting next semester.",
+            "It was implemented because of budget cuts."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "What can be concluded about previously held events?",
+          "options": [
+            "They were sometimes submitted for approval at the last minute.",
+            "They were often canceled because of a lack of proper planning.",
+            "They did not involve the Student Affairs Office.",
+            "They usually created extra work for student clubs."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "What does the speaker say about a club's meetings?",
+          "options": [
+            "They will become shorter.",
+            "They will require students to confirm their attendance in advance.",
+            "They will be held more frequently.",
+            "They will move from an afternoon schedule to an evening schedule."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "What will students find in their email?",
+          "options": [
+            "New volunteer opportunities",
+            "A list of student clubs",
+            "Directions to a local park",
+            "A permission form"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "An archaeological subfield",
+            "Artifacts found from Ancient Rome and Ancient Greece",
+            "The challenges of excavating Roman ruins",
+            "Preservation techniques for artifacts"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "What point does the speaker emphasize about the archaeological site at Ephesus?",
+          "options": [
+            "It is located in present-day Greece.",
+            "Its artifacts are mostly pottery and jewelry.",
+            "It was partly conducted using underwater archaeology.",
+            "It contains artifacts from different civilizations."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "What does the speaker say about wood and textiles?",
+          "options": [
+            "They don't deteriorate as quickly when submerged in water.",
+            "They are difficult to recover.",
+            "They were carried on ships from Europe to Africa.",
+            "They are more commonly found at Roman sites than Greek sites."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "What did archaeologists learn from studying the Uluburun shipwreck?",
+          "options": [
+            "Information about Greek boatbuilding techniques",
+            "Information about ancient excavation methods",
+            "Information about ancient trading",
+            "Information about the evolution of jewelry making"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "What is the main topic of the talk?",
+          "options": [
+            "How mythology has shaped cultural traditions",
+            "Joseph Campbell's influence on storytelling techniques",
+            "The structure and significance of the hero's journey",
+            "Criticism of modern storytelling practices"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "What point does the speaker make about Joseph Campbell?",
+          "options": [
+            "He invented the hero's journey as a new storytelling model.",
+            "He examined why readers are drawn to heroic actions in stories.",
+            "He was best known for writing fiction based on ancient stories.",
+            "He found that stories from different cultures share a similar pattern."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention a gift?",
+          "options": [
+            "To show appreciation for storytellers' creative talents",
+            "To point out what makes the hero's journey meaningful",
+            "To describe what the hero receives from a mentor",
+            "To highlight the hero's motivation for starting the journey"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "What is the speaker's opinion about the hero's journey in storytelling?",
+          "options": [
+            "It is outdated and no longer relevant.",
+            "It limits creativity by focusing only on action and adventure.",
+            "It is influential because it reflects shared human experiences.",
+            "It has become more popular due to its use in film and media."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "module_id": "M2H",
+      "id": "20260923A-M2H",
+      "title": "20260923A · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            10.72,
+            13.16
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Can you come to the team dinner tomorrow?",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            27.7,
+            30.22
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "The deadline extension should help.",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            48.57,
+            53.3
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Are you comfortable reading the room during the next class and adjusting?",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            65.35,
+            97.95
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Listen to a conversation. Did you print a copy of your résumé for the interview tomorrow? I didn't need to. I submitted it online. That's what they requested. Okay. I had to bring several copies of mine when I applied for that internship. I met with several people for the interview. What was the position again? In the accounting department. Maybe it's different in graphic design. I'm only meeting with one person. That sounds a lot less stressful.",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            124.55,
+            162.8
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Listen to a conversation. Mr. O'Neil, I know this is last minute, but can I come in a little late tonight? Maybe at, like, six instead of four? Late afternoon is our busiest time. We really need cashiers on duty then. I know. It's just that my best friend is competing in a chess tournament, and I told him I'd go to support him. I'm sure he appreciates that. Tell you what. Have you tried Maddie or Jose? If neither one of them can cover, then we'll figure out a plan B.",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a social science podcast.",
+          "listen_window": [
+            197.8,
+            306.0
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "Listen to a talk on a social science podcast. We're exploring a fascinating concept in social psychology known as pluralistic ignorance. Pluralistic ignorance describes a situation where the majority of members in a group privately reject a norm or standard, but assume incorrectly that most others accept it. This often results in everyone conforming to a norm they don't truly agree with. A classic example occurs in workplace overtime culture. Many employees might prefer to leave work on time, but they stay late because everyone else seems committed to working extra hours. In reality, most colleagues also wish to leave on time, but fear appearing less dedicated. Research highlights this dynamic: when employees are asked privately about their preferences, many express a desire for better work-life balance, despite their public behavior suggesting enthusiasm for long hours. Pluralistic ignorance has broad implications well beyond the workplace. Notably, it can perpetuate social stereotypes and hinder societal change, as individuals might hesitate to voice dissenting opinions, thinking they're in the minority. However, overcoming pluralistic ignorance has powerful benefits. When even one person speaks up, it can embolden others to express their true beliefs, potentially leading to a shift in group norms and to more honest, authentic communities. But there is a challenge, and it's a big one. Being the first to speak out often requires courage, as it can risk one's social standing among one's peers.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to part of a history lecture.",
+          "listen_window": [
+            372.3,
+            489.0
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Listen to part of a history lecture. In the year 1453, the Byzantine Empire ended with the conquest of its capital, Constantinople. After this happened, many Greek scholars who lived there fled to Italy, and they brought to Italy their knowledge of ancient Greek language, philosophy, and other subjects, which had not been preserved particularly well there. Now, this knowledge came in the form of manuscripts, which naturally were in ancient Greek. They were written long before the start of the Byzantine Empire. The Greek scholars taught Greek to the Italian scholars. They met and worked with Italian translators who could translate Greek literature into their own language. This provided new access to ancient Greek knowledge. It led Italian scholars to shift from mainly studying theology to also studying the humanities, like history and art. This influence lasted throughout the Renaissance. The Renaissance is an important period in European history which began in Italy and saw renewed interest in learning, science, and the arts. The city of Venice, Italy, had a large Greek community that grew after 1453 with the influx of Greeks. Venice then turned into a hub of classical Greek studies and culture. For one thing, it became a leader in the printing industry and helped spread Greek works in book form. It also became the home of Greek churches and a center for that religious tradition, which still has a presence throughout Italy.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ],
+          "transcript_source": "Supplied 20260923A AI-generated transcript, context-corrected for obvious ASR errors."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, we practice every day.",
+            "That sounds great.",
+            "No, but David does.",
+            "My class starts at 10 a.m."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "This extension cord looks long enough.",
+            "It's a straight line between two points.",
+            "I'm sure they're willing to help.",
+            "Every extra day helps."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "I pride myself on being adaptable.",
+            "Which wall should I start with?",
+            "Yes, the library's chairs are quite comfortable.",
+            "I'd rather let a mechanic do the work."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "Why did the woman not print her résumé?",
+          "options": [
+            "She forgot to do it.",
+            "The copy center was closed.",
+            "The company asked for an online résumé.",
+            "She ran out of printer paper."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "What does the man imply about his interview?",
+          "options": [
+            "He would have preferred to meet with fewer people.",
+            "He wishes he had been better prepared.",
+            "It was an enjoyable experience.",
+            "It led to him being hired."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "Who most likely is the woman?",
+          "options": [
+            "A store manager",
+            "A professor",
+            "A cashier",
+            "A chess club member"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "What can be inferred about the woman based on the end of the conversation?",
+          "options": [
+            "She is not busy in the afternoons.",
+            "She wants to find a solution.",
+            "She enjoys chess tournaments.",
+            "She does not have any other cashiers who could work."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "What is the main topic of the talk?",
+          "options": [
+            "How overtime work became common",
+            "Actions that companies can take to encourage better communication",
+            "The effect of individuals holding mistaken assumptions about other people's views",
+            "Why social stereotypes are generally harmful"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "What does the speaker point out about many employees who work long hours?",
+          "options": [
+            "They are often unaware of the concept of work-life balance.",
+            "They feel supported by their employers and their colleagues.",
+            "They have dynamic personalities and are highly sociable.",
+            "They are afraid of not appearing committed to their jobs."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "What does the speaker describe as one benefit of overcoming pluralistic ignorance?",
+          "options": [
+            "It can result in positive social change.",
+            "It can negatively affect an individual's self-confidence.",
+            "It leads to greater economic equality in the workplace.",
+            "It helps to uphold the status quo."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "According to the speaker, why is it often difficult to overcome pluralistic ignorance?",
+          "options": [
+            "People tend to ignore facts that contradict their strongly held beliefs.",
+            "Most people assume other people share their private beliefs.",
+            "A person needs to be brave enough to take a risk.",
+            "Members of diverse groups tend to have widely differing opinions."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "What is the main point of the talk?",
+          "options": [
+            "The work of Greek scholars protected Byzantine art and literature.",
+            "The Renaissance may have begun in Greece and later spread to Italy.",
+            "The arrival of Greek scholars in Italy had important effects.",
+            "The contact between the Greek and Italian languages caused changes in both."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "What did Greek scholars contribute that advanced the Renaissance?",
+          "options": [
+            "Preserved manuscripts",
+            "Expertise in translation",
+            "Religious traditions",
+            "Teaching methods"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "Based on the talk, in what way did Italian scholars change?",
+          "options": [
+            "They began translating Italian texts into Greek.",
+            "They added the humanities to their studies.",
+            "They learned how to create art in ancient styles.",
+            "They began applying theology to other fields."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "What point does the speaker make about Venice?",
+          "options": [
+            "It was conquered in 1453.",
+            "It was influenced by Greek culture in academic and religious settings.",
+            "Many new industrial technologies were developed there.",
+            "A new method of printing was invented there."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    }
+  ],
+  "source_notes": [
+    "Built from supplied M1/M2H audio, question PDFs, 20260923A answer key, and the two supplied AI-generated transcript DOCX files.",
+    "Question stems/options were transcribed from the supplied PDF screenshots and answer keys were mapped exactly from the supplied 20260923A answer document.",
+    "Transcript text was context-corrected for obvious ASR errors; no question content or answer key was replaced with outside material.",
+    "Audio listen_window values were aligned to the supplied full-module MP3 files using speech/silence boundaries with small safety margins."
+  ]
+}

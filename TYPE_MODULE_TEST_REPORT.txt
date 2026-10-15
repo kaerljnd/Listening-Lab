@@ -1,0 +1,26 @@
+Listening Lab v1.6 · Question-Type Training Smoke Test
+Date: 2026-09-24
+
+Runtime specialty modules are generated from the existing pack.json; no audio/question duplication is used.
+
+20260830A
+- Best Response: 15 questions / 15 materials / sources M1 + M2H
+- Conversation: 10 questions / 5 materials / sources M1 + M2H
+- Announcement: 6 questions / 3 materials / source M1
+- Academic Talk: 16 questions / 4 materials / sources M1 + M2H
+
+20260909A
+- Best Response: 15 questions / 15 materials / sources M1 + M2H
+- Conversation: 10 questions / 5 materials / sources M1 + M2H
+- Announcement: 6 questions / 3 materials / source M1
+- Academic Talk: 16 questions / 4 materials / sources M1 + M2H
+
+Checks
+- app.js syntax: PASS
+- start_local.py compile: PASS
+- 20260830A validator: Blocking 0 / Warning 0
+- 20260909A validator: Blocking 0 / Warning 0
+- /api/packs scan: 2 packs / errors []
+- HTTP byte-range audio request: PASS (206 Partial Content)
+- virtual type module ID uniqueness: PASS
+- cross-module audio source mapping: PASS (2 source audio files where applicable)

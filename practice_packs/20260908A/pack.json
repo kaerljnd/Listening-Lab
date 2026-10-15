@@ -1,0 +1,1257 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20260908A",
+  "title": "20260908A Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20260908A-M1",
+      "title": "20260908A · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            16.1,
+            18.45
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Why did you miss the physics seminar?",
+          "question_ids": [
+            "Q1"
+          ]
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            30.0,
+            31.0
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "",
+          "question_ids": [
+            "Q2"
+          ],
+          "source_issue": "The supplied M1 audio contains silence where the Q2 prompt is expected; transcript prompt unavailable."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            43.25,
+            46.55
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Why did you choose this venue for freshman orientation?",
+          "question_ids": [
+            "Q3"
+          ]
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            59.65,
+            63.2
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Has this technology improved real-time communication?",
+          "question_ids": [
+            "Q4"
+          ]
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            78.35,
+            80.55
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Why did you reschedule the study group?",
+          "question_ids": [
+            "Q5"
+          ]
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            96.3,
+            98.8
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Are you going to join the practice session tomorrow?",
+          "question_ids": [
+            "Q6"
+          ]
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            116.95,
+            118.7
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Why submit the report?",
+          "question_ids": [
+            "Q7"
+          ]
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            136.5,
+            138.35
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Where can I find the books on history?",
+          "question_ids": [
+            "Q8"
+          ]
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            156.1,
+            159.55
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "The campus garden looks lovely.",
+          "question_ids": [
+            "Q9"
+          ]
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            176.1,
+            178.35
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Didn't you take the shipment to the post office?",
+          "question_ids": [
+            "Q10"
+          ]
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            195.05,
+            198.45
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Should we invite the whole club or just the officers?",
+          "question_ids": [
+            "Q11"
+          ]
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            221.65,
+            224.75
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Are you available for the computer center workshop?",
+          "question_ids": [
+            "Q12"
+          ]
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            244.6,
+            273.3
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Did you say you're taking the train to the conference instead of driving? That's right. I'm sure I'll still be working on my conference paper, and it will be nice to have some quiet time on the train to complete it. That's smart. I was going to drive. That's not a bad idea either. That way, you'll have your car for getting around while you're there. Yes, but driving alone is boring. Maybe I'll take the train, too. Well, be sure to bring a book if you do. Two hours is a long time on the train.",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ]
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            300.7,
+            330.8
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "I'm so grateful to you for looking after my dog while I'm in the mountains. I'm happy I can help. How's the planning for your trip coming? I've already booked a flight and a cabin. All I need now is to arrange a rental car. Terrific. How long are you staying? I'll be in the cabin for one week, and then I'll spend another week hiking a trail in the national park. Wow, my vacations are so boring. I really envy you.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ]
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            360.7,
+            386.8
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "My computer keeps freezing whenever I try to open a large file. Have you been restarting it? Yes, but it didn't help. I'm worried it might be a hardware issue. Maybe it's time for a memory upgrade. That could solve the problem. You might be right. I'll take it to a technician to check. Good idea. They'll be able to help you.",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ]
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to a campus radio announcement.",
+          "listen_window": [
+            417.9,
+            452.0
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "We've had some security issues recently, and so on Monday all students and staff will be required to set new passwords with more robust requirements than the current ones. Passwords will need to be changed once a month. And remember, do not share your password with anyone else, as this has caused some recent problems. We will never ask for your password or other confidential information via email, so if you receive emails along those lines, please delete them.",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ]
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to an announcement in a university dormitory.",
+          "listen_window": [
+            484.1,
+            520.2
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Attention residents. Based on communications with the custodial staff, we felt it was necessary to provide a refresher on the dormitory policies for trash and recycling. Please be mindful of the separate bins for paper, plastic, glass, and trash, and don't forget to sort everything before you dispose of it. Cardboard boxes should be broken down and placed against the wall. Lastly, please be mindful of materials that cannot be recycled. Lists of the most common items have been posted on each floor.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ]
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to a campus radio announcement.",
+          "listen_window": [
+            547.6,
+            586.7
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Attention students! The Community Service Club will be moving to bi-weekly meetings instead of monthly meetings due to strong enrollment. You may still choose to attend one meeting a month, or you can come more often. It's up to you. We have some new ways for students to get involved this year, including helping at a local park. So please email for the full list of upcoming events. We'll be sending the message out shortly.",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ]
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a biology class.",
+          "listen_window": [
+            617.3,
+            740.4
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "Imagine a chilly mountain forest. It's early spring, snow's just melting, and it's still very cold. Now picture a small bright yellow flower blooming at the edge of the snow. Hard to imagine any flower surviving in those conditions, right? Yet the snow buttercup thrives. How can this be? Well, the snow buttercup's anatomy has a few things going for it. First, a fuzzy stem, like a tiny winter coat that protects it from extreme cold and wind, plus a deep root system. The roots keep it anchored in unstable soil on mountains and can reach water that's 30 centimeters deep. Now, the snow buttercup needs to protect its cells from ice crystals. To do this, it produces antifreeze proteins. Researchers are studying these proteins, hoping to develop ways to protect other plants, like maybe developing frost-resistant crops for farmers to grow. Okay, so these adaptations allow the snow buttercup to bloom earlier, while most other plants are still dormant in the winter. This means exclusive visits from beneficial pollinators, like bumblebees and butterflies. The pollinators get food, nectar, from the snow buttercup, while also helping the plant reproduce by spreading its reproductive material, the pollen. The adaptation I find most fascinating is called heliotropic movement. When the flower is open, heliotropic movement means it turns to face the sun throughout the day, staying warm as the sun moves along the sky. Increasing its temperature even a few degrees this way is beneficial.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ]
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a podcast about political science.",
+          "listen_window": [
+            805.7,
+            932.1
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Soft power refers to a country's ability to influence others through attraction, culture, and collaboration. The term was introduced by political scientist Joseph Nye in 1990. Notice that some countries gain support not by using force or money but by being admired and respected. What Nye contributed wasn't just a name. He offered a clear framework for understanding this kind of influence. He explained that power works in three ways: by forcing others, by paying them, or by attracting them. That third kind, attraction, he called soft power. By classifying power this way, he made it easier for people to understand and talk about influence that comes from trust, culture, and values. A modern example is South Korea's cultural wave, which has sparked global interest in Korean pop music, language, and food. This kind of appeal fits directly into Nye's idea of attraction. It shows how cultural influence can build admiration and shape international relationships without pressure or incentives. Now, soft power takes time because it's built on trust, reputation, and emotional connection. It spreads through cultural events, learning opportunities, and other shared experiences, things that grow gradually. But once established, it tends to last, often shaping how future generations view a country. Like planting a tree, it needs patience and care, but its roots run deep and its impact endures.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "My schedule is wide open.",
+            "Seminars are beneficial.",
+            "I had another commitment.",
+            "Sarah has a physics degree."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": [],
+          "verification_note": "Verified by user on 2026-09-30."
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "They are looking for student volunteers.",
+            "An exciting art exhibit just opened.",
+            "There’s a great cafe inside.",
+            "It’s right across from the basketball courts."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "You are welcome here, too.",
+            "It was the only one with enough space.",
+            "I will receive the product tomorrow.",
+            "Yes, I was there."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "I’ll do it next time.",
+            "The computer science class is great.",
+            "Because we were in a rush.",
+            "It has, to some extent."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "The schedule was sent to everyone.",
+            "I have the calendar here.",
+            "The teacher approves of our group.",
+            "I was feeling a bit sick."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "Someone should follow up.",
+            "I don’t think that’s necessary at this point.",
+            "No, that’s not what I heard.",
+            "That’s not where I found out."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "It was excellent reporting.",
+            "I had other urgent tasks.",
+            "Reports are critical.",
+            "Please submit the application."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "They’re not in this section.",
+            "Yes, she prefers fiction.",
+            "The Second World War.",
+            "I’m in the library."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "I was too busy to get it done.",
+            "The plants are beautiful.",
+            "It starts at four p.m.",
+            "I’d better hurry to class."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "I’ll place our lunch order now.",
+            "It departs from Dock 12.",
+            "There’s more paper in the supply room.",
+            "No, Joe was using our van."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "Let’s see what’s on the agenda first.",
+            "We need to send invitations.",
+            "The club room is more spacious.",
+            "Friday is better."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": [],
+          "verification_note": "Verified by user on 2026-09-30."
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "I hope it’s well attended.",
+            "I told them what the topic is.",
+            "I have a class that conflicts.",
+            "I can shop while I wait."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "Why is the man taking a train to the conference?",
+          "options": [
+            "He finds driving alone boring.",
+            "He’d like to finish reading a book on the train.",
+            "He does not own a car.",
+            "He wants to do some work as he travels."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "What does the man suggest that the woman do?",
+          "options": [
+            "Take the train to the conference with him.",
+            "Get some work done on the train.",
+            "Bring a book with her on the train.",
+            "Rent a car when she arrives at the conference."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "Which task remains for the woman to complete before she goes on vacation?",
+          "options": [
+            "Arrange a dog sitter",
+            "Book a flight",
+            "Book a cabin",
+            "Arrange a rental car"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "What is the man’s attitude toward the woman’s vacation plans?",
+          "options": [
+            "He wants her to be very careful.",
+            "He prefers less adventurous vacations.",
+            "He wishes he could take a similar vacation.",
+            "He is afraid it will be too expensive."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "What problem is the woman experiencing with her computer?",
+          "options": [
+            "It won’t turn on.",
+            "It keeps freezing.",
+            "It has a virus.",
+            "It makes loud noises."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "What will the woman most likely do next?",
+          "options": [
+            "Buy new software for her computer",
+            "Restart her computer",
+            "Take her computer to a professional",
+            "Replace her computer’s hard drive"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "What is the announcement mainly about?",
+          "options": [
+            "Information security",
+            "Course requirements",
+            "Junk emails",
+            "Campus safety"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "According to the speaker, what has caused problems recently?",
+          "options": [
+            "Password sharing",
+            "Scheduling issues",
+            "Email outages",
+            "New computer settings"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "What is the main purpose of the announcement?",
+          "options": [
+            "To describe a recent observation",
+            "To remind students of proper practices",
+            "To inform about newly posted information",
+            "To explain a change in dormitory policy"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "What does the speaker say about the custodial staff?",
+          "options": [
+            "They can provide cardboard boxes upon request.",
+            "They have noticed waste being disposed of improperly.",
+            "They recently created lists of non-recyclable items.",
+            "They will help residents sort their recycling."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "What does the speaker say about a club’s meetings?",
+          "options": [
+            "They will become shorter.",
+            "They will require students to confirm their attendance in advance.",
+            "They will be held more frequently.",
+            "They will move from an afternoon schedule to an evening schedule."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "What will students find in their email?",
+          "options": [
+            "New volunteer opportunities",
+            "A list of student clubs",
+            "Directions to a local park",
+            "A permission form"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "What does the speaker mainly discuss?",
+          "options": [
+            "Adaptations that help a flower thrive in a harsh environment",
+            "Examples of plant species that are native to alpine forests",
+            "Locations where the snow buttercup has been found",
+            "Surprising ways that the snow buttercup changes with the seasons"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "What aspect of the snow buttercup’s roots does the speaker emphasize?",
+          "options": [
+            "The ways in which they change the soil",
+            "The amount of water that they can absorb",
+            "The speed with which they grow",
+            "The depths that they reach"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "What does the speaker imply about antifreeze proteins?",
+          "options": [
+            "They are produced while the snow buttercup is dormant.",
+            "They are produced in small quantities.",
+            "They may help scientists improve crops.",
+            "They make the snow buttercup attractive to pollinators."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "What does the speaker say about heliotropic movement?",
+          "options": [
+            "It is mostly beneficial in late spring.",
+            "It helps the snow buttercup stay warm.",
+            "It benefits butterflies more than bumblebees.",
+            "It signals that plants are ready to reproduce."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "What is the main topic of the talk?",
+          "options": [
+            "Why some cultural values spread faster than others",
+            "How political alliances affect cultural exchanges",
+            "A concept that has shaped the understanding of international relations",
+            "A way to preserve cultural tradition through generations"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "What does the speaker say about Joseph Nye’s contribution?",
+          "options": [
+            "He made useful suggestions on utilizing soft power.",
+            "He defined soft power and placed it in a framework.",
+            "He ran studies to see how people respond to soft power.",
+            "He criticized how some countries use soft power."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": [],
+          "verification_note": "Verified by user on 2026-09-30."
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "What does the speaker imply about South Korea’s cultural wave?",
+          "options": [
+            "It reveals certain limitations of cultural diplomacy.",
+            "It may reflect a short-term trend.",
+            "It is unrelated to Nye’s concept of soft power.",
+            "It shows how attraction can expand a nation’s influence."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention a tree?",
+          "options": [
+            "To explain how soft power is rooted in tradition",
+            "To show that soft power grows effectively with the right tools",
+            "To illustrate the slow but lasting nature of soft power",
+            "To describe a recently designed symbol for soft power"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "module_id": "M2H",
+      "id": "20260908A-M2H",
+      "title": "20260908A · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            13.0,
+            16.1
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Do you prefer the new or old version of our course website?",
+          "question_ids": [
+            "Q1"
+          ]
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            33.45,
+            37.45
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Would you like a quick overview of the class or training schedule?",
+          "question_ids": [
+            "Q2"
+          ]
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            52.55,
+            56.8
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Can I borrow your headphones to listen to the recorded lecture?",
+          "question_ids": [
+            "Q3"
+          ]
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            75.55,
+            110.45
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Are you excited about the music festival this Saturday? Neon Chapel is performing, and they're one of my favorite bands. Mine too. But my parents are going to be visiting for the weekend, and it seems they're not interested. Oh, I see. Yeah, it was a last-minute thing. A few of my paintings are on display at the Campus Art Museum right now for the student exhibit, and they want to see them. Oh, well, that'll be fun. And you should take your parents to the Italian place on Front Street. It's really good.",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ]
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            138.65,
+            178.7
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "This is Jimmy from Rye's Bakery calling. I received a message that you'd like to do a story about my shop for your university newspaper. Yeah, you've been a staple in our city for generations now. The grandparents of our current students were customers there when they were young. It's a family-owned business, and we're proud of it. Would you be able to come next Monday at three o'clock? Definitely. Is it all right if my photographer comes along? Of course. We can get different shots, even back in our kitchen where we do all the baking.",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ]
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in an archaeology class.",
+          "listen_window": [
+            206.35,
+            336.25
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Imagine an ancient garden or field, and imagine organic material in its soil, things like plant roots or wooden irrigation pipes. When this organic material decays over the centuries, it often leaves behind voids in the soil. Researchers can fill these voids by injecting plaster into the empty spaces. When the plaster hardens, it creates casts, essentially three-dimensional negatives that replicate what existed centuries ago. For example, at the ancient Maya village of Joya de Cerén in El Salvador, Central America, casts taken from root cavities have revealed a diverse mix of crops, including manioc, maize, and beans. These species were identified in part by the shape and size of the root voids by comparing them with modern plant root systems. The layout of plants in the garden wasn't random at all. It showed the garden in an early example of the milpa system, a traditional intercropping method still practiced in Central America and Mexico today, with the tall maize plants providing stalks for bean plants to climb, the beans enriching the soil with nitrogen, and squash plants growing along the ground providing shade that suppresses weeds and retains moisture. Soil casts have also been used in sites of ancient Roman villa gardens, revealing irrigation channels and beds planted with species such as grapevines and roses. The findings show a deliberate integration of ornamental plants with edible plants, suggesting a Roman design ethos that sought to balance aesthetics with utility.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ]
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a business podcast.",
+          "listen_window": [
+            403.75,
+            524.25
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "You probably all know entrepreneurs are people who determine a need in the market and create their own businesses. Today, we're going to focus on people who combine that entrepreneurial spirit with social impact. I'm talking about social entrepreneurs. These are individuals who seek to solve societal problems through innovative and sustainable business solutions. Unlike traditional entrepreneurs, their primary goal is not simply to make money. They also strive to stimulate changes in society. Now, one of the key features of social entrepreneurship is a focus on addressing gaps in the market that affect underserved communities. This can include anything from providing affordable health care and education to developing environmentally friendly technologies. Social entrepreneurs often work in sectors where social needs are most pressing. For example, many social enterprises aim to tackle issues related to poverty, health and the environment. They do so by leveraging business strategies to create scalable and sustainable solutions to these problems. As you can imagine, social entrepreneurship can be quite challenging. After all, balancing profitability with social goals can be complex and demanding. Also, measuring the social impact of an initiative is not an easy undertaking. Just what should be measured? Worst of all, these ventures often require significant resources and support to get off the ground. Despite these obstacles, the potential benefits of social entrepreneurship are immense. It can lead to innovative solutions that traditional businesses might overlook and foster a more inclusive and equitable society.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, sometimes I do.",
+            "You should update it before you run into problems.",
+            "The new version has been out for just a month or so I think.",
+            "I’m having trouble getting used to the new one, honestly."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "I’d appreciate that.",
+            "Yes, it was quick enough for me.",
+            "In-person training, mainly.",
+            "Please send me your availability."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, I need them immediately.",
+            "I have no idea where I left them.",
+            "No, it’s actually quite far from here.",
+            "You can put them in here."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "Based on the conversation, what can be inferred about a music event?",
+          "options": [
+            "It will be held downtown.",
+            "It will feature university musicians.",
+            "It was organized at the last minute.",
+            "The man will not attend it."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "What does the woman recommend for the man to do with his parents?",
+          "options": [
+            "Eat at a restaurant",
+            "Visit an art museum",
+            "Bring them to an Italian class",
+            "Listen to a band"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "What can be inferred about the bakery?",
+          "options": [
+            "It sells unique products.",
+            "It has been in business for a long time.",
+            "The owner recently purchased it.",
+            "Students receive a discount on their purchases."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "Based on the conversation, what will happen during the interview?",
+          "options": [
+            "Pictures will be taken.",
+            "The kitchen will be temporarily closed.",
+            "The man will provide some bakery items to try.",
+            "The woman will speak with some customers."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "What is the main focus of the talk?",
+          "options": [
+            "Ways in which ancient peoples supplied nitrogen and moisture to their fields",
+            "Similarities between gardens of ancient Rome and Central America",
+            "A method for studying planting practices of ancient cultures",
+            "An example of how modern agriculture can learn to benefit from ancient knowledge"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "Why do researchers inject plaster into soil?",
+          "options": [
+            "To make the soil more stable",
+            "To protect plant roots in the soil",
+            "To replicate an ancient practice that existed in different parts of the world",
+            "To obtain casts that match decayed material in shape"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "What does the speaker say is a main feature of the agricultural system practiced in the Maya village in Central America?",
+          "options": [
+            "It takes advantage of plants that do not decay quickly.",
+            "It combines a variety of crops that support each other’s growth.",
+            "It relies on a complex irrigation system.",
+            "It changes crops from year to year."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "What does the speaker imply about Roman garden designers?",
+          "options": [
+            "They tried to replicate nature.",
+            "They considered roses to be more beautiful than other flowers.",
+            "They valued both beauty and practicality.",
+            "They were interested in foreign plant species."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "What is the main topic of the talk?",
+          "options": [
+            "A comparison of traditional and modern business professionals",
+            "The impact of social change on new business owners",
+            "The evolution of entrepreneurship in the modern world",
+            "People who create businesses that address social problems"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention traditional entrepreneurs?",
+          "options": [
+            "To help explain the origin of social entrepreneurship as a business concept",
+            "To suggest that some entrepreneurs have a more difficult time establishing a business than others",
+            "To describe the challenges facing individuals who want to impact society",
+            "To contrast their end goals with those of social entrepreneurs"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention sectors such as poverty, health, and the environment?",
+          "options": [
+            "To highlight the areas where social needs are most pressing",
+            "To provide examples of problems that have been addressed through private investment",
+            "To list various challenges faced by traditional businesses",
+            "To suggest that social entrepreneurship is necessary for financial sustainability"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "What does the speaker suggest about the task of measuring social impact?",
+          "options": [
+            "It is often required to receive funding for a venture.",
+            "It is difficult to accomplish.",
+            "It can lead to controversial results.",
+            "It is only feasible for environmental endeavors."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    }
+  ]
+}

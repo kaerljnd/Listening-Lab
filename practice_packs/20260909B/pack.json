@@ -1,0 +1,1256 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20260909B",
+  "title": "20260909B Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20260909B-M1",
+      "title": "20260909B · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            20.04,
+            22.33
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Would you mind giving this paragraph a quick look?",
+          "question_ids": [
+            "Q1"
+          ]
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            34.08,
+            36.39
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "When will the club meeting minutes be ready?",
+          "question_ids": [
+            "Q2"
+          ]
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            48.82,
+            51.43
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Did you understand all the information in the last chapter?",
+          "question_ids": [
+            "Q3"
+          ]
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            65.24,
+            68.25
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Your intro is interesting, but I'd cut right to the chase.",
+          "question_ids": [
+            "Q4"
+          ]
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            85.24,
+            87.54
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "How will you meet the deadline for this research project?",
+          "question_ids": [
+            "Q5"
+          ]
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            106.2,
+            108.35
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Group project—want to take the helm?",
+          "question_ids": [
+            "Q6"
+          ]
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            121.92,
+            125.21
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "The financial seminar begins at 9:00 a.m.",
+          "question_ids": [
+            "Q7"
+          ]
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            138.13,
+            141.17
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I'd like to review some of the vocabulary from the last chapter.",
+          "question_ids": [
+            "Q8"
+          ]
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            152.44,
+            154.93
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Did you go to the university-sponsored picnic on Sunday?",
+          "question_ids": [
+            "Q9"
+          ]
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            171.86,
+            173.68
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "You free to debrief after your conference presentation?",
+          "question_ids": [
+            "Q10"
+          ]
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            186.56,
+            188.73
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Did you take the online finance course?",
+          "question_ids": [
+            "Q11"
+          ]
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            202.21,
+            203.6
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "What if we revisit the research question?",
+          "question_ids": [
+            "Q12"
+          ]
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            206.11,
+            240.94
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Still looking for a roommate? Yeah, I've spoken to a few friends, but nobody was really a great fit. My first roommate left clothes all over the floor and stayed up past midnight. What a disaster. I'm glad you're being careful. I am, but it's time-consuming. Why not post an ad on the university's virtual bulletin board? Mention your lifestyle, schedule, hobbies. That's how I finally found someone who clicked. If I include that I play guitar, it might attract a fellow musician.",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ]
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            269.58,
+            317.8
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Are you settled into your new dorm? I'm still unpacking. I had hours yesterday trying to organize things. The closet is half the size of my old one. I use a storage bin that fits under my bed. Bins are sold in the camper's store. Great tip, thanks. There's another problem. The heating doesn't work. I froze last night. Did you report it to maintenance? Not yet. Don't delay. It usually takes a few days to respond to complaints, at least in this building. Meanwhile, you could borrow a space heater from housing services.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ]
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            347.77,
+            382.32
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "My commute to campus from my apartment is getting exhausting. I think it's time to start looking elsewhere. Any neighborhoods you're particularly interested in? Not really. How about where you live? I love it there. The building I'm in is an older one, but it's like a 10-minute walk to campus. Have you had any maintenance issues? My landlord basically ignores my leaky faucet complaints. Sometimes, but my landlord's super attentive. Nothing lingers for more than a day or two.",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ]
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to an announcement from the university radio station.",
+          "listen_window": [
+            409.47,
+            448.54
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Attention! The student radio station is piloting short public service podcasts on a variety of topics that would be useful to your fellow students. High-priority topics include financial literacy and career development. We're seeking entries from students who'd like the opportunity to present one of these segments. Submit a short pitch, under 200 words. Be sure to include whether you'll be alone or will have guests with you. Either way is completely acceptable.",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ]
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to an announcement at a university faculty event.",
+          "listen_window": [
+            480.53,
+            515.86
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Our department's planning committee has decided to host this year's Digital Arts Symposium virtually rather than on campus. This format change will allow us to include renowned speakers from across the globe, including Dr Naomi Koster of Nepal University. Dr Koster promises to unveil her latest research findings during her keynote speech. Then, attendees will choose among eight virtual breakout sessions, some focusing on the intersection between art and digital media.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ]
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to an announcement on a university radio.",
+          "listen_window": [
+            545.11,
+            579.07
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "The Academic Success Center has made our system for booking tutoring sessions more user-friendly. We strongly recommend making an appointment. Without one, we can't guarantee that a tutor specializing in your preferred subject area will be available when you arrive. Also, with midterm exams fast approaching, we've designated the third floor of our building as a quiet zone for the next two weeks. This is in addition to the fourth floor, which is our permanently designated silent zone.",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ]
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a biology class.",
+          "listen_window": [
+            605.45,
+            735.5
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Modern fish farming relies on massive inputs shall feed to boost fish production. This can cause nutrient overload where excessive amounts of uneaten food plus waste products trigger algal blooms. Algal blooms are rapid increases in algae, tiny aquatic plants that can cloud the water. When those algal blooms die off, they decompose and deplete oxygen from the water, which can suffocate fish and other aquatic life. Of course, the main cause of algal blooms is chemical fertilizers in agricultural runoff, like when water from rain or irrigation flows over fields and carries the fertilizers into rivers and coastal waters. But fish farming causes algal blooms too. An intriguing alternative is, or was, the coastal fish ponds of ancient Hawaii, called Loko'ia. People in Hawaii are reviving them today. These ponds, built along the shore using mainly lava, captured nutrient-rich runoff from nearby fields, naturally fertilizing the ponds. This was before the days of concentrated artificial fertilizers. Instead of causing algal blooms, the nutrients supported modest growth of algae, which fed local plant-eating fish. Ponds used natural tidal flushing to bring in fresh seawater and remove waste, which kept oxygen levels stable. And here's the clever part. The special sluice gates connecting the ponds to the ocean had small holes. These holes allowed juvenile fish to swim in from the ocean and fatten up on the food in the pond, but then prevented them from escaping once they matured. So they could be easily harmed.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ]
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to an art history class.",
+          "listen_window": [
+            800.73,
+            933.8
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "When I show students a small bowl by the Native American potter Lucy Lewis, they often say it feels modern, like minimalist almost. Lucy Lewis was a 20th-century Native American artist, and her pottery looks contemporary, but it's anchored in traditional Native American techniques. How so? Well, Lewis learned to build clay pots from women in her community. As a kid, Lewis made pottery for tourists, sold to travelers passing through. She found ideas in publications, books, especially a local painting style that dated back to the 11th century, of traditional black-on-white geometric designs she saw in book illustrations, and she revived that style. Lewis painted black-and-white designs on her plates, bowls, etc. She used fine linework and balanced symmetry to interpret the old designs in a personalized way. As an adult, she became an award-winning artist, but she lived in a remote area in the southwestern United States. Due to her location she didn't have any contact with museums or art collectors, which I mean honestly sounds berating to me. She could create designs she wanted and follow her own inspiration without interference, and these days her pieces are sought after and valuable. Now people sometimes assume that authenticity means keeping exactly to an old way of doing things, which can be true, but Lewis's work suggests authenticity can be procedural. You honor lineage through method, firing, meticulous brush control, while still negotiating new markets and new audiences, honoring your own creativity in the process.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "No rush—we have plenty of time to study.",
+            "Sorry—I didn't bring my calculator.",
+            "Sure, let's see it.",
+            "Yes, that's what it looked like."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Later on this afternoon.",
+            "The study room is booked.",
+            "No, check with Oscar first.",
+            "Yes, I left them on his desk."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "I think we need to get more supplies.",
+            "Not totally—can we go over it again?",
+            "Yes, I'm sure I can finish on time.",
+            "The group presentations were good."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "A small piece would be enough.",
+            "It's in the first draft.",
+            "OK, I'll delete the first section.",
+            "Yes, it's really exciting."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, that is correct.",
+            "This meeting is very important.",
+            "It will be challenging.",
+            "I don't mind."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "I think it will start later.",
+            "You would do a better job.",
+            "I already turned in my last assignment.",
+            "Sure, but let's run indoors today."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "I really enjoy literature classes.",
+            "My bank closes at 4 p.m.",
+            "I'll meet you outside beforehand.",
+            "I don't have a lot of savings."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "There are quite a few unfamiliar words.",
+            "Sure, I understand it much better now.",
+            "They should all be in the locked drawer.",
+            "I also wonder if you agree with this theory."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "It was cancelled because of the rain.",
+            "Ask for an instruction manual.",
+            "Buy me a new basket.",
+            "I need about five more."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "I'm always free after that class.",
+            "I'll probably need a moment to rest.",
+            "I think we need to spend more time reviewing it.",
+            "Keeping it short is a great idea—thanks."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "No, I've never been to that bank.",
+            "I prefer taking classes in person.",
+            "May I borrow your budgeting worksheet?",
+            "Right, Professor Yi teaches three courses."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "That's a good idea—let's reconsider it.",
+            "All answers will be reviewed.",
+            "Yes, we should come here more often.",
+            "You could change the title later."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "What can be concluded about the man?",
+          "options": [
+            "He often studies late into the night.",
+            "He does not always put all his clothes away.",
+            "He was not careful when choosing his first roommate.",
+            "He routinely checks the university's virtual bulletin board."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "What does the woman suggest about her search for a roommate?",
+          "options": [
+            "She would like a roommate who could play music with her.",
+            "She received several responses to her roommate-wanted ad.",
+            "She is not sure how to describe her schedule to potential roommates.",
+            "She might place her name into a random drawing for a roommate."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "What will the woman most likely buy?",
+          "options": [
+            "A small space heater",
+            "Some shelves for a small closet",
+            "Some storage space in the basement of her dormitory",
+            "A storage bin that can fit under a bed"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "What can be concluded about the man?",
+          "options": [
+            "He used to work in the campus store.",
+            "He lives with a roommate in an off-campus apartment.",
+            "He has reported problems to the maintenance department before.",
+            "He has a friend who works in the housing services office."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "What is the woman thinking of doing?",
+          "options": [
+            "Starting a new job",
+            "Trying a new bus route",
+            "Finding a roommate",
+            "Moving to a new place"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "What does the man imply at the end of the conversation?",
+          "options": [
+            "He spends a lot of time on campus.",
+            "He regularly uses public transportation.",
+            "His landlord is relatively quick to respond.",
+            "His apartment is not very close to campus."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "What most likely is the purpose of the program mentioned by the speaker?",
+          "options": [
+            "To teach skills",
+            "To promote social events",
+            "To provide news updates",
+            "To share opinions"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "What does the speaker say is optional?",
+          "options": [
+            "Offering multiple pitches",
+            "Inviting others to participate",
+            "Writing more than 200 words",
+            "Submitting a sample segment"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "According to the speaker, why has a symposium's format been changed?",
+          "options": [
+            "To widen the variety of speakers",
+            "To reduce the speakers' travel costs",
+            "To address some concerns about travel delays",
+            "To allow students to attend some sessions"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "What is most likely true about Dr. Costa?",
+          "options": [
+            "She specializes in creating digital media.",
+            "She is known for her work in photography.",
+            "She is a respected researcher.",
+            "She helped organize the symposium."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "What is stated about tutoring sessions?",
+          "options": [
+            "They are free of charge.",
+            "They should be reserved in advance.",
+            "They are offered by a student club.",
+            "Their number will increase during the next two weeks."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "Why does the speaker mention midterm exams?",
+          "options": [
+            "To encourage students to use study tips offered by tutors",
+            "To emphasize the benefits of professors' office hours",
+            "To remind students to take a practice exam",
+            "To give a reason for a temporary change"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "What is the main purpose of the talk?",
+          "options": [
+            "To contrast two ways of fish farming",
+            "To explain a naturally occurring process",
+            "To discuss a commercially valuable fish species",
+            "To present the advantages and disadvantages of fishponds"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "What does the speaker point out about algal blooms?",
+          "options": [
+            "They are common in the ocean around Hawaii.",
+            "They produce a lot of nutrients.",
+            "They cannot occur where fish farming is practiced.",
+            "They can kill other aquatic life."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker refer to agricultural fields?",
+          "options": [
+            "To explain the idea of fish farming",
+            "To identify a source of nutrients in water",
+            "To emphasize the need for fertilizers today",
+            "To point out that people in ancient Hawaii had different food sources"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "What does the speaker say about the sluice gates used in ancient Hawaiian fishponds?",
+          "options": [
+            "They were destroyed after the fish in the ponds were harvested.",
+            "They could open and close automatically with incoming and outgoing tides.",
+            "They allowed young fish to enter the ponds and kept older fish inside them.",
+            "They prevented agricultural runoff from nearby fields from entering the ponds."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "According to the speaker, what does Lewis's pottery look like to viewers?",
+          "options": [
+            "Rich in detail",
+            "Easily broken",
+            "Strange",
+            "Modern"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "According to the speaker, where did Lewis get the idea to use black-and-white patterns?",
+          "options": [
+            "From women she knew",
+            "From award-winning artists",
+            "From tourists",
+            "From art books"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "What is the speaker's attitude when she talks about where Lewis lived?",
+          "options": [
+            "Disappointed that Lewis's remote location limited her opportunities for success",
+            "Impressed that Lewis managed to research the history of her local area",
+            "Relieved that Lewis was free to create art without being influenced from the outside",
+            "Surprised that Lewis was discovered by artists who lived far from her"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "What point does the speaker make about authenticity?",
+          "options": [
+            "It is not always possible because old traditions are frequently lost.",
+            "It does not require keeping old traditions exactly the same.",
+            "It is often lost when artists create work to be displayed in museums.",
+            "It is the main quality that art collectors and new markets look for."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "module_id": "M2H",
+      "id": "20260909B-M2H",
+      "title": "20260909B · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            11.5,
+            13.6
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Could you swing by the lab now?",
+          "question_ids": [
+            "Q1"
+          ]
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            23.69,
+            26.03
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Mind keeping an eye on my laptop while I talk to the ...?",
+          "question_ids": [
+            "Q2"
+          ],
+          "source_note": "The supplied ASR transcript cuts off the last word of this prompt."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            36.94,
+            39.4
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Do you think we're on the right track with our literature review?",
+          "question_ids": [
+            "Q3"
+          ]
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            54.27,
+            89.62
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "So that researcher claims that if you pay people to do something they already love, they start treating it like a chore, right? The answer to the 'why am I doing this?' shifts from enjoyment to money. For me, I can't imagine bicycling ever feeling like a chore. I love it. Sometimes these psychological studies, I don't know. If you enjoy something, wouldn't you enjoy it more if you were being paid? This researcher showed that the opposite is true, though. Well, it was just one small study.",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ],
+          "source_issue": "The supplied M2H PDF is missing the Q4 question page; Q4 is preserved as a placeholder in this pack."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            124.36,
+            163.45
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Hemingway is always listed as one of the greatest novelists and short story writers. I get it. His stories are so plain and straightforward. That's a deception. It's spare, but there are things he doesn't describe explicitly that are still there. Maybe. But I can't write anything meaningful about his work. In this assignment, I'm just pointing out things that anyone could see. Then don't just write about what's at the surface. See what you can say about what's underneath those seemingly simple details. I guess I'll give it a shot.",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ]
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in an ecology class.",
+          "listen_window": [
+            192.57,
+            299.42
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "Soil fertility doesn't just depend on minerals or fertilizers. It also depends on microbes, especially bacteria that live around plant roots. These microbes break down organic matter and release nutrients that plants can absorb. But for these processes to work well, bacteria often need to act together, not just individually. One way they coordinate their behavior is through quorum sensing, figuring out if there's enough of them around. Bacteria release and detect chemical signals. Think of it like leaving notes on a shared bulletin board. One note doesn't make much difference. But when enough notes accumulate, everyone in the community notices. That's when the group, the bacteria, shift from working alone to coordinated action. An example of this kind of coordination is the formation of biofilms, sticky communities that cling to soil or root surfaces. Building biofilms benefits both the microbes and plants because it improves the microbes' ability to capture and retain nutrients. But building a biofilm is expensive for the bacteria in energy terms, so it's beneficial for them to wait until there's a large enough group before committing. If they start too early, there may not be enough cells to sustain the structure, which would make it a waste of energy. Quorum sensing helps them decide when it's worth pooling effort. And plants can actually influence this system. Roots release chemical compounds that magnify microbial signals. This helps recruit the helpful microbes that the plants need.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ]
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk in an art history class.",
+          "listen_window": [
+            380.14,
+            480.86
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Paintings can deteriorate over time. Color can gradually be lost and so on. So let's talk about painting restoration, the ways in which professional conservators bring a painting back to its original glory. The first time I watched a conservator clean a painting, it was really eye-opening. She leaned in with a cotton swab and started moving it across a dark corner, like she was erasing pencil marks. At one point, she lifted off a thin layer of old varnish. Varnish is the originally transparent coating the artist had applied over the finished painting to protect it. But varnish can brown from collecting dirt over time and so can become less transparent. After the varnish was removed, the color under it popped back like someone had turned the lights on. Another part that was super interesting: they sometimes use gels, liquids to clean. A gel holds the cleaning agent in place so it stays put, doesn't soak into cracks or drift into areas you never meant to touch. Think of it as putting the chemistry on a short leash. Now, if this sounds slow, it is. But that slowness is the point. Museums used to prize dramatic before-and-after reveals. But nowadays the goal is more like good editing: remove what doesn't belong, keep what does, and leave a clear record so the next team can undo or improve what you did.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, it's today.",
+            "Yes, I was at the lab.",
+            "I couldn't see it.",
+            "I'm coming."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Sure, I'll watch it for you.",
+            "Yes, I'll read it now.",
+            "Oh, that's so interesting!",
+            "Me too—I'd like to buy a new one."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "My literature professor is really engaging.",
+            "I think we're doing a good job so far.",
+            "I can help you hold it in place.",
+            "Not sure—I'm not familiar with this street."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "Source question page missing in supplied PDF.",
+          "options": [
+            "[Option A unavailable in source]",
+            "[Option B unavailable in source]",
+            "[Option C unavailable in source]",
+            "[Option D unavailable in source]"
+          ],
+          "correct_answer": "A",
+          "answer_verified": false,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": [],
+          "source_issue": "The supplied M2H PDF jumps from the conversation material page directly to Question 5; Question 4 stem/options are absent."
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "What does the woman imply when she mentions the size of a study?",
+          "options": [
+            "She will check to see if there are comparable studies.",
+            "She has doubts about the study's results.",
+            "She finished a reading assignment very quickly.",
+            "She will try to design a similar study."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "What does the man imply about Hemingway's writing?",
+          "options": [
+            "It is too difficult to describe.",
+            "It is intentionally confusing.",
+            "It is not as simple as it appears to be.",
+            "It does not deserve high critical praise."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "What can be inferred about the woman?",
+          "options": [
+            "She is having difficulty writing a paper.",
+            "She loves reading Hemingway's novels.",
+            "She cannot understand a professor's directions.",
+            "She is unable to follow the man's advice."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "What aspect of microbes is the talk mainly about?",
+          "options": [
+            "How they break down organic matter",
+            "How they benefit from plants",
+            "How they respond to fertilizers",
+            "How they work together"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker mention \"leaving notes on a shared bulletin board\"?",
+          "options": [
+            "To illustrate an effect of accumulated chemical signals",
+            "To make a point about microbes' memory",
+            "To explain how microbes communicate with plants",
+            "To point out that plants and microbes share nutrients"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "Why might bacteria delay forming a biofilm?",
+          "options": [
+            "To save energy",
+            "To collect enough nutrients",
+            "To wait for plants to grow",
+            "To wait for rainwater"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "According to the speaker, why do plants release certain substances?",
+          "options": [
+            "To protect themselves from harmful microbes",
+            "To remove some chemicals from their bodies",
+            "To attract beneficial microbes",
+            "To send signals to other plants"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "How does the speaker introduce painting restoration?",
+          "options": [
+            "By discussing some of the challenges involved in it",
+            "By describing a personal experience observing it",
+            "By mentioning the name of a professional who does it",
+            "By identifying paintings that have been restored"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "What effect of removing the varnish from a painting does the speaker mention?",
+          "options": [
+            "A previously unknown detail in the painting was discovered.",
+            "Pencil marks disappeared from the painting.",
+            "The painting's original colors became more visible.",
+            "The painting was damaged."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention that gels put chemistry \"on a short leash\"?",
+          "options": [
+            "To illustrate how gels limit where the cleaning agent can move",
+            "To argue that gels remove varnish faster than cotton swabs",
+            "To compare museum restoration to industrial paint removal",
+            "To suggest that using gels is an old practice that will soon be replaced"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "What can be inferred about painting restorations done in the past?",
+          "options": [
+            "They were more focused on color than present-day restorations.",
+            "They were done more quickly than present-day restorations.",
+            "They were less complete than present-day restorations.",
+            "They had less dramatic results than present-day restorations do."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    }
+  ]
+}

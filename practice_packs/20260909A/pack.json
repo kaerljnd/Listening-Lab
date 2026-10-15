@@ -1,0 +1,1253 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20260909A",
+  "title": "20260909A Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20260909A-M1",
+      "title": "20260909A · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            28.3,
+            30.72
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Do you think we can type up the report before dinner?",
+          "question_ids": [
+            "Q1"
+          ]
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            45.72,
+            47.82
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Any chance you've booked the seminar room for tomorrow?",
+          "question_ids": [
+            "Q2"
+          ]
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            61.34,
+            63.72
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I'll jot down some key words from the presentation.",
+          "question_ids": [
+            "Q3"
+          ]
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            82.84,
+            85.34
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "They moved to off-campus housing, of all places.",
+          "question_ids": [
+            "Q4"
+          ]
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            104.52,
+            106.54
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Have you figured out how to log into the course website?",
+          "question_ids": [
+            "Q5"
+          ]
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            120.6,
+            122.22
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "How can I join the team?",
+          "question_ids": [
+            "Q6"
+          ]
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            141.72,
+            144.1
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "What are the campus bookstore hours on holidays?",
+          "question_ids": [
+            "Q7"
+          ]
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            159.7,
+            161.74
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I was hoping to borrow your notes from the last lecture.",
+          "question_ids": [
+            "Q8"
+          ]
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            176.24,
+            179.4
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Let's keep the momentum and finish the report soon.",
+          "question_ids": [
+            "Q9"
+          ]
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            196.48,
+            198.12
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "My doctor recommends regular exercise.",
+          "question_ids": [
+            "Q10"
+          ]
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            214.96,
+            217.02
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "We shouldn't make a fuss over the professor's feedback.",
+          "question_ids": [
+            "Q11"
+          ]
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            233.48,
+            235.92
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I was hoping the professor would explain the grading rubric.",
+          "question_ids": [
+            "Q12"
+          ]
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            269.1,
+            300.32
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "The library suspended its fines for late returns because of last week's snowstorm. Great! The novel I borrowed was due back two days ago. You still have to return it today or tomorrow to avoid a late fine. I need to work on a psychology paper that's due tomorrow night. I was going to work on it till the last minute. Would you return the novel for me? The library's all the way across campus and I can't see myself getting over there any time soon. It's off my beaten path as well, but I'll help you out.",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ]
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            339.0,
+            370.38
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Hey, have you moved into your dorm? Yeah, it's tiny. My clothes don't fit in the closet, and I have too many books for one shelf. I plan to get rid of a chemistry textbook, but I learned I need it for a course this semester. You're reusing a textbook? Didn't you finish it last year? Apparently we only used the first half. Hey, it's cheaper than buying another new textbook. Well, have you looked into the storage room in the dorm? Everyone is assigned a large shelf for keeping things like off-season clothes. I didn't know that. That might help. At least I could store my winter clothes.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ]
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            408.28,
+            450.56
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Starting your short story with a disagreement over a planned trip is great, but after reading about the argument between Marianne and her sister, I got confused. I couldn't tell what Marianne was feeling after the argument. I struggled with how many interior monologues to include for Marianne. More monologues would help. It's okay to keep your reader in the dark for a moment or two, but ultimately readers should understand how she feels. Right now, your story ends narratively, but not emotionally. Narratively, but not emotionally? You ended your story without showing the emotional impact on your characters.",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ]
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to an announcement in a classroom.",
+          "listen_window": [
+            486.02,
+            516.36
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "The Preservation Society has invited our class to join a walking tour of the historic downtown next Saturday at 9 a.m. This is an excellent opportunity to observe building designs of the late 1800s. City Hall, for example, is an outstanding example of a Gothic Revival structure. Attendance is mandatory, but transportation will not be provided. Please consider local buses, carpooling, or other rideshare options. See me with any concerns, please.",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ]
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to an announcement on a university radio station.",
+          "listen_window": [
+            554.9,
+            589.72
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "This Monday on the North Quad, the university's media department will host an outdoor screening of director Dylan Smith's documentary, Fragments. Praised for its thought-provoking script and imagery, Fragments focuses on society's responses to climate change. Monday's 7 p.m. screening will be followed by a discussion led by the head of the media department. Seating will not be provided. Bring a blanket or lawn chair. Also bring a hoodie or a warm jacket. It will come in handy after sundown.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ]
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to an announcement in a classroom.",
+          "listen_window": [
+            628.02,
+            665.4
+          ],
+          "visual": "images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Regarding the reflection essay you're working on, several students told me the question prompt felt vague, and I agree. So please respond to the revised question on the course website, not the one on the printed syllabus from the start of the semester. Also, in your writing, remember to include ideas shared in class. To that end, you may highlight comments raised by your classmates during one of our class discussions if their point helped change your perspective.",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ]
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a music appreciation class.",
+          "listen_window": [
+            703.88,
+            805.96
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Have you ever wondered why music has such a strong emotional impact on us? Sometimes it comes from the way our brains respond to what's called dissonance. Dissonance occurs when two or more notes clash. They sound together in a way that creates tension or instability. Imagine hitting two piano keys that are right next to each other. It creates a sound that feels unresolved. Why does this matter? Well, music thrives on the tension between opposites. So dissonance is what creates a sense of unease that begs for resolution, to move to harmony. And when that resolution comes, say those two notes resolve into a harmonious chord, it feels like a breath of fresh air. This combination of tension and release forms the emotional push and pull of music. Here's something you might not know, though. The use of dissonance hasn't always been welcome. There were long periods in European history during which dissonance in music was considered sinful by the religious authorities at the time. But then in the 1700s, the German composer Johann Sebastian Bach came along. Bach started using dissonance more dynamically, and it became central to compositions. And today modern genres like jazz and experimental music rely heavily on the unique emotions dissonance creates. Let's listen to some modern pop music with some great examples.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ]
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a film class.",
+          "listen_window": [
+            883.08,
+            1015.52
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "As you know, Hollywood, California, is associated with movies. Early Hollywood, through the 1920s or so, was the period of silent films, with no recorded dialogue. Maybe you've heard of Charlie Chaplin, a famous silent film star. He was prolific early in the century. Movies remained silent until the first full-length sound film with spoken dialogue throughout, The Jazz Singer. But The Jazz Singer came out later, not till 1926. One important filmmaker's career spanned the silent film era and later. Her name was Dorothy Arzner. Arzner's career was unusual for a woman at that time. I can think of maybe one other female director who had a long Hollywood career in those days. Dorothy Arzner started out by typing scripts and then editing film. Then, in 1922, she had an opportunity to edit and direct for a silent film called Blood and Sand. It irritates me that she was not credited as an editor or director for Blood and Sand. It's unfair. She made decisions that saved the movie studio thousands of dollars. She deserved acknowledgement. From there, Arzner made about 20 films and was credited for her work. In fact, she was the first woman to direct a sound film. Many of her films deal with, shall we say, unconventional romance stories: unexpected characters meeting, falling in love, getting married. Arzner's films introduced several women actors who would go on to become hugely successful in comedies and dramas themselves.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Spaghetti and meatballs, I think.",
+            "It's probably in the main cafeteria.",
+            "We can get a discount for buying multiple tickets.",
+            "No, we'll need a lot of time for that."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "I don't want to miss out on this opportunity.",
+            "The seminar usually lasts all day.",
+            "Yes, I took care of it yesterday.",
+            "It's time to schedule your next appointment."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "I think it would be safer to leave the keys here.",
+            "Me too—I really enjoy word games.",
+            "Good idea—it'll help us recall the main points.",
+            "Sure, I'll help you move them downstairs."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "Why are you so surprised?",
+            "Yes, I will do that.",
+            "I see a parking spot over there.",
+            "It takes time to exercise."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "It's not that far, so let's go together.",
+            "It's actually really easy—let me show you.",
+            "Yes, I think that's the best choice.",
+            "Yes, I think you can request one online."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "I like to play football.",
+            "You should speak with the coach.",
+            "The students learn well in that environment.",
+            "They might have some at their new location."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "They have great holiday sales.",
+            "There's a long line.",
+            "Holiday hours may vary.",
+            "Holiday prices expire soon."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, there are several more in the box.",
+            "No problem, but please return them tomorrow.",
+            "Thank you, your notes were very helpful.",
+            "I need to return these today."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "Should we keep it in the common area?",
+            "Let's do it—we might be the first group to submit it.",
+            "What time is the appointment?",
+            "Sorry—I forgot to record it."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "That store is having a sale.",
+            "I need to finish my report.",
+            "Yes, I'll start going to the gym before my morning classes.",
+            "Let's meet for lunch tomorrow."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "You're right, let's address the key points calmly.",
+            "I can't seem to decide on a topic.",
+            "I know, I asked the professor too.",
+            "They asked us to send it back if we don't need it."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "I know—her grades have improved a lot.",
+            "Upgrading to a new device could help.",
+            "Me too—his system is a bit unusual.",
+            "No, I forgot to ask her."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "What does the woman indicate about the novel she borrowed from the library?",
+          "options": [
+            "It was renewed twice.",
+            "It is overdue.",
+            "She is still reading it.",
+            "She cited it in her psychology paper."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "What is implied about the library?",
+          "options": [
+            "It is not near the speakers' classes.",
+            "It is next to the man's residence hall.",
+            "It is open late on Friday nights.",
+            "It is closed today due to a snowstorm."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "Why does the man find it difficult to organize his dorm room?",
+          "options": [
+            "He has not had enough time to move in his furniture.",
+            "He does not have enough space for his books and clothes.",
+            "His chemistry professor assigned additional textbooks.",
+            "His roommate used too much of the storage space."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "What solution does the woman suggest to the man?",
+          "options": [
+            "He could share textbooks with his classmates.",
+            "He could leave his off-season clothing at home.",
+            "He could purchase used books instead of new ones.",
+            "He can use the shared storage space in the dormitory."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "Why is the man meeting with the woman?",
+          "options": [
+            "To get feedback on his creative writing assignment",
+            "To clarify a point the woman made in a recent lecture",
+            "To discuss a textbook chapter on character development",
+            "To compare opinions about a short story that was studied in class"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "What method of revealing a character's emotions is discussed?",
+          "options": [
+            "Revealing relevant parts of the character's personal history",
+            "Explicitly naming emotions that the character is feeling",
+            "Describing physical sensations caused by the character's emotions",
+            "Revealing the character's emotions by including unspoken thoughts"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "What class is the announcement most likely taking place in?",
+          "options": [
+            "Ancient History",
+            "Business Administration",
+            "Architecture",
+            "Political Science"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "Why does the speaker mention buses and carpools?",
+          "options": [
+            "To compare modes of transportation",
+            "To express a concern about a delay",
+            "To explain a new policy",
+            "To provide a suggestion"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "What is the main purpose of the announcement?",
+          "options": [
+            "To introduce the new head of the Media Department",
+            "To praise a documentary directed by a faculty member",
+            "To highlight a cause of climate change",
+            "To attract an audience for a film event"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "Why does the speaker mention items such as lawn chairs and jackets?",
+          "options": [
+            "To point out what listeners should bring with them",
+            "To identify some products being sold",
+            "To explain why a change was made",
+            "To make a point about an unusual weather forecast"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "Why should the listeners go to a website?",
+          "options": [
+            "To view an updated question",
+            "To access an extra-credit assignment",
+            "To print a revised syllabus",
+            "To provide suggestions for an assignment"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "Why does the speaker mention comments made by classmates?",
+          "options": [
+            "To encourage tolerance of various viewpoints",
+            "To give an example of an assignment requirement",
+            "To promote a healthy debate among students",
+            "To discuss a format change for an upcoming class"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "How European music was influenced by religion",
+            "How dissonance shapes the experience of listening to music",
+            "Why some people prefer instrumental music",
+            "Why certain genres of music avoid dissonance"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "What happens when dissonance resolves into harmony?",
+          "options": [
+            "It creates an uneasy experience.",
+            "It causes music to sound unstable.",
+            "It feels satisfying or calming.",
+            "It signals the end of a musical piece."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker mention the composer Bach?",
+          "options": [
+            "To point out when the use of dissonance increased",
+            "To illustrate how composers named specific compositions",
+            "To highlight religious themes in European music",
+            "To explain how harmony evolved from earlier systems"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "What will the class probably do next?",
+          "options": [
+            "Talk about the history of jazz",
+            "Discuss some music from the 1700s",
+            "Debate the emotional impact of certain musical pieces",
+            "Listen to some modern music"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "What does the speaker mainly discuss?",
+          "options": [
+            "The influence of 1920s female directors on today's Hollywood filmmakers",
+            "The career of an early Hollywood director who worked on both silent and sound films",
+            "The differences between the ways that silent and early sound films were made",
+            "The ways that early Hollywood actors influenced the decisions made by directors"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "What point does the speaker make about The Jazz Singer?",
+          "options": [
+            "It was Charlie Chaplin's first film with spoken dialogue.",
+            "It was the first full-length sound film.",
+            "It was a silent film made after sound films were introduced.",
+            "It was directed by a team of woman filmmakers."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "What attitude does the speaker express toward Blood and Sand?",
+          "options": [
+            "He is surprised by the amount of money it cost to make.",
+            "He is impressed by how quickly it became popular.",
+            "He is disappointed that women were not asked to work on it.",
+            "He is angry that Dorothy Arzner was not recognized for her work on it."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "What does the speaker say was a common topic of Dorothy Arzner's films?",
+          "options": [
+            "Unusual relationships",
+            "Funny stories",
+            "Dramatic events",
+            "Lives of famous directors"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "module_id": "M2H",
+      "id": "20260909A-M2H",
+      "title": "20260909A · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            16.38,
+            18.7
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Is it okay if we switch partners for this project?",
+          "question_ids": [
+            "Q1"
+          ]
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            37.5,
+            40.16
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Should we gather more data before proceeding with the analysis?",
+          "question_ids": [
+            "Q2"
+          ]
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            56.46,
+            58.48
+          ],
+          "visual": "images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Why isn't the grading criteria posted yet?",
+          "question_ids": [
+            "Q3"
+          ]
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            84.74,
+            118.26
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "You heard about the runway maintenance at the airport? Yeah, apparently it's running behind schedule. Yep, some flights are getting delayed. I'm flying across the country to spend spring break at home, and I have just 50 minutes to catch my connecting flight in Denver. I could easily miss it if there's any delay. Well, you could always stay on campus during spring break. I really want to see my family, though. Is there an earlier flight? There's one at 8 a.m., but it's like double the price of the original ticket. Yikes, that's steep.",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ]
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            161.38,
+            198.36
+          ],
+          "visual": "images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Have you eaten at Turning Leaf Kitchen? My roommate's always raving about it. I have. There's a different menu for winter, spring, summer, and fall. I went in the winter and ordered the butternut squash risotto. It wasn't cheap, but it sure was worth it. Oh, like the prices are super high? Well, more than any of the campus cafes, but not astronomical. Ah, okay. My birthday's coming up and my friends want to treat me to dinner. I just want to make sure I'm not taking advantage. If they offered, then it sounds like the perfect gift to me.",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ]
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk on an architecture podcast.",
+          "listen_window": [
+            238.32,
+            347.06
+          ],
+          "visual": "images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "The Great Pyramids of Egypt were basically built by piling one stone on top of another. Many of the stones used to build them contain huge numbers of one specific type of fossil shell. These shells resemble the size and shape of small coins, and the scientific name of the shells reflects this. The organisms that form these shells are called nummulites. That's a word with the same root as the word numismatics, which is the study of money. And coins are money, right? Okay, so considering that these shells, while small, are still large enough to collect in your hand, it may come as a surprise that they were created by a unicellular organism, a creature that consisted of just one single huge cell, not a multicellular organism like clams or oysters. Amazing, right? The vast numbers of these shell-making organisms once lived on a tropical seafloor millions of years ago in what's now Egypt. Over time, huge numbers of these shells were buried beneath many additional layers. The weight of the overlying layers compacted the limey sediment closer together until it turned into a solid rock known as limestone. But limestone that was rich in nummulites wasn't suitable for construction in all sections of the pyramids, so other types of stone had to be quarried as well. Okay, next up, let's look at the pyramid structure and why different kinds of stone were used for different parts.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ]
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a history podcast.",
+          "listen_window": [
+            428.3,
+            514.06
+          ],
+          "visual": "images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Have you had a zipper betray you—stuck halfway, misaligned, and suddenly you're negotiating with your jacket like it's got a personality? That kind of failure is annoying, but it's only noticeable because properly functioning zippers are seen as a given. The modest zipper is actually a big deal. When its earliest form was invented in the late 19th century, people weren't super impressed. Hooks and buttons had been around forever, and people thought they worked well enough. And the first versions of the zipper weren't sleek. They were fussy. They jammed. Basically, they malfunctioned much more commonly than they do today. In other words, they weren't a must-have. What made the zipper take off was a new design that was invented by a Swedish-American engineer named Gideon Sundback. Sundback's idea was to create uniform metal teeth. With these teeth, all of the exact same size, the slider could now reliably glide into place in a single motion. The zipper's impact on everyday life has been huge since designers of bags and clothing stopped planning around slow or fragile closures. Suitcases could now pack more stuff without being as bulky because luggage no longer needed unwieldy straps and buckles, so traveling became more convenient. Outdoor clothing became easier to seal with one hand. That meant you could close a pocket while holding something else. We're now so used to this convenience that we take it for granted.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "OK, let's start by choosing a topic.",
+            "Sure, I don't mind working with Tom.",
+            "Please sit here—I don't mind.",
+            "No rush—we still have two more hours."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "OK, how about we review some additional sources?",
+            "But we're all supposed to gather at the same time.",
+            "Sure, let's walk there together.",
+            "Yes, the analysis was correct."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "Maybe the lecture had to be rescheduled.",
+            "I also think that may be the reason.",
+            "Because I haven't received any new emails.",
+            "Perhaps they are revising some things."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "What are the speakers mainly discussing?",
+          "options": [
+            "The need for some airport maintenance work",
+            "A concern about the woman's upcoming trip",
+            "Why traveling can be exciting",
+            "Why airfares increase during certain times of year"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "What can be inferred about the flight at 8 a.m.?",
+          "options": [
+            "It is sometimes delayed.",
+            "It only has a few seats available.",
+            "It is relatively expensive.",
+            "It flies directly to Denver."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "What does the man say about the menu at Turning Leaf Kitchen?",
+          "options": [
+            "It has a wide variety of risotto dishes.",
+            "It changes every season.",
+            "It includes many unique dishes.",
+            "It can be viewed online."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "What concern does the woman express when she mentions her friends?",
+          "options": [
+            "She does not know what gift to purchase.",
+            "She does not know if a friend is available.",
+            "The restaurant may be too crowded.",
+            "Prices may be too high."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "The importance of pyramids in Egyptian culture",
+            "A certain type of rock that was used in ancient construction",
+            "Reasons for changes in Egyptian architecture over the centuries",
+            "A way in which fossils are identified"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "What is the speaker explaining when talking about coins?",
+          "options": [
+            "A new theory about the creation of the pyramids",
+            "An artifact that can be found at the site of pyramids",
+            "The size of holes that were drilled in some rocks",
+            "The name of some organisms"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "What about nummulites does the speaker find surprising?",
+          "options": [
+            "That they had hard shells",
+            "That they provided food for clams and oysters",
+            "That they survived in sediment",
+            "That they consisted of a single cell"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "What will the speaker probably discuss next?",
+          "options": [
+            "Methods for shaping limestone in pyramid construction",
+            "Processes for moving limestone blocks",
+            "Reasons that the pyramids were not built entirely from the same material",
+            "The variety of sea organisms that lived in what is now Egypt"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "What is the speaker's main attitude toward the zipper?",
+          "options": [
+            "He is impressed by the variety of its designs.",
+            "He is excited about possible future developments in its design.",
+            "He is highly annoyed by how frequently problems occur with it.",
+            "He feels that people do not appreciate its role enough."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "What does the speaker imply about the earliest form of the zipper?",
+          "options": [
+            "It included hooks and buttons.",
+            "It was not very popular.",
+            "It was made from metal.",
+            "It was used mostly in bags."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "What did Gideon Sundback invent?",
+          "options": [
+            "The zipper's glider",
+            "The zipper's uniform teeth",
+            "A new way to attach zippers to clothing",
+            "A way to make zippers strong enough for holding luggage"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "How did the zipper change traveling?",
+          "options": [
+            "It made carrying luggage easier.",
+            "It caused people to spend more on fashionable suitcases.",
+            "It encouraged people to pack less clothing.",
+            "It allowed people to travel in more comfortable clothing."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    }
+  ]
+}
