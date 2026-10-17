@@ -250,7 +250,10 @@ async function beginClassroomSession(){
   if(!classroomEligible()) return true;
   const studentCode=classroomStudentCode();
   if(!studentCode){ alert('需要课堂代号才能开始云端课堂练习。'); return false; }
-  const materialId=isSingleTalkMode()?(moduleData?.talkRef?.sourceMaterialId||''):(moduleData?.moduleId||moduleData?.id||'');
+  const materialId=isSingleTalkMode()?[
+    moduleData?.talkRef?.sourceModuleId,
+    moduleData?.talkRef?.sourceMaterialId
+  ].filter(Boolean).join('-'):(moduleData?.moduleId||moduleData?.id||'');
   try{
     const data=await classroomPost('/session',{
       student_code:studentCode,
@@ -314,7 +317,10 @@ function materialCloudPayload(mid){
   const t=talkLabState(),v=talkVocab(mid),fb=talkFrameworkBefore(mid),fa=talkFrameworkAfter(mid),fi=talkFrameworkIssues(mid);
   return {
     session_id:state.cloud.sessionId,
-    material_id:moduleData?.talkRef?.sourceMaterialId||mid,
+    material_id:isSingleTalkMode()?[
+      moduleData?.talkRef?.sourceModuleId,
+      moduleData?.talkRef?.sourceMaterialId
+    ].filter(Boolean).join('-'):mid,
     topic_before:fb.topic||'',
     main_points_before:(fb.mainPoints||[]).map(x=>({text:x.text||'',time:Number.isFinite(x.time)?x.time:null})),
     topic_after:fa.topic||'',
