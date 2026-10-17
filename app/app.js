@@ -224,6 +224,7 @@ function escapeHtml(v){ return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;'
 function nowIso(){ return new Date().toISOString(); }
 function makeSessionId(){ return `${moduleData?.id||'navigation'}-${Date.now()}`; }
 
+const cloudResponseTimers=new Map();
 const cloudQuestionTimers=new Map();
 const cloudMaterialTimers=new Map();
 function classroomEligible(){ return (ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER)==='20260920A'; }
@@ -269,10 +270,38 @@ async function beginClassroomSession(){
     return false;
   }
 }
+function questionHasResponseData(q){
+  if(!q) return false;
+  const meta=state.firstMeta[q.id]||{};
+  return !!(state.firstAnswers[q.id]||meta.completedAt||meta.selections?.length);
+}
+function questionResponsePayload(q){
+  const meta=state.firstMeta[q.id]||{};
+  return {
+    session_id:state.cloud.sessionId,
+    question_id:q.id,
+    first_answer:state.firstAnswers[q.id]||'',
+    response_ms:Number.isFinite(meta.responseMs)?Math.round(meta.responseMs):null,
+    timeout:!!meta.timeout,
+    answered_at:meta.completedAt||meta.selections?.at(-1)?.at||''
+  };
+}
+async function syncCloudResponse(qid){
+  if(!cloudReady()) return;
+  const q=moduleData?.questions?.find(x=>x.id===qid);
+  if(!q||!questionHasResponseData(q)) return;
+  try{ await classroomPost('/response',questionResponsePayload(q)); state.cloud.status='connected'; state.cloud.lastError=null; }
+  catch(err){ state.cloud.status='error'; state.cloud.lastError=String(err?.message||err); console.warn('Response cloud sync failed',err); }
+}
+function queueCloudResponse(qid,delay=500){
+  if(!cloudReady()||!qid) return;
+  clearTimeout(cloudResponseTimers.get(qid));
+  cloudResponseTimers.set(qid,setTimeout(()=>{cloudResponseTimers.delete(qid);syncCloudResponse(qid);},delay));
+}
 function questionHasCloudData(q){
   if(!q) return false;
   const err=state.errorData[q.id];
-  return !!(state.firstAnswers[q.id]||state.secondAnswers[q.id]||state.postTranscriptAnswers[q.id]||state.evidence[q.id]||state.confidenceData[q.id]||state.understandingData[q.id]||(err&&err.status!=='pending'));
+  return !!(state.secondAnswers[q.id]||state.postTranscriptAnswers[q.id]||state.evidence[q.id]||state.confidenceData[q.id]||state.understandingData[q.id]||(err&&err.status!=='pending'));
 }
 function questionCloudPayload(q){
   const e=state.evidence[q.id]||null;
@@ -284,7 +313,6 @@ function questionCloudPayload(q){
   return {
     session_id:state.cloud.sessionId,
     question_id:q.id,
-    first_answer:state.firstAnswers[q.id]||'',
     second_answer:state.secondAnswers[q.id]||'',
     post_transcript_answer:state.postTranscriptAnswers[q.id]||'',
     confidence,
@@ -344,6 +372,7 @@ function queueCloudMaterial(mid,delay=900){
 function queueCloudSyncFromState(){
   if(!cloudReady()||!moduleData||!state) return;
   const q=typeof getQ==='function'?getQ():null;
+  if(q&&questionHasResponseData(q)) queueCloudResponse(q.id);
   if(q&&questionHasCloudData(q)) queueCloudQuestion(q.id);
   if(q&&materialHasCloudData(q.materialId)) queueCloudMaterial(q.materialId);
 }
@@ -842,11 +871,11 @@ function chooseFirst(letter){
   state.firstAnswers[q.id]=letter; meta.selections=meta.selections||[]; meta.selections.push({answer:letter,at:nowIso(),elapsedMs:meta.answerShownMs?Date.now()-meta.answerShownMs:null}); meta.finalAnswer=letter; state.firstMeta[q.id]=meta;
   logEvent('first_answer_select',{answer:letter}); renderPractice();
 }
-function finalizeFirstQuestion(){
-  const q=getQ(),meta=state.firstMeta[q.id]||{}; meta.completedAt=nowIso(); meta.responseMs=meta.answerShownMs?Date.now()-meta.answerShownMs:null; state.firstMeta[q.id]=meta;
+function finalizeFirstQuestion(fromTimeout=false){
+  const q=getQ(),meta=state.firstMeta[q.id]||{}; meta.completedAt=nowIso(); meta.responseMs=meta.answerShownMs?Date.now()-meta.answerShownMs:null; meta.timeout=!!fromTimeout; state.firstMeta[q.id]=meta;
 }
 function nextQ(fromTimeout=false){
-  if(state.paused) return; clearInterval(state.timerId); state.timerId=null; clearPracticeStartDelay(); cancelPendingPracticePlayback(); finalizeFirstQuestion(); stopAudio({save:false}); logEvent('first_question_end',{timeout:!!fromTimeout,answer:state.firstAnswers[getQ().id]||null});
+  if(state.paused) return; clearInterval(state.timerId); state.timerId=null; clearPracticeStartDelay(); cancelPendingPracticePlayback(); finalizeFirstQuestion(fromTimeout); stopAudio({save:false}); logEvent('first_question_end',{timeout:!!fromTimeout,answer:state.firstAnswers[getQ().id]||null});
   if(state.idx<moduleData.questions.length-1){ state.idx++; enterListenPhase(); }
   else { state.idx=0; state.view='analysis'; logEvent('analysis_start'); renderAnalysis(); }
 }
