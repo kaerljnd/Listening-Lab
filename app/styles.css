@@ -228,3 +228,14 @@
 .audit-row.actionable{display:flex;align-items:center;justify-content:space-between;gap:14px}.audit-target-flash{animation:auditFlash 1.35s ease}@keyframes auditFlash{0%,100%{box-shadow:none}35%{box-shadow:0 0 0 4px rgba(0,127,104,.18);border-color:var(--green)}}
 .time-link,.result-time-link{border:0;background:transparent;color:var(--green-dark);cursor:pointer;text-decoration:underline;text-underline-offset:2px;padding:0;font:inherit}.result-time-link.inline{font-weight:700}.result-time-link:hover,.time-link:hover{color:var(--green)}
 @media(max-width:760px){.talk-mode-actions{flex-direction:column;align-items:stretch}.talk-mode-actions .btn{width:100%}.talk-overview-item summary{grid-template-columns:1fr}.talk-overview-path{white-space:normal}.audit-row.actionable{align-items:flex-start;flex-direction:column}}
+
+/* v1.9.3: word seeking and independent practice scoring */
+.transcript-words { line-height:2.15; white-space:pre-wrap; overflow-wrap:anywhere; }
+.transcript-word { border:0; border-radius:4px; background:transparent; color:inherit; font:inherit; padding:1px 2px; cursor:pointer; }
+.transcript-word:hover, .transcript-word:focus-visible { background:rgba(76,127,226,.17); outline:1px solid rgba(76,127,226,.4); }
+.transcript-word.active-word { background:rgba(244,187,62,.36); box-shadow:inset 0 -2px rgba(222,158,26,.7); }
+.transcript-sync-note { margin:6px 0 12px; font-size:.85rem; opacity:.78; }
+.practice-answer-row { margin:10px 0; padding:12px; border:1px solid var(--border,#d7dce6); border-radius:10px; line-height:1.7; }
+.practice-answer-row.correct { border-left:4px solid #358b55; }
+.practice-answer-row.incorrect { border-left:4px solid #cc6548; }
+.source-audio-warning { padding:18px; border-radius:12px; border:1px solid #c98b31; background:rgba(222,163,57,.08); }
