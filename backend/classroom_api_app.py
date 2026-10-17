@@ -74,7 +74,7 @@ def health():
     return jsonify({
         "ok": True,
         "service": "listening-lab-api",
-        "version": "classroom-pilot-0.3"
+        "version": "classroom-pilot-0.4"
     })
 
 
@@ -94,6 +94,8 @@ def create_session():
     student_code = text_value(data.get("student_code"))
     set_id = text_value(data.get("set_id"))
     material_id = text_value(data.get("material_id"))
+    practice_mode = text_value(data.get("practice_mode"))
+    module_id = text_value(data.get("module_id"))
 
     if not student_code:
         return jsonify({"ok": False, "error": "student_code is required"}), 400
@@ -113,6 +115,8 @@ def create_session():
         ("student_code", student_code),
         ("set_id", set_id),
         ("material_id", material_id),
+        ("practice_mode", practice_mode),
+        ("module_id", module_id),
         ("status", "in_progress"),
         ("started_at", timestamp),
         ("updated_at", timestamp),
@@ -130,6 +134,50 @@ def create_session():
         "session_id": session_id,
         "status": "in_progress"
     }), 201
+
+
+@app.route("/session/status", methods=["OPTIONS"])
+def session_status_options():
+    return "", 204
+
+
+@app.route("/session/status", methods=["POST"])
+def update_session_status():
+    data = request.get_json(silent=True) or {}
+
+    session_id = text_value(data.get("session_id"))
+    status = text_value(data.get("status"))
+
+    if not session_id:
+        return jsonify({"ok": False, "error": "session_id is required"}), 400
+
+    if status not in {"completed", "abandoned"}:
+        return jsonify({"ok": False, "error": "invalid status"}), 400
+
+    timestamp = now_ms()
+    primary_key = [("session_id", session_id)]
+    attribute_columns = [
+        ("status", status),
+        ("ended_at", timestamp),
+        ("updated_at", timestamp),
+    ]
+
+    if status == "completed":
+        attribute_columns.append(("completed_at", timestamp))
+
+    client = get_ots_client()
+    client.put_row(
+        "sessions",
+        Row(primary_key, attribute_columns),
+        Condition(RowExistenceExpectation.IGNORE)
+    )
+
+    return jsonify({
+        "ok": True,
+        "session_id": session_id,
+        "status": status,
+        "ended_at": timestamp
+    }), 200
 
 
 # =========================================================
