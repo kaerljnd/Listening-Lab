@@ -304,24 +304,33 @@ function questionHasCloudData(q){
   return !!(state.secondAnswers[q.id]||state.postTranscriptAnswers[q.id]||state.evidence[q.id]||state.confidenceData[q.id]||state.understandingData[q.id]||(err&&err.status!=='pending'));
 }
 function questionCloudPayload(q){
-  const e=state.evidence[q.id]||null;
-  const confidence=state.confidenceData[q.id]?.level||'';
-  let resolution='';
-  if(state.confidenceData[q.id]?.analysisSkipped) resolution='high_confidence';
-  else if(state.understandingData[q.id]?.status==='understood_after_replay') resolution='replay';
-  else if(state.understandingData[q.id]?.status==='deep_analysis') resolution='deep_analysis';
-  return {
+  const payload={
     session_id:state.cloud.sessionId,
-    question_id:q.id,
-    second_answer:state.secondAnswers[q.id]||'',
-    post_transcript_answer:state.postTranscriptAnswers[q.id]||'',
-    confidence,
-    error_reasons:errCodes(q.id),
-    evidence_start:e?(e.type==='point'?e.point:e.start):null,
-    evidence_end:e?(e.type==='point'?e.point:e.end):null,
-    analysis_skipped:!!state.confidenceData[q.id]?.analysisSkipped,
-    resolution_stage:resolution
+    question_id:q.id
   };
+  const second=state.secondAnswers[q.id];
+  const post=state.postTranscriptAnswers[q.id];
+  const conf=state.confidenceData[q.id]||null;
+  const understand=state.understandingData[q.id]||null;
+  const err=state.errorData[q.id]||null;
+  const e=state.evidence[q.id]||null;
+
+  if(second) payload.second_answer=second;
+  if(post) payload.post_transcript_answer=post;
+  if(conf?.level) payload.confidence=conf.level;
+  if(conf) payload.analysis_skipped=!!conf.analysisSkipped;
+
+  if(understand?.status==='understood_after_replay') payload.resolution_stage='replay';
+  else if(understand?.status==='deep_analysis') payload.resolution_stage='deep_analysis';
+  else if(conf?.analysisSkipped) payload.resolution_stage='high_confidence';
+
+  if(err?.status==='confirmed'||err?.status==='skipped') payload.error_reasons=err.selected||[];
+
+  if(e){
+    payload.evidence_start=e.type==='point'?e.point:e.start;
+    payload.evidence_end=e.type==='point'?e.point:e.end;
+  }
+  return payload;
 }
 function errCodes(qid){ return state.errorData[qid]?.selected||[]; }
 async function syncCloudQuestion(qid){
