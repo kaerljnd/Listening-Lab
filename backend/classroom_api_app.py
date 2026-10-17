@@ -2,6 +2,8 @@ import os
 import time
 import uuid
 import json
+import hmac
+from functools import wraps
 
 from flask import Flask, request, jsonify
 from tablestore import (
@@ -9,6 +11,9 @@ from tablestore import (
     Row,
     Condition,
     RowExistenceExpectation,
+    Direction,
+    INF_MIN,
+    INF_MAX,
 )
 
 app = Flask(__name__)
@@ -17,6 +22,7 @@ OTS_ENDPOINT = os.environ["OTS_ENDPOINT"]
 OTS_INSTANCE = os.environ["OTS_INSTANCE"]
 
 ALLOWED_SET_IDS = {"20260920A"}
+TEACHER_KEY = os.environ.get("TEACHER_KEY", "").strip()
 
 ALLOWED_ORIGINS = {
     "https://kaerljnd.github.io",
@@ -51,6 +57,61 @@ def json_value(value):
     return json.dumps(value, ensure_ascii=False)
 
 
+def teacher_required(fn):
+    @wraps(fn)
+    def wrapped(*args, **kwargs):
+        if not TEACHER_KEY:
+            return jsonify({"ok": False, "error": "teacher access is not configured"}), 503
+        supplied = request.headers.get("X-Teacher-Key", "")
+        if not supplied or not hmac.compare_digest(supplied, TEACHER_KEY):
+            return jsonify({"ok": False, "error": "teacher access denied"}), 401
+        return fn(*args, **kwargs)
+    return wrapped
+
+
+def row_to_dict(row):
+    if row is None:
+        return None
+    data = {}
+    for item in row.primary_key or []:
+        if len(item) >= 2:
+            data[item[0]] = item[1]
+    for item in row.attribute_columns or []:
+        if len(item) >= 2:
+            data[item[0]] = item[1]
+    return data
+
+
+def get_range_all(table_name, start_pk, end_pk, limit_per_page=500, hard_limit=10000):
+    client = get_ots_client()
+    rows_out = []
+    current = start_pk
+    while current is not None and len(rows_out) < hard_limit:
+        remaining = hard_limit - len(rows_out)
+        page_limit = min(limit_per_page, remaining)
+        _, next_pk, rows, _ = client.get_range(
+            table_name,
+            Direction.FORWARD,
+            current,
+            end_pk,
+            limit=page_limit,
+            max_version=1,
+        )
+        rows_out.extend(rows)
+        if next_pk is None:
+            break
+        current = next_pk
+    return [row_to_dict(row) for row in rows_out]
+
+
+def get_session_children(table_name, session_id, second_key):
+    return get_range_all(
+        table_name,
+        [("session_id", session_id), (second_key, INF_MIN)],
+        [("session_id", session_id), (second_key, INF_MAX)],
+    )
+
+
 @app.after_request
 def add_cors_headers(response):
     origin = request.headers.get("Origin", "")
@@ -59,7 +120,7 @@ def add_cors_headers(response):
         response.headers["Access-Control-Allow-Origin"] = origin
 
     response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, X-Teacher-Key"
 
     return response
 
@@ -74,8 +135,75 @@ def health():
     return jsonify({
         "ok": True,
         "service": "listening-lab-api",
-        "version": "classroom-pilot-0.4.1"
+        "version": "classroom-pilot-0.5-teacher"
     })
+
+
+# =========================================================
+# TEACHER READ API
+# =========================================================
+
+@app.route("/teacher/sessions", methods=["OPTIONS"])
+def teacher_sessions_options():
+    return "", 204
+
+
+@app.route("/teacher/sessions", methods=["GET"])
+@teacher_required
+def teacher_sessions():
+    try:
+        requested = int(request.args.get("limit", "200"))
+    except ValueError:
+        requested = 200
+    limit = max(1, min(requested, 1000))
+
+    sessions = get_range_all(
+        "sessions",
+        [("session_id", INF_MIN)],
+        [("session_id", INF_MAX)],
+        hard_limit=max(limit, 1000),
+    )
+    sessions.sort(key=lambda item: int(item.get("started_at") or 0), reverse=True)
+    sessions = sessions[:limit]
+
+    return jsonify({
+        "ok": True,
+        "sessions": sessions,
+        "count": len(sessions),
+    }), 200
+
+
+@app.route("/teacher/session/<session_id>", methods=["OPTIONS"])
+def teacher_session_detail_options(session_id):
+    return "", 204
+
+
+@app.route("/teacher/session/<session_id>", methods=["GET"])
+@teacher_required
+def teacher_session_detail(session_id):
+    session_id = text_value(session_id)
+    client = get_ots_client()
+
+    _, session_row, _ = client.get_row(
+        "sessions",
+        [("session_id", session_id)],
+        max_version=1,
+    )
+
+    if session_row is None:
+        return jsonify({"ok": False, "error": "session not found"}), 404
+
+    responses = get_session_children("question_responses", session_id, "question_id")
+    attempts = get_session_children("question_attempts", session_id, "question_id")
+    analyses = get_session_children("material_analysis", session_id, "material_id")
+
+    return jsonify({
+        "ok": True,
+        "session": row_to_dict(session_row),
+        "responses": responses,
+        "attempts": attempts,
+        "material_analysis": analyses,
+    }), 200
 
 
 # =========================================================
