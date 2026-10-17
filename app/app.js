@@ -2,6 +2,12 @@ const app = document.getElementById('app');
 const audio = document.getElementById('audio');
 const ACTIVE_SELECTION_KEY = 'listening-lab:active-selection';
 const NAVIGATION_KEY = 'listening-lab:navigation-v1.9.2';
+const CLASSROOM_STUDENT_KEY = 'listening-lab:classroom-student-code';
+const CLASSROOM_API_BASE = 'https://listeni-lab-api-yuhpblgpyn.cn-hangzhou.fcapp.run';
+const IS_GITHUB_PAGES = location.hostname.endsWith('github.io');
+const REPO_NAME = IS_GITHUB_PAGES ? (location.pathname.split('/').filter(Boolean)[0] || 'Listening-Lab') : '';
+const REPO_BASE = IS_GITHUB_PAGES ? `/${REPO_NAME}` : '';
+const PACK_BASE = IS_GITHUB_PAGES ? `${REPO_BASE}/practice_packs` : '/packs';
 let PACK_CATALOG = [];
 let CATALOG_ERRORS = [];
 let ACTIVE_PACK = null;
@@ -14,7 +20,7 @@ let STORAGE_KEY = '';
 function resolvePackAsset(folder,path){
   if(!path) return '';
   if(/^(?:https?:|data:|blob:|\/)/i.test(path)) return path;
-  return `/packs/${encodeURIComponent(folder)}/${String(path).replace(/^\.\//,'')}`;
+  return `${PACK_BASE}/${encodeURIComponent(folder)}/${String(path).replace(/^\.\//,'')}`;
 }
 function transcriptToText(value){
   if(Array.isArray(value)) return value.map(x=>{
@@ -155,7 +161,8 @@ function questionLabel(q){ return q?.displayId||q?.id||''; }
 function materialLabel(q){ return q?.displayMaterialId||q?.materialId||''; }
 function sessionModeLabel(){ if(moduleData?.trainingMode==='question_type') return `专项 · ${typeLabel(moduleData.questionType)}`; if(moduleData?.trainingMode==='single_talk') return `单篇讲座精练 · ${moduleData.talkRef?.sourceModuleId||''}·${moduleData.talkRef?.sourceMaterialId||''}`; return 'Listening'; }
 async function fetchCatalog(){
-  const res=await fetch('/api/packs',{cache:'no-store'});
+  const catalogUrl=IS_GITHUB_PAGES?`${PACK_BASE}/catalog.json`:'/api/packs';
+  const res=await fetch(catalogUrl,{cache:'no-store'});
   if(!res.ok) throw new Error(`Cannot read pack catalog (${res.status})`);
   const data=await res.json();
   PACK_CATALOG=Array.isArray(data.packs)?data.packs:[];
@@ -166,7 +173,7 @@ async function fetchPack(folder){
   const meta=PACK_CATALOG.find(x=>x.folder===folder||x.set_id===folder);
   if(!meta) throw new Error(`Practice pack not found: ${folder}`);
   const file=meta.pack_file||'pack.json';
-  const res=await fetch(`/packs/${encodeURIComponent(meta.folder)}/${encodeURIComponent(file)}`,{cache:'no-store'});
+  const res=await fetch(`${PACK_BASE}/${encodeURIComponent(meta.folder)}/${encodeURIComponent(file)}`,{cache:'no-store'});
   if(!res.ok) throw new Error(`Cannot read ${meta.folder}/${file} (${res.status})`);
   return {raw:await res.json(),meta};
 }
@@ -216,6 +223,124 @@ const ERROR_REASONS = [
 function escapeHtml(v){ return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]||c)); }
 function nowIso(){ return new Date().toISOString(); }
 function makeSessionId(){ return `${moduleData?.id||'navigation'}-${Date.now()}`; }
+
+const cloudQuestionTimers=new Map();
+const cloudMaterialTimers=new Map();
+function classroomEligible(){ return (ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER)==='20260920A'; }
+function cloudReady(){ return !!(state?.cloud?.sessionId&&classroomEligible()); }
+function classroomStudentCode(){
+  let previous='';
+  try{ previous=localStorage.getItem(CLASSROOM_STUDENT_KEY)||''; }catch(e){}
+  const code=window.prompt('请输入课堂代号（例如 ZJM、0347-03）。本次练习记录会保存到课堂服务器。',previous)?.trim();
+  if(!code) return null;
+  try{ localStorage.setItem(CLASSROOM_STUDENT_KEY,code); }catch(e){}
+  return code.slice(0,40);
+}
+async function classroomPost(path,payload){
+  const res=await fetch(`${CLASSROOM_API_BASE}${path}`,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(payload)
+  });
+  const data=await res.json().catch(()=>({}));
+  if(!res.ok||data.ok!==true) throw new Error(data.error||`Classroom API ${res.status}`);
+  return data;
+}
+async function beginClassroomSession(){
+  if(!classroomEligible()) return true;
+  const studentCode=classroomStudentCode();
+  if(!studentCode){ alert('需要课堂代号才能开始云端课堂练习。'); return false; }
+  const materialId=isSingleTalkMode()?(moduleData?.talkRef?.sourceMaterialId||''):(moduleData?.moduleId||moduleData?.id||'');
+  try{
+    const data=await classroomPost('/session',{
+      student_code:studentCode,
+      set_id:ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER,
+      material_id:materialId
+    });
+    state.cloud={enabled:true,studentCode,sessionId:data.session_id,status:'connected',lastError:null};
+    persist();
+    return true;
+  }catch(err){
+    state.cloud={enabled:false,studentCode,sessionId:null,status:'error',lastError:String(err?.message||err)};
+    alert('课堂服务器暂时无法连接。本次练习不会开始，以免记录丢失。\n\n'+state.cloud.lastError);
+    return false;
+  }
+}
+function questionHasCloudData(q){
+  if(!q) return false;
+  const err=state.errorData[q.id];
+  return !!(state.firstAnswers[q.id]||state.secondAnswers[q.id]||state.postTranscriptAnswers[q.id]||state.evidence[q.id]||state.confidenceData[q.id]||state.understandingData[q.id]||(err&&err.status!=='pending'));
+}
+function questionCloudPayload(q){
+  const e=state.evidence[q.id]||null;
+  const confidence=state.confidenceData[q.id]?.level||'';
+  let resolution='';
+  if(state.confidenceData[q.id]?.analysisSkipped) resolution='high_confidence';
+  else if(state.understandingData[q.id]?.status==='understood_after_replay') resolution='replay';
+  else if(state.understandingData[q.id]?.status==='deep_analysis') resolution='deep_analysis';
+  return {
+    session_id:state.cloud.sessionId,
+    question_id:q.id,
+    first_answer:state.firstAnswers[q.id]||'',
+    second_answer:state.secondAnswers[q.id]||'',
+    post_transcript_answer:state.postTranscriptAnswers[q.id]||'',
+    confidence,
+    error_reasons:errCodes(q.id),
+    evidence_start:e?(e.type==='point'?e.point:e.start):null,
+    evidence_end:e?(e.type==='point'?e.point:e.end):null,
+    analysis_skipped:!!state.confidenceData[q.id]?.analysisSkipped,
+    resolution_stage:resolution
+  };
+}
+function errCodes(qid){ return state.errorData[qid]?.selected||[]; }
+async function syncCloudQuestion(qid){
+  if(!cloudReady()) return;
+  const q=moduleData?.questions?.find(x=>x.id===qid);
+  if(!q||!questionHasCloudData(q)) return;
+  try{ await classroomPost('/question',questionCloudPayload(q)); state.cloud.status='connected'; state.cloud.lastError=null; }
+  catch(err){ state.cloud.status='error'; state.cloud.lastError=String(err?.message||err); console.warn('Question cloud sync failed',err); }
+}
+function queueCloudQuestion(qid,delay=700){
+  if(!cloudReady()||!qid) return;
+  clearTimeout(cloudQuestionTimers.get(qid));
+  cloudQuestionTimers.set(qid,setTimeout(()=>{cloudQuestionTimers.delete(qid);syncCloudQuestion(qid);},delay));
+}
+function materialHasCloudData(mid){
+  if(!isSingleTalkMode()||!mid) return false;
+  const t=state.talkLab||{},v=t.vocab?.[mid],fb=t.frameworkBefore?.[mid],fa=t.frameworkAfter?.[mid],fi=t.frameworkIssues?.[mid];
+  return !!(state.transcriptViewed[mid]||v?.none||v?.markers?.length||fb||fa||fi||t.directTranscriptSkip?.[mid]||t.postUnchanged?.[mid]);
+}
+function materialCloudPayload(mid){
+  const t=talkLabState(),v=talkVocab(mid),fb=talkFrameworkBefore(mid),fa=talkFrameworkAfter(mid),fi=talkFrameworkIssues(mid);
+  return {
+    session_id:state.cloud.sessionId,
+    material_id:moduleData?.talkRef?.sourceMaterialId||mid,
+    topic_before:fb.topic||'',
+    main_points_before:(fb.mainPoints||[]).map(x=>({text:x.text||'',time:Number.isFinite(x.time)?x.time:null})),
+    topic_after:fa.topic||'',
+    main_points_after:(fa.mainPoints||[]).map(x=>({text:x.text||'',time:Number.isFinite(x.time)?x.time:null})),
+    vocab_marks:(v.markers||[]).map(x=>({time:x.time,heard_text:x.heard||'',actual_text:x.corrected||'',meaning:x.meaning||'',note:x.note||''})),
+    framework_issues:fi.accurate?['accurate']:[...(fi.selected||[]),...(fi.note?[fi.note]:[])],
+    direct_transcript_skip:!!t.directTranscriptSkip?.[mid],
+    post_unchanged:!!t.postUnchanged?.[mid]
+  };
+}
+async function syncCloudMaterial(mid){
+  if(!cloudReady()||!materialHasCloudData(mid)) return;
+  try{ await classroomPost('/analysis',materialCloudPayload(mid)); state.cloud.status='connected'; state.cloud.lastError=null; }
+  catch(err){ state.cloud.status='error'; state.cloud.lastError=String(err?.message||err); console.warn('Material cloud sync failed',err); }
+}
+function queueCloudMaterial(mid,delay=900){
+  if(!cloudReady()||!mid) return;
+  clearTimeout(cloudMaterialTimers.get(mid));
+  cloudMaterialTimers.set(mid,setTimeout(()=>{cloudMaterialTimers.delete(mid);syncCloudMaterial(mid);},delay));
+}
+function queueCloudSyncFromState(){
+  if(!cloudReady()||!moduleData||!state) return;
+  const q=typeof getQ==='function'?getQ():null;
+  if(q&&questionHasCloudData(q)) queueCloudQuestion(q.id);
+  if(q&&materialHasCloudData(q.materialId)) queueCloudMaterial(q.materialId);
+}
 function newState(){
   return {
     version:'1.9.2', sessionId:makeSessionId(), startedAt:nowIso(), view:'sets', idx:0,
@@ -229,6 +354,7 @@ function newState(){
     replayDecision:{}, materialReplayCount:{}, materialPositions:{}, loadedMaterialId:null,
     segment:null, isPlaying:false,
     resultsRevealed:false, reviewMode:false, reviewQuestionId:null, reviewData:{},
+    cloud:{enabled:false,studentCode:'',sessionId:null,status:'idle',lastError:null},
     talkLab:{mode:'assignment',vocab:{},frameworkBefore:{},frameworkAfter:{},frameworkIssues:{},questionNotes:{},directTranscriptSkip:{},postUnchanged:{}},
     eventLog:[],
     paused:false, pauseSnapshot:null,
@@ -255,6 +381,7 @@ function persist(){
     const serial={...state,timerId:null,pauseSnapshot:state.pauseSnapshot?{...state.pauseSnapshot}:null};
     localStorage.setItem(STORAGE_KEY,JSON.stringify(serial));
   }catch(e){}
+  try{ queueCloudSyncFromState(); }catch(e){}
 }
 
 function saveRuntimeSnapshot(){
@@ -632,6 +759,7 @@ async function start(packRef,moduleRef,options={}){
   if(packRef && (packRef!==ACTIVE_PACK_FOLDER || (moduleRef && moduleRef!==(moduleData?.moduleId||moduleData?.id)))) await selectModuleGlobals(packRef,moduleRef);
   resetAll();
   if(isSingleTalkMode()) state.talkLab.mode=options.talkMode==='practice'?'practice':'assignment';
+  if(!(await beginClassroomSession())) return;
   state.view='practice'; state.idx=0; writeNavigation('session',ACTIVE_PACK_FOLDER); logEvent('session_start',{setId:ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER,trainingMode:moduleData?.trainingMode||'full_module',questionType:moduleData?.questionType||null,sourceModules:moduleData?.sourceModules||[],talkMode:isSingleTalkMode()?state.talkLab.mode:null}); enterListenPhase();
 }
 async function startType(packRef,type){ return start(packRef,`TYPE:${type}`); }
