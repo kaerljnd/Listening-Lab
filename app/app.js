@@ -247,6 +247,19 @@ async function classroomPost(path,payload){
   if(!res.ok||data.ok!==true) throw new Error(data.error||`Classroom API ${res.status}`);
   return data;
 }
+function classroomPracticeMode(){
+  if(isSingleTalkMode()) return 'single_talk';
+  if(moduleData?.trainingMode==='question_type') return 'type_practice';
+  return 'full_module';
+}
+function classroomModuleId(){
+  if(isSingleTalkMode()) return moduleData?.talkRef?.sourceModuleId||'';
+  if(moduleData?.trainingMode==='question_type'){
+    const src=Array.isArray(moduleData?.sourceModules)?moduleData.sourceModules.filter(Boolean):[];
+    return src.length?src.join('+'):(moduleData?.moduleId||moduleData?.id||'');
+  }
+  return moduleData?.moduleId||moduleData?.id||'';
+}
 async function beginClassroomSession(){
   if(!classroomEligible()) return true;
   const studentCode=classroomStudentCode();
@@ -259,15 +272,36 @@ async function beginClassroomSession(){
     const data=await classroomPost('/session',{
       student_code:studentCode,
       set_id:ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER,
-      material_id:materialId
+      material_id:materialId,
+      practice_mode:classroomPracticeMode(),
+      module_id:classroomModuleId()
     });
-    state.cloud={enabled:true,studentCode,sessionId:data.session_id,status:'connected',lastError:null};
+    state.cloud={enabled:true,studentCode,sessionId:data.session_id,status:'connected',lastError:null,finalStatus:null};
     persist();
     return true;
   }catch(err){
-    state.cloud={enabled:false,studentCode,sessionId:null,status:'error',lastError:String(err?.message||err)};
+    state.cloud={enabled:false,studentCode,sessionId:null,status:'error',lastError:String(err?.message||err),finalStatus:null};
     alert('课堂服务器暂时无法连接。本次练习不会开始，以免记录丢失。\n\n'+state.cloud.lastError);
     return false;
+  }
+}
+async function finishCloudSession(status){
+  if(!cloudReady()) return;
+  if(state.cloud?.finalStatus) return;
+  if(!['completed','abandoned'].includes(status)) return;
+  state.cloud.finalStatus=status;
+  try{
+    await classroomPost('/session/status',{
+      session_id:state.cloud.sessionId,
+      status
+    });
+    state.cloud.status='connected';
+    state.cloud.lastError=null;
+  }catch(err){
+    state.cloud.finalStatus=null;
+    state.cloud.status='error';
+    state.cloud.lastError=String(err?.message||err);
+    console.warn('Session status sync failed',err);
   }
 }
 function questionHasResponseData(q){
@@ -398,7 +432,7 @@ function newState(){
     replayDecision:{}, materialReplayCount:{}, materialPositions:{}, loadedMaterialId:null,
     segment:null, isPlaying:false,
     resultsRevealed:false, reviewMode:false, reviewQuestionId:null, reviewData:{},
-    cloud:{enabled:false,studentCode:'',sessionId:null,status:'idle',lastError:null},
+    cloud:{enabled:false,studentCode:'',sessionId:null,status:'idle',lastError:null,finalStatus:null},
     talkLab:{mode:'assignment',vocab:{},frameworkBefore:{},frameworkAfter:{},frameworkIssues:{},questionNotes:{},directTranscriptSkip:{},postUnchanged:{}},
     eventLog:[],
     paused:false, pauseSnapshot:null,
@@ -714,6 +748,9 @@ function showPauseOverlay(){
 function removePauseOverlay(){ document.getElementById('sessionPauseOverlay')?.remove(); }
 
 function go(view){
+  if((view==='library'||view==='sets')&&cloudReady()&&!state.cloud?.finalStatus){
+    finishCloudSession('abandoned');
+  }
   clearInterval(state.timerId); state.timerId=null; clearPracticeStartDelay(); cancelPendingPracticePlayback(); stopAudio({save:true}); state.paused=false; removePauseOverlay(); removePracticeReviewOverlay(); state.practiceReviewOpen=false; state.practiceReviewSnapshot=null; state.view=view;
   if(view==='library') writeNavigation('library',ACTIVE_PACK_FOLDER); else if(view==='sets') writeNavigation('sets',null);
   persist(); render();
@@ -1324,7 +1361,7 @@ function switchAnalysisIndex(i){ if(state.paused)return; const q=moduleData.ques
 function jump(i){ switchAnalysisIndex(i); }
 function goNextAnalysis(){ if(state.idx<moduleData.questions.length-1)switchAnalysisIndex(state.idx+1); }
 function goFirstIncomplete(){ const i=moduleData.questions.findIndex(q=>!materialComplete(q.materialId)||(!questionSkipped(q)&&!materialComplete(q.materialId))); if(i>=0)switchAnalysisIndex(i); }
-function revealResults(){ if(!allAnalysisComplete())return; state.resultsRevealed=true; logEvent('results_revealed'); go('results'); }
+function revealResults(){ if(!allAnalysisComplete())return; state.resultsRevealed=true; logEvent('results_revealed'); finishCloudSession('completed'); go('results'); }
 
 function seekToEvidencePart(part){
   const q=getQ(),e=state.evidence[q.id]; if(!e)return; let t=null;
