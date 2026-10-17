@@ -355,7 +355,7 @@ function sameMaterial(a,b){ return (a.materialId||a.id)===(b.materialId||b.id); 
 
 function transcriptWordHtml(q){
  const raw=transcriptFor(q);if(!raw)return '<em>当前材料没有可用文本。</em>';
- const parts=raw.match(/\\S+|\\s+/g)||[],words=parts.filter(x=>x.trim()),times=q.wordTimings||[];
+ const parts=raw.match(/\S+|\s+/g)||[],words=parts.filter(x=>x.trim()),times=q.wordTimings||[];
  const exact=times.length===words.length&&times.length>0&&times.every(x=>Number.isFinite(Number(x?.start)));
  let i=0;
  const html=parts.map(w=>{if(!w.trim())return escapeHtml(w);
