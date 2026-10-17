@@ -74,7 +74,7 @@ def health():
     return jsonify({
         "ok": True,
         "service": "listening-lab-api",
-        "version": "classroom-pilot-0.4"
+        "version": "classroom-pilot-0.4.1"
     })
 
 
@@ -156,20 +156,20 @@ def update_session_status():
 
     timestamp = now_ms()
     primary_key = [("session_id", session_id)]
-    attribute_columns = [
+    put_columns = [
         ("status", status),
         ("ended_at", timestamp),
         ("updated_at", timestamp),
     ]
 
     if status == "completed":
-        attribute_columns.append(("completed_at", timestamp))
+        put_columns.append(("completed_at", timestamp))
 
     client = get_ots_client()
-    client.put_row(
+    client.update_row(
         "sessions",
-        Row(primary_key, attribute_columns),
-        Condition(RowExistenceExpectation.IGNORE)
+        Row(primary_key, {"PUT": put_columns}),
+        Condition(RowExistenceExpectation.EXPECT_EXIST)
     )
 
     return jsonify({
