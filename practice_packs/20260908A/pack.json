@@ -30,8 +30,8 @@
           "type": "best_response",
           "title": "Choose the best response.",
           "listen_window": [
-            30.0,
-            31.0
+            30,
+            31
           ],
           "visual": "images/male_single.png",
           "speaker_gender": "male",
@@ -39,7 +39,8 @@
           "question_ids": [
             "Q2"
           ],
-          "source_issue": "The supplied M1 audio contains silence where the Q2 prompt is expected; transcript prompt unavailable."
+          "source_issue": "M1 Q2 source audio is missing: the 30–31s interval is a silent placeholder, not a valid prompt. Re-check source recording before replacement.",
+          "audio_missing": true
         },
         {
           "material_id": "SR03",
@@ -245,7 +246,7 @@
           "title": "Listen to a campus radio announcement.",
           "listen_window": [
             417.9,
-            452.0
+            452
           ],
           "visual": "images/announcement_male.png",
           "speaker_gender": "male",
@@ -886,7 +887,7 @@
           "type": "best_response",
           "title": "Choose the best response.",
           "listen_window": [
-            13.0,
+            13,
             16.1
           ],
           "visual": "images/male_single.png",
