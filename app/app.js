@@ -3,6 +3,7 @@ const audio = document.getElementById('audio');
 const ACTIVE_SELECTION_KEY = 'listening-lab:active-selection';
 const NAVIGATION_KEY = 'listening-lab:navigation-v1.9.2';
 const CLASSROOM_STUDENT_KEY = 'listening-lab:classroom-student-code';
+const ACTIVE_SESSION_POINTER_KEY = 'listening-lab:active-session-v1.9.3';
 const CLASSROOM_API_BASE = 'https://listeni-lab-api-yuhpblgpyn.cn-hangzhou.fcapp.run';
 const IS_GITHUB_PAGES = location.hostname.endsWith('github.io');
 const REPO_NAME = IS_GITHUB_PAGES ? (location.pathname.split('/').filter(Boolean)[0] || 'Listening-Lab') : '';
@@ -204,6 +205,25 @@ function readNavigation(){
 function writeNavigation(view,pack=null){
   try{ localStorage.setItem(NAVIGATION_KEY,JSON.stringify({view,pack:pack||ACTIVE_PACK_FOLDER||null,at:Date.now()})); }catch(e){}
 }
+function readActiveSessionPointer(){
+  try{ const raw=localStorage.getItem(ACTIVE_SESSION_POINTER_KEY); return raw?JSON.parse(raw):null; }catch(e){ return null; }
+}
+function writeActiveSessionPointer(){
+  if(!state||!moduleData||!STORAGE_KEY||!['practice','analysis','results'].includes(state.view)) return;
+  try{
+    localStorage.setItem(ACTIVE_SESSION_POINTER_KEY,JSON.stringify({
+      pack:ACTIVE_PACK_FOLDER,
+      module:moduleData.moduleId||moduleData.id,
+      storageKey:STORAGE_KEY,
+      view:state.view,
+      savedAt:Date.now(),
+      sessionId:state.sessionId||null,
+      studentCode:state.cloud?.studentCode||'',
+      completed:!!(state.resultsRevealed||state.cloud?.finalStatus==='completed')
+    }));
+  }catch(e){}
+}
+function clearActiveSessionPointer(){ try{ localStorage.removeItem(ACTIVE_SESSION_POINTER_KEY); }catch(e){} }
 const letters = ['A','B','C','D'];
 
 const ERROR_REASONS = [
@@ -457,7 +477,8 @@ function persist(){
   state.autosaveAt=nowIso();
   try{
     const serial={...state,timerId:null,pauseSnapshot:state.pauseSnapshot?{...state.pauseSnapshot}:null};
-    localStorage.setItem(STORAGE_KEY,JSON.stringify(serial));
+    if(STORAGE_KEY) localStorage.setItem(STORAGE_KEY,JSON.stringify(serial));
+    writeActiveSessionPointer();
   }catch(e){}
   try{ queueCloudSyncFromState(); }catch(e){}
 }
@@ -694,12 +715,18 @@ function cancelPendingPracticePlayback(){
 function primeMobileAudio(){
   // Mobile browsers may revoke autoplay permission after a delayed start.
   // Prime the shared media element synchronously from the user's Start tap.
+  // Never let the async prime callback reset a real source back to time 0.
   try{
     const SILENT='data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=';
     audio.muted=true; audio.src=SILENT; audio.load();
+    const cleanup=()=>{
+      const stillSilent=String(audio.currentSrc||audio.src||'').startsWith('data:audio/');
+      if(stillSilent){ audio.pause(); try{ audio.currentTime=0; }catch(e){} }
+      audio.muted=false;
+    };
     const p=audio.play();
-    if(p&&typeof p.then==='function') p.then(()=>{ audio.pause(); audio.currentTime=0; audio.muted=false; }).catch(()=>{ audio.muted=false; });
-    else { audio.pause(); audio.muted=false; }
+    if(p&&typeof p.then==='function') p.then(cleanup).catch(()=>{ audio.muted=false; });
+    else cleanup();
   }catch(e){ audio.muted=false; }
 }
 function practicePlaybackEnd(segment){
@@ -756,12 +783,40 @@ function go(view){
   persist(); render();
 }
 
-function exitTypePractice(){
-  if(!isGuidedPracticeMode()){ go('library'); return; }
-  const ok=window.confirm(isSingleTalkMode()?'退出单篇讲座精练？当前进度已自动保存，但再次点击该讲座会开始一轮新的练习。':'退出题型专项练习？当前进度已自动保存，但从题库再次点击“开始专项”会开始一轮新的练习。');
-  if(!ok) return;
-  logEvent('type_practice_exit',{idx:state.idx,questionId:getQ()?.id||null});
-  go('library');
+function confirmExitSession(){
+  if(!state||!['practice','analysis','results'].includes(state.view)){ go('library'); return; }
+  const completed=state.view==='results'||state.resultsRevealed;
+  const message=completed
+    ?'返回本套题？\n\n本次结果已经保存。之后可以通过“查看上次结果”再次进入结果页面。'
+    :'暂时退出当前练习？\n\n当前进度会自动保存，之后可以通过“继续上次练习”回到当前位置。';
+  if(!window.confirm(message)) return;
+  logEvent('session_exit_to_library',{fromView:state.view,idx:state.idx,questionId:getQ()?.id||null});
+  saveRuntimeSnapshot();
+  clearInterval(state.timerId); state.timerId=null; clearPracticeStartDelay(); cancelPendingPracticePlayback();
+  stopAudio({save:false}); removePauseOverlay(); removePracticeReviewOverlay();
+  const packRef=ACTIVE_PACK_FOLDER;
+  writeNavigation('library',packRef);
+  state=newState(); state.view='library'; moduleData=null; MATERIAL_SEQUENCE=[]; STORAGE_KEY='';
+  renderLibrary(); window.scrollTo(0,0);
+}
+function exitTypePractice(){ confirmExitSession(); }
+async function resumeSavedSession(){
+  const pointer=readActiveSessionPointer();
+  if(!pointer?.pack||!pointer?.module){ alert('没有找到可恢复的练习记录。'); return; }
+  try{
+    await selectModuleGlobals(pointer.pack,pointer.module);
+    state=newState();
+    const restored=restorePersistedState();
+    if(!restored||!['practice','analysis','results'].includes(state.view)){
+      clearActiveSessionPointer(); state=newState(); state.view='library'; STORAGE_KEY='';
+      alert('这条本地记录已经无法恢复。可以重新开始一轮练习。'); renderLibrary(); return;
+    }
+    writeNavigation('session',ACTIVE_PACK_FOLDER); render();
+    if(state.view==='practice') prepareRestoredPracticeAudio();
+    if(state.view==='analysis'&&state.uiScroll) restoreAnalysisScroll(state.uiScroll);
+    requestAnimationFrame(()=>{ if(Number.isFinite(state.pageScrollY)) window.scrollTo(0,state.pageScrollY); });
+    if(state.paused) showPauseOverlay();
+  }catch(err){ alert('恢复练习失败：'+String(err?.message||err)); }
 }
 function practiceReviewVisitedQuestions(){
   return moduleData.questions.filter((q,i)=>i<=state.idx || !!state.firstMeta[q.id]?.completedAt || !!state.firstAnswers[q.id]);
@@ -802,10 +857,22 @@ function clearPracticeStartDelay(){
   if(practiceStartDelayTimer){ clearInterval(practiceStartDelayTimer); practiceStartDelayTimer=null; }
   if(practiceStartTimeout){ clearTimeout(practiceStartTimeout); practiceStartTimeout=null; }
 }
+function preloadPracticeSegment(q){
+  if(!q||q.audioMissing) return;
+  const src=audioSourceFor(q),target=Number(q.listenWindow?.[0]);
+  if(!src||!Number.isFinite(target)) return;
+  const apply=()=>{
+    if(state?.view!=='practice'||getQ()?.id!==q.id) return;
+    try{ audio.currentTime=target; }catch(e){}
+  };
+  if(!audio.src||!audio.src.includes(src)){ audio.src=src; audio.preload='auto'; audio.load(); }
+  if(audio.readyState>=1) apply(); else audio.addEventListener('loadedmetadata',apply,{once:true});
+}
 function beginInitialPracticeDelay(q,seconds=PRACTICE_PREP_SECONDS){
   clearPracticeStartDelay();
   cancelPendingPracticePlayback();
   stopAudio({save:false});
+  preloadPracticeSegment(q);
   state.practicePhase='prepare';
   state.prepareSeconds=Math.max(1,Number(seconds)||PRACTICE_PREP_SECONDS);
   state.progressPct=0;
@@ -879,12 +946,26 @@ function playPracticeSegment(segment,onEnd){
       logEvent('first_audio_start',{start:segment[0],end:segment[1],effectiveEnd:practicePlaybackEnd(segment),sourceModuleId:q.sourceModuleId||moduleData.moduleId});
       const p=audio.play(); if(p&&typeof p.catch==='function') p.catch(err=>logEvent('first_audio_play_rejected',{message:String(err)}));
     };
+    let attempts=0;
+    const verifyPosition=()=>{
+      if(token!==practicePlaybackToken || state.view!=='practice' || getQ()?.id!==expectedQid) return;
+      const delta=Math.abs((Number(audio.currentTime)||0)-segment[0]);
+      if(!audio.seeking&&delta<=.12){ begin(); return; }
+      attempts++;
+      if(attempts>12){
+        logEvent('first_audio_seek_failed',{wanted:segment[0],actual:Number(audio.currentTime)||0});
+        try{ audio.currentTime=segment[0]; }catch(e){}
+        setTimeout(begin,120); return;
+      }
+      try{ audio.currentTime=segment[0]; }catch(e){}
+      setTimeout(verifyPosition,80);
+    };
     try{ audio.currentTime=segment[0]; }catch(e){
       audio.addEventListener('loadedmetadata',run,{once:true}); return;
     }
-    // On mobile, wait for the seek to settle before starting. This prevents the previous segment from flashing/playing.
-    if(Math.abs((audio.currentTime||0)-segment[0])>.12 || audio.seeking) audio.addEventListener('seeked',begin,{once:true});
-    else begin();
+    // Give mobile browsers time to commit the seek before play().
+    // This prevents the file intro / volume instructions from leaking into Q1.
+    setTimeout(verifyPosition,80);
   };
   if(audio.readyState>=1) run(); else audio.addEventListener('loadedmetadata',run,{once:true});
 }
