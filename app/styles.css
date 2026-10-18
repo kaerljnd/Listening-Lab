@@ -239,3 +239,8 @@
 .practice-answer-row.correct { border-left:4px solid #358b55; }
 .practice-answer-row.incorrect { border-left:4px solid #cc6548; }
 .source-audio-warning { padding:18px; border-radius:12px; border:1px solid #c98b31; background:rgba(222,163,57,.08); }
+
+.resume-session-card{display:flex;align-items:center;gap:20px;justify-content:space-between;padding:18px 20px;margin:18px 0;border:1px solid #bcd0c9;background:#f6fbf9}
+.resume-session-card h2{margin:3px 0 6px}
+.resume-session-card p{margin:4px 0}
+@media(max-width:700px){.resume-session-card{align-items:flex-start;flex-direction:column}.resume-session-card .btn{width:100%}}
