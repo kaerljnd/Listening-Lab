@@ -244,3 +244,112 @@
 .resume-session-card h2{margin:3px 0 6px}
 .resume-session-card p{margin:4px 0}
 @media(max-width:700px){.resume-session-card{align-items:flex-start;flex-direction:column}.resume-session-card .btn{width:100%}}
+
+
+/* v1.9.4 analysis transport layout hardening */
+.analysis-head{
+  min-width:0;
+  overflow:hidden;
+}
+.analysis-head > b{
+  flex:0 1 auto;
+  min-width:90px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.analysis-transport{
+  display:grid;
+  grid-template-columns:96px 116px minmax(120px,1fr) 110px;
+  align-items:center;
+  gap:10px;
+  flex:1 1 520px;
+  min-width:0;
+}
+.analysis-transport .transport-play-btn{
+  width:96px;
+  min-width:96px;
+  height:46px;
+  min-height:46px;
+  padding:0 12px !important;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+  line-height:1;
+  flex:none;
+}
+.analysis-transport .transport-restart-btn{
+  width:116px;
+  min-width:116px;
+  height:46px;
+  min-height:46px;
+  padding:0 12px !important;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+  line-height:1;
+  flex:none;
+}
+.analysis-transport .seek-slider{
+  width:100%;
+  min-width:0;
+  margin:0;
+}
+.analysis-transport .seek-time{
+  width:110px;
+  min-width:110px;
+  text-align:right;
+  overflow:hidden;
+}
+.analysis-head .volume-group.compact{
+  flex:0 0 auto;
+  min-width:max-content;
+  white-space:nowrap;
+}
+.analysis-head .volume-group.compact input[type="range"]{
+  width:90px;
+}
+@media(max-width:1400px){
+  .analysis-head .volume-group.compact{display:none}
+}
+@media(max-width:1180px){
+  .analysis-transport{
+    grid-template-columns:92px 108px minmax(100px,1fr);
+  }
+  .analysis-transport .transport-play-btn{
+    width:92px;
+    min-width:92px;
+  }
+  .analysis-transport .transport-restart-btn{
+    width:108px;
+    min-width:108px;
+  }
+  .analysis-transport .seek-time{display:none}
+}
+@media(max-width:900px){
+  .analysis-head{
+    gap:6px;
+    padding:0 10px;
+  }
+  .analysis-head > b{display:none}
+  .analysis-transport{
+    grid-template-columns:84px 96px minmax(80px,1fr);
+    gap:6px;
+  }
+  .analysis-transport .transport-play-btn{
+    width:84px;
+    min-width:84px;
+    height:42px;
+    min-height:42px;
+    font-size:13px;
+  }
+  .analysis-transport .transport-restart-btn{
+    width:96px;
+    min-width:96px;
+    height:42px;
+    min-height:42px;
+    font-size:13px;
+  }
+}
