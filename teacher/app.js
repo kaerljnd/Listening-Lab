@@ -128,12 +128,22 @@ function answerPill(value,correct){
   const cls=correct?value===correct?'ok':'bad':'';
   return `<span class="answer-pill ${cls}">${esc(value)}</span>`;
 }
+function answerFor(meta,qid){
+  const direct=answerMap.get(qid);
+  if(direct)return direct;
+  const moduleId=String(meta?.module_id||'').trim();
+  if(meta?.practice_mode==='full_module'&&moduleId){
+    return answerMap.get(moduleId+'-'+qid)||'';
+  }
+  return '';
+}
 function detailStats(detail){
   const responses=detail.responses||[], attempts=detail.attempts||[];
+  const meta=detail.session||{};
   const amap=new Map(attempts.map(x=>[x.question_id,x]));
   let firstCorrect=0,finalCorrect=0,recovered=0,withKey=0;
   for(const r of responses){
-    const ans=answerMap.get(r.question_id);
+    const ans=answerFor(meta,r.question_id);
     if(!ans)continue;
     withKey++;
     const first=r.first_answer||'';
@@ -170,7 +180,7 @@ async function sessionView(id){
   const st=detailStats(data), amap=new Map(attempts.map(x=>[x.question_id,x]));
   const pct=(a,b)=>b?Math.round(a/b*100)+'%':'—';
   const rows=responses.map(r=>{
-    const a=amap.get(r.question_id)||{}, correct=answerMap.get(r.question_id)||'', first=r.first_answer||'', final=a.post_transcript_answer||a.second_answer||first;
+    const a=amap.get(r.question_id)||{}, correct=answerFor(meta,r.question_id)||'', first=r.first_answer||'', final=a.post_transcript_answer||a.second_answer||first;
     const firstOk=correct&&first===correct, finalOk=correct&&final===correct;
     const rowClass=!firstOk&&finalOk?'recovered':correct&&!finalOk?'wrong':'';
     const reasons=parseJson(a.error_reasons,[]);
