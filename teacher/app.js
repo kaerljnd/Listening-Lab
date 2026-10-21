@@ -8,6 +8,7 @@ let sessions=[];
 let answerMap=new Map();
 let questionMeta=new Map();
 let materialMeta=new Map();
+const questionCollator=new Intl.Collator(undefined,{numeric:true,sensitivity:'base'});
 
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function parseJson(v,fallback=[]){try{return typeof v==='string'?JSON.parse(v):v??fallback;}catch{return fallback;}}
@@ -176,7 +177,7 @@ async function sessionView(id){
   let data;
   try{data=await api('/teacher/session/'+encodeURIComponent(id));}
   catch(err){layout(`<div class="card empty">读取失败：${esc(err.message||err)}</div>`,'<button class="btn ghost" id="backBtn">← 返回列表</button>');document.getElementById('backBtn').onclick=()=>{location.hash='';route();};return;}
-  const meta=data.session||{}, responses=data.responses||[], attempts=data.attempts||[], analyses=data.material_analysis||[];
+  const meta=data.session||{}, responses=[...(data.responses||[])].sort((a,b)=>questionCollator.compare(a.question_id||'',b.question_id||'')), attempts=[...(data.attempts||[])].sort((a,b)=>questionCollator.compare(a.question_id||'',b.question_id||'')), analyses=[...(data.material_analysis||[])].sort((a,b)=>questionCollator.compare(a.material_id||'',b.material_id||''));
   const st=detailStats(data), amap=new Map(attempts.map(x=>[x.question_id,x]));
   const pct=(a,b)=>b?Math.round(a/b*100)+'%':'—';
   const rows=responses.map(r=>{
