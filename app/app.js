@@ -929,6 +929,15 @@ function attachPracticeSegment(segment,onEnd,token){
   audio.addEventListener('timeupdate',timeupdateHandler);
   audio.addEventListener('ended',finish,{once:true});
 }
+function practiceBufferedAhead(target){
+  try{
+    for(let i=0;i<audio.buffered.length;i++){
+      const a=audio.buffered.start(i),b=audio.buffered.end(i);
+      if(target>=a-.05 && target<=b+.05) return Math.max(0,b-target);
+    }
+  }catch(e){}
+  return 0;
+}
 function playPracticeSegment(segment,onEnd){
   const q=getQ();
   const expectedQid=q?.id, expectedMaterialId=q?.materialId;
@@ -938,36 +947,50 @@ function playPracticeSegment(segment,onEnd){
   const src=audioSourceFor(q);
   const sourceChanged=!audio.src || !audio.src.includes(src);
   if(sourceChanged){ audio.src=src; audio.preload='auto'; audio.load(); }
-  const run=()=>{
-    if(token!==practicePlaybackToken || state.view!=='practice' || getQ()?.id!==expectedQid || getQ()?.materialId!==expectedMaterialId) return;
-    const begin=()=>{
-      if(token!==practicePlaybackToken || getQ()?.id!==expectedQid) return;
-      state.isPlaying=true; attachPracticeSegment(segment,onEnd,token);
-      logEvent('first_audio_start',{start:segment[0],end:segment[1],effectiveEnd:practicePlaybackEnd(segment),sourceModuleId:q.sourceModuleId||moduleData.moduleId});
-      const p=audio.play(); if(p&&typeof p.catch==='function') p.catch(err=>logEvent('first_audio_play_rejected',{message:String(err)}));
-    };
-    let attempts=0;
-    const verifyPosition=()=>{
-      if(token!==practicePlaybackToken || state.view!=='practice' || getQ()?.id!==expectedQid) return;
-      const delta=Math.abs((Number(audio.currentTime)||0)-segment[0]);
-      if(!audio.seeking&&delta<=.12){ begin(); return; }
-      attempts++;
-      if(attempts>12){
-        logEvent('first_audio_seek_failed',{wanted:segment[0],actual:Number(audio.currentTime)||0});
-        try{ audio.currentTime=segment[0]; }catch(e){}
-        setTimeout(begin,120); return;
-      }
+
+  const stillCurrent=()=>token===practicePlaybackToken && state.view==='practice' && getQ()?.id===expectedQid && getQ()?.materialId===expectedMaterialId;
+  const begin=()=>{
+    if(!stillCurrent()) return;
+    const delta=Math.abs((Number(audio.currentTime)||0)-segment[0]);
+    if(delta>.18){
+      logEvent('first_audio_seek_guard',{wanted:segment[0],actual:Number(audio.currentTime)||0});
       try{ audio.currentTime=segment[0]; }catch(e){}
-      setTimeout(verifyPosition,80);
-    };
-    try{ audio.currentTime=segment[0]; }catch(e){
-      audio.addEventListener('loadedmetadata',run,{once:true}); return;
+      audio.addEventListener('seeked',()=>{ if(stillCurrent()) setTimeout(begin,40); },{once:true});
+      return;
     }
-    // Give mobile browsers time to commit the seek before play().
-    // This prevents the file intro / volume instructions from leaking into Q1.
-    setTimeout(verifyPosition,80);
+    state.isPlaying=true; attachPracticeSegment(segment,onEnd,token);
+    logEvent('first_audio_start',{start:segment[0],end:segment[1],effectiveEnd:practicePlaybackEnd(segment),sourceModuleId:q.sourceModuleId||moduleData.moduleId,bufferedAhead:practiceBufferedAhead(segment[0])});
+    const p=audio.play();
+    if(p&&typeof p.catch==='function') p.catch(err=>logEvent('first_audio_play_rejected',{message:String(err)}));
   };
-  if(audio.readyState>=1) run(); else audio.addEventListener('loadedmetadata',run,{once:true});
+
+  const waitForBuffer=(startedAt=performance.now())=>{
+    if(!stillCurrent()) return;
+    const needed=Math.min(.75,Math.max(.2,(segment[1]-segment[0])*.25));
+    const enough=audio.readyState>=3 || practiceBufferedAhead(segment[0])>=needed;
+    if(enough || performance.now()-startedAt>1400){ begin(); return; }
+    setTimeout(()=>waitForBuffer(startedAt),70);
+  };
+
+  const seekOnce=()=>{
+    if(!stillCurrent()) return;
+    const target=segment[0];
+    const afterSeek=()=>{
+      if(!stillCurrent()) return;
+      waitForBuffer();
+    };
+    try{
+      const delta=Math.abs((Number(audio.currentTime)||0)-target);
+      if(delta<=.12 && !audio.seeking){ afterSeek(); return; }
+      audio.currentTime=target;
+      if(audio.seeking) audio.addEventListener('seeked',afterSeek,{once:true});
+      else setTimeout(afterSeek,40);
+    }catch(e){
+      audio.addEventListener('loadedmetadata',seekOnce,{once:true});
+    }
+  };
+
+  if(audio.readyState>=1) seekOnce(); else audio.addEventListener('loadedmetadata',seekOnce,{once:true});
 }
 function isFirstQuestionOfMaterial(i){ return i===0 || moduleData.questions[i-1].materialId!==moduleData.questions[i].materialId; }
 function enterListenPhase(){
