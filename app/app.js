@@ -290,6 +290,7 @@ async function beginClassroomSession(){
   ].filter(Boolean).join('-'):(moduleData?.moduleId||moduleData?.id||'');
   try{
     const data=await classroomPost('/session',{
+      session_id:state.sessionId,
       student_code:studentCode,
       set_id:ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER,
       material_id:materialId,
@@ -464,6 +465,7 @@ let timeupdateHandler = null;
 let practiceStartDelayTimer = null;
 let practicePlaybackToken = 0;
 let practiceStartTimeout = null;
+let startInFlight = false;
 const PRACTICE_PREP_SECONDS = 3;
 const MOBILE_AUDIO_TAIL_SEC = 0.35;
 
@@ -903,12 +905,18 @@ function resetAll(){
   clearInterval(state.timerId); clearPracticeStartDelay(); stopAudio({save:false}); state=newState(); audio.volume=1;
 }
 async function start(packRef,moduleRef,options={}){
-  primeMobileAudio();
-  if(packRef && (packRef!==ACTIVE_PACK_FOLDER || (moduleRef && moduleRef!==(moduleData?.moduleId||moduleData?.id)))) await selectModuleGlobals(packRef,moduleRef);
-  resetAll();
-  if(isSingleTalkMode()) state.talkLab.mode=options.talkMode==='practice'?'practice':'assignment';
-  if(!(await beginClassroomSession())) return;
-  state.view='practice'; state.idx=0; writeNavigation('session',ACTIVE_PACK_FOLDER); logEvent('session_start',{setId:ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER,trainingMode:moduleData?.trainingMode||'full_module',questionType:moduleData?.questionType||null,sourceModules:moduleData?.sourceModules||[],talkMode:isSingleTalkMode()?state.talkLab.mode:null}); enterListenPhase();
+  if(startInFlight) return;
+  startInFlight=true;
+  try{
+    primeMobileAudio();
+    if(packRef && (packRef!==ACTIVE_PACK_FOLDER || (moduleRef && moduleRef!==(moduleData?.moduleId||moduleData?.id)))) await selectModuleGlobals(packRef,moduleRef);
+    resetAll();
+    if(isSingleTalkMode()) state.talkLab.mode=options.talkMode==='practice'?'practice':'assignment';
+    if(!(await beginClassroomSession())) return;
+    state.view='practice'; state.idx=0; writeNavigation('session',ACTIVE_PACK_FOLDER); logEvent('session_start',{setId:ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER,trainingMode:moduleData?.trainingMode||'full_module',questionType:moduleData?.questionType||null,sourceModules:moduleData?.sourceModules||[],talkMode:isSingleTalkMode()?state.talkLab.mode:null}); enterListenPhase();
+  }finally{
+    startInFlight=false;
+  }
 }
 async function startType(packRef,type){ return start(packRef,`TYPE:${type}`); }
 async function startSingleTalk(packRef,moduleId,materialId,mode='assignment'){ return start(packRef,`TALK:${moduleId}:${materialId}`,{talkMode:mode}); }
