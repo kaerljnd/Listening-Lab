@@ -247,6 +247,7 @@ function makeSessionId(){ return `${moduleData?.id||'navigation'}-${Date.now()}`
 const cloudResponseTimers=new Map();
 const cloudQuestionTimers=new Map();
 const cloudMaterialTimers=new Map();
+let cloudSessionProgressTimer=null;
 const CLASSROOM_SET_IDS=new Set(['20260830A','20260908A','20260909A','20260909B','20260915A','20260916A','20260920A','20260923A','20261004A','20261005A']);
 function classroomEligible(){ return CLASSROOM_SET_IDS.has(ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER); }
 function cloudReady(){ return !!(state?.cloud?.sessionId&&classroomEligible()); }
@@ -363,8 +364,8 @@ function queueCloudResponse(qid,delay=500){
 function questionHasCloudData(q){
   if(!q) return false;
   const err=state.errorData[q.id];
-  const fn=state.functionData[q.id],review=state.reviewData[q.id];
-  return !!(state.secondAnswers[q.id]||state.postTranscriptAnswers[q.id]||state.evidence[q.id]||state.confidenceData[q.id]||state.understandingData[q.id]||(fn&&(fn.functionTag||fn.keyMeaning))||(review&&(review.visits||review.note||review.evidence||review.audioActions?.length))||(err&&err.status!=='pending'));
+  const fn=state.functionData[q.id],review=state.reviewData[q.id],talkNote=state.talkLab?.questionNotes?.[q.id]?.note;
+  return !!(state.secondAnswers[q.id]||state.postTranscriptAnswers[q.id]||state.evidence[q.id]||state.confidenceData[q.id]||state.understandingData[q.id]||(fn&&(fn.functionTag||fn.keyMeaning))||(review&&(review.visits||review.note||review.evidence||review.audioActions?.length))||talkNote||(err&&(err.status!=='pending'||err.otherText)));
 }
 function questionEventHistory(qid,type){
   return (state.eventLog||[]).filter(x=>x?.questionId===qid&&x?.type===type).map(x=>({answer:x.answer||'',at:x.at||''}));
@@ -398,7 +399,13 @@ function questionCloudPayload(q){
   if(fn?.functionTag) payload.function_tag=fn.functionTag;
   if(fn?.keyMeaning) payload.key_meaning=fn.keyMeaning;
   if(review) payload.post_review=review;
+  if(err?.otherText) payload.error_other_text=err.otherText;
+  if(err?.status) payload.error_status=err.status;
+  const talkNote=state.talkLab?.questionNotes?.[q.id]?.note||'';
+  if(talkNote) payload.question_note=talkNote;
   if(conf?.level) payload.confidence=conf.level;
+  if(conf?.at) payload.confidence_at=conf.at;
+  if(understand?.at) payload.understanding_at=understand.at;
   if(conf) payload.analysis_skipped=!!conf.analysisSkipped;
 
   if(understand?.status==='understood_after_replay') payload.resolution_stage='replay';
@@ -462,6 +469,9 @@ function materialCloudPayload(mid){
     topic_after:fa.topic||'',
     main_points_after:(fa.mainPoints||[]).map(x=>({text:x.text||'',time:Number.isFinite(x.time)?x.time:null})),
     vocab_marks:(v.markers||[]).map(x=>({time:x.time,heard_text:x.heard||'',actual_text:x.corrected||'',meaning:x.meaning||'',note:x.note||''})),
+    vocab_none:!!v.none,
+    topic_dont_know:!!fb.topicDontKnow,
+    main_dont_know:!!fb.mainDontKnow,
     framework_issues:fi.accurate?['accurate']:[...(fi.selected||[]),...(fi.note?[fi.note]:[])],
     direct_transcript_skip:!!t.directTranscriptSkip?.[mid],
     post_unchanged:!!t.postUnchanged?.[mid],
@@ -479,6 +489,29 @@ function queueCloudMaterial(mid,delay=900){
   if(!cloudReady()||!mid) return;
   clearTimeout(cloudMaterialTimers.get(mid));
   cloudMaterialTimers.set(mid,setTimeout(()=>{cloudMaterialTimers.delete(mid);syncCloudMaterial(mid);},delay));
+}
+async function syncCloudSessionProgress(){
+  if(!cloudReady()) return;
+  const q=typeof getQ==='function'?getQ():null;
+  try{
+    await classroomPost('/session/progress',{
+      session_id:state.cloud.sessionId,
+      current_view:state.view||'',
+      current_question_id:q?.id||'',
+      current_material_id:q?.materialId||'',
+      current_index:Number(state.idx||0),
+      event_log:state.eventLog||[]
+    });
+    state.cloud.status='connected'; state.cloud.lastError=null;
+  }catch(err){
+    state.cloud.status='error'; state.cloud.lastError=String(err?.message||err);
+    console.warn('Session progress sync failed',err);
+  }
+}
+function queueCloudSessionProgress(delay=1500){
+  if(!cloudReady()) return;
+  if(cloudSessionProgressTimer) clearTimeout(cloudSessionProgressTimer);
+  cloudSessionProgressTimer=setTimeout(()=>{cloudSessionProgressTimer=null;syncCloudSessionProgress();},delay);
 }
 function queueCloudSyncFromState(){
   if(!cloudReady()||!moduleData||!state) return;
@@ -521,6 +554,7 @@ audio.volume = 1;
 function logEvent(type,payload={}){
   state.eventLog.push({at:nowIso(),type,view:state.view,questionId:getQ()?.id||null,materialId:getQ()?.materialId||null,...payload});
   persist();
+  try{ queueCloudSessionProgress(); }catch(e){}
 }
 function persist(){
   state.autosaveAt=nowIso();
