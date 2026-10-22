@@ -15,6 +15,7 @@ import webbrowser
 ROOT = Path(__file__).resolve().parent
 APP_DIR = ROOT / "app"
 PACKS_DIR = ROOT / "practice_packs"
+TEACHER_DIR = ROOT / "teacher"
 
 
 def safe_join(base: Path, rel: str) -> Path | None:
@@ -147,6 +148,11 @@ class Handler(SimpleHTTPRequestHandler):
         if p.startswith("/packs/"):
             target = safe_join(PACKS_DIR, p[len("/packs/"):])
             return str(target or PACKS_DIR / "__invalid__")
+        if p == "/teacher" or p == "/teacher/":
+            return str(TEACHER_DIR / "index.html")
+        if p.startswith("/teacher/"):
+            target = safe_join(TEACHER_DIR, p[len("/teacher/"):])
+            return str(target or TEACHER_DIR / "__invalid__")
         rel = p.lstrip("/") or "index.html"
         target = safe_join(APP_DIR, rel)
         return str(target or APP_DIR / "__invalid__")
@@ -172,7 +178,8 @@ def main():
     port = free_port(args.port)
     url = f"http://127.0.0.1:{port}/"
     print("\nListening Lab 已启动")
-    print(f"地址：{url}")
+    print(f"学生端：{url}")
+    print(f"教师端：{url}teacher/")
     print(f"题包目录：{PACKS_DIR}")
     print("新增题包后无需重启：回到套题选择页点击‘重新扫描题包’即可。")
     print("按 Ctrl+C 停止。\n")
