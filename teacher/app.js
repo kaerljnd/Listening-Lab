@@ -187,6 +187,8 @@ function materialCard(x){
     <div class="row"><b>Main Points · After</b> ${points(after)}</div>
     <div class="row"><b>Framework</b> ${issues.length?issues.map(v=>'<span class="reason">'+esc(v)+'</span>').join(''):'—'}</div>
     <div class="row"><b>Vocab Marks</b> ${Array.isArray(vocab)?vocab.length:0}</div>
+    <div class="row"><b>Replay</b> ${esc(x.replay_decision||'—')} · ${Number(x.replay_count||0)} 次</div>
+    <div class="row"><b>Transcript</b> ${Number(x.transcript_viewed||0)?'已查看':'未查看'}</div>
   </div>`;
 }
 async function sessionView(id){
@@ -204,7 +206,10 @@ async function sessionView(id){
     const firstOk=correct&&first===correct, finalOk=correct&&final===correct;
     const rowClass=!firstOk&&finalOk?'recovered':correct&&!finalOk?'wrong':'';
     const reasons=parseJson(a.error_reasons,[]);
-    return `<tr class="${rowClass}"><td><b>${esc(r.question_id)}</b></td><td>${answerPill(first,correct)}</td><td>${answerPill(correct,'')}</td><td>${r.response_ms!=null?Math.round(Number(r.response_ms))/1000+'s':'—'}</td><td>${answerPill(a.second_answer||'','')}</td><td>${answerPill(a.post_transcript_answer||'','')}</td><td>${esc(a.resolution_stage||'—')}</td><td>${Array.isArray(reasons)?reasons.map(v=>'<span class="reason">'+esc(v)+'</span>').join(''):'—'}</td></tr>`;
+    const extras=[];
+    if(a.function_tag)extras.push('Function: '+a.function_tag);
+    if(a.key_meaning)extras.push('Key Meaning: '+a.key_meaning);
+    return `<tr class="${rowClass}"><td><b>${esc(r.question_id)}</b></td><td>${answerPill(first,correct)}<div>${answerTrail(r.selection_history)}</div><div class="small">改选 ${Number(r.change_count||0)} 次</div></td><td>${answerPill(correct,'')}</td><td>${r.response_ms!=null?Math.round(Number(r.response_ms))/1000+'s':'—'}</td><td>${answerPill(a.second_answer||'','')}<div>${answerTrail(a.second_selection_history)}</div></td><td>${answerPill(a.post_transcript_answer||'','')}<div>${answerTrail(a.post_selection_history)}</div></td><td>${esc(a.resolution_stage||'—')}${extras.length?'<div class="small">'+extras.map(esc).join('<br>')+'</div>':''}</td><td>${Array.isArray(reasons)?reasons.map(v=>'<span class="reason">'+esc(v)+'</span>').join(''):'—'}</td></tr>`;
   }).join('');
   const inner=`
     <div class="detail-head"><button class="btn secondary" id="backBtn">← 返回列表</button><div><h1>${esc(meta.student_code||'未命名学生')}</h1><div class="small code">${esc(meta.session_id||'')}</div></div><div class="spacer"></div><span class="badge ${esc(meta.status||'other')}">${esc(statusLabel(meta.status))}</span></div>
