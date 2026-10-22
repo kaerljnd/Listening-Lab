@@ -137,6 +137,16 @@ function answerPill(value,correct){
   const cls=correct?value===correct?'ok':'bad':'';
   return `<span class="answer-pill ${cls}">${esc(value)}</span>`;
 }
+function historyArray(v){
+  const x=parseJson(v,[]);
+  return Array.isArray(x)?x:[];
+}
+function answerTrail(v){
+  const arr=historyArray(v);
+  if(!arr.length)return '<span class="small">—</span>';
+  return '<span class="answer-trail">'+arr.map((x,i)=>'<span class="trail-answer">'+esc(x?.answer||'—')+'</span>'+((i<arr.length-1)?'<span class="trail-arrow">→</span>':'')).join('')+'</span>';
+}
+
 function answerFor(meta,qid){
   const direct=answerMap.get(qid);
   if(direct)return direct;
@@ -186,6 +196,7 @@ async function sessionView(id){
   try{data=await api('/teacher/session/'+encodeURIComponent(id));}
   catch(err){layout(`<div class="card empty">读取失败：${esc(err.message||err)}</div>`,'<button class="btn ghost" id="backBtn">← 返回列表</button>');document.getElementById('backBtn').onclick=()=>{location.hash='';route();};return;}
   const meta=data.session||{}, responses=[...(data.responses||[])].sort((a,b)=>questionCollator.compare(a.question_id||'',b.question_id||'')), attempts=[...(data.attempts||[])].sort((a,b)=>questionCollator.compare(a.question_id||'',b.question_id||'')), analyses=[...(data.material_analysis||[])].sort((a,b)=>questionCollator.compare(a.material_id||'',b.material_id||''));
+  try{await loadPack(meta.set_id||'20260920A');}catch(err){console.warn(err);answerMap=new Map();questionMeta=new Map();materialMeta=new Map();loadedSetId='';}
   const st=detailStats(data), amap=new Map(attempts.map(x=>[x.question_id,x]));
   const pct=(a,b)=>b?Math.round(a/b*100)+'%':'—';
   const rows=responses.map(r=>{
@@ -198,6 +209,7 @@ async function sessionView(id){
   const inner=`
     <div class="detail-head"><button class="btn secondary" id="backBtn">← 返回列表</button><div><h1>${esc(meta.student_code||'未命名学生')}</h1><div class="small code">${esc(meta.session_id||'')}</div></div><div class="spacer"></div><span class="badge ${esc(meta.status||'other')}">${esc(statusLabel(meta.status))}</span></div>
     <div class="card meta-grid">
+      <div class="meta-item"><div class="k">套题</div><div class="v">${esc(meta.set_id||'—')}</div></div>
       <div class="meta-item"><div class="k">练习类型</div><div class="v">${esc(modeLabel(meta.practice_mode))}</div></div>
       <div class="meta-item"><div class="k">模块</div><div class="v">${esc(meta.module_id||'—')}</div></div>
       <div class="meta-item"><div class="k">开始</div><div class="v">${fmtTime(meta.started_at)}</div></div>
