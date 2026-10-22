@@ -4,6 +4,7 @@ const ACTIVE_SELECTION_KEY = 'listening-lab:active-selection';
 const NAVIGATION_KEY = 'listening-lab:navigation-v1.9.2';
 const CLASSROOM_STUDENT_KEY = 'listening-lab:classroom-student-code';
 const ACTIVE_SESSION_POINTER_KEY = 'listening-lab:active-session-v1.9.3';
+const SESSION_REGISTRY_KEY = 'listening-lab:session-registry-v1.9.4';
 const CLASSROOM_API_BASE = 'https://listeni-lab-api-yuhpblgpyn.cn-hangzhou.fcapp.run';
 const IS_GITHUB_PAGES = location.hostname.endsWith('github.io');
 const REPO_NAME = IS_GITHUB_PAGES ? (location.pathname.split('/').filter(Boolean)[0] || 'Listening-Lab') : '';
@@ -17,6 +18,7 @@ let MODULES = [];
 let moduleData = null;
 let MATERIAL_SEQUENCE = [];
 let STORAGE_KEY = '';
+let STORAGE_BASE_KEY = '';
 
 function resolvePackAsset(folder,path){
   if(!path) return '';
@@ -193,7 +195,8 @@ async function selectModuleGlobals(packRef,moduleRef){
   }
   if(!moduleData) throw new Error(`No matching practice module in pack ${ACTIVE_PACK_FOLDER}: ${requested||'(none)'}`);
   MATERIAL_SEQUENCE=[...new Set(moduleData.questions.map(q=>q.materialId))];
-  STORAGE_KEY=`listening-lab:v1.9.2:${ACTIVE_PACK.set_id||ACTIVE_PACK_FOLDER}:${moduleData.moduleId||moduleData.id}`;
+  STORAGE_BASE_KEY=`listening-lab:v1.9.4:${ACTIVE_PACK.set_id||ACTIVE_PACK_FOLDER}:${moduleData.moduleId||moduleData.id}`;
+  STORAGE_KEY=STORAGE_BASE_KEY;
   try{ localStorage.setItem(ACTIVE_SELECTION_KEY,JSON.stringify({pack:ACTIVE_PACK_FOLDER,module:moduleData.moduleId||moduleData.id,training_mode:moduleData.trainingMode||'full_module',question_type:moduleData.questionType||null})); }catch(e){}
 }
 function readActiveSelection(){
@@ -224,6 +227,47 @@ function writeActiveSessionPointer(){
   }catch(e){}
 }
 function clearActiveSessionPointer(){ try{ localStorage.removeItem(ACTIVE_SESSION_POINTER_KEY); }catch(e){} }
+function readSessionRegistry(){
+  try{ const raw=localStorage.getItem(SESSION_REGISTRY_KEY); const arr=raw?JSON.parse(raw):[]; return Array.isArray(arr)?arr:[]; }catch(e){ return []; }
+}
+function writeSessionRegistry(items){
+  try{ localStorage.setItem(SESSION_REGISTRY_KEY,JSON.stringify(items)); }catch(e){}
+}
+function sessionStorageKey(sessionId){ return `${STORAGE_BASE_KEY}:session:${sessionId}`; }
+function sessionRecordLabel(rec){
+  const mod=String(rec.module||'');
+  if(rec.trainingMode==='question_type'||mod.startsWith('TYPE:')) return `专项 · ${typeLabel(rec.questionType||mod.slice(5))}`;
+  if(rec.trainingMode==='single_talk'||mod.startsWith('TALK:')){ const p=mod.split(':'); return `单篇讲座 · ${p[1]||''}·${p.slice(2).join(':')||''}`; }
+  return `完整模块 · ${mod||'Listening'}`;
+}
+function upsertSessionRegistry(){
+  if(!state||!moduleData||!STORAGE_KEY||!state.sessionId) return;
+  const rec={
+    sessionId:state.sessionId, storageKey:STORAGE_KEY, pack:ACTIVE_PACK_FOLDER,
+    setId:ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER, module:moduleData.moduleId||moduleData.id,
+    trainingMode:moduleData.trainingMode||'full_module', questionType:moduleData.questionType||null,
+    startedAt:state.startedAt||'', savedAt:Date.now(), view:state.view,
+    completed:!!(state.resultsRevealed||state.cloud?.finalStatus==='completed'),
+    studentCode:state.cloud?.studentCode||''
+  };
+  const arr=readSessionRegistry().filter(x=>x?.sessionId!==rec.sessionId);
+  arr.push(rec); arr.sort((a,b)=>(b.savedAt||0)-(a.savedAt||0));
+  writeSessionRegistry(arr);
+}
+function sessionHistoryForPack(pack){
+  const key=pack?.folder||pack?.set_id;
+  const arr=readSessionRegistry().filter(x=>x&&(x.pack===key||x.setId===pack?.set_id));
+  const pointer=readActiveSessionPointer();
+  if(pointer?.sessionId&&(pointer.pack===key||pointer.pack===pack?.set_id)&&!arr.some(x=>x.sessionId===pointer.sessionId)){
+    arr.push({...pointer,setId:pack?.set_id,trainingMode:String(pointer.module||'').startsWith('TYPE:')?'question_type':String(pointer.module||'').startsWith('TALK:')?'single_talk':'full_module',savedAt:pointer.savedAt||0});
+  }
+  return arr.sort((a,b)=>(b.savedAt||0)-(a.savedAt||0));
+}
+function renderSessionHistory(pack){
+  const rows=sessionHistoryForPack(pack);
+  if(!rows.length) return '';
+  return `<section class="card session-history-card"><div class="session-history-head"><div><div class="eyebrow">Saved Sessions</div><h2>练习记录</h2><p>每一次练习都独立保存；不同题型、不同讲座和重复练习不会互相覆盖。</p></div><span class="module-chip">${rows.length} sessions</span></div><div class="session-history-list">${rows.map(r=>{const when=r.startedAt?new Date(r.startedAt).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'—';const done=r.completed||r.view==='results';return `<div class="session-history-row"><div><b>${escapeHtml(sessionRecordLabel(r))}</b><div class="small">${escapeHtml(when)}${r.studentCode?' · '+escapeHtml(r.studentCode):''}</div></div><span class="session-status ${done?'done':'active'}">${done?'已完成':'进行中'}</span><button class="btn secondary" onclick="resumeSessionRecord('${escapeHtml(r.sessionId)}')">${done?'查看结果':'继续练习'} →</button></div>`;}).join('')}</div></section>`;
+}
 const letters = ['A','B','C','D'];
 
 const ERROR_REASONS = [
@@ -562,6 +606,7 @@ function persist(){
     const serial={...state,timerId:null,pauseSnapshot:state.pauseSnapshot?{...state.pauseSnapshot}:null};
     if(STORAGE_KEY) localStorage.setItem(STORAGE_KEY,JSON.stringify(serial));
     writeActiveSessionPointer();
+    upsertSessionRegistry();
   }catch(e){}
   try{ queueCloudSyncFromState(); }catch(e){}
 }
@@ -883,16 +928,16 @@ function confirmExitSession(){
   renderLibrary(); window.scrollTo(0,0);
 }
 function exitTypePractice(){ confirmExitSession(); }
-async function resumeSavedSession(){
-  const pointer=readActiveSessionPointer();
+async function resumeSessionPointer(pointer){
   if(!pointer?.pack||!pointer?.module){ alert('没有找到可恢复的练习记录。'); return; }
   try{
     await selectModuleGlobals(pointer.pack,pointer.module);
+    STORAGE_KEY=pointer.storageKey||STORAGE_BASE_KEY;
     state=newState();
     const restored=restorePersistedState();
     if(!restored||!['practice','analysis','results'].includes(state.view)){
-      clearActiveSessionPointer(); state=newState(); state.view='library'; STORAGE_KEY='';
-      alert('这条本地记录已经无法恢复。可以重新开始一轮练习。'); renderLibrary(); return;
+      state=newState(); state.view='library'; STORAGE_KEY='';
+      alert('这条本地记录已经无法恢复。'); renderLibrary(); return;
     }
     writeNavigation('session',ACTIVE_PACK_FOLDER); render();
     if(state.view==='practice') prepareRestoredPracticeAudio();
@@ -900,6 +945,12 @@ async function resumeSavedSession(){
     requestAnimationFrame(()=>{ if(Number.isFinite(state.pageScrollY)) window.scrollTo(0,state.pageScrollY); });
     if(state.paused) showPauseOverlay();
   }catch(err){ alert('恢复练习失败：'+String(err?.message||err)); }
+}
+async function resumeSavedSession(){ return resumeSessionPointer(readActiveSessionPointer()); }
+async function resumeSessionRecord(sessionId){
+  const rec=readSessionRegistry().find(x=>x?.sessionId===sessionId);
+  if(!rec){ const p=readActiveSessionPointer(); if(p?.sessionId===sessionId)return resumeSessionPointer(p); alert('没有找到这条 Session。'); return; }
+  return resumeSessionPointer(rec);
 }
 function practiceReviewVisitedQuestions(){
   return moduleData.questions.filter((q,i)=>i<=state.idx || !!state.firstMeta[q.id]?.completedAt || !!state.firstAnswers[q.id]);
@@ -992,6 +1043,7 @@ async function start(packRef,moduleRef,options={}){
     primeMobileAudio();
     if(packRef && (packRef!==ACTIVE_PACK_FOLDER || (moduleRef && moduleRef!==(moduleData?.moduleId||moduleData?.id)))) await selectModuleGlobals(packRef,moduleRef);
     resetAll();
+    STORAGE_KEY=sessionStorageKey(state.sessionId);
     if(isSingleTalkMode()) state.talkLab.mode=options.talkMode==='practice'?'practice':'assignment';
     if(!(await beginClassroomSession())) return;
     state.view='practice'; state.idx=0; writeNavigation('session',ACTIVE_PACK_FOLDER); logEvent('session_start',{setId:ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER,trainingMode:moduleData?.trainingMode||'full_module',questionType:moduleData?.questionType||null,sourceModules:moduleData?.sourceModules||[],talkMode:isSingleTalkMode()?state.talkLab.mode:null}); enterListenPhase();
@@ -1208,10 +1260,7 @@ function renderLibrary(){
   writeNavigation('library',pack.folder);
   const d=formatSetDate(pack.set_id||pack.folder);
   const modules=(pack.modules||[]).map(m=>`<section class="card library-card mode-card"><div><div class="module-chip">${m.title||`${pack.set_id} · ${m.module_id}`}</div><h2>${m.module_id}</h2><div class="library-meta">${moduleSummaryLine(m)}</div></div><div><button class="btn" onclick="start('${pack.folder}','${m.module_id}')">开始 ${m.module_id} →</button></div></section>`).join('');
-  const pointer=readActiveSessionPointer();
-  const samePack=pointer&&(pointer.pack===pack.folder||pointer.pack===pack.set_id);
-  const resumeLabel=pointer?.completed||pointer?.view==='results'?'查看上次结果':'继续上次练习';
-  const resumeCard=samePack?`<section class="card resume-session-card"><div><div class="eyebrow">Saved Session</div><h2>${resumeLabel}</h2><p>${escapeHtml(pointer.module||'Listening')}${pointer.studentCode?` · 学生 ${escapeHtml(pointer.studentCode)}`:''}</p><p class="muted">退出不会清空进度。点击右侧按钮回到上次保存的位置。</p></div><button class="btn" onclick="resumeSavedSession()">${resumeLabel} →</button></section>`:'';
+  const resumeCard=renderSessionHistory(pack);
   const specialty=renderTypeTrainingCards(pack);
   const talks=renderSingleTalkCards(pack);
   app.innerHTML=`<div class="topbar"><div class="brand">Listening Lab</div><button type="button" class="btn ghost" onclick="goSets(); return false;">← 所有套题</button><div class="spacer"></div>${!IS_GITHUB_PAGES?'<a class="btn ghost local-teacher-link" href="/teacher/" target="_blank" rel="noopener">教师端</a>':''}</div><main class="page"><div class="hero pack-detail-hero"><div class="pack-detail-head"><div><div class="eyebrow">${d.date}${d.version?` · ${d.version}`:''}</div><h1>${pack.title||pack.set_id}</h1><p>${pack.description||'选择本套题的练习方式。'}</p></div><span class="module-chip">schema ${pack.schema_version||'?'}</span></div>${resumeCard}<section class="mode-section full-mode-section"><div class="mode-section-title"><span class="mode-number">01</span><div><h2>整套练习分析模式</h2><p>按原考试模块顺序完成 First Attempt → Analysis → Results。</p><p class="mode-start-note">每次进入一段新音频前都有 <b>3 秒准备时间</b>；同一篇材料的后续题不会重复播放音频。</p></div></div>${modules}</section><section class="mode-section type-mode-section"><div class="mode-section-title"><span class="mode-number">02</span><div><h2>分题型练习分析模式</h2><p>从本套题 M1 / M2H / M2S 中自动抽取同一题型，独立完成练习、分析与复盘。</p><p class="mode-start-note">每次进入一段新音频前都有 <b>3 秒准备时间</b>；同一篇材料的后续题不会重复播放音频。</p></div></div><div class="specialty-grid">${specialty}</div></section>${talks?`<section class="mode-section single-talk-section"><div class="mode-section-title"><span class="mode-number">03</span><div><h2>单篇讲座精练与分析</h2><p>每次只练一篇 Academic Talk。重点不是刷正确率，而是定位三类问题：<b>听不懂的词汇</b>、<b>框架理解偏差</b>、<b>题目分析偏差</b>。</p><p class="mode-start-note">第一遍仍按考试方式完整听一遍；进入分析后可自由重听和拖动定位。</p></div></div><div class="specialty-grid">${talks}</div></section>`:''}</div></main>`;
@@ -1459,7 +1508,7 @@ function renderSingleTalkResults(){
   const mid=MATERIAL_SEQUENCE[0],qs=moduleData.questions,q0=qs[0],v=talkVocab(mid),before=talkFrameworkBefore(mid),after=talkFrameworkAfter(mid),fi=talkFrameworkIssues(mid),first=qs.filter(q=>state.firstAnswers[q.id]===q.answer).length,final=qs.filter(q=>state.postTranscriptAnswers[q.id]===q.answer).length;
   const vocabRows=v.none?'<p>本篇记录为：没有明显词汇盲点。</p>':v.markers.map((m,i)=>`<div class="talk-result-vocab"><button class="result-time-link" onclick="startReviewAtTime('${q0.id}',${m.time})"><b>${i+1}. ${fmtShort(relTime(q0,m.time))}</b></button><span>听到/猜到：${escapeHtml(m.heard||'—')}</span><span>实际：${escapeHtml(m.corrected||'—')}</span><span>意思/原因：${escapeHtml(m.meaning||'—')}</span></div>`).join('');
   const issues=fi.accurate?'原框架基本准确':fi.selected.map(c=>TALK_FRAMEWORK_ISSUES.find(x=>x[0]===c)?.[1]||c).join('、')||fi.note||'未标记';
-  app.innerHTML=`<div class="topbar"><div class="brand">Listening Lab</div><div class="spacer"></div><button class="btn ghost" onclick="confirmExitSession()">返回本套题</button></div><main class="page"><div class="results talk-results"><h1>${moduleData.title}</h1><p class="muted">单篇讲座三维分析：词汇盲点 · 框架理解 · 题目分析。</p><div class="metric-grid"><div class="card metric"><div>First-pass</div><div class="value">${first}/${qs.length}</div></div><div class="card metric"><div>Final</div><div class="value">${final}/${qs.length}</div></div><div class="card metric"><div>词汇盲点</div><div class="value">${v.none?0:v.markers.length}</div></div><div class="card metric"><div>框架修正</div><div class="value">${fi.accurate?'稳定':'已检查'}</div></div></div><section class="card student-summary-card"><div class="summary-head"><div><h2>本篇总结</h2><p class="muted">把结果转化成下一次听讲座时可以执行的改进点。</p></div><div class="summary-actions"><button class="btn secondary" onclick="copyStudentSummary()">复制总结</button><button class="btn secondary" onclick="downloadSummaryTxt()">下载 TXT</button></div></div>${buildSingleTalkSummary().map(p=>`<p>${p}</p>`).join('')}</section><section class="card talk-result-section"><h2>1. 词汇盲点</h2>${vocabRows}</section><section class="card talk-result-section"><h2>2. 框架理解</h2><div class="framework-compare"><div><h3>文本前</h3><p><b>Topic：</b>${escapeHtml(before.topicDontKnow?'我不知道':before.topic||'—')}</p>${frameworkResultRows(q0,before,{dontKnow:before.mainDontKnow})}</div><div><h3>文本后</h3><p><b>Topic：</b>${escapeHtml(after.topic||'—')}</p>${frameworkResultRows(q0,after)}<p><b>偏差：</b>${escapeHtml(issues)}</p>${fi.note?`<p><b>补充：</b>${escapeHtml(fi.note)}</p>`:''}</div></div></section><section class="card result-list"><h2>3. 题目分析</h2>${qs.map(q=>{const ok=state.postTranscriptAnswers[q.id]===q.answer;return `<details class="result-item ${ok?'':'incorrect'}" data-qid="${q.id}"><summary><span><b>${questionLabel(q)}</b> · ${q.stem}</span><span class="result-answers">${state.firstAnswers[q.id]||'—'} → ${state.secondAnswers[q.id]||'—'} → ${state.postTranscriptAnswers[q.id]||'—'} · <b class="${ok?'ok':'bad'}">${q.answer}</b></span></summary><div class="result-detail"><p><b>诊断：</b>${talkQuestionDiagnosis(q)}</p><p><b>Evidence：</b>${state.evidence[q.id]?`<button class="result-time-link inline" onclick="startReviewAtEvidence('${q.id}')">${formatEvidenceForReview(q,state.evidence[q.id])} · 点击回听</button>`:'未记录'}</p>${talkQuestionNote(q.id).note?`<p><b>学生记录：</b>${escapeHtml(talkQuestionNote(q.id).note)}</p>`:''}<button class="btn ${ok?'secondary':''}" onclick="startReview('${q.id}')">进入 Post-result Review →</button></div></details>`}).join('')}</section><div class="result-actions"><button class="btn" onclick="downloadJSON()">Export Full Diagnostic JSON</button></div></div></main>`;
+  app.innerHTML=`<div class="topbar"><div class="brand">Listening Lab</div><div class="spacer"></div><button class="btn ghost" onclick="confirmExitSession()">返回本套题</button></div><main class="page"><div class="results talk-results"><h1>${moduleData.title}</h1><p class="muted">单篇讲座三维分析：词汇盲点 · 框架理解 · 题目分析。</p><div class="metric-grid"><div class="card metric"><div>First-pass</div><div class="value">${first}/${qs.length}</div></div><div class="card metric"><div>Final</div><div class="value">${final}/${qs.length}</div></div><div class="card metric"><div>词汇盲点</div><div class="value">${v.none?0:v.markers.length}</div></div><div class="card metric"><div>框架修正</div><div class="value">${fi.accurate?'稳定':'已检查'}</div></div></div><section class="card student-summary-card"><div class="summary-head"><div><h2>本篇总结</h2><p class="muted">把结果转化成下一次听讲座时可以执行的改进点。</p></div><div class="summary-actions"><button class="btn secondary" onclick="copyStudentSummary()">复制总结</button><button class="btn secondary" onclick="downloadSummaryTxt()">下载 TXT</button></div></div>${buildSingleTalkSummary().map(p=>`<p>${p}</p>`).join('')}</section><section class="card talk-result-section"><h2>1. 词汇盲点</h2>${vocabRows}</section><section class="card talk-result-section"><h2>2. 框架理解</h2><div class="framework-compare"><div><h3>文本前</h3><p><b>Topic：</b>${escapeHtml(before.topicDontKnow?'我不知道':before.topic||'—')}</p>${frameworkResultRows(q0,before,{dontKnow:before.mainDontKnow})}</div><div><h3>文本后</h3><p><b>Topic：</b>${escapeHtml(after.topic||'—')}</p>${frameworkResultRows(q0,after)}<p><b>偏差：</b>${escapeHtml(issues)}</p>${fi.note?`<p><b>补充：</b>${escapeHtml(fi.note)}</p>`:''}</div></div></section><section class="card talk-question-results"><h2>3. 题目分析</h2><p class="muted">四道题全部展开，按题干与选项 → First → Second → Evidence → After Transcript → Correct 的顺序复盘。</p><div class="talk-question-result-list">${qs.map(q=>{const ok=state.postTranscriptAnswers[q.id]===q.answer;const note=talkQuestionNote(q.id).note;const opts=q.options.map((o,i)=>{const L=letters[i],tags=[];if(state.firstAnswers[q.id]===L)tags.push('First');if(state.secondAnswers[q.id]===L)tags.push('Second');if(state.postTranscriptAnswers[q.id]===L)tags.push('文本后');if(q.answer===L)tags.push('Correct');return `<div class="talk-result-option ${q.answer===L?'correct':''}"><span><b>${L}.</b> ${escapeHtml(o)}</span><span class="talk-result-option-tags">${tags.map(t=>`<em>${t}</em>`).join('')}</span></div>`;}).join('');return `<article class="talk-question-result-card ${ok?'':'incorrect'}" data-qid="${q.id}"><div class="talk-question-result-head"><div><b>${questionLabel(q)}</b><h3>${escapeHtml(q.stem||'Choose the best response.')}</h3></div><span class="session-status ${ok?'done':'active'}">${ok?'最终正确':'最终仍错'}</span></div><div class="talk-result-options">${opts}</div><div class="talk-answer-path"><div><span>First</span><b>${state.firstAnswers[q.id]||'—'}</b></div><div><span>Second</span><b>${state.secondAnswers[q.id]||'—'}</b></div><div><span>After Transcript</span><b>${state.postTranscriptAnswers[q.id]||'—'}</b></div><div class="correct-box"><span>Correct</span><b>${q.answer}</b></div></div><div class="talk-result-analysis"><p><b>诊断：</b>${talkQuestionDiagnosis(q)}</p><p><b>Evidence：</b>${state.evidence[q.id]?`<button class="result-time-link inline" onclick="startReviewAtEvidence('${q.id}')">${formatEvidenceForReview(q,state.evidence[q.id])} · 点击回听</button>`:'未记录'}</p>${note?`<p><b>文本后记录：</b>${escapeHtml(note)}</p>`:''}</div><button class="btn ${ok?'secondary':''}" onclick="startReview('${q.id}')">进入 Post-result Review →</button></article>`;}).join('')}</div></section><div class="result-actions"><button class="btn" onclick="downloadJSON()">Export Full Diagnostic JSON</button></div></div></main>`;
   if(state.restoreResultsUiOnRender){ state.restoreResultsUiOnRender=false; requestAnimationFrame(()=>{restoreResultsUi();persist();}); }
 }
 function errorDone(qid){ return ['confirmed','skipped'].includes(errorInfo(qid).status); }
@@ -1757,7 +1806,7 @@ function downloadJSON(){
 
 function render(){ if(!state||state.view==='sets')renderSetSelection(); else if(state.view==='library')renderLibrary(); else if(state.view==='practice')renderPractice(); else if(state.view==='analysis')renderAnalysis(); else if(state.view==='results')renderResults(); }
 
-Object.assign(window,{seekTranscriptWord,showTalkPracticeAnswers,start,startType,startSingleTalk,reloadCatalog,openPack,goSets,go,confirmExitSession,resumeSavedSession,exitTypePractice,openPracticeReview,closePracticeReview,toggleTime,chooseFirst,nextQ,setVolume,pauseSession,resumeSession,playAnalysis,pauseAnalysis,toggleAnalysisPlayback,replayFromStart,seekAnalysis,previewAnalysisSeek,commitAnalysisSeek,skipReplay,setFunctionTag,setKeyMeaning,setMapField,toggleDontKnow,chooseSecond,choosePost,setPointEvidence,startRangeEvidence,endRangeEvidence,clearEvidence,seekToEvidencePart,updateEvidencePart,toggleErrorReason,setOtherReason,confirmErrorReasons,skipErrorReasons,openTranscript,toggleTranscriptVisibility,advanceAnalysis,goNextMaterial,jump,goNextAnalysis,goFirstIncomplete,skipHighConfidence,undoHighConfidenceSkip,markUnderstood,chooseDeepAnalysis,undoUnderstandingChoice,showCompletionAudit,closeCompletionAudit,jumpFromAudit,revealResults,startReview,exitReview,setReviewPoint,setReviewNote,addTalkVocabMarker,updateTalkVocabMarker,removeTalkVocabMarker,toggleTalkNoVocab,seekTalkMarker,talkChooseSecond,talkSetPointEvidence,talkStartRangeEvidence,talkEndRangeEvidence,talkClearEvidence,openTalkTranscript,setTalkFrameworkAfter,toggleTalkFrameworkIssue,toggleTalkFrameworkAccurate,setTalkFrameworkIssueNote,setTalkQuestionNote,talkChoosePost,confirmTalkPostUnchanged,skipTalkToTranscript,seekTalkQuestionEvidence,jumpTalkLabIssue,startReviewAtTime,startReviewAtEvidence,showTalkLabAudit,closeTalkLabAudit,copyStudentSummary,downloadSummaryTxt,downloadJSON});
+Object.assign(window,{seekTranscriptWord,showTalkPracticeAnswers,start,startType,startSingleTalk,reloadCatalog,openPack,goSets,go,confirmExitSession,resumeSavedSession,resumeSessionRecord,exitTypePractice,openPracticeReview,closePracticeReview,toggleTime,chooseFirst,nextQ,setVolume,pauseSession,resumeSession,playAnalysis,pauseAnalysis,toggleAnalysisPlayback,replayFromStart,seekAnalysis,previewAnalysisSeek,commitAnalysisSeek,skipReplay,setFunctionTag,setKeyMeaning,setMapField,toggleDontKnow,chooseSecond,choosePost,setPointEvidence,startRangeEvidence,endRangeEvidence,clearEvidence,seekToEvidencePart,updateEvidencePart,toggleErrorReason,setOtherReason,confirmErrorReasons,skipErrorReasons,openTranscript,toggleTranscriptVisibility,advanceAnalysis,goNextMaterial,jump,goNextAnalysis,goFirstIncomplete,skipHighConfidence,undoHighConfidenceSkip,markUnderstood,chooseDeepAnalysis,undoUnderstandingChoice,showCompletionAudit,closeCompletionAudit,jumpFromAudit,revealResults,startReview,exitReview,setReviewPoint,setReviewNote,addTalkVocabMarker,updateTalkVocabMarker,removeTalkVocabMarker,toggleTalkNoVocab,seekTalkMarker,talkChooseSecond,talkSetPointEvidence,talkStartRangeEvidence,talkEndRangeEvidence,talkClearEvidence,openTalkTranscript,setTalkFrameworkAfter,toggleTalkFrameworkIssue,toggleTalkFrameworkAccurate,setTalkFrameworkIssueNote,setTalkQuestionNote,talkChoosePost,confirmTalkPostUnchanged,skipTalkToTranscript,seekTalkQuestionEvidence,jumpTalkLabIssue,startReviewAtTime,startReviewAtEvidence,showTalkLabAudit,closeTalkLabAudit,copyStudentSummary,downloadSummaryTxt,downloadJSON});
 
 function showBootError(err){
   console.error(err);
