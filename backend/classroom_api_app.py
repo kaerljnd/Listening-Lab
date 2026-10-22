@@ -21,7 +21,7 @@ app = Flask(__name__)
 OTS_ENDPOINT = os.environ["OTS_ENDPOINT"]
 OTS_INSTANCE = os.environ["OTS_INSTANCE"]
 
-ALLOWED_SET_IDS = {"20260920A"}
+ALLOWED_SET_IDS = {"20260830A", "20260908A", "20260909A", "20260909B", "20260915A", "20260916A", "20260920A", "20260923A", "20261004A", "20261005A"}
 TEACHER_KEY = os.environ.get("TEACHER_KEY", "").strip()
 
 ALLOWED_ORIGINS = {
@@ -135,7 +135,7 @@ def health():
     return jsonify({
         "ok": True,
         "service": "listening-lab-api",
-        "version": "classroom-pilot-0.5-teacher"
+        "version": "classroom-pilot-0.6.5-telemetry"
     })
 
 
@@ -343,6 +343,19 @@ def save_response():
     if "first_answer" in data:
         attribute_columns.append(("first_answer", text_value(data.get("first_answer"))))
 
+    if "initial_answer" in data:
+        attribute_columns.append(("initial_answer", text_value(data.get("initial_answer"))))
+
+    if "selection_history" in data:
+        attribute_columns.append(("selection_history", json_value(data.get("selection_history"))))
+
+    for field in ["selection_count", "change_count"]:
+        if data.get(field) is not None:
+            try:
+                attribute_columns.append((field, int(data.get(field))))
+            except (TypeError, ValueError):
+                return jsonify({"ok": False, "error": f"{field} must be an integer"}), 400
+
     if data.get("response_ms") is not None:
         try:
             attribute_columns.append(("response_ms", int(data.get("response_ms"))))
@@ -400,14 +413,29 @@ def save_question():
         "post_transcript_answer",
         "confidence",
         "resolution_stage",
+        "function_tag",
+        "key_meaning",
     ]
 
     for field in optional_text_fields:
         if field in data:
             attribute_columns.append((field, text_value(data.get(field))))
 
-    if "error_reasons" in data:
-        attribute_columns.append(("error_reasons", json_value(data.get("error_reasons"))))
+    for field in [
+        "error_reasons",
+        "second_selection_history",
+        "post_selection_history",
+        "post_review",
+    ]:
+        if field in data:
+            attribute_columns.append((field, json_value(data.get(field))))
+
+    for field in ["second_change_count", "post_change_count"]:
+        if data.get(field) is not None:
+            try:
+                attribute_columns.append((field, int(data.get(field))))
+            except (TypeError, ValueError):
+                return jsonify({"ok": False, "error": f"{field} must be an integer"}), 400
 
     if data.get("evidence_start") is not None:
         attribute_columns.append(("evidence_start", float(data.get("evidence_start"))))
@@ -483,6 +511,24 @@ def save_analysis():
         attribute_columns.append(
             ("post_unchanged", 1 if data.get("post_unchanged") else 0)
         )
+
+    if "topic_dont_know" in data:
+        attribute_columns.append(("topic_dont_know", 1 if data.get("topic_dont_know") else 0))
+
+    if "main_dont_know" in data:
+        attribute_columns.append(("main_dont_know", 1 if data.get("main_dont_know") else 0))
+
+    if "transcript_viewed" in data:
+        attribute_columns.append(("transcript_viewed", 1 if data.get("transcript_viewed") else 0))
+
+    if "replay_decision" in data:
+        attribute_columns.append(("replay_decision", text_value(data.get("replay_decision"))))
+
+    if data.get("replay_count") is not None:
+        try:
+            attribute_columns.append(("replay_count", int(data.get("replay_count"))))
+        except (TypeError, ValueError):
+            return jsonify({"ok": False, "error": "replay_count must be an integer"}), 400
 
     client = get_ots_client()
     client.put_row(
