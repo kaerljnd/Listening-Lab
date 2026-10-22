@@ -136,7 +136,7 @@ def health():
     return jsonify({
         "ok": True,
         "service": "listening-lab-api",
-        "version": "classroom-pilot-0.6.5-telemetry"
+        "version": "classroom-pilot-0.6.6-telemetry"
     })
 
 
@@ -313,6 +313,46 @@ def update_session_status():
 
 
 # =========================================================
+# LIVE SESSION PROGRESS / EVENT LOG SNAPSHOT
+# =========================================================
+
+@app.route("/session/progress", methods=["OPTIONS"])
+def session_progress_options():
+    return "", 204
+
+
+@app.route("/session/progress", methods=["POST"])
+def update_session_progress():
+    data = request.get_json(silent=True) or {}
+    session_id = text_value(data.get("session_id"))
+    if not session_id:
+        return jsonify({"ok": False, "error": "session_id is required"}), 400
+
+    put_columns = [("updated_at", now_ms())]
+    for field in ["current_view", "current_question_id", "current_material_id"]:
+        if field in data:
+            put_columns.append((field, text_value(data.get(field))))
+
+    if data.get("current_index") is not None:
+        try:
+            put_columns.append(("current_index", int(data.get("current_index"))))
+        except (TypeError, ValueError):
+            return jsonify({"ok": False, "error": "current_index must be an integer"}), 400
+
+    if "event_log" in data:
+        put_columns.append(("event_log", json_value(data.get("event_log"))))
+
+    client = get_ots_client()
+    client.update_row(
+        "sessions",
+        Row([("session_id", session_id)], {"PUT": put_columns}),
+        Condition(RowExistenceExpectation.EXPECT_EXIST)
+    )
+
+    return jsonify({"ok": True, "session_id": session_id}), 200
+
+
+# =========================================================
 # FIRST ATTEMPT RESPONSE
 # =========================================================
 
@@ -419,6 +459,11 @@ def save_question():
         "resolution_stage",
         "function_tag",
         "key_meaning",
+        "error_other_text",
+        "error_status",
+        "question_note",
+        "confidence_at",
+        "understanding_at",
     ]
 
     for field in optional_text_fields:
@@ -515,6 +560,9 @@ def save_analysis():
         attribute_columns.append(
             ("post_unchanged", 1 if data.get("post_unchanged") else 0)
         )
+
+    if "vocab_none" in data:
+        attribute_columns.append(("vocab_none", 1 if data.get("vocab_none") else 0))
 
     if "topic_dont_know" in data:
         attribute_columns.append(("topic_dont_know", 1 if data.get("topic_dont_know") else 0))
