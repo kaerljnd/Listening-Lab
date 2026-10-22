@@ -247,7 +247,8 @@ function makeSessionId(){ return `${moduleData?.id||'navigation'}-${Date.now()}`
 const cloudResponseTimers=new Map();
 const cloudQuestionTimers=new Map();
 const cloudMaterialTimers=new Map();
-function classroomEligible(){ return (ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER)==='20260920A'; }
+const CLASSROOM_SET_IDS=new Set(['20260830A','20260908A','20260909A','20260909B','20260915A','20260916A','20260920A','20260923A','20261004A','20261005A']);
+function classroomEligible(){ return CLASSROOM_SET_IDS.has(ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER); }
 function cloudReady(){ return !!(state?.cloud?.sessionId&&classroomEligible()); }
 function classroomStudentCode(){
   let previous='';
@@ -332,13 +333,18 @@ function questionHasResponseData(q){
 }
 function questionResponsePayload(q){
   const meta=state.firstMeta[q.id]||{};
+  const selections=Array.isArray(meta.selections)?meta.selections:[];
   return {
     session_id:state.cloud.sessionId,
     question_id:q.id,
     first_answer:state.firstAnswers[q.id]||'',
+    initial_answer:selections[0]?.answer||'',
+    selection_history:selections.map(x=>({answer:x.answer||'',at:x.at||'',elapsed_ms:Number.isFinite(x.elapsedMs)?Math.round(x.elapsedMs):null})),
+    selection_count:selections.length,
+    change_count:Math.max(0,selections.length-1),
     response_ms:Number.isFinite(meta.responseMs)?Math.round(meta.responseMs):null,
     timeout:!!meta.timeout,
-    answered_at:meta.completedAt||meta.selections?.at(-1)?.at||''
+    answered_at:meta.completedAt||selections.at(-1)?.at||''
   };
 }
 async function syncCloudResponse(qid){
@@ -356,7 +362,11 @@ function queueCloudResponse(qid,delay=500){
 function questionHasCloudData(q){
   if(!q) return false;
   const err=state.errorData[q.id];
-  return !!(state.secondAnswers[q.id]||state.postTranscriptAnswers[q.id]||state.evidence[q.id]||state.confidenceData[q.id]||state.understandingData[q.id]||(err&&err.status!=='pending'));
+  const fn=state.functionData[q.id],review=state.reviewData[q.id];
+  return !!(state.secondAnswers[q.id]||state.postTranscriptAnswers[q.id]||state.evidence[q.id]||state.confidenceData[q.id]||state.understandingData[q.id]||(fn&&(fn.functionTag||fn.keyMeaning))||(review&&(review.visits||review.note||review.evidence||review.audioActions?.length))||(err&&err.status!=='pending'));
+}
+function questionEventHistory(qid,type){
+  return (state.eventLog||[]).filter(x=>x?.questionId===qid&&x?.type===type).map(x=>({answer:x.answer||'',at:x.at||''}));
 }
 function questionCloudPayload(q){
   const payload={
@@ -365,13 +375,28 @@ function questionCloudPayload(q){
   };
   const second=state.secondAnswers[q.id];
   const post=state.postTranscriptAnswers[q.id];
+  const secondHistory=questionEventHistory(q.id,'second_answer');
+  const postHistory=questionEventHistory(q.id,'post_transcript_answer');
   const conf=state.confidenceData[q.id]||null;
   const understand=state.understandingData[q.id]||null;
   const err=state.errorData[q.id]||null;
   const e=state.evidence[q.id]||null;
+  const fn=state.functionData[q.id]||null;
+  const review=state.reviewData[q.id]||null;
 
   if(second) payload.second_answer=second;
   if(post) payload.post_transcript_answer=post;
+  if(secondHistory.length){
+    payload.second_selection_history=secondHistory;
+    payload.second_change_count=Math.max(0,secondHistory.length-1);
+  }
+  if(postHistory.length){
+    payload.post_selection_history=postHistory;
+    payload.post_change_count=Math.max(0,postHistory.length-1);
+  }
+  if(fn?.functionTag) payload.function_tag=fn.functionTag;
+  if(fn?.keyMeaning) payload.key_meaning=fn.keyMeaning;
+  if(review) payload.post_review=review;
   if(conf?.level) payload.confidence=conf.level;
   if(conf) payload.analysis_skipped=!!conf.analysisSkipped;
 
@@ -401,18 +426,36 @@ function queueCloudQuestion(qid,delay=700){
   cloudQuestionTimers.set(qid,setTimeout(()=>{cloudQuestionTimers.delete(qid);syncCloudQuestion(qid);},delay));
 }
 function materialHasCloudData(mid){
-  if(!isSingleTalkMode()||!mid) return false;
-  const t=state.talkLab||{},v=t.vocab?.[mid],fb=t.frameworkBefore?.[mid],fa=t.frameworkAfter?.[mid],fi=t.frameworkIssues?.[mid];
-  return !!(state.transcriptViewed[mid]||v?.none||v?.markers?.length||fb||fa||fi||t.directTranscriptSkip?.[mid]||t.postUnchanged?.[mid]);
+  if(!mid) return false;
+  if(isSingleTalkMode()){
+    const t=state.talkLab||{},v=t.vocab?.[mid],fb=t.frameworkBefore?.[mid],fa=t.frameworkAfter?.[mid],fi=t.frameworkIssues?.[mid];
+    return !!(state.transcriptViewed[mid]||v?.none||v?.markers?.length||fb||fa||fi||t.directTranscriptSkip?.[mid]||t.postUnchanged?.[mid]||state.replayDecision[mid]||state.materialReplayCount[mid]);
+  }
+  const m=state.materialMaps[mid]||{};
+  return !!(state.transcriptViewed[mid]||state.replayDecision[mid]||state.materialReplayCount[mid]||m.topic||m.main1||m.main2||m.main3||m.topicDontKnow||m.mainDontKnow);
 }
 function materialCloudPayload(mid){
+  if(!isSingleTalkMode()){
+    const m=state.materialMaps[mid]||{};
+    return {
+      session_id:state.cloud.sessionId,
+      material_id:mid,
+      topic_before:m.topic||'',
+      main_points_before:[m.main1,m.main2,m.main3].filter(Boolean).map(text=>({text})),
+      topic_dont_know:!!m.topicDontKnow,
+      main_dont_know:!!m.mainDontKnow,
+      replay_decision:state.replayDecision[mid]||'',
+      replay_count:Number(state.materialReplayCount[mid]||0),
+      transcript_viewed:!!state.transcriptViewed[mid]
+    };
+  }
   const t=talkLabState(),v=talkVocab(mid),fb=talkFrameworkBefore(mid),fa=talkFrameworkAfter(mid),fi=talkFrameworkIssues(mid);
   return {
     session_id:state.cloud.sessionId,
-    material_id:isSingleTalkMode()?[
+    material_id:[
       moduleData?.talkRef?.sourceModuleId,
       moduleData?.talkRef?.sourceMaterialId
-    ].filter(Boolean).join('-'):mid,
+    ].filter(Boolean).join('-'),
     topic_before:fb.topic||'',
     main_points_before:(fb.mainPoints||[]).map(x=>({text:x.text||'',time:Number.isFinite(x.time)?x.time:null})),
     topic_after:fa.topic||'',
@@ -420,7 +463,10 @@ function materialCloudPayload(mid){
     vocab_marks:(v.markers||[]).map(x=>({time:x.time,heard_text:x.heard||'',actual_text:x.corrected||'',meaning:x.meaning||'',note:x.note||''})),
     framework_issues:fi.accurate?['accurate']:[...(fi.selected||[]),...(fi.note?[fi.note]:[])],
     direct_transcript_skip:!!t.directTranscriptSkip?.[mid],
-    post_unchanged:!!t.postUnchanged?.[mid]
+    post_unchanged:!!t.postUnchanged?.[mid],
+    replay_decision:state.replayDecision[mid]||'',
+    replay_count:Number(state.materialReplayCount[mid]||0),
+    transcript_viewed:!!state.transcriptViewed[mid]
   };
 }
 async function syncCloudMaterial(mid){
