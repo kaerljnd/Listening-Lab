@@ -315,7 +315,8 @@ async function finishCloudSession(status){
   try{
     await classroomPost('/session/status',{
       session_id:state.cloud.sessionId,
-      status
+      status,
+      event_log:state.eventLog||[]
     });
     state.cloud.status='connected';
     state.cloud.lastError=null;
