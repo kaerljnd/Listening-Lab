@@ -1,0 +1,1280 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20261005A",
+  "title": "20261005A Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20261005A-M1",
+      "title": "20261005A · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            28.44,
+            31.31
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Do you think we can type up the report before dinner?",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            43.87,
+            47.46
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Where can I buy a ticket to the choir concert?",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            60.5,
+            62.68
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Have you figured out how to log into the course website?",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            80.93,
+            83.64
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I was hoping to borrow your notes from the last lecture.",
+          "question_ids": [
+            "Q4"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            112.41,
+            118.06
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Who will be delivering our class presentation at the symposium?",
+          "question_ids": [
+            "Q5"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            127.15,
+            130.08
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Looks like the library is quiet. Should we study there?",
+          "question_ids": [
+            "Q6"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            147.2,
+            149.83
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Who will take the lead for our group project?",
+          "question_ids": [
+            "Q7"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            175.14,
+            180.9
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Let's keep the momentum and be done with the report soon.",
+          "question_ids": [
+            "Q8"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            196.16,
+            199.02
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Can you help me review a paper I wrote?",
+          "question_ids": [
+            "Q9"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            215.18,
+            219.47
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "They moved to off-campus housing of all places.",
+          "question_ids": [
+            "Q10"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            240.24,
+            243.07
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I was hoping the professor would explain the grading rubric.",
+          "question_ids": [
+            "Q11"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            267.43,
+            270.01
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Would it make sense to revisit the research question?",
+          "question_ids": [
+            "Q12"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            304.65,
+            342.81
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "My roommate stays up late playing video games and slamming the keyboard every time he loses.\nSounds awful. Mine's the opposite. All I hear from her is, \"Please turn off the light,\" or, \"We're out of toothpaste.\" If I ask a question, I get a one-sentence reply.\nI'd take that over keyboard banging. Have you spoken to her about the long silences?\nWhat can I say? She's just a quiet person. Have you told your roommate to stop the late-night commotion?\nTwice. He apologizes and eases off for a week or so, but then forgets about it.",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            392.02,
+            443.47
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "I'm thinking of visiting the university museum. Have you ever gone?\nLast Saturday afternoon. Actually, there was more to view than I thought, so I wish I'd gotten there earlier. If you go, I'd say to set aside three solid hours.\nI'll be sure to do that. So what did you see?\nMy favorite part was a guided tour of the kinetic art exhibit. There's a sculpture that's about six feet tall. It's made of metal rods that move as you walk around it.\nIt sounds almost interactive.\nThat's exactly how the tour guide described it—interactive. Like if you're viewing it from one angle, the glass pieces catch the light and make the whole thing bright and glittery. But from another position, the sculpture looks almost transparent.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            485.9,
+            531.04
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Are you settled into your new dorm?\nI'm still unpacking. I spent hours yesterday trying to organize things. The closet is half the size of my old one.\nI use a storage bin that fits under my bed. Bins are sold in the campus store.\nGreat tip. Thanks. There's another problem. The heating doesn't work. I froze last night.\nDid you report it to maintenance?\nNot yet.\nDon't delay. It usually takes a few days to respond to complaints, at least in this building. Meanwhile, you could borrow a space heater from housing services.",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to an announcement on a university radio station.",
+          "listen_window": [
+            580.4,
+            609.97
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "The Academic Success Center has made our system for booking tutoring sessions more user-friendly. We strongly recommend making an appointment. Without one, we can't guarantee that a tutor specializing in your preferred subject area will be available when you arrive. Also, with midterm exams fast approaching, we've designated the third floor of our building as a silent zone for the next two weeks. This is in addition to the fourth floor, which is our permanently designated silent zone.",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to an announcement in a university computer lab.",
+          "listen_window": [
+            657.06,
+            693.49
+          ],
+          "visual": "../20260920A/images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Attention, students. Recently, there have been instances of damage to the computers. Starting next week, anyone found mishandling the equipment may face disciplinary action, including fines or temporary suspension of access to all computer labs. If you find any issues with hardware you're using, please inform the lab staff immediately. If no staff member is present in the lab, call the department.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to an announcement during a student organization meeting.",
+          "listen_window": [
+            741.12,
+            767.87
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Last week's fundraising meeting hosted by the Green Thumb Club encountered an unexpected scheduling conflict with another campus organization. For this reason, the room intended for the meeting was unavailable, forcing us to relocate on short notice. Some participants likely missed out because the notification was sent so late. To this end, we'll be developing a centralized online calendar for all extracurricular activities. It should be available by next week.",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a history of technology podcast.",
+          "listen_window": [
+            809.57,
+            932.83
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "You've probably used many remote controls for things like televisions, smart devices, and other electronics. My wife uses one to open the gate to her parking lot at work now. Remote controls for TVs have been around since the 1950s. While remote controls had been used before then, back to around 1870, they were mostly for unpiloted military vehicles. Later, the inventor Nikola Tesla developed a wireless remote control for military vehicles in 1898.\n\nAs for TV remotes, the first really popular one was developed in 1950. It was called the Lazy Bones and was pretty expensive. Unfortunately, the Lazy Bones was connected to the TV by a long wire, which was annoying and a trip hazard. It's kind of hard to imagine this was more practical for most people than just getting up and turning the dial on the television yourself.\n\nA few years later, in 1955, a wireless remote was introduced: the Flash-Matic. To use the Flash-Matic, you'd point it at one of the corners of your TV screen. This would shine a light beam at the chosen corner. Now, each corner had its own purpose: channel up or down, power, or mute. Each corner had a photoelectric cell to convert the light beam into an electrical signal to do what you want. Trouble was, the photoelectric cells responded to other light sources too, like from a light bulb or even sunlight. Imagine turning on a light bulb and your TV turns on too.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a science podcast.",
+          "listen_window": [
+            1013.23,
+            1099.47
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "Let's move on in our renewable energy series to discuss solar power, which is arguably the most abundant resource available. Solar power takes energy from the sun's rays and converts it to electricity or heat. The primary technology for this is solar panels made up of photovoltaic cells, which generate an electric current when sunlight hits them.\n\nThe advantages of solar power are well known, and the most important may be the fact that it produces zero harmful pollutants. Any industrial endeavor will produce carbon dioxide in one way or another, and manufacturing solar panels itself requires energy sourced from fossil fuels. But on the whole, the industry has a much lower carbon footprint than coal or natural gas and is a key to reducing greenhouse gas emissions.\n\nAnother advantage, and one we don't talk about enough, is that solar power can provide energy access in remote and underserved areas, far from the grid.\n\nWhat are the disadvantages? Solar panel efficiency is affected by cloud cover and other weather, which reduces the amount of sunlight reaching the panels. That said, innovations in battery storage systems do allow for the storage of solar energy for use during non-sunny periods. Panel lifespan is long, but improvements in efficiency are paradoxically driving panels to be replaced much earlier than that. So waste is increasing faster than expected. This is a problem because recycling them is expensive. Most panels end up in landfills.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "It's probably in the main cafeteria.",
+            "Spaghetti and meatballs, I think.",
+            "We can get a discount for buying multiple tickets.",
+            "No, we'll need a lot of time for that."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "At the music building.",
+            "I think she will like it.",
+            "Later this afternoon.",
+            "It's expensive."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "It's not that far, so let's go together.",
+            "It's actually really easy—let me show you.",
+            "Yes, I think that's the best choice.",
+            "Yes, I think you can request one online."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, there are several more in the box.",
+            "No problem, but please return them tomorrow.",
+            "Thank you, your notes were very helpful.",
+            "I need to return these today."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "The package was delivered yesterday.",
+            "The presentation went well.",
+            "Yes, that's true.",
+            "The group leader will do it."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "That's right—the library holds a lot of events.",
+            "Yes, it might help us concentrate.",
+            "No, I haven't read that book yet.",
+            "Not now, my roommates are still sleeping."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "I'll see you in class.",
+            "Yes, the notes were helpful.",
+            "Maybe John can.",
+            "Sure, I'll look for it."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "Should we keep it in the common area?",
+            "Let's do it—we might be the first group to submit it.",
+            "What time is the appointment?",
+            "Sorry—I forgot to record it."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "I have this afternoon free.",
+            "To print a copy.",
+            "It took longer than expected.",
+            "I appreciate your assistance."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "Why are you so surprised?",
+            "Yes, I will do that.",
+            "I see a parking spot over there.",
+            "It takes time to exercise."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "I know—her grades have improved a lot.",
+            "Upgrading to a new device could help.",
+            "Me too—his system is a bit unusual.",
+            "No, I forgot to ask her."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "That's a good idea—let's reconsider it.",
+            "All answers will be reviewed.",
+            "Yes, we should come here more often.",
+            "You could change the title later."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "What are the speakers doing?",
+          "options": [
+            "Comparing and contrasting problems with their roommates",
+            "Creating a plan to find new roommates",
+            "Discussing the benefits and drawbacks of living off campus",
+            "Exploring ways for the man to improve his gaming skills"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "What does the woman emphasize about her roommate?",
+          "options": [
+            "She has not changed her behavior despite the woman's complaints.",
+            "She is not a particularly talkative person.",
+            "She makes too much noise when using her computer.",
+            "She usually goes to sleep much later than the woman does."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "What recommendation does the man make at the beginning of the conversation?",
+          "options": [
+            "Applying for a job as a museum tour guide",
+            "Taking advantage of a student discount at a museum",
+            "Leaving sufficient time to browse a museum",
+            "Avoiding museum crowds that are common on Saturdays"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "What does the man say about a specific sculpture he saw?",
+          "options": [
+            "It appears larger than it actually is.",
+            "It is made entirely of recycled materials.",
+            "It has been recently restored to reflect its original beauty.",
+            "It looks different to viewers based on where they are standing."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "What will the woman most likely buy?",
+          "options": [
+            "A small space heater",
+            "Some shelves for a small closet",
+            "Some storage space in the basement of her dormitory",
+            "A storage bin that can fit under a bed"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "What can be concluded about the man?",
+          "options": [
+            "He used to work in the campus store.",
+            "He lives with a roommate in an off-campus apartment.",
+            "He has reported problems to the maintenance department before.",
+            "He has a friend who works in the housing services office."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "What is stated about tutoring sessions?",
+          "options": [
+            "They are free of charge.",
+            "They should be reserved in advance.",
+            "They are offered by a student club.",
+            "Their number will increase during the next two weeks."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "Why does the speaker mention midterm exams?",
+          "options": [
+            "To encourage students to use study tips offered by tutors",
+            "To emphasize the benefits of professors' office hours",
+            "To remind students to take a practice exam",
+            "To give a reason for a temporary change"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "What is the main purpose of the announcement?",
+          "options": [
+            "To introduce new staff",
+            "To give a warning",
+            "To encourage students to use a computer lab",
+            "To invite students to an event"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "What should students do if they find a hardware problem?",
+          "options": [
+            "Read some instructions",
+            "Speak with an employee",
+            "Use another computer",
+            "Restart the computer"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "What problem does the speaker identify?",
+          "options": [
+            "A building was closed.",
+            "A room was double-booked.",
+            "A club did not receive funding.",
+            "A notification was not sent."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "What does the speaker say about a calendar?",
+          "options": [
+            "It will be offline next week.",
+            "It contains some errors.",
+            "It will be created soon.",
+            "It is at capacity."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "What does the speaker mainly discuss?",
+          "options": [
+            "Ways that television remote controls have been adapted for other purposes",
+            "Versions of remote controls developed by the mid-twentieth century",
+            "Reasons that the earliest remote controls were relatively expensive",
+            "Technological innovations in remote controls that are popular today"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "What point does the speaker make about the first remote controls?",
+          "options": [
+            "They were mostly used by the armed forces.",
+            "They were introduced by the inventor Nikola Tesla.",
+            "They mostly relied on wireless technology.",
+            "They opened gates for passenger vehicles."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "What opinion does the speaker express about the Lazy Bones remote control?",
+          "options": [
+            "It caused people to spend too much time watching television.",
+            "It was too complicated for most users to understand.",
+            "It was too inconvenient to be a long-term solution.",
+            "It was too expensive for most families to buy."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker mention a light bulb?",
+          "options": [
+            "To indicate a household item that responds to remote controls",
+            "To explain the light source of the Flash-Matic's cells",
+            "To point out an older technology that improved in the 1950s",
+            "To help illustrate a disadvantage of the Flash-Matic"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "How does the speaker organize the talk on solar power?",
+          "options": [
+            "She outlines solar power's history as an alternative energy resource.",
+            "She lists the technologies involved in generating solar energy.",
+            "She offers case studies of successful solar power projects.",
+            "She compares and contrasts the benefits and challenges of solar power."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention photovoltaic cells?",
+          "options": [
+            "To describe how solar panels convert solar energy into electricity",
+            "To discuss innovations in the storage of solar energy",
+            "To explain the difficulty and expense of recycling solar panels",
+            "To explain the cost of installing solar electric systems"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker note that all industries produce some carbon dioxide?",
+          "options": [
+            "To provide context for a discussion of the solar industry's low carbon footprint",
+            "To suggest that there are reasons for skepticism of the solar industry",
+            "To introduce a discussion about the harmful pollutants given off by solar panels",
+            "To support the claim that solar power provides energy to underserved areas"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "According to the speaker, what is causing a rapid increase in waste from used solar panels?",
+          "options": [
+            "Solar panels produced in the last decade cannot be recycled.",
+            "Solar panels in regions with heavy cloud cover are scrapped due to disuse.",
+            "Improvements in panel efficiency are leading to frequent replacement.",
+            "Overuse of solar power is overwhelming panel-recycling systems."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "module_id": "M2H",
+      "id": "20261005A-M2H",
+      "title": "20261005A · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            13.16,
+            17.01
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Could you swing by the lab now?",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            26.72,
+            31.24
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I'm keeping an eye on my laptop while I talk to the professor.",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            42.83,
+            45.53
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "I'm at a loss with this experiment.",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            63.67,
+            100.97
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Congratulations. The Crucible is a fantastic play.\nI'm shocked. They chose me for the part of Mercy Lewis. I've never acted before and auditioned on a whim. What if I don't deliver my lines properly?\nThat's what rehearsals are for. Focus on delivering each line with the proper emotion. If you're just reciting words, it'll show.\nSince this is all new to me, could you help me practice and give me feedback?\nSure. I played Reverend Hale in a production of The Crucible. I forgot to warm up my voice and sounded hoarse throughout my first scene. Don't make that mistake.",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            144.82,
+            189.22
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Which elective courses are you interested in?\nNo idea. Why are we even required to take courses that aren't related to our major field of study?\nTo prepare you for evolving job markets, for one thing. Absorbing knowledge beyond your major makes you a well-rounded and empathetic person and a better critical thinker. Employers value these so-called soft skills.\nI guess. But there are so many elective courses. It's mind-boggling.\nOne of my advisees took the Science of Happiness course and said it was the calmest part of her week.\nIntriguing. I'll try it.",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a history class.",
+          "listen_window": [
+            237.52,
+            342.22
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "The Renaissance was a pivotal period in European history spanning roughly the fourteenth to the seventeenth centuries. The Renaissance is characterized by a renewed interest in art, science, and literature. It marked a significant departure from the Middle Ages and laid the groundwork for the modern era.\n\nOne of the defining features of the Renaissance was the revival of classical learning. Scholars and artists looked back to the texts and artistic achievements of ancient Greece and Rome for inspiration. This led to a flourishing of ideas and creativity, evident in the works of figures like Leonardo da Vinci, Michelangelo, and Galileo.\n\nThe invention of the printing press by Johannes Gutenberg around 1440 was a crucial development during this time. It allowed for the mass production of books, making literature and scholarly works more accessible to a broader audience. This contributed to increased literacy and the spread of Renaissance ideas.\n\nThe Renaissance also saw major advancements, particularly in astronomy. Nicolaus Copernicus proposed a heliocentric model of the solar system, placing the sun, not the Earth, at the center. Galileo Galilei later used a telescope to observe celestial bodies, providing evidence that supported Copernicus's theory. These discoveries challenged long-held beliefs and laid the foundation for modern astronomy.\n\nDespite political instability in some regions, the Renaissance left a lasting legacy on European society. Its influence can still be seen today in art, science, and education.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a history class.",
+          "listen_window": [
+            424.71,
+            522.96
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "Today, let's talk about the ancient Maya civilization and explore a fascinating revelation about its decline—a vast civilization with impressive cities and a flourishing culture that suddenly crumbled into history.\n\nFor years, scholars have debated what might have happened. And now, recent research has brought stalagmites into the spotlight. Stalagmites, those formations rising up from the floor of a cave, are more than just geological wonders. They serve as natural archives, capturing changes in precipitation over thousands of years.\n\nIn 2005, scientists analyzed stalagmites from caves near the former Maya heartland. The data revealed a series of prolonged droughts that coincided with periods of decline for Maya society. The Maya were heavily dependent on agriculture, with water being a critical resource for their survival. When these droughts occurred, the scarcity of water put pressure on their food production and societal structures. Imagine cities struggling without enough water for crops, leading to food shortages and social unrest.\n\nIt's important to note, though, that while these climate changes were significant, they weren't the sole cause. Other factors like warfare and politics played a role too. Yet the revelation from these stalagmites provides a clearer picture of how environmental changes can trigger societal shifts. This discovery not only sheds light on the past but also serves as a reminder of our vulnerability to climate change today.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, it's today.",
+            "Yes, I was at the lab.",
+            "I couldn't see it.",
+            "I'm coming."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Sure, I'll watch it for you.",
+            "Yes, I'll read it now.",
+            "Oh, that's so interesting!",
+            "Me too—I'd like to buy a new one."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "I don't understand the results either.",
+            "I thought you had found it?",
+            "Don't be upset—you can get a new one.",
+            "Is the science lab undergoing renovations?"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "Why is the woman worried about performing in The Crucible?",
+          "options": [
+            "Her personality is very different from her character's.",
+            "Her schedule might prevent her from attending all of the rehearsals.",
+            "She is overwhelmed by the number of lines she needs to memorize.",
+            "She has no experience performing onstage."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "Why does the man mention that he previously performed in The Crucible?",
+          "options": [
+            "To explain the differences between two characters in the play",
+            "To express regret for not auditioning for the upcoming play",
+            "To explain some advice that he is giving about the play",
+            "To explain why he is helping the director with the play"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "Why is the woman meeting with the man?",
+          "options": [
+            "To get help with her work on a class project",
+            "To ask for advice about developing soft skills",
+            "To receive guidance on selecting courses for the next term",
+            "To review questions that she may need to answer during job interviews"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "What can be concluded about the Science of Happiness course?",
+          "options": [
+            "It is not directly related to the woman's career goal.",
+            "It is a required course for all full-time students.",
+            "It is based on research the man has conducted.",
+            "It is one of the university's most popular courses."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "The invention of the printing press",
+            "The development of modern astronomy",
+            "The political instability of the Renaissance period",
+            "The Renaissance as a turning point in European history"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker mention classical learning during the Renaissance?",
+          "options": [
+            "To explain why ancient texts are difficult to find in Europe",
+            "To argue that classical ideas were no longer relevant",
+            "To describe how printing replaced ancient writing systems",
+            "To show how Renaissance thinkers were influenced by earlier cultures"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "According to the speaker, what was one effect of the invention of the printing press?",
+          "options": [
+            "It promoted an increase in literacy.",
+            "It limited the topics scholars could write about.",
+            "It led to the decline of handwritten manuscripts.",
+            "It caused a decrease in interest in classical learning."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "What does the speaker say about Renaissance astronomy?",
+          "options": [
+            "It highlighted Earth's special place in the universe.",
+            "It focused mainly on astrology and superstition.",
+            "It introduced ideas that challenged earlier beliefs.",
+            "It rejected the use of observational tools."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "The use of stalagmites to study ancient cave formations",
+            "The advanced agricultural practices of the Maya civilization",
+            "Environmental factors in the decline of the Maya civilization",
+            "Reasons for political instability in the Maya civilization"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention stalagmites?",
+          "options": [
+            "To compare them to other geological formations",
+            "To explain how they can reveal changes in precipitation over time",
+            "To argue against the idea that climate change affected ancient civilizations",
+            "To illustrate the beauty of natural cave formations"
+          ],
+          "correct_answer": "B",
+          "answer_verified": false,
+          "timer_sec": 30,
+          "explanation": "Supplied answer key says C, but the audio/transcript states that stalagmites record precipitation changes; B matches the material.",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "What point does the speaker make about food production in the Maya society?",
+          "options": [
+            "It was supported by food imports from neighboring regions.",
+            "It relied on stable water supplies.",
+            "It was less affected by climate changes than by political conflicts.",
+            "It increased over time as the Maya developed better farming technologies."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "What point does the speaker emphasize at the end of the talk?",
+          "options": [
+            "Geological formations are the most reliable historical records.",
+            "The Maya civilization was more advanced than previously believed.",
+            "Changes in natural conditions can have broad effects on societies.",
+            "Modern research has resolved all questions about the Maya decline."
+          ],
+          "correct_answer": "C",
+          "answer_verified": false,
+          "timer_sec": 30,
+          "explanation": "Supplied answer key says B, but the ending explicitly generalizes how environmental changes can trigger societal shifts; C matches the material.",
+          "evidence": []
+        }
+      ]
+    }
+  ]
+}
