@@ -1,6 +1,7 @@
 const API_BASE='https://listeni-lab-api-yuhpblgpyn.cn-hangzhou.fcapp.run';
 const KEY_STORAGE='listening-lab:teacher-key';
-const PACK_URL='../practice_packs/20260920A/pack.json';
+const IS_LOCAL=['127.0.0.1','localhost'].includes(location.hostname);
+const PACK_URL=setId=>IS_LOCAL?`/packs/${encodeURIComponent(setId)}/pack.json`:`../practice_packs/${encodeURIComponent(setId)}/pack.json`;
 const app=document.getElementById('app');
 
 let teacherKey=sessionStorage.getItem(KEY_STORAGE)||'';
@@ -8,6 +9,7 @@ let sessions=[];
 let answerMap=new Map();
 let questionMeta=new Map();
 let materialMeta=new Map();
+let loadedSetId='';
 const questionCollator=new Intl.Collator(undefined,{numeric:true,sensitivity:'base'});
 
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
@@ -38,19 +40,23 @@ async function api(path){
   if(!res.ok||data.ok!==true)throw new Error(data.error||('API '+res.status));
   return data;
 }
-async function loadPack(){
-  const raw=await fetch(PACK_URL,{cache:'no-store'}).then(r=>r.json());
+async function loadPack(setId){
+  setId=String(setId||'').trim();
+  if(!setId){answerMap=new Map();questionMeta=new Map();materialMeta=new Map();loadedSetId='';return;}
+  if(loadedSetId===setId)return;
+  const res=await fetch(PACK_URL(setId),{cache:'no-store'});
+  if(!res.ok)throw new Error('无法读取题包 '+setId+'（HTTP '+res.status+'）');
+  const raw=await res.json();
   answerMap=new Map(); questionMeta=new Map(); materialMeta=new Map();
   for(const mod of raw.modules||[]){
-    for(const mat of mod.materials||[]){
-      materialMeta.set(mod.module_id+'-'+mat.material_id,{...mat,module_id:mod.module_id});
-    }
+    for(const mat of mod.materials||[]){materialMeta.set(mod.module_id+'-'+mat.material_id,{...mat,module_id:mod.module_id});}
     for(const q of mod.questions||[]){
       const id=mod.module_id+'-'+q.question_id;
       answerMap.set(id,q.correct_answer||'');
       questionMeta.set(id,{...q,module_id:mod.module_id});
     }
   }
+  loadedSetId=setId;
 }
 function loginView(message=''){
   app.innerHTML=`<div class="login-wrap"><div class="card login-card">
@@ -71,7 +77,7 @@ function loginView(message=''){
   };
 }
 function layout(inner,actions=''){
-  app.innerHTML=`<div class="topbar"><div><div class="brand">Listening Lab · 教师页面</div><div class="subtitle">Classroom Pilot · 20260920A</div></div><div class="spacer"></div>${actions}<button class="btn ghost" id="logoutBtn">退出教师页面</button></div><div class="shell">${inner}</div>`;
+  app.innerHTML=`<div class="topbar"><div><div class="brand">Listening Lab · 教师页面</div><div class="subtitle">Classroom Pilot · All Sets</div></div><div class="spacer"></div>${actions}<button class="btn ghost" id="logoutBtn">退出教师页面</button></div><div class="shell">${inner}</div>`;
   document.getElementById('logoutBtn').onclick=()=>{sessionStorage.removeItem(KEY_STORAGE);teacherKey='';loginView();};
 }
 function stats(){
@@ -228,7 +234,6 @@ async function route(){
 }
 async function boot(){
   if(!teacherKey)return loginView();
-  await loadPack();
   const data=await api('/teacher/sessions?limit=500');
   sessions=data.sessions||[];
   await route();
