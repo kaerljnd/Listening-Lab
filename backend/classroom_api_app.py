@@ -294,6 +294,9 @@ def update_session_status():
     if status == "completed":
         put_columns.append(("completed_at", timestamp))
 
+    if "event_log" in data:
+        put_columns.append(("event_log", json_value(data.get("event_log"))))
+
     client = get_ots_client()
     client.update_row(
         "sessions",
