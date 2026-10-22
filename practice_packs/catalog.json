@@ -2,10 +2,51 @@
   "packs": [
     {
       "schema_version": "1.0",
+      "set_id": "20260923A",
+      "title": "20260923A Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20260923A · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          }
+        },
+        {
+          "module_id": "M2H",
+          "title": "20260923A · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          }
+        }
+      ],
+      "description": "20260923A Listening Lab pack built from the supplied M1/M2H audio, question PDFs, answer key, and transcript DOCX files. Transcript text has been context-corrected for obvious ASR errors.",
+      "folder": "20260923A"
+    },
+    {
+      "schema_version": "1.0",
       "set_id": "20260920A",
       "title": "20260920A Listening",
       "pack_file": "pack.json",
-      "folder": "20260920A",
       "modules": [
         {
           "module_id": "M1",
@@ -40,7 +81,260 @@
           }
         }
       ],
-      "description": "Classroom Pilot: 20260920A Listening"
+      "description": "20260920A Listening Lab pack built from supplied M1/M2H audio, question PDFs, answer key, and transcript DOCX files. Transcript text has been context-corrected for obvious ASR errors.",
+      "folder": "20260920A"
+    },
+    {
+      "schema_version": "1.0",
+      "set_id": "20260916A",
+      "title": "20260916A Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20260916A · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          }
+        },
+        {
+          "module_id": "M2H",
+          "title": "20260916A · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          }
+        }
+      ],
+      "description": "20260916A local Listening Lab pack built from the supplied M1/M2H audio, question PDFs, and verified answer key. Some analysis transcripts remain pending because no transcript files were supplied.",
+      "folder": "20260916A"
+    },
+    {
+      "schema_version": "1.0",
+      "set_id": "20260915A",
+      "title": "20260915A Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20260915A · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          }
+        },
+        {
+          "module_id": "M2H",
+          "title": "20260915A · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          }
+        }
+      ],
+      "description": "20260915A Listening Lab pack built from the supplied M1/M2H audio, question PDFs, answer key, and transcript DOCX files. Transcript text has been context-corrected for obvious ASR errors.",
+      "folder": "20260915A"
+    },
+    {
+      "schema_version": "1.0",
+      "set_id": "20260909B",
+      "title": "20260909B Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20260909B · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          }
+        },
+        {
+          "module_id": "M2H",
+          "title": "20260909B · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          }
+        }
+      ],
+      "description": "20260909B local Listening Lab pack built from supplied M1/M2H audio, question PDFs, transcripts, and answer key. M2H Q4 source question page is missing and is preserved as an explicit placeholder.",
+      "folder": "20260909B"
+    },
+    {
+      "schema_version": "1.0",
+      "set_id": "20260909A",
+      "title": "20260909A Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20260909A · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          }
+        },
+        {
+          "module_id": "M2H",
+          "title": "20260909A · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          }
+        }
+      ],
+      "description": "20260909A full local Listening Lab pack built from the supplied M1/M2H audio, question PDFs, transcripts, and verified answer key.",
+      "folder": "20260909A"
+    },
+    {
+      "schema_version": "1.0",
+      "set_id": "20260908A",
+      "title": "20260908A Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20260908A · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          }
+        },
+        {
+          "module_id": "M2H",
+          "title": "20260908A · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          }
+        }
+      ],
+      "description": "20260908A Listening Lab pack built from the supplied M1/M2H audio, question PDFs, transcripts, and answer key. Known source issues are documented in README.txt.",
+      "folder": "20260908A"
+    },
+    {
+      "schema_version": "1.0",
+      "set_id": "20260830A",
+      "title": "20260830A Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20260830A · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          }
+        },
+        {
+          "module_id": "M2H",
+          "title": "20260830A · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          }
+        }
+      ],
+      "description": "20260830A full local listening pack: M1 + M2H. Content is separated from the Listening Lab application.",
+      "folder": "20260830A"
     }
   ],
   "errors": []
