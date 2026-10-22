@@ -1,0 +1,1280 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20261004A",
+  "title": "20261004A Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20261004A-M1",
+      "title": "20261004A · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            20.63,
+            23.37
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Are you willing to review the syllabus with me today?",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            35.56,
+            38.02
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Someone should take the initiative in this group project.",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            51.61,
+            54.89
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "How come the professor didn't announce the quiz?",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            66.13,
+            69.06
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Should we go to the park or the job fair?",
+          "question_ids": [
+            "Q4"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            84.11,
+            87.07
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "What can we do about university expenses?",
+          "question_ids": [
+            "Q5"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            101.32,
+            104.21
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Could you alert me if today's room assignment changes?",
+          "question_ids": [
+            "Q6"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            119.86,
+            122.58
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "How will we complete it on time?",
+          "question_ids": [
+            "Q7"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            133.83,
+            136.07
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Any chance you could help me plan my schedule?",
+          "question_ids": [
+            "Q8"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            149.37,
+            151.17
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Could you ask the adviser about electives?",
+          "question_ids": [
+            "Q9"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            165.34,
+            167.79
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Why did you choose that topic for your report?",
+          "question_ids": [
+            "Q10"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            177.32,
+            180.71
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "If you have time this evening, could you send me the project grading criteria?",
+          "question_ids": [
+            "Q11"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            191.91,
+            194.16
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Please upload the lecture slides after class.",
+          "question_ids": [
+            "Q12"
+          ],
+          "transcript_source": "Supplied 20261004A AI transcript; short-response wording lightly context-corrected where clear."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            211.42,
+            249.31
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Are you planning to enroll in the work-study program?\nI haven't decided yet. How about you?\nI already registered. It's a great way to help pay off our tuition. It's super convenient because the job placements are right here on campus. There would be no commute involved.\nI'm taking an extra class this semester. That may be a lot.\nFrom what I've been told, you can choose how many hours a week you work. So start light and then increase them if you can.\nGood idea. That would make for a more manageable schedule.",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            280.59,
+            315.09
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "I heard you're into birdwatching.\nI've been doing it for years. I love it—being outdoors, looking at birds in their natural habitat, identifying different species.\nThat's why I'm really intrigued by it. But how do you differentiate the birds?\nIt requires patience and practice. I wonder if the nature club here on campus does any activities like that.\nI'll ask.\nIn any case, you can always get a guidebook. They have some at the library. That would be a great place to start.\nGood thought. I'll go to the library this weekend and see what they have.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            345.27,
+            382.45
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Which museum object are you analyzing for your next paper?\nThe marble statue of a lion—the one in the art hall.\nWhat drew you to this particular statue?\nIt looks powerful, but calm, too, like it's guarding something, but not in a threatening way. I'm just not sure how to start the paper.\nWhat in particular about its pose, surface texture, or facial expression makes it seem simultaneously powerful and calm? The very act of describing its physical features could help you figure out the creator's intention.",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to an announcement in a classroom.",
+          "listen_window": [
+            414.44,
+            447.96
+          ],
+          "visual": "../20260920A/images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "From the course syllabus, formal written proposals for group projects are due two weeks from today. Each group must meet with me briefly this Friday to confirm that your topic is acceptable and address any questions you might have before submitting your proposal. I will leave ten minutes at the end of class today for each group to appoint a spokesperson to represent your group. During Friday office hours, I look forward to working with all of you.",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to an announcement in a classroom.",
+          "listen_window": [
+            482.47,
+            512.48
+          ],
+          "visual": "../20260920A/images/announcement_male.png",
+          "speaker_gender": "male",
+          "transcript": "Due to the high number of students requesting office-hour consultations, I've implemented an appointment-only system to ensure we can meet without interruption. Appointments can be made using my online calendar on our course website. Meanwhile, a virtual office-hour option is now available if you're off campus during the designated hours. Just email me to let me know you're not on campus and wish to meet, and I'll write back and let you know if I can accommodate you.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to an announcement on a university radio station.",
+          "listen_window": [
+            545.71,
+            571.59
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "The library has been fitted with study rooms equipped for collaborative work. These rooms require reservations, which are limited to two hours per day. You can secure your spot using the scheduling system on the library's website. Please note that food and beverages, while previously allowed in some study areas, are now prohibited to keep the floor, furniture, and equipment in the study rooms as clean as possible. Remember that a café is available on the first floor.",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk on an art podcast.",
+          "listen_window": [
+            611.32,
+            729.71
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "female",
+          "transcript": "Today I'd like to talk about the color blue in art. Now, we might take blue for granted, but for centuries it was one of the most elusive and expensive pigments an artist could use. In ancient Egypt, artisans crafted blue from lapis lazuli, a brilliant stone mined in what is now Afghanistan. This mineral was so rare and so valuable that it was literally worth its weight in gold. Because of its scarcity, blue was reserved for the most honored subjects in art. In medieval European paintings, important holy figures were often cloaked in deep blue robes. This wasn't just symbolic. It was also a financial statement.\n\nDuring the Renaissance, oil paints made the mixing and layering of colors easier, including the mixing of lapis lazuli powder with oil. Still, blue remained costly due to its natural source. Then came a turning point in the eighteenth century: synthetic dyes. Prussian blue, which was originally created in Germany quite by accident, was affordable, vibrant, and widely accessible. Suddenly, artists from all walks of life could use blue freely. This democratization of color transformed artistic expression and opened doors for artistic movements like Impressionism, where blue was used freely to evoke atmosphere and emotion.\n\nEven today, blue carries echoes of its luxurious past. It's often linked to ideas of calm, depth, and aspiration. Yet some traditionalists still argue that no synthetic pigment can match the richness and depth of lapis lazuli. The story of blue continues to reflect the evolving relationship between art, innovation, and culture.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk on an economics podcast.",
+          "listen_window": [
+            798.6,
+            915.27
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Today we're discussing behavioral economics, a fascinating field that explores how psychological factors influence economic decision-making. Traditionally, economists assumed that individuals made rational choices. However, behavioral economics challenges this notion by demonstrating that people often behave irrationally because of cognitive biases and emotions.\n\nOne classic example is the concept of loss aversion. Studies show that individuals tend to prefer avoiding losses rather than acquiring equivalent gains. Since losing 100 euros feels worse than gaining 100 euros feels good, this bias can lead to risk-averse behavior, impacting consumer decisions. The risk of loss seems intolerable even when there is an equal or greater opportunity for gain.\n\nAnother factor is present bias, where individuals disproportionately value immediate rewards over future benefits. This can make it hard to save for retirement and can lead people to overspend.\n\nAnother behavior that economists examine is confirmation bias, where individuals favor information that confirms their pre-existing beliefs while disregarding contradictory data. Imagine a consumer who strongly believes that Brand X makes the best smartphones. Because of confirmation bias, they might only read favorable reviews about Brand X while ignoring negative ones. Even when presented with objective comparisons showing that another brand has better features or is more reliable, they will downplay that information.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "I thought the exam review session was last week.",
+            "On the third floor, I think.",
+            "Yes, I'll pay my tuition bill tomorrow.",
+            "Sure, we can look at it now."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "I think you should lead the way.",
+            "We can all help you look for it.",
+            "Who do you think will win the race?",
+            "What was his initial reaction to the news?"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "I guess she wanted to keep it a surprise.",
+            "The quiz was yesterday.",
+            "No, the professor didn't come.",
+            "To check the format."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "The parking lot is far away.",
+            "The fair may be crowded.",
+            "They live in the mountains.",
+            "I went there yesterday."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "A committee is working on the issue now.",
+            "I had some unexpected personal expenses.",
+            "We went over the classroom budget last quarter.",
+            "The company's revenue summary has been posted."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "I'll let you know if I hear anything.",
+            "The assignment isn't due for another week.",
+            "No, I haven't received my ID card yet.",
+            "Yes, I received the alert about the snowstorm."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "We will definitely have to spend some late nights at the library.",
+            "She deserves all the credit for the project's completion.",
+            "I forgot to talk to my advisor yesterday.",
+            "It's important to periodically take time off from schoolwork."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, we planned for the current network outage.",
+            "Yes, it is probably on time.",
+            "Let's meet after lunch and start working on it.",
+            "The campus bookstore is open seven days a week."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "Let's reschedule our meeting next week.",
+            "I don't advise watching that movie.",
+            "They should be at the student union.",
+            "We've scheduled a meeting about this."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "The subject intrigued me.",
+            "I think that's true.",
+            "I'm glad you thought so.",
+            "The library is open today."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "All my classes have projects instead of exams.",
+            "Checking the course website might be faster.",
+            "Yes, it's 6:30 p.m.",
+            "Yes, I usually do my homework in the morning."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "I'll take care of it once I'm online.",
+            "Yes, the library should have it.",
+            "Your backpack looks overloaded.",
+            "I haven't joined any clubs this year."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "What convenience does the man identify?",
+          "options": [
+            "Work locations",
+            "Payment plans",
+            "Late registration options",
+            "Campus transportation"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "What concern does the woman mention?",
+          "options": [
+            "Too much competition",
+            "High tuition costs",
+            "Not having enough time",
+            "Not finding an interesting job"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "What are the speakers mainly discussing?",
+          "options": [
+            "An upcoming trip",
+            "A pleasant location in nature",
+            "Features of a specific bird",
+            "Aspects of a hobby"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "Why will the man go to the library?",
+          "options": [
+            "To study for a class",
+            "To attend a club meeting",
+            "To sign up for an activity",
+            "To get information about birds"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "What course does the woman most likely teach?",
+          "options": [
+            "Art appreciation",
+            "Museum administration",
+            "Wildlife biology",
+            "Studio art"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "What are the speakers discussing?",
+          "options": [
+            "The professor's critique of a paper the student wrote",
+            "The approach the student should take for an assignment",
+            "The student's interest in a job at a museum",
+            "The extent to which a lion statue resembles a living lion"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "What is the main purpose of the announcement?",
+          "options": [
+            "To schedule group presentations",
+            "To announce new office hours",
+            "To discuss a change to group project requirements",
+            "To remind students about deadlines"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "What will students do at the end of class today?",
+          "options": [
+            "Submit their written proposals",
+            "Meet with the instructor individually",
+            "Choose someone to represent their group",
+            "Confirm that their research topics are acceptable"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "What is the main purpose of the announcement?",
+          "options": [
+            "To give a reason for a cancellation",
+            "To explain a change in procedure",
+            "To provide a reminder about an upcoming assignment",
+            "To report the results of a survey"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "According to the speaker, when should students send an email?",
+          "options": [
+            "When they will be off campus",
+            "When they require detailed feedback on their work",
+            "When an online calendar is not functioning properly",
+            "When there are no appointments available"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "According to the speaker, what can students do on a website?",
+          "options": [
+            "Reserve books",
+            "Contact a librarian",
+            "Reserve a study space",
+            "Renew borrowed items"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "Why does the speaker most likely mention a café?",
+          "options": [
+            "To identify an acceptable alternative",
+            "To describe a newly opened area",
+            "To point out an available student discount",
+            "To provide a reminder about a change in hours"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "Why was blue considered a symbol of wealth in ancient art?",
+          "options": [
+            "It was associated with the color of high-value coins.",
+            "It was easy to produce but hard to preserve.",
+            "It was made from a rare and costly mineral.",
+            "It was a color only royalty was allowed to wear."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "How did the use of blue in painting change during the Renaissance?",
+          "options": [
+            "Artists stopped using blue entirely.",
+            "Due to new mining techniques, blue became cheaper to acquire.",
+            "Oil paints made it easier to mix and layer blue.",
+            "Blue was replaced by green as the dominant color."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "What impact did the development of Prussian blue have on art?",
+          "options": [
+            "It made paintings that used it more valuable.",
+            "It made blue more affordable and widely used by artists.",
+            "It was associated with paintings made only in Germany.",
+            "It had little impact, as most artists disliked it."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "According to the speaker, why do some still prefer lapis lazuli over synthetic dyes?",
+          "options": [
+            "It dries more quickly.",
+            "It is easier to mix with other colors.",
+            "It is less likely to fade over time.",
+            "It has a deeper, more vibrant appearance."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "What is the main topic of the talk?",
+          "options": [
+            "Traditional economic theories",
+            "Ways to avoid financial loss",
+            "Key concepts in behavioral economics",
+            "The impact of cognitive biases on policymaking"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "According to the talk, what does loss aversion lead to?",
+          "options": [
+            "A preference for acquiring gains",
+            "A tendency to avoid risks",
+            "Rational decision-making",
+            "Increased utility maximization"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention saving for retirement?",
+          "options": [
+            "To illustrate the concept of loss aversion",
+            "To explain confirmation bias",
+            "To demonstrate the effect of present bias",
+            "To provide an example of rational behavior"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "Which behavior best describes someone experiencing confirmation bias?",
+          "options": [
+            "Buying a product at a recently reduced price",
+            "Seeking objective comparisons of products",
+            "Looking for positive reviews of a favored brand",
+            "Choosing low cost over reliability in certain products"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "module_id": "M2H",
+      "id": "20261004A-M2H",
+      "title": "20261004A · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            21.97,
+            24.2
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "It's not perfect, but let's keep this title.",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            41.54,
+            44.7
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Could you remind me what time the guest lecture begins?",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            58.01,
+            60.95
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Let's not beat around the bush. The exam is tomorrow.",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            78.05,
+            111.39
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Lisa, you took a statistics class last semester, right? How was it?\nI liked it. If I can fit it into my schedule, I might take Statistics II next year.\nReally? I remember you telling me that you didn't like math and you weren't very good at it.\nFirst of all, all university students have to take a math class, even if they're majoring in political science like me. And secondly, the statistics class kind of fits with my major. I'll be using statistics in surveys, things like that.",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            145.26,
+            183.58
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Did you hear back about that internship in Chicago?\nYes. They decided to go with someone else.\nSorry to hear that.\nI was excited to get some experience at a large newspaper. The idea of working with professionals on such a prestigious paper was right up my alley.\nI heard about an opportunity at the local newspaper in town. It's not as glamorous as the one in Chicago, but...\nI heard about that. I've actually already had a couple of stories published there. I was hoping for something bigger. I'll check with the career center to learn about other opportunities.",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a social sciences class.",
+          "listen_window": [
+            215.28,
+            322.54
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "When we're shopping, we naturally want the experience to be as smooth as possible and to feel we've made good choices. Grocery stores and supermarkets are set up to guide our decisions so we'll be satisfied. It's the result of what's called decision architecture.\n\nNow, our brains are always looking for efficiencies and shortcuts. The world is complex enough, right? Our cognitive tendency is to make our decisions easier, and grocery stores use decision architecture to facilitate those choices, which I guess is manipulative. For me, after a long day at work, I'm up for whatever helps me shop faster. Otherwise, all the options can be overwhelming.\n\nOne strategy they use is called defaults. Defaults are basically preselected options. In a store, a default might be an item that's on a shelf at eye level. If you're looking for a jar of pasta sauce, the store wants to promote a certain brand. They'll put it in a place where you'll see it right away and be more likely to pick it up.\n\nThere's also framing. It means presenting information that highlights the benefits of an item. Say a store wants to promote certain pancakes. You might see a sign to point out health benefits of those pancakes. Maybe it'll say low sugar. That's good, right? It would not say high in artificial sweeteners, which would make it less appealing. With low sugar, you're more likely to grab that item for your cart.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a geology podcast.",
+          "listen_window": [
+            399.3,
+            508.86
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Let's start with something you probably touch every day: a piece of glass. Now, you probably know that glass is made from sand, but what you might not know is how similar the process that people use to make glass is to how nature creates a type of rock called obsidian.\n\nAnother name for obsidian is volcanic glass. It has a shiny surface and, like glass, it's made primarily of a material called silica, which is found in sand. So how does nature do it? When a volcano erupts, lava flows across the ground. The lava starts to cool. Usually, as the lava temperature drops, it forms crystals, which produce granite rock or basalt rock, depending on the speed of cooling. But occasionally lava cools extremely quickly, so fast that crystals don't have time to form. The silica molecules are instead frozen in place. And this is what creates obsidian rock with its smooth, glassy texture.\n\nObsidian has been incredibly useful to humans for millennia. In ancient cultures, it was prized for its sharp edges. When obsidian is broken, the fractures are so clean that you can actually make cutting tools out of it that are sharper than modern surgical steel. In fact, obsidian scalpels are occasionally used today in specialized medical procedures.\n\nGeologists study obsidian to better understand volcanic history. Obsidian can act as a clue to help us trace the history of eruptions on Earth and other geological processes. Let's get into that.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Not a bad idea for a weekend trip.",
+            "It's okay, I think the professor will like it.",
+            "Don't worry, I'll keep it somewhere safe.",
+            "We can go there tomorrow."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Right after lunch break.",
+            "I'm sorry I didn't reply to your invitation.",
+            "Sure, I'll let you know when they arrive.",
+            "I don't know which building it is."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, we probably should get organized.",
+            "The time to beat is forty-five seconds.",
+            "Yes, let's meet there tomorrow.",
+            "Yes, we do have some gardening to do."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "What does the man find surprising?",
+          "options": [
+            "The woman's difficulty in choosing a math class",
+            "The woman's decision to major in political science",
+            "The woman's opinion of a class she took",
+            "The woman's decision to transfer to a different university"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "What does the woman imply when she discusses a statistics course that she took?",
+          "options": [
+            "She found the material relevant to her course of study.",
+            "She decided to change her major to statistics.",
+            "She did not expect the class to be so difficult.",
+            "She was not required to take a math class."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "What attitude does the woman express about an internship in Chicago?",
+          "options": [
+            "Surprise that few students were interested in it",
+            "Excitement about working with other students during it",
+            "Disappointment that she was not chosen for it",
+            "Concern that she has not heard back about it"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "What does the woman indicate about the local newspaper?",
+          "options": [
+            "It rejected a story that she wanted to publish.",
+            "It hires many recent university graduates.",
+            "She learned from the career center about a job there.",
+            "She is not interested in working there."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "What does the speaker mainly discuss?",
+          "options": [
+            "Strategies stores use to encourage shoppers to select certain items",
+            "Unexpected architectural features of supermarket buildings",
+            "Habits that cause people to overlook information in grocery stores",
+            "Reasons why people buy unnecessary products when they shop"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "What is the speaker's attitude about decision architecture?",
+          "options": [
+            "Resentful that it manipulates shoppers who are tired",
+            "Relieved that it helps simplify the shopping experience",
+            "Overwhelmed by the options it presents to shoppers",
+            "Impressed by the items that it highlights for shoppers"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker mention pasta sauce?",
+          "options": [
+            "To describe how default items can affect stores' architecture",
+            "To help explain why default items are usually less expensive",
+            "To illustrate how stores use defaults when arranging items for sale",
+            "To indicate why shoppers often select one brand to be their default"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "In the speaker's example, how does the store promote the pancakes?",
+          "options": [
+            "By placing the pancakes on a shelf that is at eye level",
+            "By highlighting the health benefits of regularly eating pancakes",
+            "By pointing out that the pancakes contain little sugar",
+            "By listing the alternative sugars found in the pancakes"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "Answer key supplies B; the transcript also mentions the specific 'low sugar' framing example.",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "Differences between types of volcanic rock",
+            "A method that ancient people used to create glass",
+            "A material that may form as a result of volcanic eruptions",
+            "Reasons why volcanic activity is unpredictable"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "What determines which type of rock forms from lava?",
+          "options": [
+            "The source of the lava",
+            "The composition of the lava",
+            "The initial temperature of the lava",
+            "The speed of cooling of the lava"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "What modern product made from obsidian does the speaker mention?",
+          "options": [
+            "A medicine",
+            "Types of decorations",
+            "Window glass",
+            "Surgical tools"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "What will the speaker most likely discuss next?",
+          "options": [
+            "Materials that contain crystals",
+            "A process of creating artificial obsidian",
+            "Information that obsidian provides about the past",
+            "Different ways in which volcanoes affect Earth"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    }
+  ]
+}
