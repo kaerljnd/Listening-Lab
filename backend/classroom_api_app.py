@@ -115,8 +115,9 @@ def get_session_children(table_name, session_id, second_key):
 @app.after_request
 def add_cors_headers(response):
     origin = request.headers.get("Origin", "")
+    local_origin = origin.startswith("http://127.0.0.1:") or origin.startswith("http://localhost:")
 
-    if origin in ALLOWED_ORIGINS:
+    if origin in ALLOWED_ORIGINS or local_origin:
         response.headers["Access-Control-Allow-Origin"] = origin
 
     response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
