@@ -395,3 +395,19 @@
   .talk-result-option{flex-direction:column}
   .talk-result-option-tags{justify-content:flex-start}
 }
+
+.classroom-id-overlay{position:fixed;inset:0;z-index:1000;background:rgba(8,34,30,.42);backdrop-filter:blur(4px);display:grid;place-items:center;padding:20px}
+.classroom-id-modal{width:min(500px,100%);background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 70px rgba(0,46,38,.22);padding:28px}
+.classroom-id-eyebrow{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.classroom-id-modal h2{margin:0 0 8px;font-size:26px}
+.classroom-id-modal>p{margin:0 0 22px;color:var(--muted);line-height:1.6}
+.classroom-id-field{display:grid;gap:8px;margin-top:16px}
+.classroom-id-field>span{font-weight:800;display:flex;align-items:center;gap:8px}
+.classroom-id-field em,.classroom-id-field b{font-size:12px;font-style:normal;padding:3px 7px;border-radius:999px}
+.classroom-id-field em{background:#eef3f1;color:var(--muted)}
+.classroom-id-field b{background:var(--soft);color:var(--green-dark)}
+.classroom-id-field input{width:100%;border:1px solid var(--line);border-radius:11px;padding:12px 13px;background:#fff;color:var(--ink);outline:none}
+.classroom-id-field input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(11,93,79,.10)}
+.classroom-id-error{min-height:20px;margin-top:10px;color:#b74646;font-size:13px}
+.classroom-id-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:8px}
+@media(max-width:560px){.classroom-id-modal{padding:22px}.classroom-id-actions{flex-direction:column-reverse}.classroom-id-actions .btn{width:100%}}
