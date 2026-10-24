@@ -136,7 +136,7 @@ def health():
     return jsonify({
         "ok": True,
         "service": "listening-lab-api",
-        "version": "classroom-pilot-0.6.7-telemetry"
+        "version": "classroom-pilot-0.6.8-class-identity"
     })
 
 
@@ -221,6 +221,7 @@ def create_session():
     data = request.get_json(silent=True) or {}
 
     student_code = text_value(data.get("student_code"))
+    class_code = text_value(data.get("class_code"))
     set_id = text_value(data.get("set_id"))
     material_id = text_value(data.get("material_id"))
     practice_mode = text_value(data.get("practice_mode"))
@@ -231,6 +232,9 @@ def create_session():
 
     if len(student_code) > 40:
         return jsonify({"ok": False, "error": "student_code is too long"}), 400
+
+    if len(class_code) > 40:
+        return jsonify({"ok": False, "error": "class_code is too long"}), 400
 
     if set_id not in ALLOWED_SET_IDS:
         return jsonify({"ok": False, "error": "set_id is not allowed"}), 400
@@ -250,6 +254,8 @@ def create_session():
         ("started_at", timestamp),
         ("updated_at", timestamp),
     ]
+    if class_code:
+        attribute_columns.append(("class_code", class_code))
 
     client = get_ots_client()
     client.put_row(
