@@ -213,8 +213,9 @@ async function sessionView(id){
     return `<tr class="${rowClass}"><td><b>${esc(r.question_id)}</b></td><td>${answerPill(first,correct)}<div>${answerTrail(r.selection_history)}</div><div class="small">改选 ${Number(r.change_count||0)} 次</div></td><td>${answerPill(correct,'')}</td><td>${r.response_ms!=null?Math.round(Number(r.response_ms))/1000+'s':'—'}</td><td>${answerPill(a.second_answer||'','')}<div>${answerTrail(a.second_selection_history)}</div></td><td>${answerPill(a.post_transcript_answer||'','')}<div>${answerTrail(a.post_selection_history)}</div></td><td>${esc(a.resolution_stage||'—')}${extras.length?'<div class="small">'+extras.map(esc).join('<br>')+'</div>':''}</td><td>${Array.isArray(reasons)?reasons.map(v=>'<span class="reason">'+esc(v)+'</span>').join(''):'—'}</td></tr>`;
   }).join('');
   const inner=`
-    <div class="detail-head"><button class="btn secondary" id="backBtn">← 返回列表</button><div><h1>${esc(meta.student_code||'未命名学生')}</h1><div class="small code">${esc(meta.session_id||'')}</div></div><div class="spacer"></div><span class="badge ${esc(meta.status||'other')}">${esc(statusLabel(meta.status))}</span></div>
+    <div class="detail-head"><button class="btn secondary" id="backBtn">← 返回列表</button><div><h1>${esc(meta.student_code||'未命名学生')}</h1><div class="small">${meta.class_code?'班号 '+esc(meta.class_code)+' · ':''}<span class="code">${esc(meta.session_id||'')}</span></div></div><div class="spacer"></div><span class="badge ${esc(meta.status||'other')}">${esc(statusLabel(meta.status))}</span></div>
     <div class="card meta-grid">
+      <div class="meta-item"><div class="k">班号</div><div class="v">${esc(meta.class_code||'—')}</div></div>
       <div class="meta-item"><div class="k">套题</div><div class="v">${esc(meta.set_id||'—')}</div></div>
       <div class="meta-item"><div class="k">练习类型</div><div class="v">${esc(modeLabel(meta.practice_mode))}</div></div>
       <div class="meta-item"><div class="k">模块</div><div class="v">${esc(meta.module_id||'—')}</div></div>
