@@ -21,7 +21,7 @@ app = Flask(__name__)
 OTS_ENDPOINT = os.environ["OTS_ENDPOINT"]
 OTS_INSTANCE = os.environ["OTS_INSTANCE"]
 
-ALLOWED_SET_IDS = {"20260830A", "20260908A", "20260909A", "20260909B", "20260915A", "20260916A", "20260920A", "20260923A", "20261004A", "20261005A"}
+ALLOWED_SET_IDS = {"20260830A", "20260908A", "20260909A", "20260909B", "20260915A", "20260916A", "20260920A", "20260923A", "20261004A", "20261004C", "20261005A", "20261005B", "20261007A"}
 TEACHER_KEY = os.environ.get("TEACHER_KEY", "").strip()
 
 ALLOWED_ORIGINS = {
@@ -136,7 +136,7 @@ def health():
     return jsonify({
         "ok": True,
         "service": "listening-lab-api",
-        "version": "classroom-pilot-0.6.6-telemetry"
+        "version": "classroom-pilot-0.6.7-telemetry"
     })
 
 
