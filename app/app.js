@@ -3,6 +3,7 @@ const audio = document.getElementById('audio');
 const ACTIVE_SELECTION_KEY = 'listening-lab:active-selection';
 const NAVIGATION_KEY = 'listening-lab:navigation-v1.9.2';
 const CLASSROOM_STUDENT_KEY = 'listening-lab:classroom-student-code';
+const CLASSROOM_CLASS_KEY = 'listening-lab:classroom-class-code';
 const ACTIVE_SESSION_POINTER_KEY = 'listening-lab:active-session-v1.9.3';
 const SESSION_REGISTRY_KEY = 'listening-lab:session-registry-v1.9.4';
 const CLASSROOM_API_BASE = 'https://listeni-lab-api-yuhpblgpyn.cn-hangzhou.fcapp.run';
@@ -295,13 +296,62 @@ let cloudSessionProgressTimer=null;
 const CLASSROOM_SET_IDS=new Set(['20260830A','20260908A','20260909A','20260909B','20260915A','20260916A','20260920A','20260923A','20261004A','20261004C','20261005A','20261005B','20261007A']);
 function classroomEligible(){ return CLASSROOM_SET_IDS.has(ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER); }
 function cloudReady(){ return !!(state?.cloud?.sessionId&&classroomEligible()); }
-function classroomStudentCode(){
-  let previous='';
-  try{ previous=localStorage.getItem(CLASSROOM_STUDENT_KEY)||''; }catch(e){}
-  const code=window.prompt('请输入课堂代号（例如 ZJM、0347-03）。本次练习记录会保存到课堂服务器。',previous)?.trim();
-  if(!code) return null;
-  try{ localStorage.setItem(CLASSROOM_STUDENT_KEY,code); }catch(e){}
-  return code.slice(0,40);
+function classroomIdentity(){
+  return new Promise(resolve=>{
+    let previousStudent='',previousClass='';
+    try{
+      previousStudent=localStorage.getItem(CLASSROOM_STUDENT_KEY)||'';
+      previousClass=localStorage.getItem(CLASSROOM_CLASS_KEY)||'';
+    }catch(e){}
+    const overlay=document.createElement('div');
+    overlay.className='classroom-id-overlay';
+    overlay.innerHTML=`<div class="classroom-id-modal" role="dialog" aria-modal="true" aria-labelledby="classroomIdTitle">
+      <div class="classroom-id-eyebrow">Listening Lab · Classroom</div>
+      <h2 id="classroomIdTitle">开始课堂练习</h2>
+      <p>请填写学生标识；班号如无可省略。信息只用于区分本次课堂练习记录。</p>
+      <label class="classroom-id-field">
+        <span>班号 <em>可选</em></span>
+        <input id="classroomClassCode" maxlength="40" autocomplete="off" placeholder="例如：0347 / 0803" value="${escapeHtml(previousClass)}">
+      </label>
+      <label class="classroom-id-field">
+        <span>学生标识 <b>必填</b></span>
+        <input id="classroomStudentCode" maxlength="40" autocomplete="off" placeholder="请输入名字拼音首字母缩写或英文名" value="${escapeHtml(previousStudent)}">
+      </label>
+      <div id="classroomIdError" class="classroom-id-error" aria-live="polite"></div>
+      <div class="classroom-id-actions">
+        <button class="btn secondary" type="button" id="classroomIdCancel">取消</button>
+        <button class="btn" type="button" id="classroomIdConfirm">确认并开始</button>
+      </div>
+    </div>`;
+    document.body.appendChild(overlay);
+    const studentInput=overlay.querySelector('#classroomStudentCode');
+    const classInput=overlay.querySelector('#classroomClassCode');
+    const errorBox=overlay.querySelector('#classroomIdError');
+    const close=value=>{overlay.remove();resolve(value);};
+    const submit=()=>{
+      const studentCode=studentInput.value.trim();
+      const classCode=classInput.value.trim();
+      if(!studentCode){
+        errorBox.textContent='请输入名字拼音首字母缩写或英文名。';
+        studentInput.focus();
+        return;
+      }
+      try{
+        localStorage.setItem(CLASSROOM_STUDENT_KEY,studentCode);
+        if(classCode)localStorage.setItem(CLASSROOM_CLASS_KEY,classCode);
+        else localStorage.removeItem(CLASSROOM_CLASS_KEY);
+      }catch(e){}
+      close({studentCode:studentCode.slice(0,40),classCode:classCode.slice(0,40)});
+    };
+    overlay.querySelector('#classroomIdCancel').onclick=()=>close(null);
+    overlay.querySelector('#classroomIdConfirm').onclick=submit;
+    overlay.addEventListener('click',e=>{if(e.target===overlay)close(null);});
+    overlay.addEventListener('keydown',e=>{
+      if(e.key==='Escape')close(null);
+      if(e.key==='Enter'&&e.target.tagName==='INPUT'){e.preventDefault();submit();}
+    });
+    requestAnimationFrame(()=>studentInput.focus());
+  });
 }
 async function classroomPost(path,payload){
   const res=await fetch(`${CLASSROOM_API_BASE}${path}`,{
@@ -328,8 +378,9 @@ function classroomModuleId(){
 }
 async function beginClassroomSession(){
   if(!classroomEligible()) return true;
-  const studentCode=classroomStudentCode();
-  if(!studentCode){ alert('需要课堂代号才能开始云端课堂练习。'); return false; }
+  const identity=await classroomIdentity();
+  if(!identity) return false;
+  const {studentCode,classCode}=identity;
   const materialId=isSingleTalkMode()?[
     moduleData?.talkRef?.sourceModuleId,
     moduleData?.talkRef?.sourceMaterialId
@@ -338,16 +389,17 @@ async function beginClassroomSession(){
     const data=await classroomPost('/session',{
       session_id:state.sessionId,
       student_code:studentCode,
+      class_code:classCode,
       set_id:ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER,
       material_id:materialId,
       practice_mode:classroomPracticeMode(),
       module_id:classroomModuleId()
     });
-    state.cloud={enabled:true,studentCode,sessionId:data.session_id,status:'connected',lastError:null,finalStatus:null};
+    state.cloud={enabled:true,studentCode,classCode,sessionId:data.session_id,status:'connected',lastError:null,finalStatus:null};
     persist();
     return true;
   }catch(err){
-    state.cloud={enabled:false,studentCode,sessionId:null,status:'error',lastError:String(err?.message||err),finalStatus:null};
+    state.cloud={enabled:false,studentCode,classCode,sessionId:null,status:'error',lastError:String(err?.message||err),finalStatus:null};
     alert('课堂服务器暂时无法连接。本次练习不会开始，以免记录丢失。\n\n'+state.cloud.lastError);
     return false;
   }
