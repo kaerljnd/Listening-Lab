@@ -1,0 +1,1282 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20261005B",
+  "title": "20261005B Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20261005B-M1",
+      "title": "20261005B · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            15.67,
+            18.24
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "How do you unlock the student lounge door?",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            30.58,
+            32.73
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "When will the dorm repairs be finished?",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            45.28,
+            48.87
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "It should be nice weather for the hiking club's trip today.",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            61.78,
+            64.36
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Can you tell me about the upcoming yoga workshop?",
+          "question_ids": [
+            "Q4"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            75.16,
+            77.89
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "mixed",
+          "transcript": "Someone should take the initiative in this group project.",
+          "question_ids": [
+            "Q5"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            86.45,
+            89.17
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "I thought the seminar was postponed. Was that not the case?",
+          "question_ids": [
+            "Q6"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            98.06,
+            99.95
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "When should we work on the class project?",
+          "question_ids": [
+            "Q7"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            111.47,
+            113.95
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "I was hoping to borrow your notes from yesterday's lecture.",
+          "question_ids": [
+            "Q8"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            122.18,
+            124.4
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "I suggest we meet again before the exam.",
+          "question_ids": [
+            "Q9"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            135.49,
+            138.01
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Any chance you can finish the bibliography for our project?",
+          "question_ids": [
+            "Q10"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            150.85,
+            154.0
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "You'll have to cover my portion during the presentation.",
+          "question_ids": [
+            "Q11"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            169.26,
+            172.71
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "If you have time this evening, could you send me the project grading criteria?",
+          "question_ids": [
+            "Q12"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            194.6,
+            264.8
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "I'd like to use the ceramic studio on weekends, but the pottery club has it booked solid.\nThe club always reserves the studio on weekends, but some sessions are open to nonmembers. This term you can practice making pots on the wheel. That's what I'm doing.\nI need something more beginner-friendly, like hand-building pots from clay coils. What kind of coaching does the club offer?\nClub members don't do formal coaching, but if an experienced potter's there, I'm sure they'll be willing to lend you a hand.",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            270.6,
+            328.8
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Emma, did you watch the new TV series that premiered last night? It's a thriller set in Spain, I think.\nYes, I loved it. The story kept me on the edge of my seat. Didn't you watch it too?\nNo, I wasn't at home at that time, but I read great reviews about it. Do you recommend it?\nAbsolutely. The characters are well developed and the plot twists are fantastic. It's still quite realistic.\nI'll start watching it tonight. Thanks for the info.\nNo problem. When I see you tomorrow, you can tell me what you thought.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            334.6,
+            391.8
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "My commute to campus from my apartment is getting exhausting. I think it's time to start looking elsewhere.\nAny neighborhoods you're particularly interested in?\nNot really. How about where you live?\nI love it there. The building I'm in is an older one, but it's like a ten-minute walk.\nHave you had any maintenance issues? My landlord basically ignores my leaky faucet complaints.\nSometimes, but my landlord's super attentive. Nothing lingers for more than a day or two.",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to an announcement.",
+          "listen_window": [
+            397.6,
+            450.8
+          ],
+          "visual": "../20260920A/images/announcement_male.png",
+          "speaker_gender": "unknown",
+          "transcript": "Attention, everyone. Quick heads-up: if you're here to buy books, please continue to stand in this queue. However, if you're returning books, you don't have to wait in this line. We've got a special desk set up at the back of the store just for returns. This way, we can help you faster and more efficiently. For returns, please head to the back. Any questions? Feel free to ask any of us here.",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to an announcement.",
+          "listen_window": [
+            456.6,
+            526.8
+          ],
+          "visual": "../20260920A/images/announcement_male.png",
+          "speaker_gender": "unknown",
+          "transcript": "Next week, we'll have a special workshop on how to effectively complete your upcoming research paper. It'll take place next Tuesday at noon in room 204. We'll cover topics such as finding trustworthy sources, organizing your ideas, and properly formatting your paper. Joining me will be investigative journalist Marcus Reed, who once uncovered a major academic fraud. Mr. Reed will share insights on source credibility and how to spot misinformation. This will be a unique opportunity to sharpen your research skills.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to an announcement.",
+          "listen_window": [
+            532.6,
+            587.8
+          ],
+          "visual": "../20260920A/images/announcement_male.png",
+          "speaker_gender": "unknown",
+          "transcript": "Good morning, students. I have information to share about a work-study program on offer this semester. Starting next week, positions will be opening for students in the library and at the peer tutoring center. Additional positions will surely become available as the program develops. These jobs offer flexible hours and opportunities to gain valuable work experience while earning money. Interested students should apply online through the university portal. For more details, visit the student employment office.",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a psychology class.",
+          "listen_window": [
+            593.6,
+            775.8
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "unknown",
+          "transcript": "In the 1950s, psychologist Solomon Asch conducted a famous series of experiments on conformity. Participants were asked to look at lines on cards and identify which comparison line matched a standard line. The correct answer was obvious. But each real participant sat with a group of people who were actually working with the researcher. On certain trials, those group members deliberately gave the same incorrect answer.\n\nThe result was striking: about three-quarters of participants conformed to the group's incorrect answer at least once. The task itself was easy, so the errors were not caused by difficulty. Instead, the study demonstrated the powerful effect of social pressure on behavior.\n\nLater replications found different levels of conformity. For example, a study with British students in the 1980s found lower rates than Asch's original study. This suggests that conformity is influenced not only by the immediate group but also by cultural and historical context.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a health podcast.",
+          "listen_window": [
+            781.6,
+            999.28
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "unknown",
+          "transcript": "Today we're looking at biohacking, a broad term for attempts to improve physical or mental performance through changes in diet, behavior, technology, or the environment. Some practices are simple, such as intermittent fasting or carefully timing meals. Others involve cognitive enhancers, including substances such as green tea extract, though the evidence for many supplements is mixed.\n\nSleep is another major area of biohacking. People use wearable devices to track sleep stages, experiment with soundscapes, and adjust room temperature or light exposure. Of these approaches, managing light has some of the strongest scientific support because light affects the body's circadian rhythm. Reducing bright light late at night and getting natural light in the morning can help regulate sleep timing.\n\nThe key point is that biohacking ranges from evidence-based lifestyle changes to much more speculative practices. Any claimed benefit should be evaluated carefully rather than accepted simply because a technique is new or popular.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Press the red button.",
+            "The alarm is loud.",
+            "Maybe she will.",
+            "I lost mine, too."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "The concert finishes at 7 p.m.",
+            "There's a shop nearby.",
+            "Yes, it's important to be on time.",
+            "I believe they're almost done."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "I enjoyed our conversation.",
+            "I had a meeting yesterday.",
+            "What time is lunch?",
+            "Yes, the forecast states clear skies."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "I've been practicing yoga for years.",
+            "It was very informative.",
+            "The shop is painted blue.",
+            "It's for first-year students only."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "I think you should lead the way.",
+            "We can all help you look for it.",
+            "Who do you think will win the race?",
+            "What was his initial reaction to the news?"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "The seminar room is available to book.",
+            "I don't know where it is either.",
+            "Not today, but we should submit it soon.",
+            "I think it was rescheduled for next week."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "Let's meet later today in the study room.",
+            "The group will present next week in class.",
+            "My roommate lost his keys.",
+            "The dining hall was serving pizza and pasta."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "Of course, I'll share them with you right away.",
+            "Don't worry—I also missed the deadline.",
+            "Yes, yesterday was pretty busy.",
+            "Sure, you can borrow any book."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "No, we haven't met yet.",
+            "Yes, it's right behind you.",
+            "How about sometime this weekend?",
+            "Would you like to try it first?"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "Let's take advantage of this opportunity.",
+            "It'll be ready by the end of the day.",
+            "I've not started reading the novel yet.",
+            "The library was very crowded today."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "The presentation was short, but really informative.",
+            "Do you want a red or a blue cover?",
+            "Is this a part-time or full-time position?",
+            "Of course, just make sure to rest and recover."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "All my classes have projects instead of exams.",
+            "Checking the course website might be faster.",
+            "Yes, it's 6:30 p.m.",
+            "Yes, I usually do my homework in the morning."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "What is the main topic of the conversation?",
+          "options": [
+            "The availability of a campus facility",
+            "Some club membership requirements",
+            "Some upcoming recreational activities",
+            "A particular technique for making pottery"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "At the end of the conversation, what does the woman say is likely?",
+          "options": [
+            "A club will reschedule a meeting.",
+            "Some ceramic pots will be sold.",
+            "Some lessons for beginners will be offered.",
+            "A club member will assist the man."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "Why did the man not see a television program?",
+          "options": [
+            "He did not know it was being broadcast.",
+            "He was away from home.",
+            "His television was not working.",
+            "He does not like action films."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "What will the speakers most likely do tomorrow?",
+          "options": [
+            "Watch a film together",
+            "Discuss a TV series",
+            "Write a movie review",
+            "Buy tickets to Spain"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "What is the woman thinking of doing?",
+          "options": [
+            "Starting a new job",
+            "Trying a new bus route",
+            "Getting a new roommate",
+            "Moving to a new place"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "What does the man imply at the end of the conversation?",
+          "options": [
+            "He spends a lot of time on campus.",
+            "He regularly uses public transportation.",
+            "His landlord is relatively quick to respond.",
+            "His apartment is not very close to campus."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "Where should you line up if you're buying books?",
+          "options": [
+            "In the same line as now",
+            "At the back of the store",
+            "At the front desk",
+            "Outside the store"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "Why did the bookstore set up a special desk?",
+          "options": [
+            "To let customers return items without receipts",
+            "To advertise a new customer service position",
+            "To help some customers more quickly",
+            "To let customers sign up for memberships"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "What is the main purpose of next Tuesday's event?",
+          "options": [
+            "To provide information about organizational changes",
+            "To share the results of an investigation",
+            "To present some new research",
+            "To help students with an assignment"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "What can be concluded about Mr. Reed?",
+          "options": [
+            "He has written several articles for the university newspaper.",
+            "He has worked as a journalist for many years.",
+            "He is an expert at judging the reliability of academic sources.",
+            "He helped create the university's research database."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "Why does the speaker mention the library and the peer tutoring",
+          "options": [
+            "To point out what jobs are currently available",
+            "To explain how students can get help with studying",
+            "To identify places whose opening hours have changed",
+            "To indicate where students can get more details about a program"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "What can be inferred about the program described in the announcement?",
+          "options": [
+            "Itrequires previous work experience.",
+            "It is limited to students with specific academic specializations.",
+            "Itincludes extensive training.",
+            "It is a new program beginning this semester."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "What was the main purpose of Solomon Asch's experiment?",
+          "options": [
+            "To compare several theories of group behavior",
+            "To study the effect of social pressure on behavior",
+            "To measure how quickly people make simple decisions",
+            "To determine whether vision changes under stress"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "What were the participants in Asch's study asked to do?",
+          "options": [
+            "Read a list of words",
+            "Draw lines on a card",
+            "Choose between several colors",
+            "Memorize a set of numbers"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "What was Asch's main finding about the majority of participants in his study?",
+          "options": [
+            "They could not solve complex problems without help from others.",
+            "They thought for a long time before answering a simple question.",
+            "They used a variety of different strategies to solve a problem.",
+            "They gave incorrect answers to match the answers of others at least once."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "What difference between the Asch study and the study conducted in 1980 does the speaker discuss?",
+          "options": [
+            "The number of participants in each group",
+            "The number of times participants answered questions",
+            "The cultural background of the participants",
+            "The difficulty of the questions being answered"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "What would be the best title for this podcast talk?",
+          "options": [
+            "The Long History of Biohacking",
+            "Biohacking Practices: Scientifically Sound?",
+            "Improve Your Mood Through Biohacking",
+            "Hack Your Way to Better Sleep"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "What is the intended purpose of taking green tea extract?",
+          "options": [
+            "To increase concentration",
+            "To improve athletic performance",
+            "To reduce appetite",
+            "To lower heart rates"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "Why does the podcaster talk about ocean waves and forest sounds?",
+          "options": [
+            "To identify places where people go to enhance their overall health",
+            "To give examples of sounds that can increase metabolic efficiency",
+            "To show one method biohackers use to deepen sleep",
+            "To recommend a better biohacking method than fasting"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "According to the speaker, which type of biohacking is most strongly supported by research?",
+          "options": [
+            "Intermittent fasting",
+            "Using cognitive enhancers",
+            "Soundscapes",
+            "Manipulating light exposure"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ],
+      "questions_pending": false
+    },
+    {
+      "module_id": "M2H",
+      "id": "20261005B-M2H",
+      "title": "20261005B · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            11.84,
+            13.98
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Could you swing by the lab now?",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            25.3,
+            28.02
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Could you watch my laptop while I talk to the professor?",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            40.3,
+            42.05
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I'm at a loss with this experiment.",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied 20261005B AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            60.6,
+            125.8
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Congratulations. The Crucible is a fantastic play.\nI'm shocked. They chose me for the part of Mercy Lewis. I've never acted before and auditioned on a whim. What if I don't deliver my lines properly?\nThat's what rehearsals are for. Focus on delivering each line with the proper emotion. If you're just reciting words, it'll show.\nSince this is all new to me, could you help me practice and give me feedback?\nSure. I played Reverend Hale in a production of The Crucible. On opening night, I forgot to warm up and sounded hoarse throughout my first scene. Don't make that mistake.",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            131.6,
+            173.8
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "Which courses are you interested in?\nNo idea. Why are we even required to take courses that aren't related to our major field of study?\nTo prepare you for evolving job markets, for one thing. Absorbing knowledge beyond your major makes you a well-rounded and empathetic person and a better critical thinker. Employers value these so-called soft skills.\nI guess. But there are so many elective courses. It's mind-boggling.\nOne of my advisees took The Science of Happiness and said it was the calmest part of her week.\nScience of Happiness? Intriguing. I'll try it.",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a history class.",
+          "listen_window": [
+            179.6,
+            389.8
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "unknown",
+          "transcript": "The Renaissance was a pivotal period in European history, spanning roughly the fourteenth to the seventeenth centuries. It was characterized by renewed interest in art, science, and literature and marked a significant departure from the Middle Ages. One defining feature was the revival of classical learning. Scholars and artists looked back to the texts and artistic achievements of ancient Greece and Rome for inspiration. This led to a flourishing of ideas and creativity, evident in the works of figures such as Leonardo da Vinci, Michelangelo, and Galileo.\n\nThe invention of the printing press by Johannes Gutenberg around 1440 was another crucial development. It allowed for the mass production of books, making literature and scholarly works accessible to a broader audience. This contributed to increased literacy and the spread of Renaissance ideas.\n\nThe Renaissance also saw major advancements in science, particularly astronomy. Nicolaus Copernicus proposed a heliocentric model of the solar system, placing the Sun rather than Earth at the center. Galileo Galilei later used a telescope to observe celestial bodies, providing evidence that supported Copernicus's theory. These discoveries challenged long-held beliefs and laid the foundation for modern astronomy.\n\nDespite political instability in some regions, the Renaissance left a lasting legacy on European society. Its influence can still be seen today in art, science, and education.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a history class.",
+          "listen_window": [
+            395.6,
+            584.95
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "unknown",
+          "transcript": "Today let's talk about the ancient Maya civilization and a fascinating development in research on its decline. For years, scholars have debated what happened to this civilization of impressive cities and flourishing culture. Recent research has brought stalagmites into the spotlight. These formations rising from cave floors serve as climate records, preserving evidence of changes in precipitation over thousands of years.\n\nIn 2025, scientists analyzed stalagmites from caves near the former Maya heartlands. The data revealed a series of prolonged droughts that coincided with periods of decline in Maya society. The Maya depended heavily on agriculture, with water as a critical resource. When droughts occurred, water scarcity likely placed immense pressure on food production and social structures. Cities could struggle to supply enough water for crops, leading to shortages and unrest.\n\nClimate changes were significant, but they were not the sole cause of Maya decline. Warfare, political instability, and other social factors also played roles. The research shows how changes in natural conditions can interact with social systems and produce broad effects on a civilization.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, it's today.",
+            "Yes, I was at the lab.",
+            "I couldn't see it.",
+            "I'm coming."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Sure, I'll watch it for you.",
+            "Yes, I'll read it now.",
+            "Oh, that's so interesting!",
+            "Me too—I'd like to buy a new one."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "I don't understand the results either.",
+            "I thought you had found it.",
+            "Don't be upset—you can get a new one.",
+            "Is the science lab undergoing renovations?"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "Why is the woman worried about performing in The Crucible?",
+          "options": [
+            "Her personality is very different from her character's.",
+            "Her schedule might prevent her from attending all of the rehearsals.",
+            "She is overwhelmed by the number of lines she needs to memorize.",
+            "She has no experience performing onstage."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "Why does the man mention that he previously performed in The Crucible?",
+          "options": [
+            "To explain the differences between two characters in the play",
+            "To express regret for not auditioning for the upcoming play",
+            "To explain some advice that he is giving about the play",
+            "To explain why he is helping the director with the play"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "Why is the woman meeting with the man?",
+          "options": [
+            "To get help with her work on a class project",
+            "To ask for advice about developing soft skills",
+            "To receive guidance on selecting courses for the next term",
+            "To review questions that she may need to answer during job interviews"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "What can be concluded about the Science of Happiness course?",
+          "options": [
+            "It is not directly related to the woman's career goal.",
+            "Itisa required course for all full-time students.",
+            "It is based on research the man has conducted.",
+            "It is one of the university's most popular courses."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "The invention of the printing press",
+            "The development of modern astronomy",
+            "The political instability of the Renaissance period",
+            "The Renaissance as a turning point in European history"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker mention classical learning during the Renaissance?",
+          "options": [
+            "To explain why ancient texts are difficult to find in Europe",
+            "To argue that classical ideas were no longer relevant",
+            "To describe how printing replaced ancient writing systems",
+            "To show how Renaissance thinkers were influenced by earlier cultures"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "According to the speaker, what was one effect of the invention",
+          "options": [
+            "It promoted an increase in literacy.",
+            "It limited the topics scholars could write about.",
+            "It led to the decline of handwritten manuscripts.",
+            "It caused a decrease in interest in classical learning."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "What does the speaker say about Renaissance astronomy?",
+          "options": [
+            "It highlighted Earth's special place in the universe.",
+            "It focused mainly on astrology and superstition.",
+            "It introduced ideas that challenged earlier beliefs.",
+            "It rejected the use of observational tools."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "The use of stalagmites to study ancient cave formations",
+            "The advanced agricultural practices of the Maya civilization",
+            "Environmental factors in the decline of the Maya civilization",
+            "Reasons for political instability in the Maya civilization"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention stalagmites?",
+          "options": [
+            "To compare them to other geological formations",
+            "To explain how they can reveal changes in precipitation over time",
+            "To argue against the idea that climate change affected ancient civilizations",
+            "To illustrate the beauty of natural cave formations"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "What point does the speaker make about food production in the Maya society?",
+          "options": [
+            "It was supported by food imports from neighboring regions.",
+            "It relied on stable water supplies.",
+            "It was less affected by climate changes than by political conflicts.",
+            "It increased over time as the Maya developed better farming technologies."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "What point does the speaker emphasize at the end of the talk?",
+          "options": [
+            "Geological formations are the most reliable historical records.",
+            "The Maya civilization was more advanced than previously believed.",
+            "Changes in natural conditions can have broad effects on societies.",
+            "Modern research has resolved all questions about the Maya decline."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ],
+      "questions_pending": false
+    }
+  ]
+}

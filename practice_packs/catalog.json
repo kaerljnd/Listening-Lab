@@ -2,6 +2,92 @@
   "packs": [
     {
       "schema_version": "1.0",
+      "set_id": "20261007A",
+      "title": "20261007A Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20261007A · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          }
+        },
+        {
+          "module_id": "M2H",
+          "title": "20261007A · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          }
+        }
+      ],
+      "description": "20261007A Listening Lab complete pack built from supplied M1/M2H audio, question PDFs, answer key, and transcript DOCX files.",
+      "folder": "20261007A"
+    },
+    {
+      "schema_version": "1.0",
+      "set_id": "20261005B",
+      "title": "20261005B Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20261005B · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          },
+          "questions_pending": false
+        },
+        {
+          "module_id": "M2H",
+          "title": "20261005B · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          },
+          "questions_pending": false
+        }
+      ],
+      "description": "20261005B Listening Lab pack built from supplied audio, question PDF(s), answer key, and transcript DOCX files.",
+      "folder": "20261005B"
+    },
+    {
+      "schema_version": "1.0",
       "set_id": "20261005A",
       "title": "20261005A Listening",
       "pack_file": "pack.json",
@@ -39,8 +125,52 @@
           }
         }
       ],
-      "description": "20261005A Listening Lab pack built from supplied M1/M2H audio, question PDFs, answer key, and transcript DOCX files. Transcript text has been context-corrected for obvious ASR errors; disputed answer-key items are explicitly flagged.",
+      "description": "20261005A Listening Lab practice pack",
       "folder": "20261005A"
+    },
+    {
+      "schema_version": "1.0",
+      "set_id": "20261004C",
+      "title": "20261004C Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20261004C · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          },
+          "questions_pending": false
+        },
+        {
+          "module_id": "M2H",
+          "title": "20261004C · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          },
+          "questions_pending": false
+        }
+      ],
+      "description": "20261004C Listening Lab pack built from supplied audio, question PDF(s), answer key, and transcript DOCX files.",
+      "folder": "20261004C"
     },
     {
       "schema_version": "1.0",
@@ -81,7 +211,7 @@
           }
         }
       ],
-      "description": "20261004A Listening Lab pack built from supplied M1/M2H audio, question PDFs, answer key, and transcript DOCX files. Transcript text has been context-corrected for obvious ASR errors; disputed answer-key items are explicitly flagged.",
+      "description": "20261004A Listening Lab practice pack",
       "folder": "20261004A"
     },
     {
@@ -89,7 +219,6 @@
       "set_id": "20260923A",
       "title": "20260923A Listening",
       "pack_file": "pack.json",
-      "folder": "20260923A",
       "modules": [
         {
           "module_id": "M1",
@@ -124,14 +253,14 @@
           }
         }
       ],
-      "description": "20260923A Listening Lab practice pack"
+      "description": "20260923A Listening Lab practice pack",
+      "folder": "20260923A"
     },
     {
       "schema_version": "1.0",
       "set_id": "20260920A",
       "title": "20260920A Listening",
       "pack_file": "pack.json",
-      "folder": "20260920A",
       "modules": [
         {
           "module_id": "M1",
@@ -166,14 +295,14 @@
           }
         }
       ],
-      "description": "20260920A Listening Lab practice pack"
+      "description": "20260920A Listening Lab practice pack",
+      "folder": "20260920A"
     },
     {
       "schema_version": "1.0",
       "set_id": "20260916A",
       "title": "20260916A Listening",
       "pack_file": "pack.json",
-      "folder": "20260916A",
       "modules": [
         {
           "module_id": "M1",
@@ -208,14 +337,14 @@
           }
         }
       ],
-      "description": "20260916A Listening Lab practice pack"
+      "description": "20260916A Listening Lab practice pack",
+      "folder": "20260916A"
     },
     {
       "schema_version": "1.0",
       "set_id": "20260915A",
       "title": "20260915A Listening",
       "pack_file": "pack.json",
-      "folder": "20260915A",
       "modules": [
         {
           "module_id": "M1",
@@ -250,14 +379,14 @@
           }
         }
       ],
-      "description": "20260915A Listening Lab practice pack"
+      "description": "20260915A Listening Lab practice pack",
+      "folder": "20260915A"
     },
     {
       "schema_version": "1.0",
       "set_id": "20260909B",
       "title": "20260909B Listening",
       "pack_file": "pack.json",
-      "folder": "20260909B",
       "modules": [
         {
           "module_id": "M1",
@@ -292,14 +421,14 @@
           }
         }
       ],
-      "description": "20260909B Listening Lab practice pack"
+      "description": "20260909B Listening Lab practice pack",
+      "folder": "20260909B"
     },
     {
       "schema_version": "1.0",
       "set_id": "20260909A",
       "title": "20260909A Listening",
       "pack_file": "pack.json",
-      "folder": "20260909A",
       "modules": [
         {
           "module_id": "M1",
@@ -334,14 +463,14 @@
           }
         }
       ],
-      "description": "20260909A Listening Lab practice pack"
+      "description": "20260909A Listening Lab practice pack",
+      "folder": "20260909A"
     },
     {
       "schema_version": "1.0",
       "set_id": "20260908A",
       "title": "20260908A Listening",
       "pack_file": "pack.json",
-      "folder": "20260908A",
       "modules": [
         {
           "module_id": "M1",
@@ -376,14 +505,14 @@
           }
         }
       ],
-      "description": "20260908A Listening Lab practice pack"
+      "description": "20260908A Listening Lab practice pack",
+      "folder": "20260908A"
     },
     {
       "schema_version": "1.0",
       "set_id": "20260830A",
       "title": "20260830A Listening",
       "pack_file": "pack.json",
-      "folder": "20260830A",
       "modules": [
         {
           "module_id": "M1",
@@ -418,7 +547,8 @@
           }
         }
       ],
-      "description": "20260830A Listening Lab practice pack"
+      "description": "20260830A Listening Lab practice pack",
+      "folder": "20260830A"
     }
   ],
   "errors": []

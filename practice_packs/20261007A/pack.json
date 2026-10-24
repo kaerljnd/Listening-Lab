@@ -1,0 +1,1281 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20261007A",
+  "title": "20261007A Listening",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20261007A-M1",
+      "title": "20261007A · M1",
+      "audio": "audio/M1.mp3",
+      "question_count": 32,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            16.93,
+            19.37
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Would you help me pick out a gift for the professor?",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            36.91,
+            38.99
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Any chance you can cover our lab session?",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            54.43,
+            56.96
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Can you walk me through setting up the experiment?",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR04",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            73.53,
+            77.35
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "I was hoping to get your feedback on the introduction section of my paper.",
+          "question_ids": [
+            "Q4"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR05",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            99.61,
+            102.99
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Looks like everyone's headed to the café. Should we tag along?",
+          "question_ids": [
+            "Q5"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR06",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            119.16,
+            122.53
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Are we expected to cite recent research in our analysis?",
+          "question_ids": [
+            "Q6"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR07",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            141.8,
+            144.57
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "I'm heading to the dorm kitchen. Need me to grab anything?",
+          "question_ids": [
+            "Q7"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR08",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            163.65,
+            167.09
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Could you swing by the library café before the lecture starts?",
+          "question_ids": [
+            "Q8"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR09",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            182.73,
+            185.44
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Let's touch base after class. Is your schedule open?",
+          "question_ids": [
+            "Q9"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR10",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            204.78,
+            207.16
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Could you block off an hour to work on the introduction?",
+          "question_ids": [
+            "Q10"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR11",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            225.79,
+            228.96
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Looks like the library has new books. Shall we have a peek?",
+          "question_ids": [
+            "Q11"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR12",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            244.91,
+            247.08
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "Did you hear about the upcoming guest speaker event?",
+          "question_ids": [
+            "Q12"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            266.6,
+            337.8
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "I can't believe the library is closing at 9:00 instead of ten on weekdays now.\nAt least the weekend hours won't change.\nI wish they'd be transparent about their reasons.\nRumor says it's budget cuts.\nEven so, why cut weekday evening hours?\nThey surveyed students last term, asking about study schedules and where we prefer to study. Maybe the survey results showed that most of us study in our dorms in the evenings.\nI'm in the minority then. My roommate and I prefer the library—much fewer distractions.",
+          "question_ids": [
+            "Q13",
+            "Q14"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            343.6,
+            411.8
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "I had basketball practice yesterday afternoon and missed the tour of the new dorm building. Did you go?\nThe dorm rooms are nice and spacious, but the shared kitchen is too small to do the kind of cooking I want to do.\nI didn't know you're into cooking. I eat at the university cafeterias three times a day.\nThe new dorm has a cafeteria right on the first floor.\nSounds like it might be worth the higher housing fee. I'm tired of having to walk twenty minutes every morning just to get breakfast.",
+          "question_ids": [
+            "Q15",
+            "Q16"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV03",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            417.6,
+            482.8
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "You seem out of sorts today, Aaron.\nI hardly slept last night.\nWere you just stressed over final exams?\nNot really. I lie awake for hours most nights. I stopped drinking coffee after 6:00 p.m., but reducing caffeine hasn't helped.\nYou spend lots of time on smartphone apps, right? Turning things off an hour before bedtime helps me unwind. I've also started deep-breathing exercises.\nI do use my phone late at night, watching fitness videos mostly.\nThat can delay melatonin production. Melatonin is the brain hormone that helps regulate your sleep-wake cycle.",
+          "question_ids": [
+            "Q17",
+            "Q18"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN01",
+          "type": "announcement",
+          "title": "Listen to an announcement on a university radio station.",
+          "listen_window": [
+            488.6,
+            554.8
+          ],
+          "visual": "../20260920A/images/announcement_male.png",
+          "speaker_gender": "unknown",
+          "transcript": "Due to a miscalculation in ticket sales, Guilford Auditorium has exceeded maximum capacity for Saturday's performance by the university's jazz quartet. In the interest of fairness, all purchased tickets will be voided and refunded. New tickets can be purchased at the door starting two hours prior to the performance. Should the auditorium reach full capacity, you'll have the option of watching a live stream of the performance in the adjacent lecture hall, which is equipped with high-definition video and sound.",
+          "question_ids": [
+            "Q19",
+            "Q20"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN02",
+          "type": "announcement",
+          "title": "Listen to an announcement in a classroom.",
+          "listen_window": [
+            560.6,
+            624.8
+          ],
+          "visual": "../20260920A/images/announcement_male.png",
+          "speaker_gender": "unknown",
+          "transcript": "I'd like to address a small error in the assignment I handed out on Monday. You were instructed to use the seventh edition of the Communication Guide for Nurses. However, you will not be able to obtain it through the library or bookstore, as previously indicated. Instead, you'll need to purchase a digital copy directly from the publisher's website. The charge is fifty dollars, and the Nursing Department has funds available to assist students who request it.",
+          "question_ids": [
+            "Q21",
+            "Q22"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "ANN03",
+          "type": "announcement",
+          "title": "Listen to an announcement in a classroom.",
+          "listen_window": [
+            630.6,
+            687.8
+          ],
+          "visual": "../20260920A/images/announcement_male.png",
+          "speaker_gender": "unknown",
+          "transcript": "The English Department will be hosting a graduate student symposium on Wednesday. This lecture hall will be one of the locations it's using. I've arranged for us to meet in room 100 of Scott Hall for our next class. The building is just next door to where we are, so it should be easy to locate. Bring a printout of your proposed essay topic with you to class. You'll work with a partner to review your topic and get their insights. This should be a productive workshop session.",
+          "question_ids": [
+            "Q23",
+            "Q24"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a technology podcast.",
+          "listen_window": [
+            693.6,
+            893.8
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "unknown",
+          "transcript": "Since ancient times, humans have studied sound and light. Today we're able to break these forms of energy into smaller components using the Fourier transform, a mathematical technique that decomposes complex signals—like songs or images—into frequencies. Afterward, those components can be manipulated and recombined.\n\nImagine a photograph of a forest. A Fourier transform can separate broad shapes from fine details, making it possible to filter noise or sharpen features. The same principle works with sound. Audio compression can identify very quiet sounds that are masked by louder ones and remove some of that information, reducing file size while preserving what listeners perceive.\n\nThe Fourier transform is also important in medicine. MRI machines collect raw signals that are difficult to interpret directly. Fourier techniques convert those signals into readable images of structures inside the body. This gives doctors useful visual information without requiring invasive surgical procedures.",
+          "question_ids": [
+            "Q25",
+            "Q26",
+            "Q27",
+            "Q28"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk on a science podcast.",
+          "listen_window": [
+            899.6,
+            1119.84
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "unknown",
+          "transcript": "If you were to take a walk in the Arctic tundra, you'd be walking over permafrost, a soil layer that has remained frozen for thousands of years. As global temperatures rise, however, the stability of this permafrost is compromised. This brings something into play that you might not expect: microbes.\n\nMany microbes have remained dormant in frozen soil. When permafrost thaws, they become active and break down organic material, releasing carbon dioxide and methane. These greenhouse gases trap heat, which can cause more warming and further thawing—a positive feedback loop.\n\nThe amount of carbon stored in permafrost is enormous, roughly twice the amount currently in Earth's atmosphere. Scientists therefore study which microbial communities become active and how much gas they produce. Continued monitoring of permafrost regions is essential for improving climate models and developing strategies to address environmental change.",
+          "question_ids": [
+            "Q29",
+            "Q30",
+            "Q31",
+            "Q32"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "Thank you—that's very thoughtful of you.",
+            "Yes, she's the professor for this class.",
+            "Are you thinking of getting a book or a souvenir?",
+            "Where did you get it from?"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "That might be true.",
+            "Yes, it's on the syllabus.",
+            "I'd be happy to help.",
+            "Feel free to use mine."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "Meet me in the lab at 6:30.",
+            "It's about a five-minute walk from campus.",
+            "The experiment requires that you continue.",
+            "Yes, I thought so too."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "SR04",
+          "stem": "Choose the best response.",
+          "options": [
+            "Sure, I'll have some time later this evening.",
+            "Yes, we need to include the first section of the chapter.",
+            "You got it—I'll record the session for you.",
+            "No problem—you pay me back next week."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "SR05",
+          "stem": "Choose the best response.",
+          "options": [
+            "OK, let's write to them about the group project.",
+            "OK, let's get them a small present together.",
+            "I have quite a bit of work to do.",
+            "Unfortunately, some people couldn't come."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "SR06",
+          "stem": "Choose the best response.",
+          "options": [
+            "It should be ready tomorrow.",
+            "We need to read the first three articles by tomorrow.",
+            "Yes, we need data to support our arguments.",
+            "No, the practice sessions start next week."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "SR07",
+          "stem": "Choose the best response.",
+          "options": [
+            "Thanks—I already have my snacks here with me.",
+            "I hope we can get a good table.",
+            "It's OK—I don't really love cooking.",
+            "Don't worry—I'll be there on time."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "SR08",
+          "stem": "Choose the best response.",
+          "options": [
+            "No, but the park next to the café has a slide.",
+            "Not yet, but I'll send them to you.",
+            "Yes, I believe it was rescheduled for Friday.",
+            "Sure, I could use some coffee."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "SR09",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, I'll be free then.",
+            "Sure, I'll help you set up the projector.",
+            "I think it closes at 10 or 11 p.m.",
+            "That study room is reserved all day."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "SR10",
+          "stem": "Choose the best response.",
+          "options": [
+            "We'll probably need even longer than that.",
+            "I think access is limited to faculty only.",
+            "Actually, it's probably in the conclusion.",
+            "Sure, I'll text you the address later."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "SR11",
+          "stem": "Choose the best response.",
+          "options": [
+            "The new library opens next semester.",
+            "Sure, I should be free after class.",
+            "Yes, the peak hours are in the evening.",
+            "I read one of her books last year."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "SR12",
+          "stem": "Choose the best response.",
+          "options": [
+            "I saw the posters around campus.",
+            "You'll never guess what I just received!",
+            "I've been trying to reach him all day.",
+            "We didn't attend the public speaking event."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "CONV01",
+          "stem": "Why does the man talk about a survey?",
+          "options": [
+            "To suggest a way for the woman to share her opinion with library officials",
+            "To point out that many students are unhappy about the library's new hours",
+            "To offer a possible reason for a change to the library's schedule",
+            "To suggest that few students use the library on weekends"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "CONV01",
+          "stem": "What does the woman imply about her roommate?",
+          "options": [
+            "Her roommate is very interested in how the library makes budget decisions.",
+            "Her roommate finds it difficult to study in the dorm in the evening.",
+            "Her roommate prefers to study in the morning rather than in the evening.",
+            "Her roommate disagrees with her opinion about the library."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "CONV02",
+          "stem": "What does the woman dislike about the new dorm building?",
+          "options": [
+            "She cannot tour the building before moving in.",
+            "She does not like the food in the cafeteria.",
+            "The housing fee is too high.",
+            "The shared kitchen is too small for her needs."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q16",
+          "question_number": 16,
+          "material_id": "CONV02",
+          "stem": "What does the man imply about his current living situation?",
+          "options": [
+            "He lives about twenty minutes from the new dorm building.",
+            "He lives on the first floor.",
+            "He lives far from a cafeteria.",
+            "He pays a very high housing fee."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q17",
+          "question_number": 17,
+          "material_id": "CONV03",
+          "stem": "What did the man initially believe caused his sleep difficulties?",
+          "options": [
+            "Feeling unprepared for a final exam",
+            "Not getting enough physical activity",
+            "A reduction of melatonin in his brain",
+            "Drinking coffee too late in the day"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q18",
+          "question_number": 18,
+          "material_id": "CONV03",
+          "stem": "Why does the woman mention melatonin production?",
+          "options": [
+            "To offer a reason for the stress that the man feels",
+            "To explain a negative effect of smartphone use",
+            "To identify a goal of some breathing exercises",
+            "To point out a benefit of an app that she has"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q19",
+          "question_number": 19,
+          "material_id": "ANN01",
+          "stem": "What does the speaker say about existing tickets?",
+          "options": [
+            "They cannot be used.",
+            "They do not show the correct date.",
+            "They were priced incorrectly.",
+            "They are still being sold."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q20",
+          "question_number": 20,
+          "material_id": "ANN01",
+          "stem": "Why does the speaker mention a lecture hall?",
+          "options": [
+            "To make a point about new equipment",
+            "To explain where a guest speaker will present",
+            "To identify an alternative location for attending a concert",
+            "To indicate where tickets can be purchased"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q21",
+          "question_number": 21,
+          "material_id": "ANN02",
+          "stem": "What error does the speaker describe?",
+          "options": [
+            "How a publication can be obtained",
+            "When an assignment must be submitted by",
+            "The university library's hours of operation",
+            "The cost of a textbook [ey"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q22",
+          "question_number": 22,
+          "material_id": "ANN02",
+          "stem": "According to the speaker, what is the Nursing Department able to do?",
+          "options": [
+            "Order the latest edition of a textbook",
+            "Provide an online instruction manual",
+            "Contact a publisher",
+            "Help cover an expense"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q23",
+          "question_number": 23,
+          "material_id": "ANN03",
+          "stem": "Why will the listeners go to Scott Hall next Wednesday?",
+          "options": [
+            "They will make use of some interactive technology.",
+            "They will meet with students from another class.",
+            "Their professor will be unable to attend class.",
+            "Their regular classroom will be used for an event."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q24",
+          "question_number": 24,
+          "material_id": "ANN03",
+          "stem": "What does the speaker say the listeners will do in their next class?",
+          "options": [
+            "Submit their completed essays",
+            "Discuss their essay proposals with a classmate",
+            "Meet with a graduate student",
+            "Attend a symposium"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q25",
+          "question_number": 25,
+          "material_id": "TALK01",
+          "stem": "What does the speaker mainly discuss?",
+          "options": [
+            "A device that makes it possible to record sound and images",
+            "A technology that is used to study ancient texts",
+            "A program that rapidly creates copies of files",
+            "A process that breaks down audio and visual files"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q26",
+          "question_number": 26,
+          "material_id": "TALK01",
+          "stem": "Why does the speaker ask you to imagine being in a forest?",
+          "options": [
+            "To illustrate a difficulty of using the Fourier transform",
+            "To explain how the Fourier transform technology was invented",
+            "To show how the Fourier transform can be used for images",
+            "To indicate why files created by the Fourier transform are large"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q27",
+          "question_number": 27,
+          "material_id": "TALK01",
+          "stem": "According to the speaker, what happens to quiet sounds from a song after the Fourier transform?",
+          "options": [
+            "They are converted to a smaller file type.",
+            "They are removed from the audio file.",
+            "They change to a different pitch.",
+            "They become louder so listeners can hear them. io"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q28",
+          "question_number": 28,
+          "material_id": "TALK01",
+          "stem": "What attitude does the speaker express about using the Fourier transform in healthcare?",
+          "options": [
+            "Impressed that it reduces the need for some medical procedures",
+            "Relieved that it has made MRI machines easier to operate",
+            "Unsure whether certain visual data can be trusted for accuracy",
+            "Hopeful that more doctors will have access to readable images"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q29",
+          "question_number": 29,
+          "material_id": "TALK02",
+          "stem": "What is the podcast mainly about?",
+          "options": [
+            "Plants that thrive in the arctic tundra",
+            "The role of microbes in worsening climate change",
+            "The advanced methodologies used to study permafrost",
+            "The comparative analysis of carbon dioxide and methane emissions"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q30",
+          "question_number": 30,
+          "material_id": "TALK02",
+          "stem": "Why does the speaker mention the carbon content of permafrost?",
+          "options": [
+            "To illustrate the potential impact of permafrost thaw",
+            "To advocate for increased funding for permafrost research initiatives",
+            "To imply that the atmosphere lacks sufficient carbon to impact climate change",
+            "To emphasize the scale of the permafrost regions"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q31",
+          "question_number": 31,
+          "material_id": "TALK02",
+          "stem": "What does the speaker imply about the feedback loop of thawing and gas emissions?",
+          "options": [
+            "It might lead to a decrease in global temperatures.",
+            "It could stabilize permafrost regions.",
+            "It may affect global warming trends.",
+            "It ensures a reduction in microbial diversity."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q32",
+          "question_number": 32,
+          "material_id": "TALK02",
+          "stem": "What does the speaker imply about the monitoring of permafrost regions?",
+          "options": [
+            "It is unnecessary because of our comprehensive understanding of climate change.",
+            "It is imperative for creating strategies that address environmental issues.",
+            "It is impractical because of the extensive size of these regions.",
+            "It is a globally implemented and effective measure."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ],
+      "questions_pending": false
+    },
+    {
+      "module_id": "M2H",
+      "id": "20261007A-M2H",
+      "title": "20261007A · M2H",
+      "audio": "audio/M2H.mp3",
+      "question_count": 15,
+      "materials": [
+        {
+          "material_id": "SR01",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            17.03,
+            20.12
+          ],
+          "visual": "../20260920A/images/male_single.png",
+          "speaker_gender": "male",
+          "transcript": "Are we expected to justify our choice of presentation topic?",
+          "question_ids": [
+            "Q1"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR02",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            36.52,
+            38.96
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "This claim requires further clarification.",
+          "question_ids": [
+            "Q2"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "SR03",
+          "type": "best_response",
+          "title": "Choose the best response.",
+          "listen_window": [
+            56.02,
+            58.77
+          ],
+          "visual": "../20260920A/images/female_single.png",
+          "speaker_gender": "female",
+          "transcript": "I wouldn't want this issue to affect our grades.",
+          "question_ids": [
+            "Q3"
+          ],
+          "transcript_source": "Supplied 20261007A AI transcript; short-response wording context-corrected where clear."
+        },
+        {
+          "material_id": "CONV01",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            77.6,
+            156.8
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "I'm glad you stopped by, Maria. You mentioned you've chosen a topic for your paper.\nI was thinking about the invention of the printing press.\nThat's good, but pick an angle. For example, you could explore its influence on politics or on literacy rates.\nPolitics. The article you posted on our class website mentioned the printing press was used for propaganda early on.\nExactly. Just make sure your source material is credible.\nHow? There are so many books and articles.\nLook at the author. The author's institutional affiliation is a good place to start. Plus, look to see how many peer-reviewed articles they have in scholarly journals.",
+          "question_ids": [
+            "Q4",
+            "Q5"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "CONV02",
+          "type": "conversation",
+          "title": "Listen to a conversation.",
+          "listen_window": [
+            162.6,
+            193.8
+          ],
+          "visual": "../20260920A/images/conversation_pair.png",
+          "speaker_gender": "mixed",
+          "transcript": "I can't believe the dining hall is eliminating breakfast service on Saturdays and Sundays. I'm gonna miss catching up with my friends over pancakes on the weekend.\nApparently too few students were showing up for breakfast.\nIt still seems unfair. They're not reducing dinner hours. Dinner lines are pretty short on weekends too.\nCutting dinner would create even more backlash. Maybe getting rid of weekend breakfast was the least controversial way for the university to save money.\nOr they just didn't want to bother experimenting with other options.",
+          "question_ids": [
+            "Q6",
+            "Q7"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK01",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a sociology class.",
+          "listen_window": [
+            199.6,
+            427.8
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "unknown",
+          "transcript": "Imagine walking into a store in the United States in the mid-1860s and seeing a small piece of paper attached to an item with its price printed on it. Today that seems ordinary, but at the time it was revolutionary. Before price tags, prices were rarely written down. They existed in the merchant's head and were revealed only during negotiation. Every purchase involved haggling, a process that could be nerve-racking for consumers and often led to unpredictable outcomes.\n\nJohn Wanamaker, a Philadelphia merchant who opened his first store in 1861 and later created one of the earliest department stores in the United States, is most often credited with popularizing the price tag. His principle of one price ended the chaos of haggling and introduced fairness and transparency to retail. The practice quickly spread across the growing department-store industry, reshaping commerce.\n\nThe price tag changed everything. It made the price visible and nonnegotiable, sending a powerful message: this is the price, and it's the same for everyone. That simple innovation built trust among shoppers, who no longer feared being overcharged because of their appearance or lack of bargaining skill. For stores, it streamlined operations. Clerks didn't need to memorize prices or haggle endlessly, and transactions became faster and more consistent. More than a piece of paper, the price tag symbolized a new way of doing business—predictable, standardized, and fair. By the early twentieth century, fixed pricing and price tags were everywhere, shaping the shopping experience we take for granted today.",
+          "question_ids": [
+            "Q8",
+            "Q9",
+            "Q10",
+            "Q11"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        },
+        {
+          "material_id": "TALK02",
+          "type": "academic_talk",
+          "title": "Listen to a talk in a geology class.",
+          "listen_window": [
+            433.6,
+            624.5
+          ],
+          "visual": "../20260920A/images/lecture_female.png",
+          "speaker_gender": "unknown",
+          "transcript": "When you hear the word volcano, you probably picture dramatic eruptions of molten rock—lava. But have you heard of cryovolcanoes? These are volcanoes that exist on extremely cold planets or moons. Instead of erupting molten rock like Earth's volcanoes do, they erupt substances such as water, ammonia, or methane. Essentially, cryovolcanoes spew out ice or icy slush. On frigid worlds, these liquids act like molten rock does in volcanoes on Earth: they are the materials that shift and flow.\n\nHundreds of cryovolcanoes exist on one of the moons orbiting Saturn, the planet known for the rings around it. The moon's name is Enceladus. The cryovolcanoes on Enceladus eject plumes of water vapor and icy particles into space. Some of this falls back to the surface of Enceladus as snow, which now covers the moon entirely. But some of the ejected material ends up in space and contributes to Saturn's rings by adding particles to them.\n\nIt seems that an underground ocean lies beneath the moon's surface. The cryovolcanoes give us insight into this hidden ocean because the material that erupts comes from below the surface. There's even a possibility that the ocean of Enceladus could host the conditions necessary for living organisms, though its environment is far colder than on Earth. So how do we study the erupting materials? Let's look at the tools spacecraft have used to obtain information from these materials and from the moon in general.",
+          "question_ids": [
+            "Q12",
+            "Q13",
+            "Q14",
+            "Q15"
+          ],
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+        }
+      ],
+      "questions": [
+        {
+          "question_id": "Q1",
+          "question_number": 1,
+          "material_id": "SR01",
+          "stem": "Choose the best response.",
+          "options": [
+            "We don't have to be there until 7 p.m.",
+            "No, but it must be suitable for the class.",
+            "I would make that our first choice.",
+            "Unfortunately, we can't get a second one today."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q2",
+          "question_number": 2,
+          "material_id": "SR02",
+          "stem": "Choose the best response.",
+          "options": [
+            "Yes, let's explain it a bit more.",
+            "I think Dr. Ramos posted our grades.",
+            "The schedule won't be out until next week.",
+            "Sure, we can move it to another day."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q3",
+          "question_number": 3,
+          "material_id": "SR03",
+          "stem": "Choose the best response.",
+          "options": [
+            "Me neither—we need to address it.",
+            "Me too—I found it very effective.",
+            "Yes, I would go if I had the time.",
+            "The subscription includes monthly issues."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q4",
+          "question_number": 4,
+          "material_id": "CONV01",
+          "stem": "Who most likely is the man?",
+          "options": [
+            "A classmate",
+            "An academic journal editor",
+            "A creative-writing tutor",
+            "A professor"
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q5",
+          "question_number": 5,
+          "material_id": "CONV01",
+          "stem": "What does the man imply when he discusses authors?",
+          "options": [
+            "They are usually chief editors of peer-reviewed journals.",
+            "They are willing to give advice to aspiring writers.",
+            "There are specific ways to determine whether a source can be trusted.",
+            "There are many authors who teach at highly respected universities."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q6",
+          "question_number": 6,
+          "material_id": "CONV02",
+          "stem": "What are the speakers mainly discussing?",
+          "options": [
+            "Affordable breakfast options on campus",
+            "The quality of breakfast foods served in the dining hall",
+            "A change in the dining hall's services",
+            "A way to promote the dining hall's weekend menus"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q7",
+          "question_number": 7,
+          "material_id": "CONV02",
+          "stem": "What do the speakers imply about dinner in the dining hall?",
+          "options": [
+            "It is a good opportunity to try new foods.",
+            "It is not very crowded on weekends.",
+            "It should be discounted on weekends.",
+            "It should be served for longer on weekdays."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 20,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q8",
+          "question_number": 8,
+          "material_id": "TALK01",
+          "stem": "What is the talk mainly about?",
+          "options": [
+            "The popularity of department stores in the United States in the mid-1800s",
+            "The psychology of price negotiations in retail commerce",
+            "How the price tag transformed retail commerce",
+            "What led John Wanamaker to open his first store"
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q9",
+          "question_number": 9,
+          "material_id": "TALK01",
+          "stem": "What does the speaker say about shopping in the U.S. prior to the mid-1800s?",
+          "options": [
+            "It was regarded as a social activity.",
+            "It was often a stressful experience.",
+            "It was based on trust between buyers and sellers.",
+            "It was not extremely profitable for most retailers."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q10",
+          "question_number": 10,
+          "material_id": "TALK01",
+          "stem": "How does the speaker describe John Wanamaker's motivating principle?",
+          "options": [
+            "Every customer should feel valued and respected.",
+            "Stores should sell high-quality products at low prices.",
+            "People buying the same item should pay the same price.",
+            "Prices should reflect the cost of goods plus a reasonable profit."
+          ],
+          "correct_answer": "C",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q11",
+          "question_number": 11,
+          "material_id": "TALK01",
+          "stem": "According to the speaker, how were stores affected by Wanamaker's innovation?",
+          "options": [
+            "Their operations became more efficient.",
+            "They were eventually forced to lower their prices.",
+            "They began keeping longer store hours.",
+            "They began to attract customers from all social classes."
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q12",
+          "question_number": 12,
+          "material_id": "TALK02",
+          "stem": "How does the speaker introduce cryovolcanoes?",
+          "options": [
+            "By explaining how they were discovered",
+            "By comparing them to volcanoes on Earth",
+            "By giving details of how ice can shift and flow",
+            "By describing a planet on which they were first observed"
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q13",
+          "question_number": 13,
+          "material_id": "TALK02",
+          "stem": "What does the speaker point out about the material released by cryovolcanoes on Enceladus?",
+          "options": [
+            "It consists of molten rock.",
+            "It causes snow to melt.",
+            "It is harmful for living organisms.",
+            "It ends up in different places."
+          ],
+          "correct_answer": "D",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q14",
+          "question_number": 14,
+          "material_id": "TALK02",
+          "stem": "What does the speaker say about Enceladus' ocean?",
+          "options": [
+            "It formed a very long time ago.",
+            "It may be suitable for life.",
+            "It covers a large part of the moon's surface.",
+            "It is far colder than the moon's surface."
+          ],
+          "correct_answer": "B",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        },
+        {
+          "question_id": "Q15",
+          "question_number": 15,
+          "material_id": "TALK02",
+          "stem": "What will the speaker probably discuss next?",
+          "options": [
+            "How scientists study Enceladus",
+            "How conditions on Enceladus are changing",
+            "Evidence for oceans on several moons",
+            "Theories about how Enceladus formed in Saturn's orbit"
+          ],
+          "correct_answer": "A",
+          "answer_verified": true,
+          "timer_sec": 30,
+          "explanation": "",
+          "evidence": []
+        }
+      ]
+    }
+  ]
+}
