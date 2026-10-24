@@ -91,7 +91,7 @@ function stats(){
 function dashboardView(){
   const s=stats();
   const inner=`
-    <div class="page-head"><div><h1>课堂练习记录</h1><p>按学生代号、练习类型和状态查看服务器记录。</p></div><div class="spacer"></div><button class="btn secondary" id="refreshBtn">刷新数据</button></div>
+    <div class="page-head"><div><h1>课堂练习记录</h1><p>按班号、学生标识、练习类型和状态查看服务器记录。</p></div><div class="spacer"></div><button class="btn secondary" id="refreshBtn">刷新数据</button></div>
     <div class="metrics">
       <div class="card metric"><div class="label">总 Session</div><div class="value">${s.total}</div></div>
       <div class="card metric"><div class="label">已完成</div><div class="value">${s.completed}</div></div>
@@ -99,23 +99,24 @@ function dashboardView(){
       <div class="card metric"><div class="label">进行中</div><div class="value">${s.active}</div></div>
     </div>
     <div class="card filters">
-      <input id="searchInput" placeholder="搜索学生代号 / Session ID">
+      <input id="searchInput" placeholder="搜索班号 / 学生标识 / Session ID">
       <select id="statusFilter"><option value="">全部状态</option><option value="completed">已完成</option><option value="abandoned">中途退出</option><option value="in_progress">进行中</option></select>
       <select id="modeFilter"><option value="">全部练习</option><option value="type_practice">题型专项</option><option value="single_talk">单篇讲座精练</option><option value="full_module">完整模块</option></select>
       <select id="setFilter"><option value="">全部套题</option>${[...new Set(sessions.map(x=>x.set_id).filter(Boolean))].sort().reverse().map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('')}</select>
+      <select id="classFilter"><option value="">全部班号</option>${[...new Set(sessions.map(x=>x.class_code).filter(Boolean))].sort().map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('')}</select>
       <button class="btn secondary" id="clearFilters">清空筛选</button>
     </div>
     <div class="card table-card"><div class="table-wrap"><table>
-      <thead><tr><th>学生</th><th>套题</th><th>练习</th><th>模块</th><th>状态</th><th>开始</th><th>时长</th><th>Session</th><th></th></tr></thead>
+      <thead><tr><th>班号</th><th>学生</th><th>套题</th><th>练习</th><th>模块</th><th>状态</th><th>开始</th><th>时长</th><th>Session</th><th></th></tr></thead>
       <tbody id="sessionRows"></tbody>
     </table></div></div>`;
   layout(inner);
-  const search=document.getElementById('searchInput'),status=document.getElementById('statusFilter'),mode=document.getElementById('modeFilter'),setFilter=document.getElementById('setFilter');
+  const search=document.getElementById('searchInput'),status=document.getElementById('statusFilter'),mode=document.getElementById('modeFilter'),setFilter=document.getElementById('setFilter'),classFilter=document.getElementById('classFilter');
   const renderRows=()=>{
     const q=search.value.trim().toLowerCase();
-    const rows=sessions.filter(x=>(!q||String(x.student_code||'').toLowerCase().includes(q)||String(x.session_id||'').toLowerCase().includes(q))&&(!status.value||x.status===status.value)&&(!mode.value||x.practice_mode===mode.value)&&(!setFilter.value||x.set_id===setFilter.value));
+    const rows=sessions.filter(x=>(!q||String(x.student_code||'').toLowerCase().includes(q)||String(x.class_code||'').toLowerCase().includes(q)||String(x.session_id||'').toLowerCase().includes(q))&&(!status.value||x.status===status.value)&&(!mode.value||x.practice_mode===mode.value)&&(!setFilter.value||x.set_id===setFilter.value)&&(!classFilter.value||x.class_code===classFilter.value));
     document.getElementById('sessionRows').innerHTML=rows.length?rows.map(x=>`<tr>
-      <td><b>${esc(x.student_code||'—')}</b></td>
+      <td><b>${esc(x.class_code||'—')}</b></td>\n      <td><b>${esc(x.student_code||'—')}</b></td>
       <td class="code">${esc(x.set_id||'—')}</td>
       <td>${esc(modeLabel(x.practice_mode))}<div class="small">${esc(x.material_id||'')}</div></td>
       <td>${esc(x.module_id||'—')}</td>
@@ -124,11 +125,11 @@ function dashboardView(){
       <td>${fmtDuration(x.started_at,x.ended_at)}</td>
       <td class="code">${esc((x.session_id||'').slice(0,18))}…</td>
       <td><button class="link-btn" data-id="${esc(x.session_id)}">查看详情 →</button></td>
-    </tr>`).join(''):`<tr><td colspan="9" class="empty">没有符合条件的记录</td></tr>`;
+    </tr>`).join(''):`<tr><td colspan="10" class="empty">没有符合条件的记录</td></tr>`;
     document.querySelectorAll('[data-id]').forEach(btn=>btn.onclick=()=>{location.hash='session='+encodeURIComponent(btn.dataset.id);route();});
   };
-  [search,status,mode,setFilter].forEach(el=>el.oninput=renderRows);
-  document.getElementById('clearFilters').onclick=()=>{search.value='';status.value='';mode.value='';setFilter.value='';renderRows();};
+  [search,status,mode,setFilter,classFilter].forEach(el=>el.oninput=renderRows);
+  document.getElementById('clearFilters').onclick=()=>{search.value='';status.value='';mode.value='';setFilter.value='';classFilter.value='';renderRows();};
   document.getElementById('refreshBtn').onclick=refreshSessions;
   renderRows();
 }
