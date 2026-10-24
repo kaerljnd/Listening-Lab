@@ -2,6 +2,16 @@
 
 单篇 Academic Talk 精练继续聚焦：词汇盲点 / 框架理解 / 题目分析。
 
+## 常用入口
+
+| 用途 | 地址 | 说明 |
+| --- | --- | --- |
+| 学生公开练习 | https://kaerljnd.github.io/Listening-Lab/ | 学生进入 Listening Lab 进行课堂练习或自主练习 |
+| Teacher 教师页面 | https://kaerljnd.github.io/Listening-Lab/teacher/ | 查看班号、学生标识、Session、答题记录与分析 |
+| Health 后端检查 | https://listeni-lab-api-yuhpblgpyn.cn-hangzhou.fcapp.run/health | 检查阿里云 Function Compute API 是否正常 |
+
+Health 返回 `"ok": true` 时表示后端服务可用。
+
 v1.9.2 重点：
 - 作业 / 完整分析 与 自主练习分离
 - 自主练习可跳过分析直接看 Transcript
