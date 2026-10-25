@@ -89,7 +89,7 @@ You'll have to cover my portion during the presentation.
 If you have time this evening, could you send me the project grading criteria?
 
 ### CONV01 · conversation
-- Time: 194.60–264.80
+- Time: 194.60–233.18
 - Questions: Q13, Q14
 - Answers: Q13=A, Q14=D
 
@@ -99,7 +99,7 @@ I need something more beginner-friendly, like hand-building pots from clay coils
 Club members don't do formal coaching, but if an experienced potter's there, I'm sure they'll be willing to lend you a hand.
 
 ### CONV02 · conversation
-- Time: 270.60–328.80
+- Time: 270.60–313.16
 - Questions: Q15, Q16
 - Answers: Q15=B, Q16=B
 
@@ -111,7 +111,7 @@ I'll start watching it tonight. Thanks for the info.
 No problem. When I see you tomorrow, you can tell me what you thought.
 
 ### CONV03 · conversation
-- Time: 334.60–391.80
+- Time: 334.60–369.61
 - Questions: Q17, Q18
 - Answers: Q17=D, Q18=C
 
@@ -123,28 +123,28 @@ Have you had any maintenance issues? My landlord basically ignores my leaky fauc
 Sometimes, but my landlord's super attentive. Nothing lingers for more than a day or two.
 
 ### ANN01 · announcement
-- Time: 397.60–450.80
+- Time: 397.60–433.36
 - Questions: Q19, Q20
 - Answers: Q19=A, Q20=C
 
 Attention, everyone. Quick heads-up: if you're here to buy books, please continue to stand in this queue. However, if you're returning books, you don't have to wait in this line. We've got a special desk set up at the back of the store just for returns. This way, we can help you faster and more efficiently. For returns, please head to the back. Any questions? Feel free to ask any of us here.
 
 ### ANN02 · announcement
-- Time: 456.60–526.80
+- Time: 456.60–495.84
 - Questions: Q21, Q22
 - Answers: Q21=D, Q22=C
 
 Next week, we'll have a special workshop on how to effectively complete your upcoming research paper. It'll take place next Tuesday at noon in room 204. We'll cover topics such as finding trustworthy sources, organizing your ideas, and properly formatting your paper. Joining me will be investigative journalist Marcus Reed, who once uncovered a major academic fraud. Mr. Reed will share insights on source credibility and how to spot misinformation. This will be a unique opportunity to sharpen your research skills.
 
 ### ANN03 · announcement
-- Time: 532.60–587.80
+- Time: 532.60–569.67
 - Questions: Q23, Q24
 - Answers: Q23=A, Q24=D
 
 Good morning, students. I have information to share about a work-study program on offer this semester. Starting next week, positions will be opening for students in the library and at the peer tutoring center. Additional positions will surely become available as the program develops. These jobs offer flexible hours and opportunities to gain valuable work experience while earning money. Interested students should apply online through the university portal. For more details, visit the student employment office.
 
 ### TALK01 · academic_talk
-- Time: 593.60–775.80
+- Time: 593.60–671.72
 - Questions: Q25, Q26, Q27, Q28
 - Answers: Q25=B, Q26=A, Q27=D, Q28=C
 
@@ -155,7 +155,7 @@ The result was striking: about three-quarters of participants conformed to the g
 Later replications found different levels of conformity. For example, a study with British students in the 1980s found lower rates than Asch's original study. This suggests that conformity is influenced not only by the immediate group but also by cultural and historical context.
 
 ### TALK02 · academic_talk
-- Time: 781.60–999.28
+- Time: 781.60–860.18
 - Questions: Q29, Q30, Q31, Q32
 - Answers: Q29=B, Q30=A, Q31=C, Q32=D
 
@@ -189,7 +189,7 @@ Could you watch my laptop while I talk to the professor?
 I'm at a loss with this experiment.
 
 ### CONV01 · conversation
-- Time: 60.60–125.80
+- Time: 60.60–105.15
 - Questions: Q4, Q5
 - Answers: Q4=D, Q5=C
 
@@ -212,7 +212,7 @@ One of my advisees took The Science of Happiness and said it was the calmest par
 Science of Happiness? Intriguing. I'll try it.
 
 ### TALK01 · academic_talk
-- Time: 179.60–389.80
+- Time: 179.60–287.44
 - Questions: Q8, Q9, Q10, Q11
 - Answers: Q8=D, Q9=D, Q10=A, Q11=C
 
@@ -225,7 +225,7 @@ The Renaissance also saw major advancements in science, particularly astronomy. 
 Despite political instability in some regions, the Renaissance left a lasting legacy on European society. Its influence can still be seen today in art, science, and education.
 
 ### TALK02 · academic_talk
-- Time: 395.60–584.95
+- Time: 395.60–484.86
 - Questions: Q12, Q13, Q14, Q15
 - Answers: Q12=C, Q13=B, Q14=B, Q15=C
 
