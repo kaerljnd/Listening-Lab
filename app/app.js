@@ -37,19 +37,6 @@ function transcriptToText(value){
 function defaultMaterialTitle(type){
   return ({best_response:'Choose the best response.',conversation:'Listen to a conversation.',announcement:'Listen to an announcement.',academic_talk:'Listen to a talk.'})[type]||'Listening';
 }
-function practiceWindowForMaterial(material){
-  const raw=Array.isArray(material?.listen_window)?material.listen_window.map(Number):[];
-  if(raw.length!==2||!raw.every(Number.isFinite)||raw[1]<=raw[0]) return raw;
-  if(material?.type!=='announcement') return raw;
-  const words=transcriptToText(material.transcript).trim().split(/\s+/).filter(Boolean).length;
-  if(words<20) return raw;
-  const duration=raw[1]-raw[0];
-  const target=Math.max(32,Math.min(50,words/2+8));
-  if(duration<=target+4) return raw;
-  const totalTrim=Math.min(duration-target,24);
-  const headTrim=totalTrim/2,tailTrim=totalTrim-headTrim;
-  return [Number((raw[0]+headTrim).toFixed(2)),Number((raw[1]-tailTrim).toFixed(2))];
-}
 function compilePack(raw,folder){
   const setId=raw.set_id||folder;
   return (raw.modules||[]).map(mod=>{
@@ -73,7 +60,6 @@ function compilePack(raw,folder){
         displayMaterialId:m.material_id,
         title:m.title||defaultMaterialTitle(m.type),
         listenWindow:m.listen_window,
-        practiceWindow:practiceWindowForMaterial(m),
         visual:resolvePackAsset(folder,m.visual),
         timerSec:Number(q.timer_sec)||(m.type==='academic_talk'?30:20),
         stem:q.stem||defaultMaterialTitle(m.type),
@@ -763,7 +749,7 @@ function restorePersistedState(){
 }
 function prepareRestoredPracticeAudio(){
   if(state.view!=='practice') return;
-  const q=getQ(),window=q.practiceWindow||q.listenWindow,snap=state.refreshSnapshot||{},target=Number.isFinite(snap.audioTime)?snap.audioTime:window[0];
+  const q=getQ(),window=q.listenWindow,snap=state.refreshSnapshot||{},target=Number.isFinite(snap.audioTime)?snap.audioTime:window[0];
   { const src=audioSourceFor(q); if(!audio.src||!audio.src.includes(src)){ audio.src=src; audio.preload='auto'; audio.load(); } }
   const apply=()=>{
     const t=Math.min(window[1],Math.max(window[0],target));
@@ -776,7 +762,7 @@ function prepareRestoredPracticeAudio(){
   if(audio.readyState>=1) apply(); else audio.addEventListener('loadedmetadata',apply,{once:true});
 }
 function resumePracticeFromRefresh(t){
-  const q=getQ(),window=q.practiceWindow||q.listenWindow,start=window[0],end=window[1];
+  const q=getQ(),window=q.listenWindow,start=window[0],end=window[1];
   cancelPendingPracticePlayback();
   const token=practicePlaybackToken;
   { const src=audioSourceFor(q); if(!audio.src||!audio.src.includes(src)){ audio.src=src; audio.preload='auto'; audio.load(); } }
@@ -1091,7 +1077,7 @@ function clearPracticeStartDelay(){
 }
 function preloadPracticeSegment(q){
   if(!q||q.audioMissing) return;
-  const src=audioSourceFor(q),target=Number((q.practiceWindow||q.listenWindow)?.[0]);
+  const src=audioSourceFor(q),target=Number(q.listenWindow?.[0]);
   if(!src||!Number.isFinite(target)) return;
   const apply=()=>{
     if(state?.view!=='practice'||getQ()?.id!==q.id) return;
@@ -1121,7 +1107,7 @@ function beginInitialPracticeDelay(q,seconds=PRACTICE_PREP_SECONDS){
       logEvent('first_audio_prepare_end',{questionId:q?.id||null,materialId:q?.materialId||null});
       renderPractice();
       // q may have become stale after navigation/timeout; play only if it is still current.
-      if(getQ()?.id===q?.id) playPracticeSegment(q.practiceWindow||q.listenWindow,beginAnswerPhase);
+      if(getQ()?.id===q?.id) playPracticeSegment(q.listenWindow,beginAnswerPhase);
     }else{
       const el=document.getElementById('prepareCount'); if(el) el.textContent=state.prepareSeconds;
       const label=document.querySelector('.audio-label'); if(label) label.textContent=`准备时间 · ${state.prepareSeconds} 秒后自动播放`;
