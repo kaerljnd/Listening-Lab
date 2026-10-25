@@ -287,6 +287,33 @@ const ERROR_REASONS = [
 
 function escapeHtml(v){ return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]||c)); }
 function nowIso(){ return new Date().toISOString(); }
+function setupMobileViewportAssist(){
+  const root=document.documentElement;
+  const vv=window.visualViewport;
+  const isEditable=el=>!!el && (el.matches?.('input, textarea, [contenteditable="true"]'));
+  const update=()=>{
+    const h=vv?.height||window.innerHeight;
+    if(Number.isFinite(h)&&h>0) root.style.setProperty('--app-height',Math.round(h)+'px');
+    const active=document.activeElement;
+    const editing=isEditable(active);
+    document.body.classList.toggle('keyboard-open',editing);
+    if(editing){
+      setTimeout(()=>{
+        try{ active.scrollIntoView({block:'center',inline:'nearest',behavior:'smooth'}); }catch(e){}
+      },90);
+    }
+  };
+  if(vv){
+    vv.addEventListener('resize',update);
+    vv.addEventListener('scroll',update);
+  }else{
+    window.addEventListener('resize',update);
+  }
+  document.addEventListener('focusin',e=>{ if(isEditable(e.target)) update(); });
+  document.addEventListener('focusout',()=>setTimeout(update,80));
+  window.addEventListener('orientationchange',()=>setTimeout(update,180));
+  update();
+}
 function makeSessionId(){ return `${moduleData?.id||'navigation'}-${Date.now()}`; }
 
 const cloudResponseTimers=new Map();
@@ -1902,6 +1929,7 @@ async function bootstrap(){
     }
   }catch(e){ showBootError(e); }
 }
+setupMobileViewportAssist();
 bootstrap();
 window.addEventListener('pagehide',()=>{ if(state) saveRuntimeSnapshot(); });
 window.addEventListener('beforeunload',()=>{ if(state) saveRuntimeSnapshot(); });
