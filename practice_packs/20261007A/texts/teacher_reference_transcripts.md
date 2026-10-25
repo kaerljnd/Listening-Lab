@@ -89,7 +89,7 @@ Looks like the library has new books. Shall we have a peek?
 Did you hear about the upcoming guest speaker event?
 
 ### CONV01 · conversation
-- Time: 266.60–337.80
+- Time: 266.60–305.18
 - Questions: Q13, Q14
 - Answers: Q13=C, Q14=B
 
@@ -102,7 +102,7 @@ They surveyed students last term, asking about study schedules and where we pref
 I'm in the minority then. My roommate and I prefer the library—much fewer distractions.
 
 ### CONV02 · conversation
-- Time: 343.60–411.80
+- Time: 343.60–384.57
 - Questions: Q15, Q16
 - Answers: Q15=D, Q16=C
 
@@ -113,7 +113,7 @@ The new dorm has a cafeteria right on the first floor.
 Sounds like it might be worth the higher housing fee. I'm tired of having to walk twenty minutes every morning just to get breakfast.
 
 ### CONV03 · conversation
-- Time: 417.60–482.80
+- Time: 417.60–458.17
 - Questions: Q17, Q18
 - Answers: Q17=D, Q18=B
 
@@ -126,28 +126,28 @@ I do use my phone late at night, watching fitness videos mostly.
 That can delay melatonin production. Melatonin is the brain hormone that helps regulate your sleep-wake cycle.
 
 ### ANN01 · announcement
-- Time: 488.60–554.80
+- Time: 488.60–527.41
 - Questions: Q19, Q20
 - Answers: Q19=A, Q20=C
 
 Due to a miscalculation in ticket sales, Guilford Auditorium has exceeded maximum capacity for Saturday's performance by the university's jazz quartet. In the interest of fairness, all purchased tickets will be voided and refunded. New tickets can be purchased at the door starting two hours prior to the performance. Should the auditorium reach full capacity, you'll have the option of watching a live stream of the performance in the adjacent lecture hall, which is equipped with high-definition video and sound.
 
 ### ANN02 · announcement
-- Time: 560.60–624.80
+- Time: 560.60–598.10
 - Questions: Q21, Q22
 - Answers: Q21=A, Q22=D
 
 I'd like to address a small error in the assignment I handed out on Monday. You were instructed to use the seventh edition of the Communication Guide for Nurses. However, you will not be able to obtain it through the library or bookstore, as previously indicated. Instead, you'll need to purchase a digital copy directly from the publisher's website. The charge is fifty dollars, and the Nursing Department has funds available to assist students who request it.
 
 ### ANN03 · announcement
-- Time: 630.60–687.80
+- Time: 630.60–672.89
 - Questions: Q23, Q24
 - Answers: Q23=D, Q24=B
 
 The English Department will be hosting a graduate student symposium on Wednesday. This lecture hall will be one of the locations it's using. I've arranged for us to meet in room 100 of Scott Hall for our next class. The building is just next door to where we are, so it should be easy to locate. Bring a printout of your proposed essay topic with you to class. You'll work with a partner to review your topic and get their insights. This should be a productive workshop session.
 
 ### TALK01 · academic_talk
-- Time: 693.60–893.80
+- Time: 693.60–768.93
 - Questions: Q25, Q26, Q27, Q28
 - Answers: Q25=D, Q26=C, Q27=B, Q28=A
 
@@ -158,7 +158,7 @@ Imagine a photograph of a forest. A Fourier transform can separate broad shapes 
 The Fourier transform is also important in medicine. MRI machines collect raw signals that are difficult to interpret directly. Fourier techniques convert those signals into readable images of structures inside the body. This gives doctors useful visual information without requiring invasive surgical procedures.
 
 ### TALK02 · academic_talk
-- Time: 899.60–1119.84
+- Time: 899.60–972.15
 - Questions: Q29, Q30, Q31, Q32
 - Answers: Q29=B, Q30=A, Q31=C, Q32=B
 
@@ -192,7 +192,7 @@ This claim requires further clarification.
 I wouldn't want this issue to affect our grades.
 
 ### CONV01 · conversation
-- Time: 77.60–156.80
+- Time: 77.60–124.13
 - Questions: Q4, Q5
 - Answers: Q4=D, Q5=C
 
@@ -216,7 +216,7 @@ Cutting dinner would create even more backlash. Maybe getting rid of weekend bre
 Or they just didn't want to bother experimenting with other options.
 
 ### TALK01 · academic_talk
-- Time: 199.60–427.80
+- Time: 199.60–323.23
 - Questions: Q8, Q9, Q10, Q11
 - Answers: Q8=C, Q9=B, Q10=C, Q11=A
 
@@ -227,7 +227,7 @@ John Wanamaker, a Philadelphia merchant who opened his first store in 1861 and l
 The price tag changed everything. It made the price visible and nonnegotiable, sending a powerful message: this is the price, and it's the same for everyone. That simple innovation built trust among shoppers, who no longer feared being overcharged because of their appearance or lack of bargaining skill. For stores, it streamlined operations. Clerks didn't need to memorize prices or haggle endlessly, and transactions became faster and more consistent. More than a piece of paper, the price tag symbolized a new way of doing business—predictable, standardized, and fair. By the early twentieth century, fixed pricing and price tags were everywhere, shaping the shopping experience we take for granted today.
 
 ### TALK02 · academic_talk
-- Time: 433.60–624.50
+- Time: 433.60–552.58
 - Questions: Q12, Q13, Q14, Q15
 - Answers: Q12=B, Q13=D, Q14=B, Q15=A
 
