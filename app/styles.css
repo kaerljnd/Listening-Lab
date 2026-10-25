@@ -417,3 +417,43 @@ body.keyboard-open{overflow:hidden}
 body.keyboard-open .analysis-tools,body.keyboard-open .analysis-question,body.keyboard-open .question-pane{scroll-padding-bottom:45vh}
 body.keyboard-open input,body.keyboard-open textarea,body.keyboard-open [contenteditable="true"]{scroll-margin-block:22vh}
 @supports not (height:100dvh){html,body,#app{height:var(--app-height,100%)}}
+
+/* v0.7.2 phone portrait: true vertical split */
+@media (orientation:portrait) and (max-width:700px){
+  .practice-shell{grid-template-rows:auto minmax(0,1fr) 28px}
+  .practice-head{min-height:58px;height:auto;padding:7px 8px;gap:6px;flex-wrap:wrap;align-content:center}
+  .practice-head .btn{padding:7px 9px;font-size:12px}
+  .practice-head .title{font-size:12px;max-width:44vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .practice-head .volume-group{display:none}
+  .practice-head .timer{font-size:12px;gap:4px}
+  .practice-head .timer strong{font-size:14px}
+  .split{grid-template-columns:1fr;grid-template-rows:minmax(150px,38%) minmax(0,62%);min-height:0}
+  .visual-pane{border-right:0;border-bottom:1px solid var(--line);padding:10px 14px;justify-content:center;overflow:hidden}
+  .visual-pane img{max-width:72%;max-height:62%;object-fit:contain}
+  .audio-status{width:min(420px,92%);margin-top:9px}
+  .audio-label{font-size:12px;margin-top:5px}
+  .question-pane{padding:16px 18px 20px;min-height:0;overflow:auto}
+  .question-pane h2,.analysis-question h2{font-size:20px;margin-bottom:12px}
+  .stem{font-size:17px;margin-bottom:12px}
+  .options{gap:8px}
+  .option{padding:11px 12px}
+  .question-actions{padding-top:12px}
+  .progress-strip{gap:5px}
+  .dot{width:6px;height:6px}
+
+  .analysis-shell{grid-template-rows:auto minmax(0,1fr)}
+  .analysis-head{min-height:56px;height:auto;padding:7px 8px;gap:6px;overflow-x:auto;white-space:nowrap}
+  .analysis-head .btn{padding:7px 9px;font-size:12px;flex:0 0 auto}
+  .analysis-head>b{font-size:12px;flex:0 0 auto}
+  .analysis-head .volume-group{display:none}
+  .analysis-transport{min-width:310px;flex:0 0 auto;gap:5px}
+  .analysis-transport .seek-slider{width:110px}
+  .analysis-grid{grid-template-columns:1fr;grid-template-rows:minmax(0,52%) minmax(0,48%) auto;min-height:0}
+  .analysis-tools{grid-row:1;padding:14px 16px;border-right:0;border-bottom:1px solid var(--line);overflow:auto}
+  .analysis-question{grid-row:2;padding:14px 16px;overflow:auto;border-bottom:1px solid var(--line)}
+  .qnav{grid-row:3;border-left:0;border-top:1px solid var(--line);padding:5px 8px;display:flex;gap:5px;overflow-x:auto;overflow-y:hidden;min-height:45px}
+  .qnav button{width:auto;min-width:42px;margin:0;padding:7px 9px;flex:0 0 auto}
+  .toolcard{padding:13px;margin-bottom:10px}
+  .analysis-summary{grid-template-columns:1fr 1fr;gap:8px}
+  .review-layout{padding:14px}
+}
