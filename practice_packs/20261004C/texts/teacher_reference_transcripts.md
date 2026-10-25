@@ -89,7 +89,7 @@ The seminar will start at 4:00 p.m.
 Mind if we switch seats for the next lecture?
 
 ### CONV01 · conversation
-- Time: 251.60–327.80
+- Time: 251.60–293.36
 - Questions: Q13, Q14
 - Answers: Q13=A, Q14=D
 
@@ -101,7 +101,7 @@ The line was short, although someone ordered an egg salad sandwich with pickle s
 Hopefully they've restocked by now. I'm heading over.
 
 ### CONV02 · conversation
-- Time: 333.60–407.80
+- Time: 333.60–373.38
 - Questions: Q15, Q16
 - Answers: Q15=D, Q16=B
 
@@ -112,7 +112,7 @@ There are templates you can use after a little practice. The app lets me sketch 
 Which app is it? Maybe I'll try it.
 
 ### CONV03 · conversation
-- Time: 413.60–480.80
+- Time: 413.60–452.98
 - Questions: Q17, Q18
 - Answers: Q17=C, Q18=D
 
@@ -125,28 +125,28 @@ Yeah, but then I met someone who offered to email me their Mandarin notes.
 Nice. The organizers announced only the most commonly studied languages will be featured next time, so it'll be easier for participants to find what they need.
 
 ### ANN01 · announcement
-- Time: 486.60–552.80
+- Time: 486.60–521.49
 - Questions: Q19, Q20
 - Answers: Q19=C, Q20=A
 
 Our university recreational facilities can now be reserved online up to two months in advance rather than one month. This adjustment is to ensure that teams and clubs have access while still providing availability for individual students. Sometimes people have been forgetting their student ID, but remember that it's required to borrow sporting equipment. This will allow us to confirm your enrollment and charge any equipment damages to your student account.
 
 ### ANN02 · announcement
-- Time: 558.60–630.80
+- Time: 558.60–599.15
 - Questions: Q21, Q22
 - Answers: Q21=C, Q22=B
 
 For your next assignment, you'll write an analysis of a conversation heard in a club meeting, the dining hall, anywhere on campus. First, transcribe the conversation the best you can. Please note: do not record anyone, and be sure not to use real names. This is a fundamental, non-negotiable part of the assignment. Your analysis should highlight how the speakers convey and justify their viewpoints. Do they give examples? Appeal to shared values? Explain how these strategies shape the overall meaning of the conversation.
 
 ### ANN03 · announcement
-- Time: 636.60–693.80
+- Time: 636.60–670.62
 - Questions: Q23, Q24
 - Answers: Q23=D, Q24=B
 
 Good morning, students. We regret to inform you that tonight's outdoor movie screening at the university stadium has been cancelled due to rain in the forecast. We understand many of you were looking forward to this event, and we sincerely apologize for not being able to go ahead with it. We'll try to reschedule the screening for next Saturday after the football game. Please stay tuned for further announcements.
 
 ### TALK01 · academic_talk
-- Time: 699.60–864.80
+- Time: 699.60–785.61
 - Questions: Q25, Q26, Q27, Q28
 - Answers: Q25=B, Q26=C, Q27=B, Q28=B
 
@@ -155,7 +155,7 @@ Previously, we discussed the significance of pottery to ancient cultures, includ
 Another advance was the updraft kiln, which directed heat upward through the chamber. By adjusting the airflow, potters could control how much oxygen reached the fire. This helped them produce pottery with specific colors, like red or black, depending on how the clay reacted to the firing atmosphere. Then, in ancient China, potters developed kilns that could reach very high temperatures, making it possible to create porcelain. Porcelain is hard, thin, and often translucent, but it requires much higher firing temperatures than ordinary pottery.
 
 ### TALK02 · academic_talk
-- Time: 870.60–1034.94
+- Time: 870.60–957.54
 - Questions: Q29, Q30, Q31, Q32
 - Answers: Q29=C, Q30=D, Q31=B, Q32=A
 
@@ -189,7 +189,7 @@ Could you remind me when the guest lecture begins?
 Let's not beat around the bush. The exam is tomorrow.
 
 ### CONV01 · conversation
-- Time: 72.60–139.80
+- Time: 72.60–111.18
 - Questions: Q4, Q5
 - Answers: Q4=C, Q5=A
 
@@ -199,7 +199,7 @@ Really? I remember you telling me that you didn't like math and you weren't very
 First of all, all university students have to take a math class, even if they're majoring in political science like me. And secondly, the statistics class kind of fits with my major. I use statistics in surveys, things like that.
 
 ### CONV02 · conversation
-- Time: 145.60–216.80
+- Time: 145.60–189.75
 - Questions: Q6, Q7
 - Answers: Q6=C, Q7=D
 
@@ -211,7 +211,7 @@ I heard about an opportunity at the local newspaper in town. It's not as glamoro
 I heard about that. I've actually already had a couple of stories published there. I was hoping for something bigger. I'll check with the career center to learn about other opportunities.
 
 ### TALK01 · academic_talk
-- Time: 222.60–397.80
+- Time: 222.60–321.61
 - Questions: Q8, Q9, Q10, Q11
 - Answers: Q8=A, Q9=B, Q10=C, Q11=B
 
@@ -222,7 +222,7 @@ Our brains are always looking for efficiencies and shortcuts. The world is compl
 There's also framing, which means presenting information that highlights the benefits of an item. Say a store wants to promote certain pancakes. You might see a sign pointing out a health benefit, perhaps saying low sugar. It would not say high in artificial sweeteners, which would make the product less appealing. The framing makes you more likely to put the item in your cart.
 
 ### TALK02 · academic_talk
-- Time: 403.60–616.14
+- Time: 403.60–491.01
 - Questions: Q12, Q13, Q14, Q15
 - Answers: Q12=C, Q13=D, Q14=D, Q15=C
 
