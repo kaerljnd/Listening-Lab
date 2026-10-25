@@ -736,11 +736,16 @@ function prepareRestoredPracticeAudio(){
 }
 function resumePracticeFromRefresh(t){
   const q=getQ(),start=q.listenWindow[0],end=q.listenWindow[1];
-  { const src=audioSourceFor(q); if(!audio.src||!audio.src.includes(src)) audio.src=src; }
+  cancelPendingPracticePlayback();
+  const token=practicePlaybackToken;
+  { const src=audioSourceFor(q); if(!audio.src||!audio.src.includes(src)){ audio.src=src; audio.preload='auto'; audio.load(); } }
   const run=()=>{
+    if(token!==practicePlaybackToken || state.view!=='practice') return;
     const pos=Number.isFinite(t)?Math.min(end,Math.max(start,t)):start;
     audio.currentTime=pos; state.progressPct=Math.min(100,Math.max(0,((pos-start)/(end-start))*100));
-    state.isPlaying=true; attachPracticeSegment(q.listenWindow,beginAnswerPhase); updatePracticeProgress(); audio.play().catch(()=>{});
+    state.isPlaying=true; attachPracticeSegment(q.listenWindow,beginAnswerPhase,token); updatePracticeProgress();
+    const p=audio.play();
+    if(p&&typeof p.catch==='function') p.catch(err=>logEvent('resume_audio_play_rejected',{message:String(err)}));
   };
   if(audio.readyState>=1) run(); else audio.addEventListener('loadedmetadata',run,{once:true});
 }
