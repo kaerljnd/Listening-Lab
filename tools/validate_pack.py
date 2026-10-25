@@ -9,6 +9,8 @@ from pathlib import Path
 
 ALLOWED_TYPES = {"best_response", "conversation", "announcement", "academic_talk"}
 ALLOWED_ANSWERS = {"A", "B", "C", "D"}
+TIMING_WPM_FLOOR = {"conversation": 95, "announcement": 95, "academic_talk": 90}
+MIN_POST_MATERIAL_GAP = 12.0
 
 
 def load_json(path: Path):
@@ -94,8 +96,36 @@ def validate(pack_dir: Path):
             visual = m.get("visual")
             if visual and not (pack_dir / visual).is_file():
                 errors.append(f"{mid}/{matid}: 找不到图片 {visual}")
-            if not m.get("transcript"):
+            transcript = str(m.get("transcript") or "").strip()
+            if not transcript:
                 warnings.append(f"{mid}/{matid}: 没有 transcript，无法完成完整文本分析")
+            elif isinstance(win, list) and len(win) == 2 and win[1] > win[0] and tp in TIMING_WPM_FLOOR:
+                words = len(transcript.split())
+                span = float(win[1]) - float(win[0])
+                if words and span > 0:
+                    wpm = words / span * 60
+                    if wpm < TIMING_WPM_FLOOR[tp]:
+                        warnings.append(
+                            f"{mid}/{matid}: listen_window 疑似过宽（约 {wpm:.0f} wpm），"
+                            "可能把答题静音计入材料；请核对 audio_start/audio_end"
+                        )
+
+        ordered_mats = [
+            m for m in mats
+            if isinstance(m.get("listen_window"), list)
+            and len(m.get("listen_window")) == 2
+            and all(isinstance(x, (int, float)) for x in m.get("listen_window"))
+        ]
+        ordered_mats.sort(key=lambda m: m["listen_window"][0])
+        for current, nxt in zip(ordered_mats, ordered_mats[1:]):
+            if current.get("type") == "best_response":
+                continue
+            gap = float(nxt["listen_window"][0]) - float(current["listen_window"][1])
+            if gap < MIN_POST_MATERIAL_GAP:
+                warnings.append(
+                    f"{mid}/{current.get('material_id')}: 材料结束到下一材料仅 {gap:.1f}s，"
+                    "疑似 audio_end 延伸进答题/静音区间"
+                )
 
         seen_q = set()
         linked = Counter()
