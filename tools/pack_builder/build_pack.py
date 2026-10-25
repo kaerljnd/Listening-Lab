@@ -15,6 +15,8 @@ from pathlib import Path
 from typing import Any
 import xml.etree.ElementTree as ET
 
+from timing_qa import run_timing_qa
+
 ALLOWED_TYPES = {"best_response", "conversation", "announcement", "academic_talk"}
 ALLOWED_ANSWERS = {"A", "B", "C", "D"}
 ROOT = Path(__file__).resolve().parents[2]
@@ -203,7 +205,7 @@ def default_visual_name(tp: str, gender: str) -> str:
     return DEFAULT_VISUALS.get((tp, gender), DEFAULT_VISUALS[(tp, "unknown")])
 
 
-def build(source: Path, output_dir: Path, install_dir: Path | None = None, overwrite: bool = False) -> dict[str, Any]:
+def build(source: Path, output_dir: Path, install_dir: Path | None = None, overwrite: bool = False, timing_qa: bool = True, block_on_timing_errors: bool = True) -> dict[str, Any]:
     errors: list[str] = []
     warnings: list[str] = []
     temp_ctx = None
@@ -474,6 +476,22 @@ def build(source: Path, output_dir: Path, install_dir: Path | None = None, overw
     (pack_dir/"pack.json").write_text(json.dumps(pack,ensure_ascii=False,indent=2),encoding="utf-8")
     (pack_dir/"manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
 
+    # VAD + sentence timestamp QA
+    timing_report=None
+    timing_blockers=[]
+    if timing_qa:
+        try:
+            timing_report=run_timing_qa(pack_dir,pack)
+            (pack_dir/"timing_qa.json").write_text(
+                json.dumps(timing_report,ensure_ascii=False,indent=2),encoding="utf-8"
+            )
+            warnings.extend(timing_report.get("warnings",[]))
+            timing_blockers=list(timing_report.get("blocking_errors",[]))
+            if block_on_timing_errors:
+                errors.extend(f"Timing QA: {x}" for x in timing_blockers)
+        except Exception as exc:
+            warnings.append(f"Timing QA 未完成：{exc}")
+
     # quality level
     all_mats=[m for mod in modules_out for m in mod["materials"]]
     all_q=[q for mod in modules_out for q in mod["questions"]]
@@ -485,8 +503,14 @@ def build(source: Path, output_dir: Path, install_dir: Path | None = None, overw
     if has_transcript: quality=2
     if has_transcript and full_verified and has_evidence and has_expl: quality=3
     report={
-        "builder_version":"0.1","source_xlsx":xlsx.name,"set_id":set_id,"quality_level":quality,
-        "blocking_errors":[],"warnings":warnings,
+        "builder_version":"0.2","source_xlsx":xlsx.name,"set_id":set_id,"quality_level":quality,
+        "blocking_errors":errors,"warnings":warnings,
+        "timing_qa":{
+            "enabled":timing_qa,
+            "status":timing_report.get("status") if timing_report else "not_run",
+            "summary":timing_report.get("summary") if timing_report else None,
+            "blocking_error_count":len(timing_blockers),
+        },
         "stats":{"modules":len(modules_out),"materials":len(all_mats),"questions":len(all_q),
                  "material_type_counts":dict(type_m_total),"question_type_counts":dict(type_q_total)}
     }
@@ -521,13 +545,22 @@ def build(source: Path, output_dir: Path, install_dir: Path | None = None, overw
 
 
 def main():
-    ap=argparse.ArgumentParser(description="Listening Pack Builder v0.1")
+    ap=argparse.ArgumentParser(description="Listening Pack Builder v0.2")
     ap.add_argument("source",help="源文件夹或 Source Bundle ZIP")
     ap.add_argument("--output",default=str(ROOT/"builder_output"))
     ap.add_argument("--install",action="store_true",help="构建后安装到当前 Listening Lab 的 practice_packs")
     ap.add_argument("--overwrite",action="store_true")
+    ap.add_argument("--skip-timing-qa",action="store_true",help="跳过 VAD + 句子时间戳 QA")
+    ap.add_argument("--allow-timing-review",action="store_true",help="即使 Timing QA 有阻断项也允许安装（仅人工复核时使用）")
     args=ap.parse_args()
-    result=build(Path(args.source).resolve(),Path(args.output).resolve(), ROOT/"practice_packs" if args.install else None,args.overwrite)
+    result=build(
+        Path(args.source).resolve(),
+        Path(args.output).resolve(),
+        ROOT/"practice_packs" if args.install else None,
+        args.overwrite,
+        timing_qa=not args.skip_timing_qa,
+        block_on_timing_errors=not args.allow_timing_review,
+    )
     print(json.dumps(result,ensure_ascii=False,indent=2))
     raise SystemExit(0 if result.get("ok") else 1)
 
