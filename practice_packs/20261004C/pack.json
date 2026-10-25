@@ -208,7 +208,7 @@
           "title": "Listen to a conversation.",
           "listen_window": [
             251.6,
-            327.8
+            293.36
           ],
           "visual": "../20260920A/images/conversation_pair.png",
           "speaker_gender": "mixed",
@@ -217,7 +217,9 @@
             "Q13",
             "Q14"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         },
         {
           "material_id": "CONV02",
@@ -225,7 +227,7 @@
           "title": "Listen to a conversation.",
           "listen_window": [
             333.6,
-            407.8
+            373.38
           ],
           "visual": "../20260920A/images/conversation_pair.png",
           "speaker_gender": "mixed",
@@ -234,7 +236,9 @@
             "Q15",
             "Q16"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         },
         {
           "material_id": "CONV03",
@@ -242,7 +246,7 @@
           "title": "Listen to a conversation.",
           "listen_window": [
             413.6,
-            480.8
+            452.98
           ],
           "visual": "../20260920A/images/conversation_pair.png",
           "speaker_gender": "mixed",
@@ -251,7 +255,9 @@
             "Q17",
             "Q18"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         },
         {
           "material_id": "ANN01",
@@ -259,7 +265,7 @@
           "title": "Listen to an announcement in a university recreation center.",
           "listen_window": [
             486.6,
-            552.8
+            521.49
           ],
           "visual": "../20260920A/images/announcement_male.png",
           "speaker_gender": "unknown",
@@ -268,7 +274,9 @@
             "Q19",
             "Q20"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         },
         {
           "material_id": "ANN02",
@@ -276,7 +284,7 @@
           "title": "Listen to an announcement in a classroom.",
           "listen_window": [
             558.6,
-            630.8
+            599.15
           ],
           "visual": "../20260920A/images/announcement_male.png",
           "speaker_gender": "unknown",
@@ -285,7 +293,9 @@
             "Q21",
             "Q22"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         },
         {
           "material_id": "ANN03",
@@ -293,7 +303,7 @@
           "title": "Listen to an announcement on a university radio station.",
           "listen_window": [
             636.6,
-            693.8
+            670.62
           ],
           "visual": "../20260920A/images/announcement_male.png",
           "speaker_gender": "unknown",
@@ -302,7 +312,9 @@
             "Q23",
             "Q24"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         },
         {
           "material_id": "TALK01",
@@ -310,7 +322,7 @@
           "title": "Listen to a talk in an anthropology class.",
           "listen_window": [
             699.6,
-            864.8
+            785.61
           ],
           "visual": "../20260920A/images/lecture_female.png",
           "speaker_gender": "unknown",
@@ -321,7 +333,9 @@
             "Q27",
             "Q28"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         },
         {
           "material_id": "TALK02",
@@ -329,7 +343,7 @@
           "title": "Listen to a talk in an art history class.",
           "listen_window": [
             870.6,
-            1034.94
+            957.54
           ],
           "visual": "../20260920A/images/lecture_female.png",
           "speaker_gender": "unknown",
@@ -340,7 +354,9 @@
             "Q31",
             "Q32"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         }
       ],
       "questions": [
@@ -952,7 +968,7 @@
           "title": "Listen to a conversation.",
           "listen_window": [
             72.6,
-            139.8
+            111.18
           ],
           "visual": "../20260920A/images/conversation_pair.png",
           "speaker_gender": "mixed",
@@ -961,7 +977,9 @@
             "Q4",
             "Q5"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         },
         {
           "material_id": "CONV02",
@@ -969,7 +987,7 @@
           "title": "Listen to a conversation.",
           "listen_window": [
             145.6,
-            216.8
+            189.75
           ],
           "visual": "../20260920A/images/conversation_pair.png",
           "speaker_gender": "mixed",
@@ -978,7 +996,9 @@
             "Q6",
             "Q7"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         },
         {
           "material_id": "TALK01",
@@ -986,7 +1006,7 @@
           "title": "Listen to a talk in a social sciences class.",
           "listen_window": [
             222.6,
-            397.8
+            321.61
           ],
           "visual": "../20260920A/images/lecture_female.png",
           "speaker_gender": "unknown",
@@ -997,7 +1017,9 @@
             "Q10",
             "Q11"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         },
         {
           "material_id": "TALK02",
@@ -1005,7 +1027,7 @@
           "title": "Listen to a talk on a geology podcast.",
           "listen_window": [
             403.6,
-            616.14
+            491.01
           ],
           "visual": "../20260920A/images/lecture_female.png",
           "speaker_gender": "unknown",
@@ -1016,7 +1038,9 @@
             "Q14",
             "Q15"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "reference-normalized",
+          "timing_review_required": true
         }
       ],
       "questions": [
