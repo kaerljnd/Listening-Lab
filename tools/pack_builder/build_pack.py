@@ -375,6 +375,17 @@ def build(source: Path, output_dir: Path, install_dir: Path | None = None, overw
                 transcript_text=" ".join(s["text"] for s in segs)
             if not transcript_text:
                 warnings.append(f"{mid}/{matid}: 没有 Transcript，无法完成完整文本分析")
+            elif tp in {"conversation", "announcement", "academic_talk"} and a1 > a0:
+                words=len(transcript_text.split())
+                span=a1-a0
+                floor={"conversation":95,"announcement":95,"academic_talk":90}[tp]
+                if words and span > 0:
+                    wpm=words/span*60
+                    if wpm < floor:
+                        warnings.append(
+                            f"{mid}/{matid}: audio_start/audio_end 疑似过宽（约 {wpm:.0f} wpm），"
+                            "可能把答题静音计入材料"
+                        )
 
             qrows=q_by_material.get((mid,matid),[])
             qids=[]
