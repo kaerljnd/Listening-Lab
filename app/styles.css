@@ -365,6 +365,11 @@
 .session-status{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:800}
 .session-status.done{background:#e7f5ee;color:#08735f}
 .session-status.active{background:#fff1d6;color:#a66300}
+.session-history-head-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.session-history-actions{display:flex;align-items:center;gap:8px}
+.session-clear-btn,.session-delete-btn{white-space:nowrap}
+.session-delete-btn{color:#a43f3f;border-color:#e3b9b9;background:#fff}
+.session-delete-btn:hover{background:#fff5f5;border-color:#d89b9b}
 
 .talk-question-results{padding:22px}
 .talk-question-results>h2{margin:0 0 5px}
@@ -388,8 +393,11 @@
 
 @media(max-width:760px){
   .session-history-head{flex-direction:column}
+  .session-history-head-actions{width:100%;justify-content:space-between}
   .session-history-row{grid-template-columns:1fr auto}
-  .session-history-row .btn{grid-column:1/-1;width:100%}
+  .session-history-actions{grid-column:1/-1;width:100%;display:grid;grid-template-columns:1fr auto}
+  .session-history-actions .btn{width:100%}
+  .session-history-actions .session-delete-btn{width:auto}
   .talk-question-result-head{flex-direction:column}
   .talk-answer-path{grid-template-columns:repeat(2,minmax(0,1fr))}
   .talk-result-option{flex-direction:column}
