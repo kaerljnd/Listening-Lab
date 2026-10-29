@@ -968,7 +968,7 @@
           "title": "Listen to a conversation.",
           "listen_window": [
             77.6,
-            124.13
+            156.8
           ],
           "visual": "../20260920A/images/conversation_pair.png",
           "speaker_gender": "mixed",
@@ -978,8 +978,9 @@
             "Q5"
           ],
           "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
-          "timing_source": "reference-normalized",
-          "timing_review_required": true
+          "timing_source": "original-window-restored-after-incomplete-cut",
+          "timing_review_required": true,
+          "timing_note": "Previous reference-normalized end cut the conversation early. Restored the original uploaded window pending forced alignment."
         },
         {
           "material_id": "CONV02",
@@ -987,7 +988,7 @@
           "title": "Listen to a conversation.",
           "listen_window": [
             162.6,
-            193.8
+            199.4
           ],
           "visual": "../20260920A/images/conversation_pair.png",
           "speaker_gender": "mixed",
@@ -996,7 +997,10 @@
             "Q6",
             "Q7"
           ],
-          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear."
+          "transcript_source": "Supplied AI-generated transcript, context-corrected against audio/question context where clear.",
+          "timing_source": "manual-safety-extension",
+          "timing_review_required": true,
+          "timing_note": "Original end at 193.8 was reported incomplete in classroom use. Extended to 0.2s before TALK01 start pending forced alignment."
         },
         {
           "material_id": "TALK01",
