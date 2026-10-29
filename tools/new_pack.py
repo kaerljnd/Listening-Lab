@@ -35,4 +35,4 @@ for name in ("manifest.json", "pack.json"):
             m["title"] = f"{set_id} · {m.get('module_id','M1')}"
     p.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 print(f"已创建：{out}")
-print("下一步：放入音频/图片，填写 pack.json，然后运行 validate_pack.py。")
+print(f"下一步：完成题包内容后运行 python tools/release_pack.py {set_id} --check-only")\nprint(f"确认无误后运行 python tools/release_pack.py {set_id} --publish")
