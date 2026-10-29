@@ -282,10 +282,38 @@ function sessionHistoryForPack(pack){
   }
   return arr.sort((a,b)=>(b.savedAt||0)-(a.savedAt||0));
 }
+function sessionRecordCompleted(rec){ return !!(rec?.completed||rec?.view==='results'); }
+function deleteLocalSession(sessionId){
+  const pack=currentPackMeta();
+  const rec=sessionHistoryForPack(pack).find(x=>x?.sessionId===sessionId);
+  if(!rec){ alert('没有找到这条本地 Session。'); return; }
+  if(sessionRecordCompleted(rec)){ alert('已完成的 Session 默认保留，不在这里删除。'); return; }
+  if(!confirm('删除这条未完成练习记录？\n\n只会删除当前浏览器里的本地记录，不会删除教师端或阿里云中的数据。')) return;
+  try{ if(rec.storageKey) localStorage.removeItem(rec.storageKey); }catch(e){}
+  writeSessionRegistry(readSessionRegistry().filter(x=>x?.sessionId!==sessionId));
+  const pointer=readActiveSessionPointer();
+  if(pointer?.sessionId===sessionId) clearActiveSessionPointer();
+  renderLibrary();
+}
+function clearIncompleteLocalSessions(){
+  const pack=currentPackMeta();
+  const rows=sessionHistoryForPack(pack);
+  const targets=rows.filter(r=>!sessionRecordCompleted(r));
+  if(!targets.length){ alert('本套题没有未完成的本地 Session。'); return; }
+  if(!confirm(`清理本套题的 ${targets.length} 条未完成练习记录？\n\n只会删除当前浏览器里的本地记录；已完成记录会保留，也不会删除教师端或阿里云中的数据。`)) return;
+  const ids=new Set(targets.map(r=>r.sessionId));
+  targets.forEach(r=>{ try{ if(r.storageKey) localStorage.removeItem(r.storageKey); }catch(e){} });
+  writeSessionRegistry(readSessionRegistry().filter(x=>!ids.has(x?.sessionId)));
+  const pointer=readActiveSessionPointer();
+  if(pointer?.sessionId&&ids.has(pointer.sessionId)) clearActiveSessionPointer();
+  renderLibrary();
+}
 function renderSessionHistory(pack){
   const rows=sessionHistoryForPack(pack);
   if(!rows.length) return '';
-  return `<section class="card session-history-card"><div class="session-history-head"><div><div class="eyebrow">Saved Sessions</div><h2>练习记录</h2><p>每一次练习都独立保存；不同题型、不同讲座和重复练习不会互相覆盖。</p></div><span class="module-chip">${rows.length} sessions</span></div><div class="session-history-list">${rows.map(r=>{const when=r.startedAt?new Date(r.startedAt).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'—';const done=r.completed||r.view==='results';return `<div class="session-history-row"><div><b>${escapeHtml(sessionRecordLabel(r))}</b><div class="small">${escapeHtml(when)}${r.studentCode?' · '+escapeHtml(r.studentCode):''}</div></div><span class="session-status ${done?'done':'active'}">${done?'已完成':'进行中'}</span><button class="btn secondary" onclick="resumeSessionRecord('${escapeHtml(r.sessionId)}')">${done?'查看结果':'继续练习'} →</button></div>`;}).join('')}</div></section>`;
+  const incompleteCount=rows.filter(r=>!sessionRecordCompleted(r)).length;
+  const headActions=`<div class="session-history-head-actions"><span class="module-chip">${rows.length} sessions</span>${incompleteCount?`<button class="btn secondary session-clear-btn" type="button" onclick="clearIncompleteLocalSessions()">清理未完成（${incompleteCount}）</button>`:''}</div>`;
+  return `<section class="card session-history-card"><div class="session-history-head"><div><div class="eyebrow">Saved Sessions</div><h2>练习记录</h2><p>每一次练习都独立保存；不同题型、不同讲座和重复练习不会互相覆盖。</p></div>${headActions}</div><div class="session-history-list">${rows.map(r=>{const when=r.startedAt?new Date(r.startedAt).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}):'—';const done=sessionRecordCompleted(r);return `<div class="session-history-row"><div><b>${escapeHtml(sessionRecordLabel(r))}</b><div class="small">${escapeHtml(when)}${r.studentCode?' · '+escapeHtml(r.studentCode):''}</div></div><span class="session-status ${done?'done':'active'}">${done?'已完成':'进行中'}</span><div class="session-history-actions"><button class="btn secondary" onclick="resumeSessionRecord('${escapeHtml(r.sessionId)}')">${done?'查看结果':'继续练习'} →</button>${done?'':`<button class="btn secondary session-delete-btn" type="button" onclick="deleteLocalSession('${escapeHtml(r.sessionId)}')">删除</button>`}</div></div>`;}).join('')}</div></section>`;
 }
 const letters = ['A','B','C','D'];
 
@@ -1908,7 +1936,7 @@ function downloadJSON(){
 
 function render(){ if(!state||state.view==='sets')renderSetSelection(); else if(state.view==='library')renderLibrary(); else if(state.view==='practice')renderPractice(); else if(state.view==='analysis')renderAnalysis(); else if(state.view==='results')renderResults(); }
 
-Object.assign(window,{seekTranscriptWord,showTalkPracticeAnswers,start,startType,startSingleTalk,reloadCatalog,openPack,goSets,go,confirmExitSession,resumeSavedSession,resumeSessionRecord,exitTypePractice,openPracticeReview,closePracticeReview,toggleTime,chooseFirst,nextQ,setVolume,pauseSession,resumeSession,playAnalysis,pauseAnalysis,toggleAnalysisPlayback,replayFromStart,seekAnalysis,previewAnalysisSeek,commitAnalysisSeek,skipReplay,setFunctionTag,setKeyMeaning,setMapField,toggleDontKnow,chooseSecond,choosePost,setPointEvidence,startRangeEvidence,endRangeEvidence,clearEvidence,seekToEvidencePart,updateEvidencePart,toggleErrorReason,setOtherReason,confirmErrorReasons,skipErrorReasons,openTranscript,toggleTranscriptVisibility,advanceAnalysis,goNextMaterial,jump,goNextAnalysis,goFirstIncomplete,skipHighConfidence,undoHighConfidenceSkip,markUnderstood,chooseDeepAnalysis,undoUnderstandingChoice,showCompletionAudit,closeCompletionAudit,jumpFromAudit,revealResults,startReview,exitReview,setReviewPoint,setReviewNote,addTalkVocabMarker,updateTalkVocabMarker,removeTalkVocabMarker,toggleTalkNoVocab,seekTalkMarker,talkChooseSecond,talkSetPointEvidence,talkStartRangeEvidence,talkEndRangeEvidence,talkClearEvidence,openTalkTranscript,setTalkFrameworkAfter,toggleTalkFrameworkIssue,toggleTalkFrameworkAccurate,setTalkFrameworkIssueNote,setTalkQuestionNote,talkChoosePost,confirmTalkPostUnchanged,skipTalkToTranscript,seekTalkQuestionEvidence,jumpTalkLabIssue,startReviewAtTime,startReviewAtEvidence,showTalkLabAudit,closeTalkLabAudit,copyStudentSummary,downloadSummaryTxt,downloadJSON});
+Object.assign(window,{seekTranscriptWord,showTalkPracticeAnswers,start,startType,startSingleTalk,reloadCatalog,openPack,goSets,go,confirmExitSession,resumeSavedSession,resumeSessionRecord,deleteLocalSession,clearIncompleteLocalSessions,exitTypePractice,openPracticeReview,closePracticeReview,toggleTime,chooseFirst,nextQ,setVolume,pauseSession,resumeSession,playAnalysis,pauseAnalysis,toggleAnalysisPlayback,replayFromStart,seekAnalysis,previewAnalysisSeek,commitAnalysisSeek,skipReplay,setFunctionTag,setKeyMeaning,setMapField,toggleDontKnow,chooseSecond,choosePost,setPointEvidence,startRangeEvidence,endRangeEvidence,clearEvidence,seekToEvidencePart,updateEvidencePart,toggleErrorReason,setOtherReason,confirmErrorReasons,skipErrorReasons,openTranscript,toggleTranscriptVisibility,advanceAnalysis,goNextMaterial,jump,goNextAnalysis,goFirstIncomplete,skipHighConfidence,undoHighConfidenceSkip,markUnderstood,chooseDeepAnalysis,undoUnderstandingChoice,showCompletionAudit,closeCompletionAudit,jumpFromAudit,revealResults,startReview,exitReview,setReviewPoint,setReviewNote,addTalkVocabMarker,updateTalkVocabMarker,removeTalkVocabMarker,toggleTalkNoVocab,seekTalkMarker,talkChooseSecond,talkSetPointEvidence,talkStartRangeEvidence,talkEndRangeEvidence,talkClearEvidence,openTalkTranscript,setTalkFrameworkAfter,toggleTalkFrameworkIssue,toggleTalkFrameworkAccurate,setTalkFrameworkIssueNote,setTalkQuestionNote,talkChoosePost,confirmTalkPostUnchanged,skipTalkToTranscript,seekTalkQuestionEvidence,jumpTalkLabIssue,startReviewAtTime,startReviewAtEvidence,showTalkLabAudit,closeTalkLabAudit,copyStudentSummary,downloadSummaryTxt,downloadJSON});
 
 function showBootError(err){
   console.error(err);
