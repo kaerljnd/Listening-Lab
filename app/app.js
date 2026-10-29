@@ -173,13 +173,31 @@ async function fetchCatalog(){
   CATALOG_ERRORS=Array.isArray(data.errors)?data.errors:[];
   return PACK_CATALOG;
 }
+function packAssetUrl(folder,path){
+  const safePath=String(path||'').split('/').filter(Boolean).map(encodeURIComponent).join('/');
+  return `${PACK_BASE}/${encodeURIComponent(folder)}/${safePath}`;
+}
+async function fetchPackJson(folder,path){
+  const res=await fetch(packAssetUrl(folder,path),{cache:'no-store'});
+  if(!res.ok) throw new Error(`Cannot read ${folder}/${path} (${res.status})`);
+  return res.json();
+}
 async function fetchPack(folder){
   const meta=PACK_CATALOG.find(x=>x.folder===folder||x.set_id===folder);
   if(!meta) throw new Error(`Practice pack not found: ${folder}`);
   const file=meta.pack_file||'pack.json';
-  const res=await fetch(`${PACK_BASE}/${encodeURIComponent(meta.folder)}/${encodeURIComponent(file)}`,{cache:'no-store'});
-  if(!res.ok) throw new Error(`Cannot read ${meta.folder}/${file} (${res.status})`);
-  return {raw:await res.json(),meta};
+  const raw=await fetchPackJson(meta.folder,file);
+  for(const mod of (raw.modules||[])){
+    if(!Array.isArray(mod.materials)&&Array.isArray(mod.materials_files)){
+      const parts=await Promise.all(mod.materials_files.map(path=>fetchPackJson(meta.folder,path)));
+      mod.materials=parts.flat();
+    }
+    if(!Array.isArray(mod.questions)&&Array.isArray(mod.questions_files)){
+      const parts=await Promise.all(mod.questions_files.map(path=>fetchPackJson(meta.folder,path)));
+      mod.questions=parts.flat();
+    }
+  }
+  return {raw,meta};
 }
 async function selectModuleGlobals(packRef,moduleRef){
   const loaded=await fetchPack(packRef);
