@@ -192,7 +192,7 @@ This claim requires further clarification.
 I wouldn't want this issue to affect our grades.
 
 ### CONV01 · conversation
-- Time: 77.60–124.13
+- Time: 77.60–156.80
 - Questions: Q4, Q5
 - Answers: Q4=D, Q5=C
 
@@ -205,7 +205,7 @@ How? There are so many books and articles.
 Look at the author. The author's institutional affiliation is a good place to start. Plus, look to see how many peer-reviewed articles they have in scholarly journals.
 
 ### CONV02 · conversation
-- Time: 162.60–193.80
+- Time: 162.60–199.40
 - Questions: Q6, Q7
 - Answers: Q6=C, Q7=B
 
