@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "set_id": "20261019A",
+  "title": "20261019A Listening",
+  "timing_status": "vad_checked",
+  "timing_note": "Material-level windows checked against supplied audio/transcripts; sentence/word forced alignment pending.",
+  "modules": [
+    {
+      "module_id": "M1",
+      "id": "20261019A-M1",
+      "title": "20261019A · M1",
+      "audio": "audio/20261019A M1.mp3",
+      "question_count": 32,
+      "materials_files": ["data/M1_materials_1.json","data/M1_materials_2.json"],
+      "questions_files": ["data/M1_questions_1.json","data/M1_questions_2.json"]
+    },
+    {
+      "module_id": "M2H",
+      "id": "20261019A-M2H",
+      "title": "20261019A · M2H",
+      "audio": "audio/20261019A M2H.mp3",
+      "question_count": 15,
+      "materials_files": ["data/M2H_materials_1.json"],
+      "questions_files": ["data/M2H_questions_1.json"]
+    }
+  ]
+}
