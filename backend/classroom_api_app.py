@@ -3,6 +3,7 @@ import time
 import uuid
 import json
 import hmac
+import re
 from functools import wraps
 
 from flask import Flask, request, jsonify
@@ -21,7 +22,7 @@ app = Flask(__name__)
 OTS_ENDPOINT = os.environ["OTS_ENDPOINT"]
 OTS_INSTANCE = os.environ["OTS_INSTANCE"]
 
-ALLOWED_SET_IDS = {"20260830A", "20260908A", "20260909A", "20260909B", "20260915A", "20260916A", "20260920A", "20260923A", "20261004A", "20261004C", "20261005A", "20261005B", "20261007A", "20261011A", "20261019A"}
+SET_ID_PATTERN = re.compile(r"^\\d{8}[A-Z]$")
 TEACHER_KEY = os.environ.get("TEACHER_KEY", "").strip()
 
 ALLOWED_ORIGINS = {
@@ -136,7 +137,8 @@ def health():
     return jsonify({
         "ok": True,
         "service": "listening-lab-api",
-        "version": "classroom-pilot-0.6.8-class-identity"
+        "version": "classroom-pilot-0.6.9-set-policy",
+        "set_policy": "format-validated"
     })
 
 
@@ -236,8 +238,8 @@ def create_session():
     if len(class_code) > 40:
         return jsonify({"ok": False, "error": "class_code is too long"}), 400
 
-    if set_id not in ALLOWED_SET_IDS:
-        return jsonify({"ok": False, "error": "set_id is not allowed"}), 400
+    if not SET_ID_PATTERN.fullmatch(set_id):
+        return jsonify({"ok": False, "error": "set_id format is invalid"}), 400
 
     session_id = text_value(data.get("session_id")) or f"sess_{uuid.uuid4().hex}"
     timestamp = now_ms()
