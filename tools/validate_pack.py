@@ -17,6 +17,52 @@ def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_module_list(pack_dir: Path, mod: dict, inline_key: str, files_key: str, errors: list[str]) -> list:
+    """Load a module list from inline JSON or one/more fragment files."""
+    mid = mod.get("module_id") or "?"
+    inline = mod.get(inline_key)
+    if isinstance(inline, list):
+        return inline
+
+    files = mod.get(files_key)
+    if not files:
+        errors.append(f"{mid}: 缺少 {inline_key} 或 {files_key}")
+        return []
+    if not isinstance(files, list):
+        errors.append(f"{mid}: {files_key} 必须是数组")
+        return []
+
+    out = []
+    for rel in files:
+        path = pack_dir / str(rel)
+        if not path.is_file():
+            errors.append(f"{mid}: 找不到分片文件 {rel}")
+            continue
+        try:
+            part = load_json(path)
+        except Exception as exc:
+            errors.append(f"{mid}: 分片文件 {rel} 无法读取：{exc}")
+            continue
+        if not isinstance(part, list):
+            errors.append(f"{mid}: 分片文件 {rel} 顶层必须是数组")
+            continue
+        out.extend(part)
+    return out
+
+
+def expanded_pack(pack_dir: Path, pack: dict, errors: list[str] | None = None) -> dict:
+    errors = errors if errors is not None else []
+    result = dict(pack)
+    modules = []
+    for raw_mod in pack.get("modules", []):
+        mod = dict(raw_mod)
+        mod["materials"] = load_module_list(pack_dir, raw_mod, "materials", "materials_files", errors)
+        mod["questions"] = load_module_list(pack_dir, raw_mod, "questions", "questions_files", errors)
+        modules.append(mod)
+    result["modules"] = modules
+    return result
+
+
 def audio_duration(path: Path):
     try:
         cp = subprocess.run(
@@ -43,14 +89,31 @@ def validate(pack_dir: Path):
     if not pack_path.exists():
         return [f"缺少 {pack_file}"], []
     try:
-        pack = load_json(pack_path)
+        raw_pack = load_json(pack_path)
     except Exception as exc:
         return [f"{pack_file} 无法读取：{exc}"], []
 
-    if not pack.get("set_id"):
+    manifest_set_id = str(manifest.get("set_id") or "").strip()
+    pack_set_id = str(raw_pack.get("set_id") or "").strip()
+    folder_set_id = pack_dir.name
+
+    if not manifest_set_id:
+        errors.append("manifest.json 缺少 set_id")
+    if not pack_set_id:
         errors.append("pack.json 缺少 set_id")
-    if manifest.get("set_id") and pack.get("set_id") and manifest["set_id"] != pack["set_id"]:
+    if manifest_set_id and pack_set_id and manifest_set_id != pack_set_id:
         errors.append("manifest.set_id 与 pack.set_id 不一致")
+    if manifest_set_id and manifest_set_id != folder_set_id:
+        errors.append(f"目录名 {folder_set_id} 与 manifest.set_id={manifest_set_id} 不一致")
+    if pack_set_id and pack_set_id != folder_set_id:
+        errors.append(f"目录名 {folder_set_id} 与 pack.set_id={pack_set_id} 不一致")
+
+    pack = expanded_pack(pack_dir, raw_pack, errors)
+
+    manifest_modules = {
+        m.get("module_id"): m for m in manifest.get("modules", [])
+        if m.get("module_id")
+    }
 
     seen_modules = set()
     for mod in pack.get("modules", []):
@@ -128,7 +191,6 @@ def validate(pack_dir: Path):
                 )
 
         seen_q = set()
-        linked = Counter()
         for q in questions:
             qid = q.get("question_id")
             if not qid:
@@ -140,8 +202,6 @@ def validate(pack_dir: Path):
             matid = q.get("material_id")
             if matid not in material_map:
                 errors.append(f"{mid}/{qid}: 引用了不存在的 material_id={matid}")
-            else:
-                linked[matid] += 1
             opts = q.get("options", [])
             if len(opts) != 4:
                 errors.append(f"{mid}/{qid}: 当前版本要求 4 个选项，实际 {len(opts)} 个")
@@ -157,7 +217,34 @@ def validate(pack_dir: Path):
 
         declared = mod.get("question_count")
         if declared is not None and declared != len(questions):
-            errors.append(f"{mid}: question_count={declared}，但 questions 实际 {len(questions)}")
+            errors.append(f"{mid}: pack.question_count={declared}，但 questions 实际 {len(questions)}")
+
+        manifest_mod = manifest_modules.get(mid)
+        if manifest_mod:
+            manifest_count = manifest_mod.get("question_count")
+            if manifest_count is not None and manifest_count != len(questions):
+                errors.append(f"{mid}: manifest.question_count={manifest_count}，但 questions 实际 {len(questions)}")
+
+            actual_q_counts = Counter(material_map.get(q.get("material_id"), {}).get("type") for q in questions)
+            actual_q_counts.pop(None, None)
+            declared_q_counts = manifest_mod.get("question_type_counts")
+            if isinstance(declared_q_counts, dict) and dict(actual_q_counts) != declared_q_counts:
+                errors.append(
+                    f"{mid}: manifest.question_type_counts 与实际不一致 "
+                    f"(manifest={declared_q_counts}, actual={dict(actual_q_counts)})"
+                )
+
+            actual_m_counts = Counter(m.get("type") for m in mats)
+            actual_m_counts.pop(None, None)
+            declared_m_counts = manifest_mod.get("material_type_counts")
+            if isinstance(declared_m_counts, dict) and dict(actual_m_counts) != declared_m_counts:
+                errors.append(
+                    f"{mid}: manifest.material_type_counts 与实际不一致 "
+                    f"(manifest={declared_m_counts}, actual={dict(actual_m_counts)})"
+                )
+        else:
+            errors.append(f"{mid}: manifest.modules 中缺少对应模块")
+
         for matid, m in material_map.items():
             qids = m.get("question_ids", [])
             real = [q.get("question_id") for q in questions if q.get("material_id") == matid]
@@ -165,6 +252,14 @@ def validate(pack_dir: Path):
                 warnings.append(f"{mid}/{matid}: question_ids 与 questions 中的实际关联顺序不一致")
             if not real:
                 warnings.append(f"{mid}/{matid}: 没有任何题目关联")
+
+    pack_module_ids = {m.get("module_id") for m in pack.get("modules", []) if m.get("module_id")}
+    manifest_module_ids = set(manifest_modules)
+    if pack_module_ids != manifest_module_ids:
+        errors.append(
+            f"manifest.modules 与 pack.modules 模块集合不一致 "
+            f"(manifest={sorted(manifest_module_ids)}, pack={sorted(pack_module_ids)})"
+        )
 
     if not pack.get("modules"):
         errors.append("pack.json 中没有 modules")
