@@ -22,7 +22,7 @@ app = Flask(__name__)
 OTS_ENDPOINT = os.environ["OTS_ENDPOINT"]
 OTS_INSTANCE = os.environ["OTS_INSTANCE"]
 
-SET_ID_PATTERN = re.compile(r"^\\d{8}[A-Z]$")
+SET_ID_PATTERN = re.compile(r"^\d{8}[A-Z]$")
 TEACHER_KEY = os.environ.get("TEACHER_KEY", "").strip()
 
 ALLOWED_ORIGINS = {
