@@ -338,8 +338,7 @@ const cloudResponseTimers=new Map();
 const cloudQuestionTimers=new Map();
 const cloudMaterialTimers=new Map();
 let cloudSessionProgressTimer=null;
-const CLASSROOM_SET_IDS=new Set(['20260830A','20260908A','20260909A','20260909B','20260915A','20260916A','20260920A','20260923A','20261004A','20261004C','20261005A','20261005B','20261007A']);
-function classroomEligible(){ return CLASSROOM_SET_IDS.has(ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER); }
+function classroomEligible(){ return !!(ACTIVE_PACK?.set_id||ACTIVE_PACK_FOLDER); }
 function cloudReady(){ return !!(state?.cloud?.sessionId&&classroomEligible()); }
 function classroomIdentity(){
   return new Promise(resolve=>{
