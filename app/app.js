@@ -166,7 +166,7 @@ function normalizedMediaUrl(src){
 }
 function sameAudioSource(src){
   if(!src) return false;
-  const current=audio.currentSrc||audio.src||'';
+  const current=audio.src||audio.currentSrc||'';
   return normalizedMediaUrl(current)===normalizedMediaUrl(src);
 }
 function questionLabel(q){ return q?.displayId||q?.id||''; }
