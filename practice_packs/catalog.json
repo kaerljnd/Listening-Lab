@@ -2,6 +2,91 @@
   "packs": [
     {
       "schema_version": "1.0",
+      "set_id": "20261021A",
+      "title": "20261021A Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20261021A · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          }
+        },
+        {
+          "module_id": "M2H",
+          "title": "20261021A · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          }
+        }
+      ],
+      "description": "20261021A Listening Lab pack built from supplied M1/M2H audio, question PDFs, answer key, and transcript DOCX files; material windows checked with WebRTC VAD.",
+      "source_note": "M2H source PDF omitted Question 4 page. Q4 is explicitly reconstructed from the supplied conversation transcript and answer key and flagged in question data.",
+      "folder": "20261021A"
+    },
+    {
+      "schema_version": "1.0",
+      "set_id": "20261020A",
+      "title": "20261020A Listening",
+      "pack_file": "pack.json",
+      "modules": [
+        {
+          "module_id": "M1",
+          "title": "20261020A · M1",
+          "question_count": 32,
+          "question_type_counts": {
+            "best_response": 12,
+            "conversation": 6,
+            "announcement": 6,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 12,
+            "conversation": 3,
+            "announcement": 3,
+            "academic_talk": 2
+          }
+        },
+        {
+          "module_id": "M2H",
+          "title": "20261020A · M2H",
+          "question_count": 15,
+          "question_type_counts": {
+            "best_response": 3,
+            "conversation": 4,
+            "academic_talk": 8
+          },
+          "material_type_counts": {
+            "best_response": 3,
+            "conversation": 2,
+            "academic_talk": 2
+          }
+        }
+      ],
+      "description": "20261020A Listening Lab pack built from supplied M1/M2H audio, question PDFs, answer key, and transcript DOCX files; material windows checked with WebRTC VAD.",
+      "folder": "20261020A"
+    },
+    {
+      "schema_version": "1.0",
       "set_id": "20261019A",
       "title": "20261019A Listening",
       "pack_file": "pack.json",
