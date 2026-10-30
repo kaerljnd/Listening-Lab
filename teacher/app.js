@@ -1,7 +1,11 @@
 const API_BASE='https://listeni-lab-api-yuhpblgpyn.cn-hangzhou.fcapp.run';
 const KEY_STORAGE='listening-lab:teacher-key';
 const IS_LOCAL=['127.0.0.1','localhost'].includes(location.hostname);
-const PACK_URL=setId=>IS_LOCAL?`/packs/${encodeURIComponent(setId)}/pack.json`:`../practice_packs/${encodeURIComponent(setId)}/pack.json`;
+const PACK_ASSET_URL=(setId,path)=>{
+  const safe=String(path||'').split('/').filter(Boolean).map(encodeURIComponent).join('/');
+  return IS_LOCAL?`/packs/${encodeURIComponent(setId)}/${safe}`:`../practice_packs/${encodeURIComponent(setId)}/${safe}`;
+};
+const PACK_URL=setId=>PACK_ASSET_URL(setId,'pack.json');
 const app=document.getElementById('app');
 
 let teacherKey=sessionStorage.getItem(KEY_STORAGE)||'';
@@ -40,6 +44,13 @@ async function api(path){
   if(!res.ok||data.ok!==true)throw new Error(data.error||('API '+res.status));
   return data;
 }
+async function fetchPackPart(setId,path){
+  const res=await fetch(PACK_ASSET_URL(setId,path),{cache:'no-store'});
+  if(!res.ok)throw new Error('无法读取题包分片 '+setId+'/'+path+'（HTTP '+res.status+'）');
+  const data=await res.json();
+  if(!Array.isArray(data))throw new Error('题包分片格式错误：'+setId+'/'+path);
+  return data;
+}
 async function loadPack(setId){
   setId=String(setId||'').trim();
   if(!setId){answerMap=new Map();questionMeta=new Map();materialMeta=new Map();loadedSetId='';return;}
@@ -47,6 +58,16 @@ async function loadPack(setId){
   const res=await fetch(PACK_URL(setId),{cache:'no-store'});
   if(!res.ok)throw new Error('无法读取题包 '+setId+'（HTTP '+res.status+'）');
   const raw=await res.json();
+  for(const mod of raw.modules||[]){
+    if(!Array.isArray(mod.materials)&&Array.isArray(mod.materials_files)){
+      const parts=await Promise.all(mod.materials_files.map(path=>fetchPackPart(setId,path)));
+      mod.materials=parts.flat();
+    }
+    if(!Array.isArray(mod.questions)&&Array.isArray(mod.questions_files)){
+      const parts=await Promise.all(mod.questions_files.map(path=>fetchPackPart(setId,path)));
+      mod.questions=parts.flat();
+    }
+  }
   answerMap=new Map(); questionMeta=new Map(); materialMeta=new Map();
   for(const mod of raw.modules||[]){
     for(const mat of mod.materials||[]){materialMeta.set(mod.module_id+'-'+mat.material_id,{...mat,module_id:mod.module_id});}
