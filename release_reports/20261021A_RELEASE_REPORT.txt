@@ -1,0 +1,39 @@
+Listening Lab Pack Release Pipeline v1.0
+================================================
+Set: 20261021A
+Result: PASS
+
+CONTENT
+- M1: 32 questions / 20 materials
+- M2H: 15 questions / 7 materials
+- Total: 47 questions / 27 materials
+- Question -> material references: PASS
+- Four options per question: PASS
+- All answers verified: PASS
+- Listen-window validity: PASS
+- Listen-window overlap: PASS
+- Audio-window overflow: PASS
+
+AUDIO
+- M1.mp3: 24,885,364 bytes; source upload size matched exactly
+- M2H.mp3: 14,955,908 bytes; source upload size matched exactly
+- M1 duration: 1036.852245s; last material ends 953.19s
+- M2H duration: 623.124898s; last material ends 517.62s
+
+SOURCE NOTE
+- M2H source PDF omits the Question 4 page.
+- Q4 was explicitly reconstructed from the supplied conversation transcript and answer key.
+- source_reconstructed=true is retained in question JSON.
+
+RUNTIME COMPATIBILITY
+- Fragmented materials_files/questions_files: PASS
+- Student frontend fragmented-pack support: PASS
+- Teacher frontend fragmented-pack support: PASS
+- Safe normalized audio URL comparison: PASS
+- Audio filenames use M1.mp3 / M2H.mp3 (no space/%20 regression): PASS
+
+CATALOG
+- Published in practice_packs/catalog.json
+
+ONLINE SMOKE TEST
+- Pending Pages deployment verification at report creation.
