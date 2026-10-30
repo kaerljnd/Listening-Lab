@@ -184,7 +184,10 @@
     "answer_verified": true,
     "timer_sec": 30,
     "explanation": "",
-    "evidence": []
+    "evidence": [],
+    "answer_source": "supplied_answer_key",
+    "source_consistency_review_required": true,
+    "source_consistency_note": "Supplied answer key gives C; supplied talk transcript discusses mangroves as a mitigation mechanism, so semantic consistency should be teacher-reviewed."
   },
   {
     "question_id": "Q12",
@@ -201,7 +204,10 @@
     "answer_verified": true,
     "timer_sec": 30,
     "explanation": "",
-    "evidence": []
+    "evidence": [],
+    "answer_source": "supplied_answer_key",
+    "source_consistency_review_required": true,
+    "source_consistency_note": "Supplied answer key gives C; supplied talk is broadly about the American mulberry craze/economic bubble, so semantic consistency should be teacher-reviewed."
   },
   {
     "question_id": "Q13",
@@ -252,6 +258,9 @@
     "answer_verified": true,
     "timer_sec": 30,
     "explanation": "",
-    "evidence": []
+    "evidence": [],
+    "answer_source": "supplied_answer_key",
+    "source_consistency_review_required": true,
+    "source_consistency_note": "Supplied answer key gives C; supplied talk closes by framing the craze as a cautionary tale, so semantic consistency should be teacher-reviewed."
   }
 ]
