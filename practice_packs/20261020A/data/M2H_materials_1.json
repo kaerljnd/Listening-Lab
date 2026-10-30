@@ -1,0 +1,136 @@
+[
+  {
+    "material_id": "SR01",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      16.17,
+      18.57
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "It's not perfect, but let's keep this title.",
+    "question_ids": [
+      "Q1"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR02",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      32.49,
+      34.77
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Are you heading to the library after class?",
+    "question_ids": [
+      "Q2"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR03",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      51.3,
+      53.73
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Any chance you can finalize your slides today?",
+    "question_ids": [
+      "Q3"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "CONV01",
+    "type": "conversation",
+    "title": "Listen to a conversation.",
+    "listen_window": [
+      71.52,
+      103.44
+    ],
+    "visual": "../20260920A/images/conversation_pair.png",
+    "speaker_gender": "mixed",
+    "transcript": "Did that new shipment of textbooks come in yet? No, not yet. Wasn't it supposed to be here yesterday? That's what I thought. The semester starts next week. So soon, there are going to be lots of students stopping by our store to get their books. Right? We should talk to Amy about this. She probably received an email with details about tracking. Yes, you're probably right. I hope this doesn't become a trend. More shipments are set to come in tomorrow and the day after that,",
+    "question_ids": [
+      "Q4",
+      "Q5"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "CONV02",
+    "type": "conversation",
+    "title": "Listen to a conversation.",
+    "listen_window": [
+      144.51,
+      181.5
+    ],
+    "visual": "../20260920A/images/conversation_pair.png",
+    "speaker_gender": "mixed",
+    "transcript": "Our efforts have paid off. We've received additional funding from the university as well as several grants to support our arts program. Wonderful. I know how hard you worked on this. Everyone in the department contributed. Anyway, at the staff meeting, we have scheduled. We'll discuss how to allocate the funds. The grants offer specific purposes. We don't have much flexibility there. Did. we get the one to update our computers and design software? Partially? So we'll need to upgrade in phases. We'll start with the hardware first, because without it, we really can't run the software.",
+    "question_ids": [
+      "Q6",
+      "Q7"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "TALK01",
+    "type": "academic_talk",
+    "title": "Listen to a talk.",
+    "listen_window": [
+      221.94,
+      340.92
+    ],
+    "visual": "../20260920A/images/lecture_female.png",
+    "speaker_gender": "unknown",
+    "transcript": "One growing concern in marine biology is ocean acidification. This refers to the decrease in the pH of earth's ocean, mainly due to the absorption of carbon dioxide from the atmosphere. When carbon dioxide dissolves in seawater, it forms carbonic acid, which lowers the pH and alters the oceans chemical balance. This change has serious consequences for marine organisms, especially those that use calcium carbonate to build shells and skeletons, such as staghorn corals, pacific oysters, and certain types of plankton. As acidity increases, these organisms struggle to maintain their structures, resulting in weaker shells and unhealthy corals, coral reefs, such as the Great Barrier Reef in the Coral Sea, are particularly vulnerable. Their decline can lead to reduced biodiversity and disrupted ecosystems. Ocean acidification also affects fish. A 2023 study conducted by marine biologists at James Cook University, found that clownfish exposed to lower pH levels in reef environments had difficulty detecting the sound editors and navigating their surroundings. This sensory impairment may also interfere with reproduction, threatening population stability. To address this issue, efforts focus on reducing carbon dioxide emissions. This includes shifting to renewable energy, improving energy efficiency, and adopting sustainable practices. Additionally, protecting ecosystems like sea grass beds and mangrove can help absorb carbon dioxide and buffer acidification. Mangrove, in particular, can store up to 10 times more carbon per hectare than terrestrial forests. Understanding and mitigating ocean acidification is essential for preserving marine biodiversity and maintaining healthy oceans. It requires global cooperation and long term commitment.",
+    "question_ids": [
+      "Q8",
+      "Q9",
+      "Q10",
+      "Q11"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "TALK02",
+    "type": "academic_talk",
+    "title": "Listen to a talk.",
+    "listen_window": [
+      432.24,
+      564.75
+    ],
+    "visual": "../20260920A/images/lecture_female.png",
+    "speaker_gender": "unknown",
+    "transcript": "Earlier in class, we talked about the Dutch tulip craze of the early 1600s. A time when tulip bulbs became luxury symbols, prices soared and fortunes vanished almost overnight. It was one of history is first economic bubbles fueled by speculation and status. America had version in the early 19th century when the country was swept up in the mulberry craze. The idea sounded simple. Plant mulberry trees, raise the silkworms that eat their leaves, collect the silk from the worms, cocoons and rake in the profits. Silk was a prized luxury import and producing it locally promised enormous wealth. Farmers and investors rushed to buy mulberry sapling. Prices for the young trees soared from pennies to several dollars. Classic bubble behavior and the speculation wasn't all about money. Silk itself, the idea of silk carried powerful symbolism, refinement, status, and aspiration. For a brief moment, middle class americans. Imagine in silk dresses as attainable, blurring old class distance, but reality intervened. Silkworms are delicate, requiring precise care and stable climates. Harsh winters wiped out silkworm populations across the country. Mulberry groves lost their purpose. The trees lost their value. The bubble burst by the mid 1840 s folks who'd invested their fortunes in the venture were ruined financially. The bottom line I for us today, just like tulip mania in the Netherlands, the American mulberry craze shows how ambition and hype, pace, ecological and practical limits. This is a cautionary tale for modern day investment booms.",
+    "question_ids": [
+      "Q12",
+      "Q13",
+      "Q14",
+      "Q15"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  }
+]

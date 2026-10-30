@@ -1,0 +1,274 @@
+[
+  {
+    "question_id": "Q17",
+    "question_number": 17,
+    "material_id": "CONV03",
+    "stem": "What will the woman most likely buy?",
+    "options": [
+      "A small space heater",
+      "Some shelves for a small closet",
+      "Some storage space in the basement of her dormitory",
+      "A storage bin that can fit under a bed"
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q18",
+    "question_number": 18,
+    "material_id": "CONV03",
+    "stem": "What can be concluded about the man?",
+    "options": [
+      "He used to work in the campus store.",
+      "He lives with a roommate in an off-campus apartment.",
+      "He has reported problems to the maintenance department before.",
+      "He has a friend who works in the housing services office."
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q19",
+    "question_number": 19,
+    "material_id": "ANN01",
+    "stem": "What event is the announcement mainly about?",
+    "options": [
+      "An outdoor camping trip",
+      "A rescheduled meeting",
+      "A football game",
+      "A film screening"
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q20",
+    "question_number": 20,
+    "material_id": "ANN01",
+    "stem": "How does the speaker expect students to feel when they hear the announcement?",
+    "options": [
+      "Excited",
+      "Disappointed",
+      "Doubtful",
+      "Surprised"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q21",
+    "question_number": 21,
+    "material_id": "ANN02",
+    "stem": "What does the speaker say is a fundamental part of the assignment she discusses?",
+    "options": [
+      "Developing questions to refer to while listening to a conversation",
+      "Recording a conversation to ensure the transcription's accuracy",
+      "Maintaining the privacy of the people holding a conversation",
+      "Working with a classmate to analyze a conversation"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q22",
+    "question_number": 22,
+    "material_id": "ANN02",
+    "stem": "According to the announcement, what should be explained in the assignment's analysis?",
+    "options": [
+      "How well the participants in the conversation know each other",
+      "How the participants in the conversation support a position",
+      "Whether the evidence used in the conversation is accurate",
+      "Whether the conversation is casual or formal"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q23",
+    "question_number": 23,
+    "material_id": "ANN03",
+    "stem": "According to the speaker, what is one task listeners can do on the university website?",
+    "options": [
+      "Get tickets",
+      "Reserve a hotel",
+      "Check a schedule",
+      "Apply to graduate school"
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q24",
+    "question_number": 24,
+    "material_id": "ANN03",
+    "stem": "What change from last year does the speaker describe?",
+    "options": [
+      "Where graduation information can be accessed",
+      "When a graduation ceremony will take place",
+      "How graduation rehearsals will be run",
+      "Who will speak at a graduation ceremony"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q25",
+    "question_number": 25,
+    "material_id": "TALK01",
+    "stem": "Why does the speaker discuss the Kuiper Belt at the beginningg of the talk?",
+    "options": [
+      "To explain why Pluto's status changed",
+      "To illustrate Pluto's size",
+      "To emphasize how far Pluto is from the Sun",
+      "To make a point about Pluto's shape"
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q26",
+    "question_number": 26,
+    "material_id": "TALK01",
+    "stem": "How did new data change scientists' understanding of Pluto?",
+    "options": [
+      "It has a longer orbit than previously thought.",
+      "It has a wider variety of features than previously thought.",
+      "It used to be larger in the past than previously thought.",
+      "It has larger amounts of rainfall than previously thought."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q27",
+    "question_number": 27,
+    "material_id": "TALK01",
+    "stem": "What point does the speaker make about convection in Pluto's ice basin?",
+    "options": [
+      "It is making the surface of the ice basin grow larger.",
+      "It suggests that volcanoes exist on Pluto.",
+      "It continuously moves warmer ice to the basin's surface.",
+      "It creates strong winds that blow across Pluto's surface."
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q28",
+    "question_number": 28,
+    "material_id": "TALK01",
+    "stem": "According to the speaker, what could the presence of an ocean on Pluto mean?",
+    "options": [
+      "Pluto orbits closer to the Sun than expected.",
+      "A huge amount of salt exists throughout Pluto.",
+      "Objects in the Kuiper Belt could support life.",
+      "Pluto's ice might be melting."
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q29",
+    "question_number": 29,
+    "material_id": "TALK02",
+    "stem": "What does the speaker mainly discuss?",
+    "options": [
+      "The way Norman Lewis’ paintings influenced other artists",
+      "The development of Norman Lewis’ artistic style over time",
+      "Norman Lewis’ views on abstract expressionist art",
+      "The best-known examples of Norman Lewis’ art"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q30",
+    "question_number": 30,
+    "material_id": "TALK02",
+    "stem": "What is the speaker's attitude about Norman Lewis' professional success?",
+    "options": [
+      "He is frustrated that Lewis was underappreciated during his lifetime.",
+      "He is confused by the analyses of Lewis’ work that appeared in publications.",
+      "He is disappointed in the way critics responded to Lewis’ paintings.",
+      "He is surprised that Lewis made a living by selling his lesser-known paintings."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q31",
+    "question_number": 31,
+    "material_id": "TALK02",
+    "stem": "Why does the speaker refer to a painting of an older man and woman called “American Gothic”?",
+    "options": [
+      "To indicate a painting that influenced artists in Harlem",
+      "To contrast social realism with abstract expressionism",
+      "To give an example of a work of social realism",
+      "To introduce a sociopolitical issue of Lewis' lifetime"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q32",
+    "question_number": 32,
+    "material_id": "TALK02",
+    "stem": "According to the speaker, what happened around 1950?",
+    "options": [
+      "Lewis became the leader of the 306 Group.",
+      "Lewis began working with other Black artists in New York.",
+      "Lewis used Migratory Birds to make a political statement.",
+      "Lewis began to focus more on abstract expressionism."
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  }
+]

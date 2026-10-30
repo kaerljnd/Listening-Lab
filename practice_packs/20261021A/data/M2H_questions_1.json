@@ -1,0 +1,259 @@
+[
+  {
+    "question_id": "Q1",
+    "question_number": 1,
+    "material_id": "SR01",
+    "stem": "Choose the best response.",
+    "options": [
+      "Not a bad idea for a weekend trip.",
+      "It's okay, I think the professor will like it.",
+      "Don't worry, I'll keep it somewhere safe.",
+      "We can go there tomorrow."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q2",
+    "question_number": 2,
+    "material_id": "SR02",
+    "stem": "Choose the best response.",
+    "options": [
+      "My literature professor is really engaging.",
+      "I think we're doing a good job so far.",
+      "I can help you hold it in place.",
+      "Not sure—I'm not familiar with this street."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q3",
+    "question_number": 3,
+    "material_id": "SR03",
+    "stem": "Choose the best response.",
+    "options": [
+      "No problem, it wasn't hard to find the place.",
+      "Yes, more students need to register for this course.",
+      "I decided not to go, sorry.",
+      "Weren't you going to join the club?"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q4",
+    "question_number": 4,
+    "material_id": "CONV01",
+    "stem": "Why did the man originally choose economics as his major?",
+    "options": [
+      "He enjoyed an introductory economics course.",
+      "He expected economics courses to be easy.",
+      "He wanted to prepare for a career in finance.",
+      "A professor recommended the major to him."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": [],
+    "source_reconstructed": true,
+    "source_note": "Source PDF omitted Q4 page; question reconstructed from supplied conversation transcript and answer key. Distractors are reconstructed."
+  },
+  {
+    "question_id": "Q5",
+    "question_number": 5,
+    "material_id": "CONV01",
+    "stem": "What does the woman suggest that the man should do?",
+    "options": [
+      "Take notes at lectures",
+      "Speak with a professor",
+      "Spend more time studying",
+      "Change his major"
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q6",
+    "question_number": 6,
+    "material_id": "CONV02",
+    "stem": "What attitude does the woman express about an internship in Chicago?",
+    "options": [
+      "Surprise that few students were interested in it",
+      "Excitement about working with other students during it",
+      "Disappointment that she was not chosen for it",
+      "Concern that she has not heard back about it"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q7",
+    "question_number": 7,
+    "material_id": "CONV02",
+    "stem": "What does the woman indicate about the local newspaper?",
+    "options": [
+      "It hires many recent university graduates.",
+      "It rejected a story that she wanted to publish.",
+      "She learned from the career center about a job there.",
+      "She is not interested in working there."
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q8",
+    "question_number": 8,
+    "material_id": "TALK01",
+    "stem": "What was transported on the ship that is discussed in the talk?",
+    "options": [
+      "Metal for making various objects",
+      "Expensive items for sale",
+      "Writing by ancient scientists",
+      "A large number of passengers"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q9",
+    "question_number": 9,
+    "material_id": "TALK01",
+    "stem": "The name “Antikythera mechanism” comes from the name of the",
+    "options": [
+      "location near which it was found",
+      "Greek scientist who created it",
+      "scholar who determined what it is",
+      "market in which it was originally sold"
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q10",
+    "question_number": 10,
+    "material_id": "TALK01",
+    "stem": "What was the purpose of the Antikythera mechanism?",
+    "options": [
+      "To help ships move faster",
+      "To predict astronomical events",
+      "To make statues quickly",
+      "To calculate ship travel times"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q11",
+    "question_number": 11,
+    "material_id": "TALK01",
+    "stem": "What device does the speaker compare the Antikythera mechanism to?",
+    "options": [
+      "An electronic watch",
+      "A mechanical clock",
+      "A computer",
+      "A telescope"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q12",
+    "question_number": 12,
+    "material_id": "TALK02",
+    "stem": "What is the speaker's main attitude toward the zipper?",
+    "options": [
+      "He is excited about possible future developments in its design.",
+      "He is impressed by the variety of its designs.",
+      "He is highly annoyed by how frequently problems occur with it.",
+      "He feels that people do not appreciate its role enough."
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q13",
+    "question_number": 13,
+    "material_id": "TALK02",
+    "stem": "What does the speaker imply about the earliest form of the zipper?",
+    "options": [
+      "It included hooks and buttons.",
+      "It was not very popular.",
+      "It was made from metal.",
+      "It was used mostly in bags."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q14",
+    "question_number": 14,
+    "material_id": "TALK02",
+    "stem": "What did Gideon Sundback invent?",
+    "options": [
+      "The zipper's glider",
+      "The zipper's uniform teeth",
+      "A new way to attach zippers to clothing",
+      "A way to make zippers strong enough for holding luggage"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q15",
+    "question_number": 15,
+    "material_id": "TALK02",
+    "stem": "How did the zipper change traveling?",
+    "options": [
+      "It made carrying luggage easier.",
+      "It caused people to spend more on fashionable suitcases.",
+      "It encouraged people to pack less clothing.",
+      "It allowed people to travel in more comfortable clothing."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  }
+]

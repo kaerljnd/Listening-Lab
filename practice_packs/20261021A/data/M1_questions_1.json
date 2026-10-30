@@ -1,0 +1,274 @@
+[
+  {
+    "question_id": "Q1",
+    "question_number": 1,
+    "material_id": "SR01",
+    "stem": "Choose the best response.",
+    "options": [
+      "There are some exceptions to this rule.",
+      "I haven't visited the library yet.",
+      "I believe it's due next week.",
+      "I think we should stay in line a little longer."
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q2",
+    "question_number": 2,
+    "material_id": "SR02",
+    "stem": "Choose the best response.",
+    "options": [
+      "I know, but the lecture was postponed.",
+      "I'm worried the professors will ask tough questions.",
+      "You always have the coolest shoes.",
+      "Yes, that's the easiest way to stay hydrated."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q3",
+    "question_number": 3,
+    "material_id": "SR03",
+    "stem": "Choose the best response.",
+    "options": [
+      "Later on this afternoon.",
+      "The study room is booked.",
+      "No, check with Oscar first.",
+      "Yes, I left them on his desk."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q4",
+    "question_number": 4,
+    "material_id": "SR04",
+    "stem": "Choose the best response.",
+    "options": [
+      "Sounds like you two had a great time!",
+      "Yes, the film was somewhat dated.",
+      "Yes, it's next Wednesday at 7 p.m.",
+      "Are you visiting family this weekend?"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q5",
+    "question_number": 5,
+    "material_id": "SR05",
+    "stem": "Choose the best response.",
+    "options": [
+      "That's true—let's focus on what's crucial.",
+      "There was a lot of extra food left over.",
+      "You're right—let's add a few extra slides.",
+      "My schedule hasn't changed much."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q6",
+    "question_number": 6,
+    "material_id": "SR06",
+    "stem": "Choose the best response.",
+    "options": [
+      "We will definitely have to spend some late nights at the library.",
+      "She deserves all the credit for the project's completion.",
+      "I forgot to talk to my advisor yesterday.",
+      "It's important to periodically take time off from schoolwork."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q7",
+    "question_number": 7,
+    "material_id": "SR07",
+    "stem": "Choose the best response.",
+    "options": [
+      "Play rehearsals went well yesterday.",
+      "Her speech was really engaging.",
+      "We should go there at some point next week.",
+      "Let's practice tonight and make it perfect."
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q8",
+    "question_number": 8,
+    "material_id": "SR08",
+    "stem": "Choose the best response.",
+    "options": [
+      "The seminar room is available to book.",
+      "I don't know where it is either.",
+      "Not today, but we should submit it soon.",
+      "I think it was rescheduled for next week."
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q9",
+    "question_number": 9,
+    "material_id": "SR09",
+    "stem": "Choose the best response.",
+    "options": [
+      "The previous session covered audio.",
+      "Students were asked to sign in before the session started.",
+      "The class registration page said space was limited.",
+      "I learned a few shortcuts I didn't know before."
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q10",
+    "question_number": 10,
+    "material_id": "SR10",
+    "stem": "Choose the best response.",
+    "options": [
+      "All my classes have projects instead of exams.",
+      "Checking the course website might be faster.",
+      "Yes, it's 6:30 p.m.",
+      "Yes, I usually do my homework in the morning."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q11",
+    "question_number": 11,
+    "material_id": "SR11",
+    "stem": "Choose the best response.",
+    "options": [
+      "Sure, I'd be happy to.",
+      "No, I don't need any help.",
+      "It's incomplete.",
+      "I'll ask you some other time."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q12",
+    "question_number": 12,
+    "material_id": "SR12",
+    "stem": "Choose the best response.",
+    "options": [
+      "They used to, but right now they don't.",
+      "I'd love to volunteer at the library.",
+      "They offered me more hours at the tutoring center.",
+      "Let me check my schedule."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q13",
+    "question_number": 13,
+    "material_id": "CONV01",
+    "stem": "What event are the speakers discussing?",
+    "options": [
+      "A picnic",
+      "A hiking trip",
+      "A beach outing",
+      "A cycling tour"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q14",
+    "question_number": 14,
+    "material_id": "CONV01",
+    "stem": "Where will the group meet?",
+    "options": [
+      "At a community center",
+      "At a park entrance",
+      "At a bus station",
+      "At a visitor center"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q15",
+    "question_number": 15,
+    "material_id": "CONV02",
+    "stem": "What does the woman indicate about the novel she borrowed from the library?",
+    "options": [
+      "It was renewed twice.",
+      "It is overdue.",
+      "She cited it in her psychology paper.",
+      "She is still reading it."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q16",
+    "question_number": 16,
+    "material_id": "CONV02",
+    "stem": "What is implied about the library?",
+    "options": [
+      "It is not near the speakers' classes.",
+      "It is next to the man's residence hall.",
+      "It is open late on Friday nights.",
+      "It is closed today due to a snowstorm."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  }
+]

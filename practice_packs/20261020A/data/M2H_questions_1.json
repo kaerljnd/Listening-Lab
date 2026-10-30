@@ -1,0 +1,257 @@
+[
+  {
+    "question_id": "Q1",
+    "question_number": 1,
+    "material_id": "SR01",
+    "stem": "Choose the best response.",
+    "options": [
+      "Not a bad idea for a weekend trip.",
+      "It's okay, I think the professor will like it.",
+      "Don't worry, I'll keep it somewhere safe.",
+      "We can go there tomorrow."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q2",
+    "question_number": 2,
+    "material_id": "SR02",
+    "stem": "Choose the best response.",
+    "options": [
+      "I'm glad we don't have classes early in the morning.",
+      "Yes, it will be closed by then.",
+      "Not before I have a quick nap.",
+      "I hope the bookstore has them in stock."
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q3",
+    "question_number": 3,
+    "material_id": "SR03",
+    "stem": "Choose the best response.",
+    "options": [
+      "I'll have them done shortly.",
+      "I already returned them to the library.",
+      "I'm not sure when it ends.",
+      "They already ended yesterday."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q4",
+    "question_number": 4,
+    "material_id": "CONV01",
+    "stem": "Why does the man suggest that the speakers talk to Amy?",
+    "options": [
+      "Amy has not replied to an important email the woman sent her.",
+      "The speakers do not know how to order a shipment of books.",
+      "Some books Amy ordered have arrived at the bookstore.",
+      "Amy should have important information for them about a package."
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q5",
+    "question_number": 5,
+    "material_id": "CONV01",
+    "stem": "What concern does the woman express about future shipments of books?",
+    "options": [
+      "That they might not arrive on time",
+      "That they will contain the wrong textbooks",
+      "That they will not arrive in good condition",
+      "That the bookstore will have no place to put them"
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q6",
+    "question_number": 6,
+    "material_id": "CONV02",
+    "stem": "What are the speakers mainly discussing?",
+    "options": [
+      "A new academic program",
+      "A trip to an art museum",
+      "A department's financial resources",
+      "An upcoming grant opportunity"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q7",
+    "question_number": 7,
+    "material_id": "CONV02",
+    "stem": "What does the man say will be upgraded first?",
+    "options": [
+      "Some design software",
+      "Computer hardware",
+      "A course catalog",
+      "A meeting schedule"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q8",
+    "question_number": 8,
+    "material_id": "TALK01",
+    "stem": "What is the main topic of the talk?",
+    "options": [
+      "The benefits of coral reef ecosystems",
+      "The behavior of fish in marine environments",
+      "The causes and effects of ocean acidification",
+      "The role of renewable energy in ocean science"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q9",
+    "question_number": 9,
+    "material_id": "TALK01",
+    "stem": "According to the speaker, what challenge are shell-building organisms facing?",
+    "options": [
+      "They have difficulty preserving their physical structures",
+      "They need to search for calcium-rich food sources",
+      "They must migrate to escape acidic conditions",
+      "Their shells are growing larger than usual"
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q10",
+    "question_number": 10,
+    "material_id": "TALK01",
+    "stem": "According to the speaker, what is one effect of changes in ocean chemistry on clown fish?",
+    "options": [
+      "They migrate to colder regions of the ocean",
+      "They become more aggressive towards each other.",
+      "They lose the ability to regulate body temperature.",
+      "They have difficulty perceiving their surroundings"
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q11",
+    "question_number": 11,
+    "material_id": "TALK01",
+    "stem": "Why does the speaker mention mangroves?",
+    "options": [
+      "To identify organisms most vulnerable to acidification",
+      "To explain a way to mitigate acidification",
+      "To describe symbiotic relationships in marine ecosystems",
+      "To highlight the importance of marine biodiversity"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q12",
+    "question_number": 12,
+    "material_id": "TALK02",
+    "stem": "What does the speaker mainly discuss?",
+    "options": [
+      "A notable economic bubble in American history",
+      "The problems involved in importing silk to the United States",
+      "Silk's effect on social class distinctions in the United States",
+      "Differences between the Dutch and American economies"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q13",
+    "question_number": 13,
+    "material_id": "TALK02",
+    "stem": "Why does the speaker mention the value of silk as an import?",
+    "options": [
+      "To indicate why there was relatively little silk in the United States",
+      "To emphasize that luxury goods often lose value",
+      "To explain the motivation behind purchasing mulberry trees",
+      "To highlight the growing prosperity in the United States"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q14",
+    "question_number": 14,
+    "material_id": "TALK02",
+    "stem": "According to the speaker, why did mulberry groves lose their value?",
+    "options": [
+      "Insect pests damaged most of the trees",
+      "Economic difficulties reduced the demand for silk",
+      "Overproduction of silkworms brought down the price of silk.",
+      "The climate made raising silkworms too difficult"
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q15",
+    "question_number": 15,
+    "material_id": "TALK02",
+    "stem": "What view does the speaker express regarding the tulip and mulberry crazes?",
+    "options": [
+      "They were inevitable outcomes of technological progress.",
+      "They warn about investing without careful judgment.",
+      "They helped economic growth in the short term.",
+      "They were unusual events and unlikely to happen again."
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 30,
+    "explanation": "",
+    "evidence": []
+  }
+]

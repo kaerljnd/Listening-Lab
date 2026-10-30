@@ -1,0 +1,194 @@
+[
+  {
+    "material_id": "SR11",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      215.1,
+      218.4
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Which artist is featured in the gallery's new exhibit?",
+    "question_ids": [
+      "Q11"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR12",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      242.07,
+      245.61
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Seems like the lab is locked. Do we wait or leave?",
+    "question_ids": [
+      "Q12"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "CONV01",
+    "type": "conversation",
+    "title": "Listen to a conversation.",
+    "listen_window": [
+      271.62,
+      301.53
+    ],
+    "visual": "../20260920A/images/conversation_pair.png",
+    "speaker_gender": "mixed",
+    "transcript": "You're the founder of the martial arts club, right? One of the cofounders, you wanna, actually, I need help with the application to start a new student organization. The instructions on the university website are impossible to understand. I wasn't really involved in that, but let me send you Naomi's contact information. Naomi is my cofounder. Great. I wanna start a geology club. geology, no offense, but do you think there'd be enough interest?",
+    "question_ids": [
+      "Q13",
+      "Q14"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "CONV02",
+    "type": "conversation",
+    "title": "Listen to a conversation.",
+    "listen_window": [
+      345.24,
+      368.4
+    ],
+    "visual": "../20260920A/images/conversation_pair.png",
+    "speaker_gender": "mixed",
+    "transcript": "Hi, Mike. Have you booked your flight for the conference yet? I'm still trying to find the best deal. Have you booked yours? Last night? I got a great price by using a travel app, which one called. bear trip. My brother told me about it. He got great hotel prices for our family vacation. Thanks for the tip.",
+    "question_ids": [
+      "Q15",
+      "Q16"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "CONV03",
+    "type": "conversation",
+    "title": "Listen to a conversation.",
+    "listen_window": [
+      403.47,
+      434.55
+    ],
+    "visual": "../20260920A/images/conversation_pair.png",
+    "speaker_gender": "mixed",
+    "transcript": "you still need help brainstorming ideas for your next painting? I wanted to help yesterday. If I didn't get to my job on time, I would have gotten in a lot of trouble. No worries. In fact, I decided I'm going to paint that tree by the pond, old lonesome tree, as it's affectionately called on campus. That's an interesting idea. Yeah. Honestly, I was watching a cartoon with my niece last night, and a tree was a key plot point.",
+    "question_ids": [
+      "Q17",
+      "Q18"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "ANN01",
+    "type": "announcement",
+    "title": "Listen to an announcement.",
+    "listen_window": [
+      477.36,
+      503.67
+    ],
+    "visual": "../20260920A/images/announcement_male.png",
+    "speaker_gender": "unknown",
+    "transcript": "This Saturday's culinary club event will take place on the quad from noon until three. After a barbecue lunch sponsored by the club, the main feature will be a recipe swap where club members and nonmembers alike can trade printouts of their favorite recipes. Local restaurants have been invited to set up booths. Can learn about the restaurant business and even apply for part time positions. Admission is free, but capacity is limited.",
+    "question_ids": [
+      "Q19",
+      "Q20"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "ANN02",
+    "type": "announcement",
+    "title": "Listen to an announcement.",
+    "listen_window": [
+      540.78,
+      570.45
+    ],
+    "visual": "../20260920A/images/announcement_male.png",
+    "speaker_gender": "unknown",
+    "transcript": "Before we begin our film screening, I want to invite you all to the regional university debate championship on Thursday at 7:00 pm in the student center auditorium. We're excited to be hosting this special event for the second year in a row. Come see your very own Nordgren university debate team, take on the south Melville university team, learn new perspectives, cheer on your friends, and enjoy complimentary snacks. Registration is free. Just sign up on the debate teams website soon.",
+    "question_ids": [
+      "Q21",
+      "Q22"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "ANN03",
+    "type": "announcement",
+    "title": "Listen to an announcement.",
+    "listen_window": [
+      611.76,
+      641.28
+    ],
+    "visual": "../20260920A/images/announcement_male.png",
+    "speaker_gender": "unknown",
+    "transcript": "Since this is our last club meeting before our ski trip, let's make sure we're all on the same page. We'll meet in front of the student center at 4:00 pm on Thursday to catch the bus. It should be about a 4 hour bus ride to the ski area. Remember, we're crossing the border into Canada, so bring your passports, credit and debit cards are widely accepted and often have the best exchange rate. So don't worry about withdrawing cash.",
+    "question_ids": [
+      "Q23",
+      "Q24"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "TALK01",
+    "type": "academic_talk",
+    "title": "Listen to a talk.",
+    "listen_window": [
+      680.1,
+      775.86
+    ],
+    "visual": "../20260920A/images/lecture_female.png",
+    "speaker_gender": "unknown",
+    "transcript": "Today we're discussing the concept of dark stores that is retail centers that resemble warehouses and are usually located near city centers. Unlike traditional fronts, they are not designed for walk in customers, but function as fulfillment hubs optimized for rapid online delivery. The rise of dark stores has been fueled by the growing demand for online shopping, especially in urban areas where space is limited and rent is high. The main appeal of dark stores lies in their efficiency. By eliminating the traditional store front, businesses can reduce overhead costs and pass savings on to consumers through lower prices. Their proximity to dense urban areas also allows for faster delivery times, meeting the expectations of customers who value, speed and convenience. For instance, a company might deliver groceries in under an hour, giving it a major vantage over traditional supermarkets. However, dark stores are not without drawbacks. Their expansion can contribute to the decline of traditional retail spaces, creating economic challenges for local businesses. Employment is another concern while these centers generate jobs in logistics and delivery. They may reduce the number of customer facing roles available in physical stores. Looking ahead, many experts predict that dark stores will continue to reshape the retail landscape. Some may adopt advanced automation, further reducing the need for human labor and potentially redefining the shopping experience itself. As with other technological shifts, the key Challenge will be balancing efficiency, broader social and economic implications of these changes.",
+    "question_ids": [
+      "Q25",
+      "Q26",
+      "Q27",
+      "Q28"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "TALK02",
+    "type": "academic_talk",
+    "title": "Listen to a talk.",
+    "listen_window": [
+      873.18,
+      987.45
+    ],
+    "visual": "../20260920A/images/lecture_female.png",
+    "speaker_gender": "unknown",
+    "transcript": "Today we're diving into the dynamic and often unpredictable world of viral marketing. Viral marketing is a strategy that has redefined how brands connect with audiences in the digital age. Viral marketing harnesses the power of social networks, relying on individuals to share content that resonates, entertains or provokes thought. When executed, effectively, a viral campaign can generate massive exposure. This amplifies brand at a fraction of the cost of traditional advertising methods. You don't need to pay for ads when the video or meme is exploding on its own. What makes viral marketing compelling is its potential for exponential reach. A single post video or meme can cascade through online communities crossing geographic and demographic boundaries in mere hours. But this strategy is far from foolproof. One of the biggest is unpredictability. There's no guaranteed formula for vitality. What resonates with one audience may be ignored by another. And content that's edgy or controversial may be more likely to go viral, but it can also spark backlash and damage a company's reputation. Another risk is loss of control. Once content goes viral, it's no longer in the hands of the brand. Means remix is and commentary can distort the message sometimes in ways that conflict with the brand's values or goals. But despite these risks, viral marketing remains an invaluable tool, particularly for startups and emerging brands seeking rapid traction. Next, let's talk about some case studies of particularly effective viral marketing campaigns.",
+    "question_ids": [
+      "Q29",
+      "Q30",
+      "Q31",
+      "Q32"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  }
+]

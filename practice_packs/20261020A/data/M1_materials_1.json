@@ -1,0 +1,182 @@
+[
+  {
+    "material_id": "SR01",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      29.88,
+      31.8
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Can you tell me where the student lounge is?",
+    "question_ids": [
+      "Q1"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR02",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      49.89,
+      52.41
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "We should keep the vibe upbeat during the seminar.",
+    "question_ids": [
+      "Q2"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR03",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      69.42,
+      71.1
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Mind grabbing the attendance sheet?",
+    "question_ids": [
+      "Q3"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR04",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      87.3,
+      89.97
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Mind if we switch seats for the next lecture?",
+    "question_ids": [
+      "Q4"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR05",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      101.49,
+      103.23
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "I'm presenting my paper at noon.",
+    "question_ids": [
+      "Q5"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR06",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      126.15,
+      128.37
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "I think we should reschedule our meeting.",
+    "question_ids": [
+      "Q6"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR07",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      142.59,
+      145.17
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "How can I access the training videos online?",
+    "question_ids": [
+      "Q7"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR08",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      163.92,
+      166.62
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "What do you think of the new classroom policy?",
+    "question_ids": [
+      "Q8"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR09",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      180.48,
+      182.55
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "What did you think of the recent seminar?",
+    "question_ids": [
+      "Q9"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR10",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      196.47,
+      198.75
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Are you interested in joining the robotics club?",
+    "question_ids": [
+      "Q10"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  }
+]

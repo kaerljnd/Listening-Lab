@@ -1,0 +1,136 @@
+[
+  {
+    "material_id": "SR01",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      19.23,
+      21.87
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "It's not perfect, but let's keep this title.",
+    "question_ids": [
+      "Q1"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR02",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      34.02,
+      36.6
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Do you think we're on the right track with our literature review?",
+    "question_ids": [
+      "Q2"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR03",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      49.98,
+      53.49
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "If you join the student orientation, could you please share the schedule?",
+    "question_ids": [
+      "Q3"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "CONV01",
+    "type": "conversation",
+    "title": "Listen to a conversation.",
+    "listen_window": [
+      68.25,
+      109.77
+    ],
+    "visual": "../20260920A/images/conversation_pair.png",
+    "speaker_gender": "mixed",
+    "transcript": "are your economics classes going? Miserably? That bad. But. occasionally the lectures are interesting, but usually I can't wait for classes to end. I thought you were interested in economics. So. I like the introduction course I took last year. That's the reason I declared economics as my major. But as I dive a little deeper into the subject, what about your other classes? My. anthropology class is awesome. The professor is engaging and the lectures are really engrossing, then. take more anthropology. It's not too late to shift to a different specialization.",
+    "question_ids": [
+      "Q4",
+      "Q5"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "CONV02",
+    "type": "conversation",
+    "title": "Listen to a conversation.",
+    "listen_window": [
+      144.87,
+      183.6
+    ],
+    "visual": "../20260920A/images/conversation_pair.png",
+    "speaker_gender": "mixed",
+    "transcript": "Did you hear back about that internship in Chicago? They decided to go with someone else. Sorry to hear that. I was some experience at a large newspaper. The idea of working with professionals on such a prestigious paper was right up my alley. I heard about an opportunity at the local newspaper in town. It's not as glamorous as the one in Chicago, but I heard about that. I've actually already had a couple of stories published there. I was hoping for something bigger. I'll check with the career center to learn about other opportunities.",
+    "question_ids": [
+      "Q6",
+      "Q7"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "TALK01",
+    "type": "academic_talk",
+    "title": "Listen to a talk.",
+    "listen_window": [
+      226.05,
+      342.54
+    ],
+    "visual": "../20260920A/images/lecture_female.png",
+    "speaker_gender": "unknown",
+    "transcript": "talk about the Antikythera mechanism. The Antikythera mechanism is an ancient mechanical device made of metal gears that was used to make calculations about the sky. It was discovered in a cargo ship that sank around 60 to 70 BCE probably during a storm near the Greek island of Antikythera, the ship was carrying luxury goods, use glassware and other fancy items, likely headed for wealthy buyers in ancient Rome. Just over 100 years ago, divers accidentally discovered the wreck. At first, they thought they were seeing dead bodies on the ocean floor. But those turned out to be bronze and marble statues. Among those artifacts was a small, corroded lump of metal that didn't seem important. Until scientists later realized it had tiny gears inside. That object is what we now call the Antikythera mechanism, named after the island near which it was found. Most scholars think Greek scientists built it around 100 BCE although we don't know exactly who. And this device could model astronomical movements. It's really amazing when you turn to crank the gears, moved size ways to predict the positions of the sun and moon, the phases of the moon and even eclipses. Because it performs calculations, it's thought of as the world's first analog computer. It's not electronic, but the way it works, it's based on the same idea that your laptops are based on input, processing and output.",
+    "question_ids": [
+      "Q8",
+      "Q9",
+      "Q10",
+      "Q11"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "TALK02",
+    "type": "academic_talk",
+    "title": "Listen to a talk.",
+    "listen_window": [
+      431.07,
+      517.62
+    ],
+    "visual": "../20260920A/images/lecture_female.png",
+    "speaker_gender": "unknown",
+    "transcript": "Have you had a zipper betray? You stuck halfway, teeth misaligned. And so negotiating with your jacket, like it's got a personality that kind of failure is annoying, but it's only noticeable because properly functioning zippers are seen as a given. The modest zipper is actually a big deal when its earliest form was invented in the late 19th century. People weren't super impressed hoax, and buttons had been around forever, and people thought they worked well enough. The first versions of the zipper weren't sleek. They were fussy. They jammed. Basically, they malfunctioned much more commonly than they do today. In other words, they weren't a must have. This zipper take off was a new design that was invented by a Swedish American engineer named Gideon Sundback. Sun backs idea was to create uniform metal teeth with these teeth. All of the exact same size, the slider could now reliably glide into place in a single motion. The zippers impact on everyday life has been huge since designers of bags and clothing could stop planning around slow or fragile closures. Suitcases could now pack more stuff without being as bulky, because luggage noted unwieldy straps and buckles. So traveling became more convenient. Outdoor clothing became easier to seal with one hand. That meant you could close a pocket while holding something else. We're now so used to this convenience that we take it for granted.",
+    "question_ids": [
+      "Q12",
+      "Q13",
+      "Q14",
+      "Q15"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  }
+]

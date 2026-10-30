@@ -1,0 +1,194 @@
+[
+  {
+    "material_id": "SR11",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      183.66,
+      186.84
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Can you help me understand the instructions for this homework?",
+    "question_ids": [
+      "Q11"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR12",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      198.21,
+      201.33
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Do you know if the library offers interlibrary loans?",
+    "question_ids": [
+      "Q12"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "CONV01",
+    "type": "conversation",
+    "title": "Listen to a conversation.",
+    "listen_window": [
+      216.21,
+      234.33
+    ],
+    "visual": "../20260920A/images/conversation_pair.png",
+    "speaker_gender": "mixed",
+    "transcript": "you going on the hiking trip this weekend? Yes, i've been wanting to explore the trails in the national park. Me, too. Do? You know, what time. we're meeting at the park entrance at 8:00 am don't forget to bring water and snacks. Thanks. I'll make sure to pack everything. See you there.",
+    "question_ids": [
+      "Q13",
+      "Q14"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "CONV02",
+    "type": "conversation",
+    "title": "Listen to a conversation.",
+    "listen_window": [
+      262.23,
+      294.45
+    ],
+    "visual": "../20260920A/images/conversation_pair.png",
+    "speaker_gender": "mixed",
+    "transcript": "The library suspended its fines for late returns because of last week's snowstorm. Great. The novel I borrowed was due back 2 days ago. You still have to return it today or tomorrow to avoid a late fine. I need to work on a psychology paper that's due tomorrow night. I was gonna work on it till the last minute. Would you return the novel for me? The library is all the way across campus, and I can't see myself getting over there anytime soon. It's off my beaten path, but i'll help you out.",
+    "question_ids": [
+      "Q15",
+      "Q16"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "CONV03",
+    "type": "conversation",
+    "title": "Listen to a conversation.",
+    "listen_window": [
+      334.86,
+      379.71
+    ],
+    "visual": "../20260920A/images/conversation_pair.png",
+    "speaker_gender": "mixed",
+    "transcript": "Are you settled into your new dorm? I'm. still unpacking. I spent hours yesterday trying to organize things. The closet is half the size of my old one. I use a storage bin that fits under my bed. Bins are sold in the campus store. Tip, thanks. There's another problem. The heating doesn't work. I froze last night. Did you report it to maintenance? Not yet, don't delay. It, usually takes a few days to respond to complaints, at least in this building. Meanwhile, you could borrow a space heater from housing services.",
+    "question_ids": [
+      "Q17",
+      "Q18"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "ANN01",
+    "type": "announcement",
+    "title": "Listen to an announcement.",
+    "listen_window": [
+      420.69,
+      445.08
+    ],
+    "visual": "../20260920A/images/announcement_male.png",
+    "speaker_gender": "unknown",
+    "transcript": "Good morning students. We regret to inform you that tonight's outdoor movie screening at the university stadium has been cancelled due to the rain in the forecast. We understand many of you were looking forward to this event. We sincerely apologise for not being able to go ahead with it. We'll try to reschedule the screening for next Saturday after the football game. Please stay tuned for further announcements.",
+    "question_ids": [
+      "Q19",
+      "Q20"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "ANN02",
+    "type": "announcement",
+    "title": "Listen to an announcement.",
+    "listen_window": [
+      472.11,
+      508.05
+    ],
+    "visual": "../20260920A/images/announcement_male.png",
+    "speaker_gender": "unknown",
+    "transcript": "For your next assignment, you'll write an analysis of a conversation heard in a club meeting, the dining hall anywhere on campus. First track the conversation, the best you can. Please note, do not record anyone and be sure not to use real names. This is a fundamental, non-negotiable part of the assignment. Your analysis should highlight how the speakers convey and justify their viewpoints. Do they give examples? Appeal to shared values, explain how these strategies shape the overall meaning of the conversation.",
+    "question_ids": [
+      "Q21",
+      "Q22"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "ANN03",
+    "type": "announcement",
+    "title": "Listen to an announcement.",
+    "listen_window": [
+      551.79,
+      578.73
+    ],
+    "visual": "../20260920A/images/announcement_male.png",
+    "speaker_gender": "unknown",
+    "transcript": "Students all graduation related information can be found on a dedicated page on our university website. Among other things, you can reserve tickets for your guests through the site. Capacity limits apply. Also, as a change from previous years, we'll be organizing rehearsals differently. Graduate and undergraduate rehearsals will now be held separately. But in different venues, details will be announced in the coming weeks.",
+    "question_ids": [
+      "Q23",
+      "Q24"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "TALK01",
+    "type": "academic_talk",
+    "title": "Listen to a talk.",
+    "listen_window": [
+      608.55,
+      733.47
+    ],
+    "visual": "../20260920A/images/lecture_female.png",
+    "speaker_gender": "unknown",
+    "transcript": "When I was growing up? Pluto was known as the 9th planet in our solar system. Alas, Pluto was demoted to dwarf planet status in 2006, and not only because it's so small, maybe half the width of the United States. It's mainly because in 2006, it was decided that planets had to meet three criteria. They had to orbit the sun and be round in shape, check, and check. But they also had to be the main object in their orbit, which Pluto is in the Kuiper Belt, is a region in the far outer reaches of the solar system with many other bodies that orbit the sun. So Pluto lost its planet status as a result. Many scientists dismissed Pluto as just a ball of ice. Anyway. However, about 10 years later, the New Horizons spacecraft sent back new images and data, showing that Pluto is far more complex than previously thought. We're talking volcanoes, dunes, I get this. Pluto has a deep basin with 3 types of ice and New Horizons images. There's convection in the basin of ice with convection. Warmer ice rises to the surface, then cools and sinks at the edge of the basin. So the surface is continuously rejuvenating renewing itself. Moreover, under the basin of ice, there may be something astonishing. A saltwater ocean life could exist there. This means neighboring bodies in the Kuiper Belt could also have oceans and potentially be habitable.",
+    "question_ids": [
+      "Q25",
+      "Q26",
+      "Q27",
+      "Q28"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "TALK02",
+    "type": "academic_talk",
+    "title": "Listen to a talk.",
+    "listen_window": [
+      823.08,
+      953.19
+    ],
+    "visual": "../20260920A/images/lecture_female.png",
+    "speaker_gender": "unknown",
+    "transcript": "When you think of abstract expressionism, you probably imagine colorful, chaotic canvases. Maybe you're familiar with Jackson Pollock, a leader of the movement. But how about Norman Lewis? Probably not. Norman Lewis is associated with abstract expressionism, although he wasn't included in major publications about the movement and nor did his work sell very well. If you ask me, that's an injustice. Lewis won awards and was well regarded by critics. Even so, he wasn't really recognized for his work until after his death. In 1979, his career began in 1930 at that time. His major focus wasn't abstract expressionism. Social realism refers to works that draw attention to sociopolitical issues. Maybe you've seen the painting American Gothic by Grant Wood, that one showing an older man and woman farmers standing in front of their home, looking very serious, and the man is holding a pitchfork. Norman Lewis is social realist works. Focused on life in Harlem, New York City where he lived. It also LED him to be a member of a group of fellow black artists called the 306 Group. The six group worked together in Harlem. As Lewis, his career went on around 1950, his work became more abstract. So it's around 1950 that Lewis began to more on beauty and harmony in his art. Here's where we get into abstract expressionism. He focused on beauty and harmony in his art, and less on the political side of things. As he had earlier, his painting, migrating birds shows that there's an abstract depiction of birds with delicate white marks and an orange brown background.",
+    "question_ids": [
+      "Q29",
+      "Q30",
+      "Q31",
+      "Q32"
+    ],
+    "transcript_source": "Supplied AI transcript, lightly cleaned against context where clear.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  }
+]

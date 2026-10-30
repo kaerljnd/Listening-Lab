@@ -1,0 +1,274 @@
+[
+  {
+    "question_id": "Q1",
+    "question_number": 1,
+    "material_id": "SR01",
+    "stem": "Choose the best response.",
+    "options": [
+      "I'm not heading toward the lab.",
+      "No, I'll be at the library most afternoons.",
+      "It's just down the hall to your left.",
+      "Yes, I put it on top of the other papers."
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q2",
+    "question_number": 2,
+    "material_id": "SR02",
+    "stem": "Choose the best response.",
+    "options": [
+      "Good idea—the projector can go higher.",
+      "Yes, let's include some interactive activities.",
+      "Where do you want to keep it?",
+      "Do we need to repeat the steps?"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q3",
+    "question_number": 3,
+    "material_id": "SR03",
+    "stem": "Choose the best response.",
+    "options": [
+      "Sure, I'll get it right away.",
+      "Yes, I'm planning to attend.",
+      "I skipped class twice in a row.",
+      "You can leave it outside the door."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q4",
+    "question_number": 4,
+    "material_id": "SR04",
+    "stem": "Choose the best response.",
+    "options": [
+      "Yes, that was an interesting lecture.",
+      "That's fine with me.",
+      "I don't know where the light switch is, either.",
+      "The new library chairs are quite comfortable."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q5",
+    "question_number": 5,
+    "material_id": "SR05",
+    "stem": "Choose the best response.",
+    "options": [
+      "Yes, the weather was perfect.",
+      "No, in the science building.",
+      "I may be running a little late.",
+      "She said to come by after dinner."
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q6",
+    "question_number": 6,
+    "material_id": "SR06",
+    "stem": "Choose the best response.",
+    "options": [
+      "Yesterday's class was interesting.",
+      "Tomorrow works for me.",
+      "I will be in the library.",
+      "I can't find my keys."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q7",
+    "question_number": 7,
+    "material_id": "SR07",
+    "stem": "Choose the best response.",
+    "options": [
+      "There's a link to the videos in the professor's email.",
+      "Do you know how many videos are available?",
+      "The videos were uploaded last week.",
+      "The lessons are divided into modules."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q8",
+    "question_number": 8,
+    "material_id": "SR08",
+    "stem": "Choose the best response.",
+    "options": [
+      "It will take some time to see if it's effective.",
+      "We are required to sign off on it by the end of the week.",
+      "It was emailed to us by the registrar's office.",
+      "It goes into effect next month."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q9",
+    "question_number": 9,
+    "material_id": "SR09",
+    "stem": "Choose the best response.",
+    "options": [
+      "I went to a seminar during the last semester.",
+      "It had some valuable insights.",
+      "Seminars can be very informative.",
+      "When does the seminar begin?"
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q10",
+    "question_number": 10,
+    "material_id": "SR10",
+    "stem": "Choose the best response.",
+    "options": [
+      "I'd love to visit there someday.",
+      "I'm too busy with extracurricular activities these days.",
+      "Robots could probably build that.",
+      "I would look downtown."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q11",
+    "question_number": 11,
+    "material_id": "SR11",
+    "stem": "Choose the best response.",
+    "options": [
+      "Students can submit their projects tomorrow.",
+      "My new phone has several features.",
+      "I wouldn't call myself an artist.",
+      "I haven't been over to see it yet."
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q12",
+    "question_number": 12,
+    "material_id": "SR12",
+    "stem": "Choose the best response.",
+    "options": [
+      "It might be smart to stay here for a bit.",
+      "The lab demonstration was very informative.",
+      "They left the waiting room.",
+      "Next time don't forget to lock the door."
+    ],
+    "correct_answer": "A",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q13",
+    "question_number": 13,
+    "material_id": "CONV01",
+    "stem": "Why does the woman ask the man about the martial arts club?",
+    "options": [
+      "She is interested in joining the club.",
+      "She wants the contact information of a cofounder of the club.",
+      "She wants to learn about how to start a club.",
+      "She needs help with attracting members to a club."
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q14",
+    "question_number": 14,
+    "material_id": "CONV01",
+    "stem": "What attitude does the man express about the geology club?",
+    "options": [
+      "He is excited to join it.",
+      "He doubts it will have many members.",
+      "He is curious about what activities it will organize.",
+      "He is surprised it does not already exist at the university."
+    ],
+    "correct_answer": "B",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q15",
+    "question_number": 15,
+    "material_id": "CONV02",
+    "stem": "What is the main topic of the conversation?",
+    "options": [
+      "Comparing two travel apps",
+      "Finding a conference venue",
+      "Buying tickets for a flight",
+      "Planning a vacation"
+    ],
+    "correct_answer": "C",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  },
+  {
+    "question_id": "Q16",
+    "question_number": 16,
+    "material_id": "CONV02",
+    "stem": "What will the man most likely do next?",
+    "options": [
+      "Give the woman a tip on traveling",
+      "Download an app",
+      "Purchase a book",
+      "Contact the woman's brother"
+    ],
+    "correct_answer": "D",
+    "answer_verified": true,
+    "timer_sec": 20,
+    "explanation": "",
+    "evidence": []
+  }
+]

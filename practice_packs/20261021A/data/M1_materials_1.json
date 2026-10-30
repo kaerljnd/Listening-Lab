@@ -1,0 +1,182 @@
+[
+  {
+    "material_id": "SR01",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      22.74,
+      25.26
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Don't first-year students have to live on campus?",
+    "question_ids": [
+      "Q1"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR02",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      37.41,
+      39.96
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Stay cool under pressure during your presentation.",
+    "question_ids": [
+      "Q2"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR03",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      54.36,
+      57.09
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "When will the class in minutes be ready?",
+    "question_ids": [
+      "Q3"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR04",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      69.0,
+      72.57
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "I wonder if the date for the guest lecture is confirmed.",
+    "question_ids": [
+      "Q4"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR05",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      85.5,
+      88.32
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "We won't be able to handle all the extra readings.",
+    "question_ids": [
+      "Q5"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR06",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      100.89,
+      103.68
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "How do we complete the project on time?",
+    "question_ids": [
+      "Q6"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR07",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      117.0,
+      119.64
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "Should we go all out and rehearse the speech tonight?",
+    "question_ids": [
+      "Q7"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR08",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      130.56,
+      133.71
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "I thought the seminar was postponed. Was that not the case?",
+    "question_ids": [
+      "Q8"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR09",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      145.14,
+      147.99
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "How did you enjoy the film editing workshop?",
+    "question_ids": [
+      "Q9"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  },
+  {
+    "material_id": "SR10",
+    "type": "best_response",
+    "title": "Choose the best response.",
+    "listen_window": [
+      165.24,
+      169.02
+    ],
+    "visual": "../20260920A/images/female_single.png",
+    "speaker_gender": "unknown",
+    "transcript": "If you have time this evening, could you send me the project grading criteria?",
+    "question_ids": [
+      "Q10"
+    ],
+    "transcript_source": "Supplied transcript DOCX; short-response wording lightly cleaned where separable.",
+    "timing_source": "webrtc-vad-checked",
+    "timing_review_required": true
+  }
+]
