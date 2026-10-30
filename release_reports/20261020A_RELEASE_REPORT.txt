@@ -37,5 +37,13 @@ RUNTIME COMPATIBILITY
 CATALOG
 - Published in practice_packs/catalog.json
 
-ONLINE SMOKE TEST
-- Pending Pages deployment verification at report creation.
+ONLINE POST-RELEASE CHECK
+- GitHub Pages Run #154: BUILD PASS
+- GitHub Pages Run #154: DEPLOY PASS
+- GitHub Pages Run #154: REPORT STATUS PASS
+- Catalog contains 20261020A: PASS
+- Student frontend fragmented-pack support: PASS
+- Teacher frontend fragmented-pack support: PASS
+- Student audio URL regression guard: PASS
+- Classroom backend set policy 0.6.9 format-validated: PASS
+- Browser-interactive TEST Session creation remains a manual smoke-test item because the repository connector cannot submit an end-user browser session.
