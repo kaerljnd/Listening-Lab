@@ -180,14 +180,13 @@
       "To describe symbiotic relationships in marine ecosystems",
       "To highlight the importance of marine biodiversity"
     ],
-    "correct_answer": "C",
+    "correct_answer": "B",
     "answer_verified": true,
     "timer_sec": 30,
     "explanation": "",
     "evidence": [],
-    "answer_source": "supplied_answer_key",
-    "source_consistency_review_required": true,
-    "source_consistency_note": "Supplied answer key gives C; supplied talk transcript discusses mangroves as a mitigation mechanism, so semantic consistency should be teacher-reviewed."
+    "answer_source": "teacher_approved_source_reconciliation",
+    "answer_revision_note": "Supplied answer key gave C; revised to B after semantic review against the supplied question PDF and transcript, approved by the teacher on 2026-10-30."
   },
   {
     "question_id": "Q12",
@@ -200,14 +199,13 @@
       "Silk's effect on social class distinctions in the United States",
       "Differences between the Dutch and American economies"
     ],
-    "correct_answer": "C",
+    "correct_answer": "A",
     "answer_verified": true,
     "timer_sec": 30,
     "explanation": "",
     "evidence": [],
-    "answer_source": "supplied_answer_key",
-    "source_consistency_review_required": true,
-    "source_consistency_note": "Supplied answer key gives C; supplied talk is broadly about the American mulberry craze/economic bubble, so semantic consistency should be teacher-reviewed."
+    "answer_source": "teacher_approved_source_reconciliation",
+    "answer_revision_note": "Supplied answer key gave C; revised to A after semantic review against the supplied question PDF and transcript, approved by the teacher on 2026-10-30."
   },
   {
     "question_id": "Q13",
@@ -254,13 +252,12 @@
       "They helped economic growth in the short term.",
       "They were unusual events and unlikely to happen again."
     ],
-    "correct_answer": "C",
+    "correct_answer": "B",
     "answer_verified": true,
     "timer_sec": 30,
     "explanation": "",
     "evidence": [],
-    "answer_source": "supplied_answer_key",
-    "source_consistency_review_required": true,
-    "source_consistency_note": "Supplied answer key gives C; supplied talk closes by framing the craze as a cautionary tale, so semantic consistency should be teacher-reviewed."
+    "answer_source": "teacher_approved_source_reconciliation",
+    "answer_revision_note": "Supplied answer key gave C; revised to B after semantic review against the supplied question PDF and transcript, approved by the teacher on 2026-10-30."
   }
 ]
