@@ -161,6 +161,14 @@ function buildSingleTalkModule(sourceModuleId,sourceMaterialId){
 function isSingleTalkMode(){ return moduleData?.trainingMode==='single_talk'; }
 function isGuidedPracticeMode(){ return ['question_type','single_talk'].includes(moduleData?.trainingMode); }
 function audioSourceFor(q){ return q?.sourceAudio||moduleData?.sourceAudio||''; }
+function normalizedMediaUrl(src){
+  try{ return new URL(String(src||''),location.href).href; }catch(e){ return String(src||''); }
+}
+function sameAudioSource(src){
+  if(!src) return false;
+  const current=audio.currentSrc||audio.src||'';
+  return normalizedMediaUrl(current)===normalizedMediaUrl(src);
+}
 function questionLabel(q){ return q?.displayId||q?.id||''; }
 function materialLabel(q){ return q?.displayMaterialId||q?.materialId||''; }
 function sessionModeLabel(){ if(moduleData?.trainingMode==='question_type') return `专项 · ${typeLabel(moduleData.questionType)}`; if(moduleData?.trainingMode==='single_talk') return `单篇讲座精练 · ${moduleData.talkRef?.sourceModuleId||''}·${moduleData.talkRef?.sourceMaterialId||''}`; return 'Listening'; }
@@ -795,7 +803,7 @@ function restorePersistedState(){
 function prepareRestoredPracticeAudio(){
   if(state.view!=='practice') return;
   const q=getQ(),window=q.listenWindow,snap=state.refreshSnapshot||{},target=Number.isFinite(snap.audioTime)?snap.audioTime:window[0];
-  { const src=audioSourceFor(q); if(!audio.src||!audio.src.includes(src)){ audio.src=src; audio.preload='auto'; audio.load(); } }
+  { const src=audioSourceFor(q); if(!sameAudioSource(src)){ audio.src=src; audio.preload='auto'; audio.load(); } }
   const apply=()=>{
     const t=Math.min(window[1],Math.max(window[0],target));
     try{ audio.currentTime=t; }catch(e){}
@@ -810,7 +818,7 @@ function resumePracticeFromRefresh(t){
   const q=getQ(),window=q.listenWindow,start=window[0],end=window[1];
   cancelPendingPracticePlayback();
   const token=practicePlaybackToken;
-  { const src=audioSourceFor(q); if(!audio.src||!audio.src.includes(src)){ audio.src=src; audio.preload='auto'; audio.load(); } }
+  { const src=audioSourceFor(q); if(!sameAudioSource(src)){ audio.src=src; audio.preload='auto'; audio.load(); } }
   const run=()=>{
     if(token!==practicePlaybackToken || state.view!=='practice') return;
     const pos=Number.isFinite(t)?Math.min(end,Math.max(start,t)):start;
@@ -1128,7 +1136,7 @@ function preloadPracticeSegment(q){
     if(state?.view!=='practice'||getQ()?.id!==q.id) return;
     try{ audio.currentTime=target; }catch(e){}
   };
-  if(!audio.src||!audio.src.includes(src)){ audio.src=src; audio.preload='auto'; audio.load(); }
+  if(!sameAudioSource(src)){ audio.src=src; audio.preload='auto'; audio.load(); }
   if(audio.readyState>=1) apply(); else audio.addEventListener('loadedmetadata',apply,{once:true});
 }
 function beginInitialPracticeDelay(q,seconds=PRACTICE_PREP_SECONDS){
@@ -1215,7 +1223,7 @@ function playPracticeSegment(segment,onEnd){
   const token=practicePlaybackToken;
   stopAudio({save:false});
   const src=audioSourceFor(q);
-  const sourceChanged=!audio.src || !audio.src.includes(src);
+  const sourceChanged=!sameAudioSource(src);
   if(sourceChanged){ audio.src=src; audio.preload='auto'; audio.load(); }
 
   const stillCurrent=()=>token===practicePlaybackToken && state.view==='practice' && getQ()?.id===expectedQid && getQ()?.materialId===expectedMaterialId;
@@ -1416,7 +1424,7 @@ function currentMaterialPosition(q){ const s=state.materialPositions[q.materialI
 function ensureAnalysisAudio(q){
   const materialChanged=state.loadedMaterialId!==q.materialId;
   if(materialChanged) stopAudio({save:true});
-  const src=audioSourceFor(q); if(!audio.src||!audio.src.includes(src)) audio.src=src;
+  const src=audioSourceFor(q); if(!sameAudioSource(src)) audio.src=src;
   if(materialChanged){
     state.loadedMaterialId=q.materialId; state.segment=q.listenWindow;
     const apply=()=>{ if(state.loadedMaterialId!==q.materialId)return; try{audio.currentTime=currentMaterialPosition(q);}catch(e){} refreshAnalysisTransport(q); };
