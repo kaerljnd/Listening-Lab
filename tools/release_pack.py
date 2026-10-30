@@ -60,6 +60,16 @@ def scan_manifests():
     return packs, errors
 
 
+def frontend_contract_checks():
+    errors = []
+    app_text = (ROOT / "app" / "app.js").read_text(encoding="utf-8")
+    if "audio.src.includes(src)" in app_text:
+        errors.append("学生端仍使用 audio.src.includes(src) 比较媒体地址；带空格/%20 的音频会在分析阶段反复重载")
+    if "function sameAudioSource" not in app_text:
+        errors.append("学生端缺少标准化媒体 URL 比较函数 sameAudioSource")
+    return errors
+
+
 def strict_release_checks(pack_dir: Path):
     errors, warnings = [], []
     manifest = load_json(pack_dir / "manifest.json")
@@ -153,7 +163,7 @@ def verify_generated_consistency(target_set_id: str):
 
 
 def make_report(set_id, base_errors, base_warnings, strict_errors, strict_warnings, cache_info, applied):
-    errors = list(base_errors) + list(strict_errors)
+    errors = list(base_errors) + list(strict_errors) + frontend_contract_checks()
     warnings = list(base_warnings) + list(strict_warnings)
     status = "PASS" if not errors else "BLOCKED"
     lines = [
