@@ -72,7 +72,7 @@ Listening Lab 是一套面向 TOEFL Listening 教学的网页练习与课堂记�
 
 ## 教师端访问
 
-教师端需要输入阿里云 Function Compute 环境变量 `TEACHER_KEY` 对应的访问密钥。密钥只保存在当前浏览器标签页的 `sessionStorage` 中；退出教师页面会清除该标签页中的密钥。**不要把真实密钥写进 README、代码、题包或 GitHub commit。**
+教师端需要输入阿里云 Function Compute 环境变量 `TEACHER_KEY` 对应的访问密钥。密钥只保存在当前浏览器标签页的 `sessionStorage` 中；退出教师页面会清除该标签页中的密钥。**真实密钥未写进 README、代码、题包或 GitHub commit。**
 
 ## 本地运行
 
