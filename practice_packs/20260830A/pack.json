@@ -1037,10 +1037,10 @@
             "When is it due?",
             "Did you already send them to me?"
           ],
-          "correct_answer": "A",
+          "correct_answer": "B",
           "answer_verified": true,
           "timer_sec": 20,
-          "explanation": "The speaker says that a positive atmosphere makes seminars enjoyable. 'For sure' agrees with that statement, and being more interactive is a natural extension. Option B introduces an unrelated proposal to attend as a group.",
+          "explanation": "",
           "evidence": []
         },
         {
