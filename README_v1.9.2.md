@@ -1,3 +1,5 @@
+> **历史版本记录**：本文仅记录 v1.9.2 单篇讲座 UX 变更，不代表当前完整功能、资源托管方式或部署架构。当前项目状态请以仓库根目录 [README.md](README.md) 为准。
+
 # Listening Lab v1.9.2 · Single Talk UX Refinement
 
 基于学生实际测试反馈，对单篇 Academic Talk 精练进行减负与教学回看优化。
