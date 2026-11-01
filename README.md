@@ -16,7 +16,7 @@ Listening Lab 是一套面向 TOEFL Listening 教学的网页练习与课堂记�
 ## 当前部署快照
 
 - GitHub 发布分支：`classroom-pilot`
-- 学生端静态资源缓存标识：`classroom-pilot-0.7.9`
+- 学生端静态资源缓存标识：`classroom-pilot-0.7.10`
 - 教师端静态资源缓存标识：`teacher-0.2.2`
 - 阿里云 API 版本：`classroom-pilot-0.6.9-set-policy`
 - 当前题包目录：17 套；最新发布为 `20261021A`、`20261020A`
@@ -35,6 +35,7 @@ Listening Lab 是一套面向 TOEFL Listening 教学的网页练习与课堂记�
 - 支持题包 JSON 内嵌结构，也支持 `materials_files` / `questions_files` 分片结构。
 - Transcript 点击跳转：有 `word_timings` 时按词时间定位；没有时使用近似位置，不代表精确单词对齐。
 - 题目和练习进度保存在当前浏览器；课堂 Session 与答题分析数据同步到云端。
+- 移动端播放器包含自动播放失败兜底、`waiting/stalled/error` 监听和缓冲恢复提示；正常浏览器仍按原流程自动播放。
 
 ### 教师端
 
