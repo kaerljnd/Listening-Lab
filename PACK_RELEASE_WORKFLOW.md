@@ -103,6 +103,7 @@ python tools/release_pack.py <SET_ID> --publish
 - 正式题包目录不能包含 ZIP / 7z / RAR；
 - 单文件达到 GitHub 100 MB 限制时阻断，达到 45 MB 时警告；
 - 学生端必须存在媒体 URL 标准化函数 `sameAudioSource`，且不能重新出现 `audio.src.includes(src)`；
+- 学生端必须保留统一 `requestMediaPlay`、`waiting` / `stalled` / `error` 监听和移动端首听缓冲门槛；
 - 后端必须使用 set_id 格式校验，不能恢复逐题包白名单；
 - 学生端不能恢复逐题包 `CLASSROOM_SET_IDS` 白名单。
 
@@ -115,10 +116,11 @@ python tools/release_pack.py <SET_ID> --publish
 1. **套题目录**：学生端列表能看到新 set；`catalog.json` 中存在对应 set_id。
 2. **题包读取**：M1、M2H 均能打开；pack.json 和所有 JSON 分片没有 404。
 3. **音频播放**：分别测试首听播放、暂停、继续、From start；进入分析阶段后再次测试 Play / From start。重点检查长音频分段定位和拖动。
-4. **身份弹窗**：点击开始后必须出现班号（可选）和学生标识（必填）；取消时不得创建 Session。
-5. **云端记录**：使用 TEST 班号 / TEST 学生标识建立一次测试 Session；教师端刷新后应能看到对应套题、模块、状态和学生标识。
-6. **答案读取**：教师端详情页显示正确答案，首听正确率分母不应为 0/0；抽查 First / Second / Transcript 后记录。
-7. **数据分析**：确认答题选择历史、修改次数和材料分析记录能正常显示。
+4. **移动端容错**：至少用 iPhone Safari 和一个 App 内浏览器（优先微信）测试。若自动播放被阻止，应出现“点击播放音频”；弱网进入 `waiting/stalled` 时应显示缓冲提示，恢复后应继续播放。
+5. **身份弹窗**：点击开始后必须出现班号（可选）和学生标识（必填）；取消时不得创建 Session。
+6. **云端记录**：使用 TEST 班号 / TEST 学生标识建立一次测试 Session；教师端刷新后应能看到对应套题、模块、状态和学生标识。
+7. **答案读取**：教师端详情页显示正确答案，首听正确率分母不应为 0/0；抽查 First / Second / Transcript 后记录。
+8. **数据分析**：确认答题选择历史、修改次数和材料分析记录能正常显示。
 
 浏览器测试完成后，把 Release Report 中的 Smoke Test 项目标记为 PASS，并记录测试日期/浏览器。GitHub Actions 绿色只证明构建和部署成功，不等于以上交互已全部验证。
 
