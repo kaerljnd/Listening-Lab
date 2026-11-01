@@ -754,7 +754,7 @@ function mediaSnapshot(){
 }
 function mediaLog(type,payload={}){
   try{
-    if(state&&Array.isArray(state.eventLog)) logEvent(type,{...mediaSnapshot(),...payload});
+    if(state&&moduleData&&['practice','analysis'].includes(state.view)&&Array.isArray(state.eventLog)) logEvent(type,{...mediaSnapshot(),...payload});
     else console.warn('[Listening Lab media]',type,{...mediaSnapshot(),...payload});
   }catch(e){}
 }
@@ -831,8 +831,10 @@ function installMediaHealthMonitoring(){
     clearMediaStallTimers(); mediaStallActive=false; state&&(state.isPlaying=false);
     const err=audio.error;
     mediaLog('media_error',{code:err?.code||null,message:err?.message||'',ua:String(navigator.userAgent||'').slice(0,180)});
-    showMediaRecovery({kind:'error',title:'音频加载失败',message:'请检查网络后重新尝试播放。',actionLabel:'重新尝试播放',action:retryCurrentMediaFromGesture});
-    if(state?.view==='analysis') refreshAnalysisTransport();
+    if(state&&['practice','analysis'].includes(state.view)){
+      showMediaRecovery({kind:'error',title:'音频加载失败',message:'请检查网络后重新尝试播放。',actionLabel:'重新尝试播放',action:retryCurrentMediaFromGesture});
+      if(state.view==='analysis') refreshAnalysisTransport();
+    }
   });
 }
 function persist(){
@@ -1109,7 +1111,7 @@ function pauseSession(){
   const audioWasPlaying=!audio.paused;
   state.pauseSnapshot={audioWasPlaying,timerRunning,pausedAt:Date.now(),audioTime:Number.isFinite(audio.currentTime)?audio.currentTime:null,timerRemaining:state.timer};
   clearInterval(state.timerId); state.timerId=null;
-  audio.pause(); state.isPlaying=false; state.paused=true;
+  audio.pause(); state.isPlaying=false; clearMediaStallTimers(); mediaStallActive=false; hideMediaRecovery(); state.paused=true;
   logEvent('session_pause',{audioWasPlaying,timerRunning,audioTime:state.pauseSnapshot.audioTime,timerRemaining:state.timer});
   showPauseOverlay();
 }
@@ -1559,7 +1561,7 @@ function playAnalysis(){
   // 旧版只改了 state，没有刷新左侧卡片，导致 Step 2 仍显示锁定，直到发生别的点击。
   if(firstReplayDecision && !state.reviewMode) requestAnimationFrame(()=>renderAnalysisPreserveScroll());
 }
-function pauseAnalysis(){ saveMaterialPosition(); audio.pause(); state.isPlaying=false; logEvent(state.reviewMode?'review_audio_pause':'analysis_audio_pause',{position:audio.currentTime}); refreshAnalysisTransport(); }
+function pauseAnalysis(){ saveMaterialPosition(); audio.pause(); state.isPlaying=false; clearMediaStallTimers(); mediaStallActive=false; hideMediaRecovery(); logEvent(state.reviewMode?'review_audio_pause':'analysis_audio_pause',{position:audio.currentTime}); refreshAnalysisTransport(); }
 function toggleAnalysisPlayback(){ if(audio.paused) playAnalysis(); else pauseAnalysis(); }
 function replayFromStart(){
   if(state.paused)return; const q=getQ(); ensureAnalysisAudio(q); const firstReplayDecision=!replayStepDone(q.materialId);
