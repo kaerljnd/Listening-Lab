@@ -737,6 +737,8 @@ let mediaStallActive=false;
 let mediaLastGoodPosition=null;
 let mediaLastGoodQuestionId=null;
 let mediaLastGoodMaterialId=null;
+let mobileSeekToken=0;
+let mobileSeekInFlight=false;
 
 audio.volume = 1;
 
@@ -789,6 +791,87 @@ function rememberMediaPosition(){
   mediaLastGoodMaterialId=q.materialId||null;
   if(state.view==='analysis'&&q.materialId) state.materialPositions[q.materialId]=Math.min(b,Math.max(a,t));
 }
+function mobileWindowTarget(q,target){
+  if(!q||!Array.isArray(q.listenWindow)) return Number(target)||0;
+  const [a,b]=q.listenWindow,t=Number(target);
+  return Number.isFinite(t)?Math.min(Math.max(a,t),Math.max(a,b-.05)):a;
+}
+function mobilePositionValid(q,target,tolerance=.24){
+  if(!q||!Array.isArray(q.listenWindow)) return false;
+  const [a,b]=q.listenWindow,t=Number(audio.currentTime);
+  if(!Number.isFinite(t)||t<a-.08||t>b+.08) return false;
+  return Math.abs(t-target)<=tolerance;
+}
+function mobileSeekVerified(q,target,{reason='mobile_seek',onReady=null,showStatus=true}={}){
+  if(!MOBILE_MEDIA_CLIENT){ onReady?.(target); return; }
+  if(!q||!Array.isArray(q.listenWindow)) return;
+  target=mobileWindowTarget(q,target);
+  const src=audioSourceFor(q);
+  const token=++mobileSeekToken;
+  mobileSeekInFlight=true;
+  audio.pause(); state&&(state.isPlaying=false);
+  if(!sameAudioSource(src)){ audio.src=src; audio.preload='auto'; audio.load(); }
+  if(showStatus) showMediaRecovery({kind:'buffering',title:'正在定位当前音频',message:'手机端正在定位到本题音频位置…'});
+  const finish=(attempt=0)=>{
+    if(token!==mobileSeekToken) return;
+    if(mobilePositionValid(q,target)){
+      mobileSeekInFlight=false; hideMediaRecovery();
+      mediaLastGoodPosition=target; mediaLastGoodQuestionId=q.id||null; mediaLastGoodMaterialId=q.materialId||null;
+      mediaLog('mobile_seek_verified',{reason,target,actual:Number(audio.currentTime),attempt,window:q.listenWindow});
+      onReady?.(target);
+      return;
+    }
+    if(attempt>=3){
+      mobileSeekInFlight=false; audio.pause(); state&&(state.isPlaying=false);
+      mediaLog('mobile_seek_failed',{reason,target,actual:Number(audio.currentTime),attempt,window:q.listenWindow});
+      showMediaRecovery({
+        kind:'stalled',
+        title:'当前音频定位失败',
+        message:'已阻止从整套音频开头播放。请重新定位当前题目。',
+        actionLabel:'重新定位音频',
+        action:()=>mobileSeekVerified(q,target,{reason:'mobile_manual_reseek',onReady})
+      });
+      return;
+    }
+    setTimeout(()=>attemptSeek(attempt+1),120+attempt*120);
+  };
+  const attemptSeek=(attempt=0)=>{
+    if(token!==mobileSeekToken) return;
+    if(audio.readyState<1){
+      audio.addEventListener('loadedmetadata',()=>attemptSeek(attempt),{once:true});
+      return;
+    }
+    if(mobilePositionValid(q,target)){ finish(attempt); return; }
+    mediaLog('mobile_seek_request',{reason,target,actual:Number(audio.currentTime),attempt,window:q.listenWindow});
+    let verified=false;
+    const verify=()=>{ if(verified||token!==mobileSeekToken)return; verified=true; setTimeout(()=>finish(attempt),50); };
+    try{
+      audio.currentTime=target;
+      audio.addEventListener('seeked',verify,{once:true});
+      setTimeout(verify,650);
+    }catch(e){
+      setTimeout(()=>finish(attempt),160);
+    }
+  };
+  attemptSeek(0);
+}
+function guardMobilePlaybackPosition(source='playing'){
+  if(!MOBILE_MEDIA_CLIENT||mobileSeekInFlight||!state||!['practice','analysis'].includes(state.view)) return true;
+  const q=getQ(); if(!q||!Array.isArray(q.listenWindow)) return true;
+  const [a,b]=q.listenWindow,t=Number(audio.currentTime);
+  if(Number.isFinite(t)&&t>=a-.08&&t<=b+MOBILE_AUDIO_TAIL_SEC) return true;
+  audio.pause(); state.isPlaying=false;
+  const target=recoveryTargetForCurrentMedia();
+  mediaLog('mobile_wrong_window_blocked',{source,target,actual:t,window:q.listenWindow});
+  showMediaRecovery({
+    kind:'stalled',
+    title:'已阻止错误位置播放',
+    message:'手机浏览器跳回了整套音频开头。请重新定位当前题目。',
+    actionLabel:'重新定位音频',
+    action:()=>mobileSeekVerified(q,target,{reason:'mobile_window_guard',onReady:()=>{state.isPlaying=true;requestMediaPlay('mobile_guard_resume');}})
+  });
+  return false;
+}
 function recoveryTargetForCurrentMedia(){
   const q=getQ(); if(!q||!Array.isArray(q.listenWindow)) return 0;
   const [a,b]=q.listenWindow;
@@ -836,7 +919,13 @@ function seekAndRetryCurrentMedia(reason='user_retry'){
 function retryCurrentMediaFromGesture(){
   hideMediaRecovery(); clearMediaStallTimers();
   mediaLog('media_user_retry',{userActivation:!!navigator.userActivation?.isActive});
-  seekAndRetryCurrentMedia('user_retry');
+  if(MOBILE_MEDIA_CLIENT){
+    const q=getQ(); if(!q) return;
+    const target=recoveryTargetForCurrentMedia();
+    mobileSeekVerified(q,target,{reason:'mobile_user_retry',onReady:()=>{state.isPlaying=true;requestMediaPlay('user_retry');if(state.view==='analysis')refreshAnalysisTransport(q);}});
+  }else{
+    seekAndRetryCurrentMedia('user_retry');
+  }
 }
 function requestMediaPlay(reason='play'){
   let p;
@@ -871,10 +960,10 @@ function scheduleMediaStall(kind){
 }
 function installMediaHealthMonitoring(){
   if(mediaHealthInstalled) return; mediaHealthInstalled=true;
-  audio.addEventListener('timeupdate',rememberMediaPosition);
+  audio.addEventListener('timeupdate',()=>{ if(!guardMobilePlaybackPosition('timeupdate'))return; rememberMediaPosition(); });
   audio.addEventListener('waiting',()=>{ rememberMediaPosition(); scheduleMediaStall('waiting'); });
   audio.addEventListener('stalled',()=>{ rememberMediaPosition(); scheduleMediaStall('stalled'); });
-  audio.addEventListener('playing',()=>{ rememberMediaPosition();
+  audio.addEventListener('playing',()=>{ if(!guardMobilePlaybackPosition('playing'))return; rememberMediaPosition();
     const recovered=mediaStallActive; mediaStallActive=false; clearMediaStallTimers(); hideMediaRecovery();
     if(state) state.isPlaying=true;
     if(recovered) mediaLog('media_playback_recovered');
@@ -965,8 +1054,16 @@ function prepareRestoredPracticeAudio(){
   if(state.view!=='practice') return;
   const q=getQ(),window=q.listenWindow,snap=state.refreshSnapshot||{},target=Number.isFinite(snap.audioTime)?snap.audioTime:window[0];
   { const src=audioSourceFor(q); if(!sameAudioSource(src)){ audio.src=src; audio.preload='auto'; audio.load(); } }
+  const t=Math.min(window[1],Math.max(window[0],target));
+  if(MOBILE_MEDIA_CLIENT){
+    mediaLastGoodPosition=t; mediaLastGoodQuestionId=q.id||null; mediaLastGoodMaterialId=q.materialId||null;
+    if(state.practicePhase==='listen'){
+      state.progressPct=Math.min(100,Math.max(0,((t-window[0])/(window[1]-window[0]))*100));
+      updatePracticeProgress();
+    }
+    return;
+  }
   const apply=()=>{
-    const t=Math.min(window[1],Math.max(window[0],target));
     try{ audio.currentTime=t; }catch(e){}
     if(state.practicePhase==='listen'){
       state.progressPct=Math.min(100,Math.max(0,((t-window[0])/(window[1]-window[0]))*100));
@@ -980,9 +1077,18 @@ function resumePracticeFromRefresh(t){
   cancelPendingPracticePlayback();
   const token=practicePlaybackToken;
   { const src=audioSourceFor(q); if(!sameAudioSource(src)){ audio.src=src; audio.preload='auto'; audio.load(); } }
+  const pos=Number.isFinite(t)?Math.min(end,Math.max(start,t)):start;
+  if(MOBILE_MEDIA_CLIENT){
+    mobileSeekVerified(q,pos,{reason:'mobile_refresh_practice',onReady:()=>{
+      if(token!==practicePlaybackToken||state.view!=='practice')return;
+      state.progressPct=Math.min(100,Math.max(0,((pos-start)/(end-start))*100));
+      state.isPlaying=true; attachPracticeSegment(window,beginAnswerPhase,token); updatePracticeProgress();
+      requestMediaPlay('resume_practice');
+    }});
+    return;
+  }
   const run=()=>{
     if(token!==practicePlaybackToken || state.view!=='practice') return;
-    const pos=Number.isFinite(t)?Math.min(end,Math.max(start,t)):start;
     audio.currentTime=pos; state.progressPct=Math.min(100,Math.max(0,((pos-start)/(end-start))*100));
     state.isPlaying=true; attachPracticeSegment(window,beginAnswerPhase,token); updatePracticeProgress();
     requestMediaPlay('resume_practice');
@@ -991,8 +1097,14 @@ function resumePracticeFromRefresh(t){
 }
 function resumeAnalysisFromRefresh(t){
   const q=getQ(); ensureAnalysisAudio(q);
+  const pos=Number.isFinite(t)?Math.min(q.listenWindow[1],Math.max(q.listenWindow[0],t)):currentMaterialPosition(q);
+  if(MOBILE_MEDIA_CLIENT){
+    mobileSeekVerified(q,pos,{reason:'mobile_refresh_analysis',onReady:()=>{
+      state.materialPositions[q.materialId]=pos; state.isPlaying=true; attachAnalysisTracking(q); requestMediaPlay('resume_analysis'); refreshAnalysisTransport(q);
+    }});
+    return;
+  }
   const run=()=>{
-    const pos=Number.isFinite(t)?Math.min(q.listenWindow[1],Math.max(q.listenWindow[0],t)):currentMaterialPosition(q);
     audio.currentTime=pos; state.materialPositions[q.materialId]=pos; state.isPlaying=true; attachAnalysisTracking(q); requestMediaPlay('resume_analysis'); refreshAnalysisTransport(q);
   };
   if(audio.readyState>=1) run(); else audio.addEventListener('loadedmetadata',run,{once:true});
@@ -1184,7 +1296,9 @@ function resumeSession(){
     state.initialAudioDelayDone=false;
     beginInitialPracticeDelay(getQ(),state.prepareSeconds||3);
   }else if(snap.audioWasPlaying){
-    if(snap.restoredFromRefresh && state.view==='practice' && state.practicePhase==='listen') resumePracticeFromRefresh(snap.audioTime);
+    if(MOBILE_MEDIA_CLIENT && state.view==='practice' && state.practicePhase==='listen') resumePracticeFromRefresh(snap.audioTime);
+    else if(MOBILE_MEDIA_CLIENT && state.view==='analysis') resumeAnalysisFromRefresh(snap.audioTime);
+    else if(snap.restoredFromRefresh && state.view==='practice' && state.practicePhase==='listen') resumePracticeFromRefresh(snap.audioTime);
     else if(snap.restoredFromRefresh && state.view==='analysis') resumeAnalysisFromRefresh(snap.audioTime);
     else { state.isPlaying=true; requestMediaPlay('session_resume'); }
   }
@@ -1266,7 +1380,10 @@ function closePracticeReview(){
   if(!state.practiceReviewOpen) return;
   const snap=state.practiceReviewSnapshot||{}; removePracticeReviewOverlay(); state.practiceReviewOpen=false; state.practiceReviewSnapshot=null;
   if(snap.timerRunning && state.view==='practice' && state.practicePhase==='answer'){ if(Number.isFinite(snap.timerRemaining)) state.timer=snap.timerRemaining; startCountdown(false); }
-  if(snap.audioWasPlaying && state.view==='practice' && state.practicePhase==='listen'){ state.isPlaying=true; requestMediaPlay('practice_review_resume'); }
+  if(snap.audioWasPlaying && state.view==='practice' && state.practicePhase==='listen'){
+    if(MOBILE_MEDIA_CLIENT) resumePracticeFromRefresh(snap.audioTime);
+    else { state.isPlaying=true; requestMediaPlay('practice_review_resume'); }
+  }
   logEvent('practice_review_close'); persist();
 }
 function renderPracticeReviewOverlay(){
@@ -1432,7 +1549,9 @@ function playPracticeSegment(segment,onEnd){
     }
   };
 
-  if(audio.readyState>=1) seekOnce(); else audio.addEventListener('loadedmetadata',seekOnce,{once:true});
+  if(MOBILE_MEDIA_CLIENT){
+    mobileSeekVerified(q,segment[0],{reason:'mobile_first_attempt',showStatus:false,onReady:()=>waitForBuffer()});
+  }else if(audio.readyState>=1) seekOnce(); else audio.addEventListener('loadedmetadata',seekOnce,{once:true});
 }
 function isFirstQuestionOfMaterial(i){ return i===0 || moduleData.questions[i-1].materialId!==moduleData.questions[i].materialId; }
 function enterListenPhase(){
