@@ -724,6 +724,16 @@ let practiceStartTimeout = null;
 let startInFlight = false;
 const PRACTICE_PREP_SECONDS = 3;
 const MOBILE_AUDIO_TAIL_SEC = 0.35;
+const MOBILE_MEDIA_CLIENT = /iPhone|iPad|iPod|Android|MicroMessenger/i.test(navigator.userAgent||'') || (navigator.maxTouchPoints>1 && Math.min(window.innerWidth||9999,window.innerHeight||9999)<900);
+const PRACTICE_MIN_BUFFER_SEC = MOBILE_MEDIA_CLIENT ? 2.5 : 0.75;
+const PRACTICE_MAX_BUFFER_WAIT_MS = MOBILE_MEDIA_CLIENT ? 4500 : 1800;
+const MEDIA_STALL_NOTICE_MS = 900;
+const MEDIA_STALL_ACTION_MS = 5000;
+let mediaHealthInstalled=false;
+let mediaStallNoticeTimer=null;
+let mediaStallActionTimer=null;
+let mediaRecoveryAction=null;
+let mediaStallActive=false;
 
 audio.volume = 1;
 
@@ -731,6 +741,99 @@ function logEvent(type,payload={}){
   state.eventLog.push({at:nowIso(),type,view:state.view,questionId:getQ()?.id||null,materialId:getQ()?.materialId||null,...payload});
   persist();
   try{ queueCloudSessionProgress(); }catch(e){}
+}
+function mediaSnapshot(){
+  const ranges=[];
+  try{ for(let i=0;i<audio.buffered.length;i++) ranges.push([Number(audio.buffered.start(i).toFixed(2)),Number(audio.buffered.end(i).toFixed(2))]); }catch(e){}
+  return {
+    readyState:audio.readyState,networkState:audio.networkState,paused:audio.paused,seeking:audio.seeking,
+    currentTime:Number.isFinite(audio.currentTime)?Number(audio.currentTime.toFixed(3)):null,
+    duration:Number.isFinite(audio.duration)?Number(audio.duration.toFixed(3)):null,
+    buffered:ranges
+  };
+}
+function mediaLog(type,payload={}){
+  try{
+    if(state&&Array.isArray(state.eventLog)) logEvent(type,{...mediaSnapshot(),...payload});
+    else console.warn('[Listening Lab media]',type,{...mediaSnapshot(),...payload});
+  }catch(e){}
+}
+function clearMediaStallTimers(){
+  if(mediaStallNoticeTimer){ clearTimeout(mediaStallNoticeTimer); mediaStallNoticeTimer=null; }
+  if(mediaStallActionTimer){ clearTimeout(mediaStallActionTimer); mediaStallActionTimer=null; }
+}
+function hideMediaRecovery(){
+  document.getElementById('mediaRecovery')?.remove();
+  mediaRecoveryAction=null;
+}
+function showMediaRecovery({kind='buffering',title='音频正在缓冲',message='网络较慢，请稍候。',actionLabel='',action=null}={}){
+  let el=document.getElementById('mediaRecovery');
+  if(!el){ el=document.createElement('div'); el.id='mediaRecovery'; el.className='media-recovery'; document.body.appendChild(el); }
+  el.className='media-recovery '+kind;
+  el.innerHTML='<div class="media-recovery-card"><div class="media-recovery-copy"><b>'+escapeHtml(title)+'</b><span>'+escapeHtml(message)+'</span></div>'+(actionLabel?'<button type="button" class="btn media-recovery-btn">'+escapeHtml(actionLabel)+'</button>':'<span class="media-buffer-dot" aria-hidden="true"></span>')+'</div>';
+  mediaRecoveryAction=typeof action==='function'?action:null;
+  const btn=el.querySelector('.media-recovery-btn');
+  if(btn) btn.addEventListener('click',()=>{ const fn=mediaRecoveryAction; mediaRecoveryAction=null; fn?.(); });
+}
+function retryCurrentMediaFromGesture(){
+  hideMediaRecovery(); clearMediaStallTimers();
+  mediaLog('media_user_retry',{userActivation:!!navigator.userActivation?.isActive});
+  if(!state||!['practice','analysis'].includes(state.view)) return;
+  state.isPlaying=true;
+  requestMediaPlay('user_retry');
+  if(state.view==='analysis') refreshAnalysisTransport();
+}
+function requestMediaPlay(reason='play'){
+  let p;
+  try{ p=audio.play(); }
+  catch(err){
+    state&&(state.isPlaying=false);
+    mediaLog('media_play_rejected',{reason,name:err?.name||'',message:String(err?.message||err||''),userActivation:!!navigator.userActivation?.isActive,ua:String(navigator.userAgent||'').slice(0,180)});
+    showMediaRecovery({kind:'blocked',title:'需要点击播放音频',message:'当前浏览器阻止了自动播放。点击后会从当前位置继续。',actionLabel:'▶ 点击播放音频',action:retryCurrentMediaFromGesture});
+    return Promise.resolve(false);
+  }
+  if(!p||typeof p.then!=='function') return Promise.resolve(true);
+  return p.then(()=>true).catch(err=>{
+    state&&(state.isPlaying=false);
+    mediaLog('media_play_rejected',{reason,name:err?.name||'',message:String(err?.message||err||''),userActivation:!!navigator.userActivation?.isActive,ua:String(navigator.userAgent||'').slice(0,180)});
+    showMediaRecovery({kind:'blocked',title:'需要点击播放音频',message:'当前浏览器阻止了自动播放。点击后会从当前位置继续。',actionLabel:'▶ 点击播放音频',action:retryCurrentMediaFromGesture});
+    if(state?.view==='analysis') refreshAnalysisTransport();
+    return false;
+  });
+}
+function scheduleMediaStall(kind){
+  if(!state||!state.isPlaying||!['practice','analysis'].includes(state.view)) return;
+  clearMediaStallTimers();
+  if(!mediaStallActive){ mediaStallActive=true; mediaLog(kind==='stalled'?'media_stalled':'media_waiting'); }
+  mediaStallNoticeTimer=setTimeout(()=>{
+    if(!state?.isPlaying||!['practice','analysis'].includes(state.view)||!audio.paused&&audio.readyState>=3) return;
+    showMediaRecovery({kind:'buffering',title:'音频正在缓冲',message:'网络较慢，正在继续加载音频…'});
+  },MEDIA_STALL_NOTICE_MS);
+  mediaStallActionTimer=setTimeout(()=>{
+    if(!state?.isPlaying||!['practice','analysis'].includes(state.view)) return;
+    showMediaRecovery({kind:'stalled',title:'音频加载较慢',message:'可以继续等待，或点击重新尝试播放。',actionLabel:'重新尝试播放',action:retryCurrentMediaFromGesture});
+  },MEDIA_STALL_ACTION_MS);
+}
+function installMediaHealthMonitoring(){
+  if(mediaHealthInstalled) return; mediaHealthInstalled=true;
+  audio.addEventListener('waiting',()=>scheduleMediaStall('waiting'));
+  audio.addEventListener('stalled',()=>scheduleMediaStall('stalled'));
+  audio.addEventListener('playing',()=>{
+    const recovered=mediaStallActive; mediaStallActive=false; clearMediaStallTimers(); hideMediaRecovery();
+    if(state) state.isPlaying=true;
+    if(recovered) mediaLog('media_playback_recovered');
+    if(state?.view==='analysis') refreshAnalysisTransport();
+  });
+  audio.addEventListener('canplay',()=>{
+    if(mediaStallActive&&state?.isPlaying&&!audio.paused) mediaLog('media_canplay_after_stall');
+  });
+  audio.addEventListener('error',()=>{
+    clearMediaStallTimers(); mediaStallActive=false; state&&(state.isPlaying=false);
+    const err=audio.error;
+    mediaLog('media_error',{code:err?.code||null,message:err?.message||'',ua:String(navigator.userAgent||'').slice(0,180)});
+    showMediaRecovery({kind:'error',title:'音频加载失败',message:'请检查网络后重新尝试播放。',actionLabel:'重新尝试播放',action:retryCurrentMediaFromGesture});
+    if(state?.view==='analysis') refreshAnalysisTransport();
+  });
 }
 function persist(){
   state.autosaveAt=nowIso();
@@ -824,8 +927,7 @@ function resumePracticeFromRefresh(t){
     const pos=Number.isFinite(t)?Math.min(end,Math.max(start,t)):start;
     audio.currentTime=pos; state.progressPct=Math.min(100,Math.max(0,((pos-start)/(end-start))*100));
     state.isPlaying=true; attachPracticeSegment(window,beginAnswerPhase,token); updatePracticeProgress();
-    const p=audio.play();
-    if(p&&typeof p.catch==='function') p.catch(err=>logEvent('resume_audio_play_rejected',{message:String(err)}));
+    requestMediaPlay('resume_practice');
   };
   if(audio.readyState>=1) run(); else audio.addEventListener('loadedmetadata',run,{once:true});
 }
@@ -833,7 +935,7 @@ function resumeAnalysisFromRefresh(t){
   const q=getQ(); ensureAnalysisAudio(q);
   const run=()=>{
     const pos=Number.isFinite(t)?Math.min(q.listenWindow[1],Math.max(q.listenWindow[0],t)):currentMaterialPosition(q);
-    audio.currentTime=pos; state.materialPositions[q.materialId]=pos; state.isPlaying=true; attachAnalysisTracking(q); audio.play().catch(()=>{}); refreshAnalysisTransport(q);
+    audio.currentTime=pos; state.materialPositions[q.materialId]=pos; state.isPlaying=true; attachAnalysisTracking(q); requestMediaPlay('resume_analysis'); refreshAnalysisTransport(q);
   };
   if(audio.readyState>=1) run(); else audio.addEventListener('loadedmetadata',run,{once:true});
 }
@@ -969,7 +1071,7 @@ function saveMaterialPosition(){
 }
 function stopAudio({save=true}={}){
   if(save) saveMaterialPosition();
-  audio.pause(); state.isPlaying=false; clearSegment(); refreshAnalysisTransport();
+  audio.pause(); state.isPlaying=false; clearSegment(); clearMediaStallTimers(); mediaStallActive=false; hideMediaRecovery(); refreshAnalysisTransport();
 }
 function setVolume(v){ audio.volume=Math.max(0,Math.min(1,Number(v))); document.querySelectorAll('.vol-readout').forEach(el=>el.textContent=Math.round(audio.volume*100)+'%'); }
 function updatePracticeProgress(){ document.querySelectorAll('.audio-progress').forEach(el=>el.style.width=`${state.progressPct}%`); }
@@ -1026,7 +1128,7 @@ function resumeSession(){
   }else if(snap.audioWasPlaying){
     if(snap.restoredFromRefresh && state.view==='practice' && state.practicePhase==='listen') resumePracticeFromRefresh(snap.audioTime);
     else if(snap.restoredFromRefresh && state.view==='analysis') resumeAnalysisFromRefresh(snap.audioTime);
-    else { state.isPlaying=true; audio.play().catch(()=>{}); }
+    else { state.isPlaying=true; requestMediaPlay('session_resume'); }
   }
   logEvent('session_resume',{pausedMs:snap.pausedAt?Date.now()-snap.pausedAt:null,restoredFromRefresh:!!snap.restoredFromRefresh});
   refreshAnalysisTransport(); persist();
@@ -1238,16 +1340,19 @@ function playPracticeSegment(segment,onEnd){
     }
     state.isPlaying=true; attachPracticeSegment(segment,onEnd,token);
     logEvent('first_audio_start',{start:segment[0],end:segment[1],effectiveEnd:practicePlaybackEnd(segment),sourceModuleId:q.sourceModuleId||moduleData.moduleId,bufferedAhead:practiceBufferedAhead(segment[0])});
-    const p=audio.play();
-    if(p&&typeof p.catch==='function') p.catch(err=>logEvent('first_audio_play_rejected',{message:String(err)}));
+    requestMediaPlay('first_attempt');
   };
 
   const waitForBuffer=(startedAt=performance.now())=>{
     if(!stillCurrent()) return;
-    const needed=Math.min(.75,Math.max(.2,(segment[1]-segment[0])*.25));
+    const elapsed=performance.now()-startedAt;
+    const needed=Math.min(PRACTICE_MIN_BUFFER_SEC,Math.max(.35,(segment[1]-segment[0])*.35));
     const enough=audio.readyState>=3 || practiceBufferedAhead(segment[0])>=needed;
-    if(enough || performance.now()-startedAt>1400){ begin(); return; }
-    setTimeout(()=>waitForBuffer(startedAt),70);
+    if(enough || elapsed>PRACTICE_MAX_BUFFER_WAIT_MS){ hideMediaRecovery(); begin(); return; }
+    if(MOBILE_MEDIA_CLIENT && elapsed>900 && !document.getElementById('mediaRecovery')){
+      showMediaRecovery({kind:'buffering',title:'音频正在缓冲',message:'网络较慢，正在准备音频…'});
+    }
+    setTimeout(()=>waitForBuffer(startedAt),90);
   };
 
   const seekOnce=()=>{
@@ -1448,7 +1553,7 @@ function playAnalysis(){
   }
   state.isPlaying=true; attachAnalysisTracking(q);
   logEvent(state.reviewMode?'review_audio_play':'analysis_audio_play',{position:audio.currentTime});
-  audio.play().catch(()=>{}); refreshAnalysisTransport(q);
+  requestMediaPlay('analysis_play'); refreshAnalysisTransport(q);
   // Step 1 is optional and “整篇 / 局部”均可，因此一旦学生主动播放，就视为完成重听步骤。
   // 旧版只改了 state，没有刷新左侧卡片，导致 Step 2 仍显示锁定，直到发生别的点击。
   if(firstReplayDecision && !state.reviewMode) requestAnimationFrame(()=>renderAnalysisPreserveScroll());
@@ -1464,7 +1569,7 @@ function replayFromStart(){
     state.materialReplayCount[q.materialId]=(state.materialReplayCount[q.materialId]||0)+1;
   }
   state.isPlaying=true; attachAnalysisTracking(q); logEvent(state.reviewMode?'review_audio_restart':'analysis_audio_restart');
-  audio.play().catch(()=>{}); refreshAnalysisTransport(q);
+  requestMediaPlay('analysis_restart'); refreshAnalysisTransport(q);
   if(firstReplayDecision && !state.reviewMode) requestAnimationFrame(()=>renderAnalysisPreserveScroll());
 }
 function setAnalysisSeekValue(v,{log=false}={}){ if(state.paused)return; const q=getQ(); ensureAnalysisAudio(q); if(audio.readyState<1){ audio.addEventListener('loadedmetadata',()=>setAnalysisSeekValue(v,{log}),{once:true}); return; } const old=audio.currentTime; const nv=Math.min(q.listenWindow[1],Math.max(q.listenWindow[0],Number(v))); audio.currentTime=nv; state.materialPositions[q.materialId]=nv; if(log)logEvent(state.reviewMode?'review_audio_seek':'analysis_audio_seek',{from:old,to:nv}); refreshAnalysisTransport(q); }
@@ -1951,6 +2056,7 @@ function showBootError(err){
   app.innerHTML=`<main class="page"><div class="hero"><div class="card boot-error"><h2>Listening Lab 无法启动</h2><p>${String(err?.message||err)}</p><p>请使用根目录的 <b>start_mac.command</b> / <b>start_windows.bat</b> / <code>python3 start_local.py</code> 启动，不要直接双击 app/index.html。</p></div></div></main>`;
 }
 async function bootstrap(){
+  installMediaHealthMonitoring();
   try{
     await fetchCatalog();
     if(!PACK_CATALOG.length){ state=newState(); state.view='sets'; writeNavigation('sets',null); renderSetSelection(); return; }
