@@ -73,6 +73,8 @@ def frontend_contract_checks():
         "audio.addEventListener('stalled'": "学生端缺少 audio stalled 卡顿监听",
         "audio.addEventListener('error'": "学生端缺少 audio error 错误监听",
         "PRACTICE_MIN_BUFFER_SEC": "学生端缺少移动端首听缓冲门槛",
+        "function recoveryTargetForCurrentMedia": "学生端缺少卡顿恢复位置计算；重试可能从整段音频 0 秒开始",
+        "function seekAndRetryCurrentMedia": "学生端缺少重试前 seek 定位恢复",
     }
     for needle, message in required_media_contracts.items():
         if needle not in app_text:
