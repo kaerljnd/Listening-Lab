@@ -1347,7 +1347,8 @@ function playPracticeSegment(segment,onEnd){
     if(!stillCurrent()) return;
     const elapsed=performance.now()-startedAt;
     const needed=Math.min(PRACTICE_MIN_BUFFER_SEC,Math.max(.35,(segment[1]-segment[0])*.35));
-    const enough=audio.readyState>=3 || practiceBufferedAhead(segment[0])>=needed;
+    const bufferedAhead=practiceBufferedAhead(segment[0]);
+    const enough=bufferedAhead>=needed || audio.readyState>=4 || (!MOBILE_MEDIA_CLIENT && audio.readyState>=3);
     if(enough || elapsed>PRACTICE_MAX_BUFFER_WAIT_MS){ hideMediaRecovery(); begin(); return; }
     if(MOBILE_MEDIA_CLIENT && elapsed>900 && !document.getElementById('mediaRecovery')){
       showMediaRecovery({kind:'buffering',title:'音频正在缓冲',message:'网络较慢，正在准备音频…'});
