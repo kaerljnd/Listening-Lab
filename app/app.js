@@ -1208,7 +1208,7 @@ function closePracticeReview(){
   if(!state.practiceReviewOpen) return;
   const snap=state.practiceReviewSnapshot||{}; removePracticeReviewOverlay(); state.practiceReviewOpen=false; state.practiceReviewSnapshot=null;
   if(snap.timerRunning && state.view==='practice' && state.practicePhase==='answer'){ if(Number.isFinite(snap.timerRemaining)) state.timer=snap.timerRemaining; startCountdown(false); }
-  if(snap.audioWasPlaying && state.view==='practice' && state.practicePhase==='listen'){ state.isPlaying=true; audio.play().catch(()=>{}); }
+  if(snap.audioWasPlaying && state.view==='practice' && state.practicePhase==='listen'){ state.isPlaying=true; requestMediaPlay('practice_review_resume'); }
   logEvent('practice_review_close'); persist();
 }
 function renderPracticeReviewOverlay(){
