@@ -813,10 +813,10 @@ function seekAndRetryCurrentMedia(reason='user_retry'){
     const play=()=>{
       if(state.view==='practice'){
         const segment=Array.isArray(state.segment)?state.segment:q.listenWindow;
-        if(segment) attachPracticeSegment(segment,beginAnswerPhase,practicePlaybackToken);
+        if(segment&&!timeupdateHandler) attachPracticeSegment(segment,beginAnswerPhase,practicePlaybackToken);
       }else{
         state.materialPositions[q.materialId]=target;
-        attachAnalysisTracking(q);
+        if(!timeupdateHandler) attachAnalysisTracking(q);
       }
       state.isPlaying=true;
       requestMediaPlay(reason);
