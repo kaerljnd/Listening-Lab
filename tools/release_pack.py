@@ -67,6 +67,16 @@ def frontend_contract_checks():
         errors.append("学生端仍使用 audio.src.includes(src) 比较媒体地址；带空格/%20 的音频会在分析阶段反复重载")
     if "function sameAudioSource" not in app_text:
         errors.append("学生端缺少标准化媒体 URL 比较函数 sameAudioSource")
+    required_media_contracts = {
+        "function requestMediaPlay": "学生端缺少统一的媒体 play() 失败处理 requestMediaPlay",
+        "audio.addEventListener('waiting'": "学生端缺少 audio waiting 缓冲监听",
+        "audio.addEventListener('stalled'": "学生端缺少 audio stalled 卡顿监听",
+        "audio.addEventListener('error'": "学生端缺少 audio error 错误监听",
+        "PRACTICE_MIN_BUFFER_SEC": "学生端缺少移动端首听缓冲门槛",
+    }
+    for needle, message in required_media_contracts.items():
+        if needle not in app_text:
+            errors.append(message)
     return errors
 
 
