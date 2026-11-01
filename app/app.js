@@ -734,6 +734,9 @@ let mediaStallNoticeTimer=null;
 let mediaStallActionTimer=null;
 let mediaRecoveryAction=null;
 let mediaStallActive=false;
+let mediaLastGoodPosition=null;
+let mediaLastGoodQuestionId=null;
+let mediaLastGoodMaterialId=null;
 
 audio.volume = 1;
 
@@ -775,13 +778,65 @@ function showMediaRecovery({kind='buffering',title='音频正在缓冲',message=
   const btn=el.querySelector('.media-recovery-btn');
   if(btn) btn.addEventListener('click',()=>{ const fn=mediaRecoveryAction; mediaRecoveryAction=null; fn?.(); });
 }
+function rememberMediaPosition(){
+  if(!state||!['practice','analysis'].includes(state.view)||!Number.isFinite(audio.currentTime)) return;
+  const q=getQ(); if(!q) return;
+  const [a,b]=Array.isArray(q.listenWindow)?q.listenWindow:[0,Infinity];
+  const t=Number(audio.currentTime);
+  if(t<a-.05||t>b+MOBILE_AUDIO_TAIL_SEC) return;
+  mediaLastGoodPosition=t;
+  mediaLastGoodQuestionId=q.id||null;
+  mediaLastGoodMaterialId=q.materialId||null;
+  if(state.view==='analysis'&&q.materialId) state.materialPositions[q.materialId]=Math.min(b,Math.max(a,t));
+}
+function recoveryTargetForCurrentMedia(){
+  const q=getQ(); if(!q||!Array.isArray(q.listenWindow)) return 0;
+  const [a,b]=q.listenWindow;
+  const sameQuestion=mediaLastGoodQuestionId===q.id&&mediaLastGoodMaterialId===q.materialId;
+  const remembered=sameQuestion&&Number.isFinite(mediaLastGoodPosition)?mediaLastGoodPosition:null;
+  if(state.view==='analysis'){
+    const saved=Number(state.materialPositions?.[q.materialId]);
+    if(Number.isFinite(saved)&&saved>=a-.05&&saved<b-.05) return Math.min(b-.05,Math.max(a,saved));
+  }
+  if(Number.isFinite(remembered)&&remembered>=a-.05&&remembered<b-.05) return Math.min(b-.05,Math.max(a,remembered));
+  const current=Number(audio.currentTime);
+  if(Number.isFinite(current)&&current>=a-.05&&current<b-.05) return Math.min(b-.05,Math.max(a,current));
+  return a;
+}
+function seekAndRetryCurrentMedia(reason='user_retry'){
+  if(!state||!['practice','analysis'].includes(state.view)) return;
+  const q=getQ(); if(!q) return;
+  const run=()=>{
+    const target=recoveryTargetForCurrentMedia();
+    const current=Number(audio.currentTime)||0;
+    mediaLog('media_retry_seek',{reason,target,current,segment:q.listenWindow});
+    const play=()=>{
+      if(state.view==='practice'){
+        const segment=Array.isArray(state.segment)?state.segment:q.listenWindow;
+        if(segment) attachPracticeSegment(segment,beginAnswerPhase,practicePlaybackToken);
+      }else{
+        state.materialPositions[q.materialId]=target;
+        attachAnalysisTracking(q);
+      }
+      state.isPlaying=true;
+      requestMediaPlay(reason);
+      if(state.view==='analysis') refreshAnalysisTransport(q);
+    };
+    if(Math.abs(current-target)<=.12&&!audio.seeking){ play(); return; }
+    try{
+      audio.currentTime=target;
+      if(audio.seeking) audio.addEventListener('seeked',play,{once:true});
+      else setTimeout(play,40);
+    }catch(e){
+      audio.addEventListener('loadedmetadata',run,{once:true});
+    }
+  };
+  if(audio.readyState>=1) run(); else audio.addEventListener('loadedmetadata',run,{once:true});
+}
 function retryCurrentMediaFromGesture(){
   hideMediaRecovery(); clearMediaStallTimers();
   mediaLog('media_user_retry',{userActivation:!!navigator.userActivation?.isActive});
-  if(!state||!['practice','analysis'].includes(state.view)) return;
-  state.isPlaying=true;
-  requestMediaPlay('user_retry');
-  if(state.view==='analysis') refreshAnalysisTransport();
+  seekAndRetryCurrentMedia('user_retry');
 }
 function requestMediaPlay(reason='play'){
   let p;
@@ -816,9 +871,10 @@ function scheduleMediaStall(kind){
 }
 function installMediaHealthMonitoring(){
   if(mediaHealthInstalled) return; mediaHealthInstalled=true;
-  audio.addEventListener('waiting',()=>scheduleMediaStall('waiting'));
-  audio.addEventListener('stalled',()=>scheduleMediaStall('stalled'));
-  audio.addEventListener('playing',()=>{
+  audio.addEventListener('timeupdate',rememberMediaPosition);
+  audio.addEventListener('waiting',()=>{ rememberMediaPosition(); scheduleMediaStall('waiting'); });
+  audio.addEventListener('stalled',()=>{ rememberMediaPosition(); scheduleMediaStall('stalled'); });
+  audio.addEventListener('playing',()=>{ rememberMediaPosition();
     const recovered=mediaStallActive; mediaStallActive=false; clearMediaStallTimers(); hideMediaRecovery();
     if(state) state.isPlaying=true;
     if(recovered) mediaLog('media_playback_recovered');
@@ -1382,6 +1438,7 @@ function isFirstQuestionOfMaterial(i){ return i===0 || moduleData.questions[i-1]
 function enterListenPhase(){
   clearInterval(state.timerId); state.timerId=null; clearPracticeStartDelay(); cancelPendingPracticePlayback(); stopAudio({save:false});
   const q=getQ(); state.progressPct=0;
+  mediaLastGoodPosition=null; mediaLastGoodQuestionId=q?.id||null; mediaLastGoodMaterialId=q?.materialId||null;
   if(q.audioMissing){state.practicePhase='source_missing';logEvent('source_audio_missing_skip',{questionId:q.id});renderPractice();return;}
   // Every piece of audio gets the same 3-second preparation period:
   // each Best Response item and the first question of each shared material.
@@ -1535,6 +1592,8 @@ function ensureAnalysisAudio(q){
   const src=audioSourceFor(q); if(!sameAudioSource(src)) audio.src=src;
   if(materialChanged){
     state.loadedMaterialId=q.materialId; state.segment=q.listenWindow;
+    mediaLastGoodQuestionId=q?.id||null; mediaLastGoodMaterialId=q?.materialId||null;
+    mediaLastGoodPosition=currentMaterialPosition(q);
     const apply=()=>{ if(state.loadedMaterialId!==q.materialId)return; try{audio.currentTime=currentMaterialPosition(q);}catch(e){} refreshAnalysisTransport(q); };
     if(audio.readyState>=1) apply(); else audio.addEventListener('loadedmetadata',apply,{once:true});
   }
