@@ -45,6 +45,8 @@ GitHub Pages 模式下，学生端：
 
 路径按题包目录相对定位。建议使用 `audio/M1.mp3`、`audio/M2H.mp3` 等简单文件名。学生端已使用标准化媒体 URL 比较，避免因 URL 空格编码差异造成重复重载。
 
+移动端播放器在 `classroom-pilot-0.7.10` 加入容错层：统一处理 `play()` rejection，监听 `waiting` / `stalled` / `error` / `playing`，在微信内置浏览器或 iOS Safari 阻止自动播放时提供手动播放按钮；网络缓冲不足时显示缓冲状态，并在持续卡顿后提供重试入口。移动端首听会等待更充分的实际 buffer 后再开始。
+
 ## 3. 教师端资源加载
 
 教师端 `teacher/` 从同一 `practice_packs/` 目录读取 `pack.json` 和题目/材料分片，以建立：
@@ -112,7 +114,7 @@ GitHub Pages 模式下，学生端：
 
 ## 7. 当前资源缓存标识
 
-- 学生端：`classroom-pilot-0.7.9`
+- 学生端：`classroom-pilot-0.7.10`
 - 教师端：`teacher-0.2.2`
 - API：`classroom-pilot-0.6.9-set-policy`
 
