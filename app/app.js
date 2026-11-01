@@ -857,6 +857,7 @@ function mobileSeekVerified(q,target,{reason='mobile_seek',onReady=null,showStat
 }
 function guardMobilePlaybackPosition(source='playing'){
   if(!MOBILE_MEDIA_CLIENT||mobileSeekInFlight||!state||!['practice','analysis'].includes(state.view)) return true;
+  if(source!=='playing'&&!state.isPlaying) return true;
   const q=getQ(); if(!q||!Array.isArray(q.listenWindow)) return true;
   const [a,b]=q.listenWindow,t=Number(audio.currentTime);
   if(Number.isFinite(t)&&t>=a-.08&&t<=b+MOBILE_AUDIO_TAIL_SEC) return true;
