@@ -74,7 +74,11 @@ def frontend_contract_checks():
         "audio.addEventListener('error'": "学生端缺少 audio error 错误监听",
         "PRACTICE_MIN_BUFFER_SEC": "学生端缺少移动端首听缓冲门槛",
         "function recoveryTargetForCurrentMedia": "学生端缺少卡顿恢复位置计算；重试可能从整段音频 0 秒开始",
-        "function seekAndRetryCurrentMedia": "学生端缺少重试前 seek 定位恢复",
+        "function seekAndRetryCurrentMedia": "桌面端缺少重试前 seek 定位恢复",
+        "function mobileSeekVerified": "移动端缺少独立的 seeked + listening_window 定位核验状态机",
+        "function guardMobilePlaybackPosition": "移动端缺少播放位置硬保护；浏览器可能回到整段音频 0 秒继续播放",
+        "mobile_refresh_practice": "移动端刷新恢复没有经过独立定位流程",
+        "mobile_preplay_guard": "移动端真正播放前缺少二次 listening_window 核验",
     }
     for needle, message in required_media_contracts.items():
         if needle not in app_text:
