@@ -1480,7 +1480,9 @@ function attachPracticeSegment(segment,onEnd,token){
   const [a,b]=segment, effectiveEnd=practicePlaybackEnd(segment);
   const finish=()=>{
     if(token!==practicePlaybackToken) return;
-    audio.pause(); state.isPlaying=false; state.progressPct=100; updatePracticeProgress(); clearSegment();
+    audio.pause(); state.isPlaying=false; state.progressPct=100; updatePracticeProgress();
+    clearMediaStallTimers(); mediaStallActive=false; hideMediaRecovery(); mobileSeekToken++; mobileSeekInFlight=false;
+    clearSegment();
     logEvent('first_audio_end',{nominalEnd:b,effectiveEnd}); onEnd?.();
   };
   timeupdateHandler=()=>{
@@ -1732,7 +1734,7 @@ function ensureAnalysisAudio(q){
 function analysisPos(q){ return state.loadedMaterialId===q.materialId&&Number.isFinite(audio.currentTime)?Math.min(materialEnd(q),Math.max(materialStart(q),audio.currentTime)):currentMaterialPosition(q); }
 function attachAnalysisTracking(q){
   clearSegment(); const [a,b]=q.listenWindow, effectiveEnd=Math.min(Number.isFinite(audio.duration)?audio.duration:Infinity,b+MOBILE_AUDIO_TAIL_SEC);
-  timeupdateHandler=()=>{ if(state.loadedMaterialId!==q.materialId) return; state.materialPositions[q.materialId]=Math.min(b,audio.currentTime); if(audio.currentTime>=effectiveEnd-.02){ audio.pause(); state.isPlaying=false; state.materialPositions[q.materialId]=b; clearSegment(); } refreshAnalysisTransport(q); };
+  timeupdateHandler=()=>{ if(state.loadedMaterialId!==q.materialId) return; state.materialPositions[q.materialId]=Math.min(b,audio.currentTime); if(audio.currentTime>=effectiveEnd-.02){ audio.pause(); state.isPlaying=false; state.materialPositions[q.materialId]=b; clearMediaStallTimers(); mediaStallActive=false; hideMediaRecovery(); mobileSeekToken++; mobileSeekInFlight=false; clearSegment(); } refreshAnalysisTransport(q); };
   audio.addEventListener('timeupdate',timeupdateHandler);
 }
 function playAnalysis(){
