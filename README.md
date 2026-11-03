@@ -13,6 +13,18 @@ Listening Lab 是一套面向 TOEFL Listening 教学的网页练习与课堂记�
 | 教师端 | https://kaerljnd.github.io/Listening-Lab/teacher/ | 查询课堂 Session、学生答题和分析记录 |
 | API Health | https://listeni-lab-api-yuhpblgpyn.cn-hangzhou.fcapp.run/health | 检查阿里云课堂 API 是否可用 |
 
+## 稳定基线
+
+当前长期稳定基线：**`stable-0.7.15`**
+
+- 对应前端版本：`classroom-pilot-0.7.15`
+- 对应 commit：`8678e3d69981bfcd7efb53dec1916689d52dcd6d`
+- GitHub Pages 部署：已通过
+- 维护原则：核心程序默认冻结；新增真题优先只走 Pack Release Pipeline。只有真实课堂反馈暴露明确问题时，才修改学生端、教师端或课堂 API。
+- 回归/排错时，以 `stable-0.7.15` 作为已知正常参考点，不要把后续题包数据更新误判为核心程序变化。
+
+详细说明见 [STABLE_BASELINE.md](STABLE_BASELINE.md)。
+
 ## 当前部署快照
 
 - GitHub 发布分支：`classroom-pilot`
