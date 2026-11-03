@@ -861,6 +861,13 @@ function guardMobilePlaybackPosition(source='playing'){
   const q=getQ(); if(!q||!Array.isArray(q.listenWindow)) return true;
   const [a,b]=q.listenWindow,t=Number(audio.currentTime);
   if(Number.isFinite(t)&&t>=a-.08&&t<=b+MOBILE_AUDIO_TAIL_SEC) return true;
+  // A final timeupdate can arrive a little beyond the segment boundary before the
+  // segment-specific finish handler runs. Treat that as a natural completion,
+  // not as a seek-to-zero / wrong-window failure.
+  if(Number.isFinite(t)&&t>=b-.12){
+    mediaLog('mobile_window_natural_end',{source,actual:t,window:q.listenWindow});
+    return true;
+  }
   audio.pause(); state.isPlaying=false;
   const target=recoveryTargetForCurrentMedia();
   mediaLog('mobile_wrong_window_blocked',{source,target,actual:t,window:q.listenWindow});
@@ -1695,7 +1702,7 @@ function renderLibrary(){
 function renderPractice(){
   const q=getQ(),selected=state.firstAnswers[q.id];
   const td=state.practicePhase==='answer'?(state.showTime?fmt(state.timer):'--:--'):(state.showTime?fmt(q.timerSec):'--:--');
-  const options=q.options.map((o,i)=>`<div class="option ${selected===letters[i]?'selected':''} ${state.practicePhase!=='answer'?'disabled-option':''}" ${state.practicePhase==='answer'?`onclick="chooseFirst('${letters[i]}')"`:''}><span class="radio"></span><span><b>${letters[i]}.</b> ${o}</span></div>`).join('');
+  const options=q.options.map((o,i)=>`<button type="button" class="option ${selected===letters[i]?'selected':''} ${state.practicePhase!=='answer'?'disabled-option':''}" ${state.practicePhase==='answer'?`onclick="chooseFirst('${letters[i]}'); return false;"`:'disabled'}><span class="radio"></span><span><b>${letters[i]}.</b> ${o}</span></button>`).join('');
   let right='';
   if(q.audioMissing)right='<div class="source-audio-warning"><h2>⚠ 本题缺少真实音频</h2><p>现有片段是静音占位，不计入成绩。</p><button class="btn" onclick="nextQ()">跳过本题 →</button></div>';
   else if(state.practicePhase==='prepare') right=`<div class="prep-question-pane"><div class="prep-count" id="prepareCount">${state.prepareSeconds||3}</div><h2>准备</h2><p>音频将在倒计时结束后自动播放。</p></div>`;
