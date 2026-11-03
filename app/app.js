@@ -771,7 +771,14 @@ function hideMediaRecovery(){
   document.getElementById('mediaRecovery')?.remove();
   mediaRecoveryAction=null;
 }
+function mediaRecoveryUiAllowed(){
+  if(!state) return false;
+  if(state.view==='practice') return state.practicePhase==='listen';
+  if(state.view==='analysis') return true;
+  return false;
+}
 function showMediaRecovery({kind='buffering',title='音频正在缓冲',message='网络较慢，请稍候。',actionLabel='',action=null}={}){
+  if(!mediaRecoveryUiAllowed()){ hideMediaRecovery(); return; }
   let el=document.getElementById('mediaRecovery');
   if(!el){ el=document.createElement('div'); el.id='mediaRecovery'; el.className='media-recovery'; document.body.appendChild(el); }
   el.className='media-recovery '+kind;
@@ -981,12 +988,16 @@ function installMediaHealthMonitoring(){
     if(mediaStallActive&&state?.isPlaying&&!audio.paused) mediaLog('media_canplay_after_stall');
   });
   audio.addEventListener('error',()=>{
-    clearMediaStallTimers(); mediaStallActive=false; state&&(state.isPlaying=false);
+    clearMediaStallTimers(); mediaStallActive=false;
+    const activeMediaContext=state&&(state.view==='analysis'||(state.view==='practice'&&state.practicePhase==='listen'));
+    if(activeMediaContext) state.isPlaying=false;
     const err=audio.error;
-    mediaLog('media_error',{code:err?.code||null,message:err?.message||'',ua:String(navigator.userAgent||'').slice(0,180)});
-    if(state&&['practice','analysis'].includes(state.view)){
+    mediaLog('media_error',{code:err?.code||null,message:err?.message||'',ua:String(navigator.userAgent||'').slice(0,180),uiAllowed:!!activeMediaContext});
+    if(activeMediaContext){
       showMediaRecovery({kind:'error',title:'音频加载失败',message:'请检查网络后重新尝试播放。',actionLabel:'重新尝试播放',action:retryCurrentMediaFromGesture});
       if(state.view==='analysis') refreshAnalysisTransport();
+    }else{
+      hideMediaRecovery();
     }
   });
 }
@@ -1579,6 +1590,7 @@ function enterListenPhase(){
   else beginAnswerPhase();
 }
 function beginAnswerPhase(){
+  clearMediaStallTimers(); mediaStallActive=false; hideMediaRecovery(); mobileSeekToken++; mobileSeekInFlight=false;
   const q=getQ(); state.practicePhase='answer'; state.timer=q.timerSec;
   state.firstMeta[q.id]=state.firstMeta[q.id]||{answerShownAt:nowIso(),answerShownMs:Date.now(),selections:[],timeout:false};
   logEvent('first_answer_phase_start',{timerSec:q.timerSec}); renderPractice(); startCountdown(true);
