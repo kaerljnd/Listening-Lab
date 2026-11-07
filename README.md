@@ -28,12 +28,12 @@ Listening Lab 是一套面向 TOEFL Listening 教学的网页练习与课堂记�
 ## 当前部署快照
 
 - GitHub 发布分支：`classroom-pilot`
-- 学生端静态资源缓存标识：`classroom-pilot-0.7.10`
-- 教师端静态资源缓存标识：`teacher-0.2.2`
+- 学生端静态资源缓存标识：`classroom-pilot-0.7.16`
+- 教师端静态资源缓存标识：`teacher-0.2.3`
 - 阿里云 API 版本：`classroom-pilot-0.6.9-set-policy`
 - 当前题包目录：17 套；最新发布为 `20261021A`、`20261020A`
 
-说明：前端的 `0.7.9`、`0.2.2` 是用于浏览器缓存更新的资源标识，不应理解为完整的产品语义版本号。API 的实际运行版本可通过 Health 接口查看。
+说明：前端的 `0.7.16`、`0.2.3` 是用于浏览器缓存更新的资源标识，不应理解为完整的产品语义版本号。API 的实际运行版本可通过 Health 接口查看。
 
 ## 功能概览
 
@@ -43,7 +43,7 @@ Listening Lab 是一套面向 TOEFL Listening 教学的网页练习与课堂记�
 - 题型专项：Best Response、Conversation、Announcement、Academic Talk。
 - 单篇 Academic Talk 精练：作业模式与自主练习模式。
 - 首次作答、重听分析、Transcript 后复核和 Results 汇总。
-- 记录选择历史、修改次数、反应时间、分析步骤、Evidence 和文本后答案。
+- 记录选择历史、修改次数、有效选择用时、分析步骤、Evidence 和文本后答案；暂停、题目回看和刷新等待不会计入选择用时。
 - 支持题包 JSON 内嵌结构，也支持 `materials_files` / `questions_files` 分片结构。
 - Transcript 点击跳转：有 `word_timings` 时按词时间定位；没有时使用近似位置，不代表精确单词对齐。
 - 题目和练习进度保存在当前浏览器；课堂 Session 与答题分析数据同步到云端。
@@ -53,7 +53,7 @@ Listening Lab 是一套面向 TOEFL Listening 教学的网页练习与课堂记�
 
 - 按班号、学生标识、套题、练习类型和 Session 状态筛选。
 - 查看进行中、已完成和中途退出的 Session。
-- 查看 First / Second / Transcript 后答案、正确答案、反应时间、选择修改历史和材料分析。
+- 查看 First / Second / Transcript 后答案、正确答案、首次/最终选择用时、选择修改历史和材料分析；旧版异常墙钟时长会标记为历史异常数据。
 - 能读取内嵌题目，也能读取分片题包；正确答案来自题包的 `correct_answer`。
 
 ## 系统架构
