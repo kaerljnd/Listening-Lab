@@ -178,6 +178,36 @@ function answerFor(meta,qid){
   }
   return '';
 }
+function questionFor(meta,qid){
+  const direct=questionMeta.get(qid);
+  if(direct)return direct;
+  const moduleId=String(meta?.module_id||'').trim();
+  if(moduleId){
+    const scoped=questionMeta.get(moduleId+'-'+qid);
+    if(scoped)return scoped;
+  }
+  return null;
+}
+function formatMs(ms){
+  const n=Number(ms);
+  return Number.isFinite(n)?(n/1000).toFixed(n<10000?1:2)+'s':'—';
+}
+function selectionTimingCell(meta,response){
+  const q=questionFor(meta,response.question_id);
+  const limitMs=Math.max(0,Number(q?.timer_sec)||0)*1000;
+  const history=historyArray(response.selection_history).filter(x=>Number.isFinite(Number(x?.elapsed_ms)));
+  if(!history.length){
+    if(Number(response.timeout||0)) return '<span class="small">超时</span>';
+    return '<span class="small">—</span>';
+  }
+  const first=Number(history[0].elapsed_ms),final=Number(history[history.length-1].elapsed_ms);
+  const tolerance=1000;
+  if(limitMs>0 && (first>limitMs+tolerance || final>limitMs+tolerance)){
+    return '<span class="small">旧记录异常</span><div class="small">超过题目时限，不用于速度判断</div>';
+  }
+  if(history.length===1) return '<b>'+formatMs(first)+'</b><div class="small">首次 = 最终</div>';
+  return '<b>'+formatMs(first)+'</b><div class="small">最终 '+formatMs(final)+'</div>';
+}
 function detailStats(detail){
   const responses=detail.responses||[], attempts=detail.attempts||[];
   const meta=detail.session||{};
@@ -231,7 +261,7 @@ async function sessionView(id){
     const extras=[];
     if(a.function_tag)extras.push('Function: '+a.function_tag);
     if(a.key_meaning)extras.push('Key Meaning: '+a.key_meaning);
-    return `<tr class="${rowClass}"><td><b>${esc(r.question_id)}</b></td><td>${answerPill(first,correct)}<div>${answerTrail(r.selection_history)}</div><div class="small">改选 ${Number(r.change_count||0)} 次</div></td><td>${answerPill(correct,'')}</td><td>${r.response_ms!=null?Math.round(Number(r.response_ms))/1000+'s':'—'}</td><td>${answerPill(a.second_answer||'','')}<div>${answerTrail(a.second_selection_history)}</div></td><td>${answerPill(a.post_transcript_answer||'','')}<div>${answerTrail(a.post_selection_history)}</div></td><td>${esc(a.resolution_stage||'—')}${extras.length?'<div class="small">'+extras.map(esc).join('<br>')+'</div>':''}</td><td>${Array.isArray(reasons)?reasons.map(v=>'<span class="reason">'+esc(v)+'</span>').join(''):'—'}</td></tr>`;
+    return `<tr class="${rowClass}"><td><b>${esc(r.question_id)}</b></td><td>${answerPill(first,correct)}<div>${answerTrail(r.selection_history)}</div><div class="small">改选 ${Number(r.change_count||0)} 次</div></td><td>${answerPill(correct,'')}</td><td>${selectionTimingCell(meta,r)}</td><td>${answerPill(a.second_answer||'','')}<div>${answerTrail(a.second_selection_history)}</div></td><td>${answerPill(a.post_transcript_answer||'','')}<div>${answerTrail(a.post_selection_history)}</div></td><td>${esc(a.resolution_stage||'—')}${extras.length?'<div class="small">'+extras.map(esc).join('<br>')+'</div>':''}</td><td>${Array.isArray(reasons)?reasons.map(v=>'<span class="reason">'+esc(v)+'</span>').join(''):'—'}</td></tr>`;
   }).join('');
   const inner=`
     <div class="detail-head"><button class="btn secondary" id="backBtn">← 返回列表</button><div><h1>${esc(meta.student_code||'未命名学生')}</h1><div class="small">${meta.class_code?'班号 '+esc(meta.class_code)+' · ':''}<span class="code">${esc(meta.session_id||'')}</span></div></div><div class="spacer"></div><span class="badge ${esc(meta.status||'other')}">${esc(statusLabel(meta.status))}</span></div>
@@ -250,7 +280,7 @@ async function sessionView(id){
       <div class="card metric"><div class="label">分析后修正</div><div class="value">${st.recovered}</div><div class="small">最终正确率 ${pct(st.finalCorrect,st.withKey)}</div></div>
     </div>
     <div class="section"><h2>题目记录</h2><div class="card table-card"><div class="table-wrap"><table class="question-table">
-      <thead><tr><th>题目</th><th>First</th><th>正确答案</th><th>反应时间</th><th>Second</th><th>Transcript 后</th><th>分析路径</th><th>错因</th></tr></thead>
+      <thead><tr><th>题目</th><th>First</th><th>正确答案</th><th>选择用时</th><th>Second</th><th>Transcript 后</th><th>分析路径</th><th>错因</th></tr></thead>
       <tbody>${rows||'<tr><td colspan="8" class="empty">没有 First Attempt 数据</td></tr>'}</tbody>
     </table></div></div></div>
     ${analyses.length?`<div class="section"><h2>材料分析</h2><div class="material-grid">${analyses.map(materialCard).join('')}</div></div>`:''}
