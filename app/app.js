@@ -1662,7 +1662,7 @@ function beginAnswerPhase(){
   logEvent('first_answer_phase_start',{timerSec:q.timerSec,timingVersion:2}); renderPractice(); startCountdown(false);
 }
 function startCountdown(reset=false){
-  clearInterval(state.timerId);
+  clearInterval(state.timerId); state.timerId=null;
   const q=getQ();
   if(reset) ensureAnswerTiming(q,{reset:true,start:true});
   else resumeAnswerTiming(q);
@@ -1678,9 +1678,8 @@ function startCountdown(reset=false){
       nextQ(true);
     }
   };
-  tick();
-  if(state.timerId===null) return;
   state.timerId=setInterval(tick,200);
+  tick();
 }
 function toggleTime(){ state.showTime=!state.showTime; const el=document.getElementById('timer'); if(el) el.textContent=state.showTime?fmt(state.practicePhase==='answer'?state.timer:getQ().timerSec):'--:--'; persist(); }
 function chooseFirst(letter){
