@@ -520,7 +520,7 @@ function questionResponsePayload(q){
     selection_history:selections.map(x=>({answer:x.answer||'',at:x.at||'',elapsed_ms:Number.isFinite(x.elapsedMs)?Math.round(x.elapsedMs):null})),
     selection_count:selections.length,
     change_count:Math.max(0,selections.length-1),
-    response_ms:Number.isFinite(meta.responseMs)?Math.round(meta.responseMs):null,
+    response_ms:Number.isFinite(meta.finalSelectionMs)?Math.round(meta.finalSelectionMs):(Number.isFinite(meta.responseMs)?Math.round(meta.responseMs):null),
     timeout:!!meta.timeout,
     answered_at:meta.completedAt||selections.at(-1)?.at||''
   };
@@ -1014,6 +1014,7 @@ function persist(){
 
 function saveRuntimeSnapshot(){
   try{
+    if(state.view==='practice'&&state.practicePhase==='answer'&&!state.paused) freezeAnswerTiming();
     if(state.view==='analysis') state.uiScroll=captureAnalysisScroll();
     state.pageScrollY = window.scrollY || 0;
     if(state.view==='analysis') saveMaterialPosition();
@@ -1046,6 +1047,11 @@ function restorePersistedState(){
     state.confidenceData=state.confidenceData||{}; state.understandingData=state.understandingData||{}; state.replayDecision=state.replayDecision||{}; state.materialReplayCount=state.materialReplayCount||{};
     state.reviewData=state.reviewData||{}; state.resultsUi=state.resultsUi||{scrollTop:0,openQids:[]}; state.restoreResultsUiOnRender=!!state.restoreResultsUiOnRender;
     state.practiceReviewOpen=false; state.practiceReviewSnapshot=null;
+    if(state.view==='practice'&&state.practicePhase==='answer'){
+      const q=getQ(); const meta=ensureAnswerTiming(q);
+      meta.activeStartedMs=null; state.firstMeta[q.id]=meta;
+      updateAnswerTimerDisplay(q,meta);
+    }
     const snap=state.refreshSnapshot||{};
     if(['practice','analysis'].includes(state.view)){
       if(state.paused && state.pauseSnapshot){
@@ -1295,6 +1301,7 @@ function practicePlaybackEnd(segment){
 function pauseSession(){
   if(state.paused || !['practice','analysis'].includes(state.view)) return;
   const timerRunning = state.view==='practice' && state.practicePhase==='answer' && !!state.timerId;
+  if(timerRunning) freezeAnswerTiming();
   const audioWasPlaying=!audio.paused;
   state.pauseSnapshot={audioWasPlaying,timerRunning,pausedAt:Date.now(),audioTime:Number.isFinite(audio.currentTime)?audio.currentTime:null,timerRemaining:state.timer};
   clearInterval(state.timerId); state.timerId=null;
@@ -1308,7 +1315,7 @@ function resumeSession(){
   state.paused=false; state.pauseSnapshot=null;
   removePauseOverlay();
   if(snap.timerRunning && state.view==='practice' && state.practicePhase==='answer'){
-    if(Number.isFinite(snap.timerRemaining)) state.timer=snap.timerRemaining;
+    resumeAnswerTiming();
     startCountdown(false);
   }
   if(snap.restoredFromRefresh && state.view==='practice' && state.practicePhase==='prepare'){
@@ -1389,6 +1396,7 @@ function removePracticeReviewOverlay(){ document.getElementById('practiceReviewO
 function openPracticeReview(){
   if(!isGuidedPracticeMode() || state.practiceReviewOpen || state.view!=='practice') return;
   const timerRunning=state.practicePhase==='answer' && !!state.timerId;
+  if(timerRunning) freezeAnswerTiming();
   const audioWasPlaying=!audio.paused && state.isPlaying;
   state.practiceReviewSnapshot={timerRunning,audioWasPlaying,timerRemaining:state.timer,audioTime:Number.isFinite(audio.currentTime)?audio.currentTime:null};
   clearInterval(state.timerId); state.timerId=null; audio.pause(); state.isPlaying=false; state.practiceReviewOpen=true;
@@ -1398,7 +1406,7 @@ function openPracticeReview(){
 function closePracticeReview(){
   if(!state.practiceReviewOpen) return;
   const snap=state.practiceReviewSnapshot||{}; removePracticeReviewOverlay(); state.practiceReviewOpen=false; state.practiceReviewSnapshot=null;
-  if(snap.timerRunning && state.view==='practice' && state.practicePhase==='answer'){ if(Number.isFinite(snap.timerRemaining)) state.timer=snap.timerRemaining; startCountdown(false); }
+  if(snap.timerRunning && state.view==='practice' && state.practicePhase==='answer'){ resumeAnswerTiming(); startCountdown(false); }
   if(snap.audioWasPlaying && state.view==='practice' && state.practicePhase==='listen'){
     if(MOBILE_MEDIA_CLIENT) resumePracticeFromRefresh(snap.audioTime);
     else { state.isPlaying=true; requestMediaPlay('practice_review_resume'); }
@@ -1589,28 +1597,109 @@ function enterListenPhase(){
   if(q.type==='best_response' || isFirstQuestionOfMaterial(state.idx)) beginInitialPracticeDelay(q,PRACTICE_PREP_SECONDS);
   else beginAnswerPhase();
 }
+function answerTimeLimitMs(q=getQ()){ return Math.max(0,Number(q?.timerSec)||0)*1000; }
+function ensureAnswerTiming(q=getQ(),{reset=false,start=false}={}){
+  if(!q) return null;
+  const existing=state.firstMeta[q.id]||{};
+  existing.selections=Array.isArray(existing.selections)?existing.selections:[];
+  const limit=answerTimeLimitMs(q);
+  if(reset || existing.timingVersion!==2){
+    let inferred=0;
+    if(!reset && Number.isFinite(state.timer) && limit>0){
+      inferred=Math.max(0,Math.min(limit,limit-Math.max(0,Number(state.timer))*1000));
+    }
+    existing.timingVersion=2;
+    existing.activeElapsedMs=reset?0:inferred;
+    existing.activeStartedMs=null;
+    existing.firstSelectionMs=Number.isFinite(existing.firstSelectionMs)?existing.firstSelectionMs:null;
+    existing.finalSelectionMs=Number.isFinite(existing.finalSelectionMs)?existing.finalSelectionMs:null;
+  }
+  existing.activeElapsedMs=Math.max(0,Math.min(limit,Number(existing.activeElapsedMs)||0));
+  if(start && !existing.completedAt && !Number.isFinite(existing.activeStartedMs)) existing.activeStartedMs=Date.now();
+  state.firstMeta[q.id]=existing;
+  return existing;
+}
+function answerElapsedMs(q=getQ(),meta=null){
+  if(!q) return 0;
+  meta=meta||ensureAnswerTiming(q);
+  const limit=answerTimeLimitMs(q);
+  let elapsed=Math.max(0,Number(meta?.activeElapsedMs)||0);
+  if(Number.isFinite(meta?.activeStartedMs)) elapsed+=Math.max(0,Date.now()-meta.activeStartedMs);
+  return Math.max(0,Math.min(limit,elapsed));
+}
+function updateAnswerTimerDisplay(q=getQ(),meta=null){
+  if(!q) return 0;
+  meta=meta||ensureAnswerTiming(q);
+  const remainingMs=Math.max(0,answerTimeLimitMs(q)-answerElapsedMs(q,meta));
+  state.timer=Math.ceil(remainingMs/1000);
+  const el=document.getElementById('timer');
+  if(el) el.textContent=state.showTime?fmt(state.timer):'--:--';
+  return remainingMs;
+}
+function freezeAnswerTiming(q=getQ()){
+  if(!q || state.view!=='practice' || state.practicePhase!=='answer') return;
+  const meta=ensureAnswerTiming(q);
+  if(!meta) return;
+  meta.activeElapsedMs=answerElapsedMs(q,meta);
+  meta.activeStartedMs=null;
+  state.firstMeta[q.id]=meta;
+  updateAnswerTimerDisplay(q,meta);
+}
+function resumeAnswerTiming(q=getQ()){
+  if(!q || state.view!=='practice' || state.practicePhase!=='answer') return;
+  const meta=ensureAnswerTiming(q);
+  if(!meta || meta.completedAt) return;
+  if(!Number.isFinite(meta.activeStartedMs)) meta.activeStartedMs=Date.now();
+  state.firstMeta[q.id]=meta;
+  updateAnswerTimerDisplay(q,meta);
+}
 function beginAnswerPhase(){
   clearMediaStallTimers(); mediaStallActive=false; hideMediaRecovery(); mobileSeekToken++; mobileSeekInFlight=false;
   const q=getQ(); state.practicePhase='answer'; state.timer=q.timerSec;
-  state.firstMeta[q.id]=state.firstMeta[q.id]||{answerShownAt:nowIso(),answerShownMs:Date.now(),selections:[],timeout:false};
-  logEvent('first_answer_phase_start',{timerSec:q.timerSec}); renderPractice(); startCountdown(true);
+  const meta=ensureAnswerTiming(q,{reset:true,start:true});
+  meta.answerShownAt=nowIso(); meta.answerShownMs=Date.now(); meta.timeout=false;
+  state.firstMeta[q.id]=meta;
+  logEvent('first_answer_phase_start',{timerSec:q.timerSec,timingVersion:2}); renderPractice(); startCountdown(false);
 }
 function startCountdown(reset=false){
-  clearInterval(state.timerId); if(reset) state.timer=getQ().timerSec;
-  state.timerId=setInterval(()=>{
-    state.timer=Math.max(0,state.timer-1); const el=document.getElementById('timer'); if(el) el.textContent=state.showTime?fmt(state.timer):'--:--';
-    if(state.timer===0){ clearInterval(state.timerId); state.timerId=null; const q=getQ(); state.firstMeta[q.id]=state.firstMeta[q.id]||{}; state.firstMeta[q.id].timeout=true; logEvent('first_timeout'); nextQ(true); }
-  },1000);
+  clearInterval(state.timerId);
+  const q=getQ();
+  if(reset) ensureAnswerTiming(q,{reset:true,start:true});
+  else resumeAnswerTiming(q);
+  const tick=()=>{
+    if(!state || state.view!=='practice' || state.practicePhase!=='answer' || state.paused) return;
+    const current=getQ(); if(!current || current.id!==q.id) return;
+    const remainingMs=updateAnswerTimerDisplay(q);
+    if(remainingMs<=0){
+      clearInterval(state.timerId); state.timerId=null;
+      freezeAnswerTiming(q);
+      const meta=ensureAnswerTiming(q); meta.timeout=true; state.firstMeta[q.id]=meta;
+      logEvent('first_timeout',{activeElapsedMs:answerElapsedMs(q,meta)});
+      nextQ(true);
+    }
+  };
+  tick();
+  if(state.timerId===null) return;
+  state.timerId=setInterval(tick,200);
 }
 function toggleTime(){ state.showTime=!state.showTime; const el=document.getElementById('timer'); if(el) el.textContent=state.showTime?fmt(state.practicePhase==='answer'?state.timer:getQ().timerSec):'--:--'; persist(); }
 function chooseFirst(letter){
   if(state.practicePhase!=='answer'||state.paused) return;
-  const q=getQ(); const meta=state.firstMeta[q.id]||{};
-  state.firstAnswers[q.id]=letter; meta.selections=meta.selections||[]; meta.selections.push({answer:letter,at:nowIso(),elapsedMs:meta.answerShownMs?Date.now()-meta.answerShownMs:null}); meta.finalAnswer=letter; state.firstMeta[q.id]=meta;
-  logEvent('first_answer_select',{answer:letter}); renderPractice();
+  const q=getQ(); const meta=ensureAnswerTiming(q,{start:true}); const elapsed=answerElapsedMs(q,meta);
+  state.firstAnswers[q.id]=letter; meta.selections=meta.selections||[];
+  meta.selections.push({answer:letter,at:nowIso(),elapsedMs:elapsed});
+  if(!Number.isFinite(meta.firstSelectionMs)) meta.firstSelectionMs=elapsed;
+  meta.finalSelectionMs=elapsed; meta.finalAnswer=letter; state.firstMeta[q.id]=meta;
+  logEvent('first_answer_select',{answer:letter,elapsedMs:Math.round(elapsed)}); renderPractice();
 }
 function finalizeFirstQuestion(fromTimeout=false){
-  const q=getQ(),meta=state.firstMeta[q.id]||{}; meta.completedAt=nowIso(); meta.responseMs=meta.answerShownMs?Date.now()-meta.answerShownMs:null; meta.timeout=!!fromTimeout; state.firstMeta[q.id]=meta;
+  const q=getQ(); freezeAnswerTiming(q); const meta=ensureAnswerTiming(q);
+  const limit=answerTimeLimitMs(q);
+  meta.completedAt=nowIso();
+  meta.timeout=!!fromTimeout;
+  meta.responseMs=Number.isFinite(meta.finalSelectionMs)?Math.min(limit,meta.finalSelectionMs):(fromTimeout?limit:answerElapsedMs(q,meta));
+  meta.activeStartedMs=null;
+  state.firstMeta[q.id]=meta;
 }
 function nextQ(fromTimeout=false){
   if(state.paused) return; clearInterval(state.timerId); state.timerId=null; clearPracticeStartDelay(); cancelPendingPracticePlayback(); finalizeFirstQuestion(fromTimeout); stopAudio({save:false}); logEvent('first_question_end',{timeout:!!fromTimeout,answer:state.firstAnswers[getQ().id]||null});
