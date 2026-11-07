@@ -80,6 +80,10 @@ def frontend_contract_checks():
         "mobile_refresh_practice": "移动端刷新恢复没有经过独立定位流程",
         "mobile_preplay_guard": "移动端真正播放前缺少二次 listening_window 核验",
         "function mediaRecoveryUiAllowed": "学生端缺少恢复提示阶段门禁；Safari 可能在音频结束后仍显示重试提示",
+        "function ensureAnswerTiming": "学生端缺少有效答题时间状态；暂停/刷新可能污染选择用时",
+        "function freezeAnswerTiming": "学生端缺少答题计时冻结逻辑",
+        "function answerElapsedMs": "学生端缺少有效选择用时计算",
+        "timingVersion:2": "学生端缺少新版选择用时记录标记",
     }
     for needle, message in required_media_contracts.items():
         if needle not in app_text:
