@@ -46,6 +46,8 @@ def scan_manifests():
         if not set_id:
             errors.append(f"{folder.name}: manifest.set_id 为空")
             continue
+        if manifest.get("student_visible") is False:
+            continue
         if set_id != folder.name:
             errors.append(f"{folder.name}: 目录名与 manifest.set_id={set_id} 不一致")
             continue
