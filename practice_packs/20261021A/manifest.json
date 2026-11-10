@@ -38,5 +38,8 @@
     }
   ],
   "description": "20261021A Listening Lab pack built from supplied M1/M2H audio, question PDFs, answer key, and transcript DOCX files; material windows checked with WebRTC VAD.",
-  "source_note": "M2H source PDF omitted Question 4 page. Q4 is explicitly reconstructed from the supplied conversation transcript and answer key and flagged in question data."
+  "source_note": "M2H source PDF omitted Question 4 page. Q4 is explicitly reconstructed from the supplied conversation transcript and answer key and flagged in question data.",
+  "student_visible": false,
+  "withdrawn_reason": "audio_quality_manual_review",
+  "withdrawn_note": "Temporarily hidden from the student catalog pending manual audio-quality review."
 }
